@@ -1,3 +1,10 @@
+// Vercel builds preview deployments in production mode, so the robots module would call
+// them indexable. It honours this variable (setting `site.indexable` below had no effect),
+// so derive it from Vercel's environment: only the production deployment may be indexed.
+if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production') {
+  process.env.NUXT_SITE_INDEXABLE = 'false'
+}
+
 // One file per product keeps translations manageable as forms are added.
 const localeFiles = (code: string) =>
   ['common', 'legal', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
@@ -6,9 +13,46 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-01-01',
   devtools: { enabled: false },
 
-  modules: ['@nuxtjs/i18n', '@nuxt/fonts'],
+  modules: ['@nuxtjs/i18n', '@nuxt/fonts', 'nuxt-security', '@nuxtjs/robots', '@nuxtjs/sitemap'],
 
   css: ['~/assets/css/main.css'],
+
+  // Used by the sitemap and robots modules.
+  site: {
+    url: 'https://dix.tax',
+    name: 'Dix.Tax',
+  },
+
+  // Security headers, a content security policy and limits for the one server route.
+  // The defaults are strict; only what this site needs is opened up.
+  security: {
+    headers: {
+      contentSecurityPolicy: {
+        'default-src': ["'self'"],
+        'img-src': ["'self'", 'data:'],
+        'font-src': ["'self'"],
+        'connect-src': ["'self'"],
+        'form-action': ["'self'"],
+        'frame-ancestors': ["'none'"],
+        'object-src': ["'none'"],
+        'base-uri': ["'none'"],
+        'upgrade-insecure-requests': true,
+      },
+      // Nothing embeds this site and it embeds nothing.
+      xFrameOptions: 'DENY',
+      permissionsPolicy: {
+        camera: [],
+        microphone: [],
+        geolocation: [],
+        'display-capture': [],
+      },
+    },
+    // Nuxt 4 compiles with oxc, which ignores this esbuild-based option and warns about it.
+    removeLoggers: false,
+    // The only thing visitors can post is the signup form: keep bodies small.
+    requestSizeLimiter: { maxRequestSizeInBytes: 20_000, maxUploadFileRequestInBytes: 20_000 },
+  },
+
 
   runtimeConfig: {
     public: {
@@ -74,6 +118,8 @@ export default defineNuxtConfig({
     '/es/legal': { redirect: { to: '/es/aviso-legal', statusCode: 301 } },
     '/uk/legal': { redirect: { to: '/uk/legal-notice', statusCode: 301 } },
     '/ru/legal': { redirect: { to: '/ru/legal-notice', statusCode: 301 } },
+    // A person signs up once. Five tries a minute stops scripts without blocking anyone real.
+    '/api/interest': { security: { rateLimiter: { tokensPerInterval: 5, interval: 60_000 } } },
   },
 
   // Pages are prerendered; only the signup route under /api runs on the server.

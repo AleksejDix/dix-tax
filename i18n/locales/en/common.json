@@ -1,8 +1,7 @@
 {
   "meta": {
     "title": "Dix.Tax: tax forms for your property abroad",
-    "description": "Own a home in another country? Dix.Tax prepares the numbers for the forms that come with it: the Swiss tax return, Spain's Modelo 210 and Germany's Anlage V.",
-    "legalTitle": "Legal notice and privacy"
+    "description": "Own a home in another country? Dix.Tax prepares the numbers for the forms that come with it: the Swiss tax return, Spain's Modelo 210 and Germany's Anlage V."
   },
   "nav": {
     "how": "How it works",
@@ -24,24 +23,15 @@
   },
   "footer": {
     "disclaimer": "Dix.Tax is an information and calculation tool. It is not tax or legal advice and does not replace an adviser. Rules and practice can change; check your figures before you file.",
-    "legal": "Legal notice and privacy",
     "sources": "Based on the Zurich tax return guide (Wegleitung) and the cantonal valuation directive.",
-    "rights": "Built in Zurich by Aleksej Dix"
-  },
-  "legal": {
-    "title": "Legal notice and privacy",
-    "disclaimerTitle": "No tax advice",
-    "disclaimer": "Dix.Tax provides general information and a calculation aid for standard situations. It is not tax or legal advice. The valuation percentages reflect the published practice of the canton of Zurich at the time of writing; the tax office can assess your case differently. You remain responsible for your tax return. For complex situations consult a licensed adviser or your tax office.",
-    "privacyTitle": "Privacy",
-    "privacy": [
-      "Everything you enter in the calculator is processed and stored only in your browser (local storage). It is never transmitted to us.",
-      "If you leave your email address so we can tell you when a form is ready, it reaches us as an email in our own mailbox, hosted in Switzerland. We use it only for that purpose and delete it on request.",
-      "We do not use analytics, advertising or tracking cookies. One functional cookie remembers your language.",
-      "Our hosting provider processes technical connection data such as IP addresses in server logs to deliver the site securely."
-    ],
-    "contactTitle": "Responsible for this site",
-    "contactBody": "Aleksej Dix, Zurich, Switzerland",
-    "contactEmail": "Contact"
+    "formsTitle": "Forms",
+    "companyTitle": "Dix.Tax",
+    "legalNotice": "Legal notice",
+    "privacy": "Privacy policy",
+    "contact": "Contact",
+    "tagline": "Tax forms for people who own property abroad.",
+    "copyright": "© {year} {name}. All rights reserved.",
+    "made": "Made in Zurich"
   },
   "hub": {
     "title": "Property abroad comes with a tax form. We prepare it.",

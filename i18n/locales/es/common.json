@@ -1,8 +1,7 @@
 {
   "meta": {
     "title": "Dix.Tax: formularios fiscales para tu inmueble en el extranjero",
-    "description": "¿Tienes una vivienda en otro país? Dix.Tax prepara las cifras para los formularios que conlleva: la declaración de impuestos suiza, el Modelo 210 español y la Anlage V alemana.",
-    "legalTitle": "Aviso legal y privacidad"
+    "description": "¿Tienes una vivienda en otro país? Dix.Tax prepara las cifras para los formularios que conlleva: la declaración de impuestos suiza, el Modelo 210 español y la Anlage V alemana."
   },
   "nav": {
     "how": "Cómo funciona",
@@ -24,24 +23,15 @@
   },
   "footer": {
     "disclaimer": "Dix.Tax es una herramienta de información y cálculo. No es asesoramiento fiscal ni jurídico y no sustituye a un asesor. Las reglas y la práctica pueden cambiar; revisa tus cifras antes de presentar la declaración.",
-    "legal": "Aviso legal y privacidad",
     "sources": "Basado en la guía de la declaración de Zúrich (Wegleitung) y la directiva cantonal de valoración.",
-    "rights": "Hecho en Zúrich por Aleksej Dix"
-  },
-  "legal": {
-    "title": "Aviso legal y privacidad",
-    "disclaimerTitle": "Sin asesoramiento fiscal",
-    "disclaimer": "Dix.Tax ofrece información general y una ayuda de cálculo para situaciones estándar. No es asesoramiento fiscal ni jurídico. Los porcentajes de valoración reflejan la práctica publicada del cantón de Zúrich en el momento de redactar este texto; la oficina tributaria puede valorar tu caso de otra manera. Tú sigues siendo responsable de tu declaración. Para situaciones complejas, consulta a un asesor autorizado o a tu oficina tributaria.",
-    "privacyTitle": "Privacidad",
-    "privacy": [
-      "Todo lo que introduces en la calculadora se procesa y se guarda solo en tu navegador (almacenamiento local). Nunca se nos transmite.",
-      "Si nos escribes, recibimos tu dirección de correo y tu mensaje. Los usamos solo para responderte y avisarte cuando el formulario que pediste esté listo, y los borramos si lo solicitas.",
-      "No usamos analítica, publicidad ni cookies de seguimiento. Una cookie funcional recuerda tu idioma.",
-      "Nuestro proveedor de alojamiento procesa datos técnicos de conexión, como direcciones IP, en los registros del servidor para servir el sitio de forma segura."
-    ],
-    "contactTitle": "Responsable de este sitio",
-    "contactBody": "Aleksej Dix, Zúrich, Suiza",
-    "contactEmail": "Contacto"
+    "formsTitle": "Formularios",
+    "companyTitle": "Dix.Tax",
+    "legalNotice": "Aviso legal",
+    "privacy": "Política de privacidad",
+    "contact": "Contacto",
+    "tagline": "Formularios fiscales para quienes tienen un inmueble en el extranjero.",
+    "copyright": "© {year} {name}. Todos los derechos reservados.",
+    "made": "Hecho en Zúrich"
   },
   "hub": {
     "title": "Un inmueble en el extranjero trae un formulario fiscal. Nosotros lo preparamos.",
@@ -117,11 +107,13 @@
       "chOther": "Declaración suiza, otro cantón",
       "other": "Otra cosa"
     },
+    "email": "Tu correo electrónico",
     "note": "Tu situación, en una frase (opcional)",
     "notePlaceholder": "Por ejemplo: vivo en Basilea y alquilo un piso en Múnich.",
-    "submit": "Escríbenos",
-    "consent": "Se abrirá tu aplicación de correo con un mensaje preparado. No se envía nada hasta que pulses enviar.",
-    "mailGreeting": "Hola, me gustaría saber cuándo estará listo este formulario.",
-    "fallback": "¿No tienes aplicación de correo? Escribe a"
+    "submit": "Avísame cuando esté listo",
+    "sending": "Enviando",
+    "done": "Gracias. Te escribiremos cuando este formulario esté listo, y no antes.",
+    "error": "No ha funcionado. Inténtalo de nuevo en un momento o escribe a",
+    "consent": "Usamos tu dirección solo para avisarte sobre este formulario. Sin boletines, y la borramos si nos lo pides."
   }
 }

@@ -1,8 +1,7 @@
 {
   "meta": {
     "title": "Dix.Tax: Steuerformulare für Ihre Liegenschaft im Ausland",
-    "description": "Sie besitzen ein Zuhause in einem anderen Land? Dix.Tax bereitet die Zahlen für die Formulare vor, die dazugehören: die Schweizer Steuererklärung, das spanische Modelo 210 und die deutsche Anlage V.",
-    "legalTitle": "Impressum und Datenschutz"
+    "description": "Sie besitzen ein Zuhause in einem anderen Land? Dix.Tax bereitet die Zahlen für die Formulare vor, die dazugehören: die Schweizer Steuererklärung, das spanische Modelo 210 und die deutsche Anlage V."
   },
   "nav": {
     "how": "So funktioniert es",
@@ -24,24 +23,15 @@
   },
   "footer": {
     "disclaimer": "Dix.Tax ist ein Informations- und Berechnungshilfsmittel. Es ist keine Steuer- oder Rechtsberatung und ersetzt keine Fachperson. Regeln und Praxis können sich ändern. Prüfen Sie Ihre Zahlen, bevor Sie die Steuererklärung einreichen.",
-    "legal": "Impressum und Datenschutz",
     "sources": "Grundlage sind die Wegleitung zur Zürcher Steuererklärung und die kantonale Weisung zur Bewertung von Liegenschaften.",
-    "rights": "In Zürich entwickelt von Aleksej Dix"
-  },
-  "legal": {
-    "title": "Impressum und Datenschutz",
-    "disclaimerTitle": "Keine Steuerberatung",
-    "disclaimer": "Dix.Tax bietet allgemeine Informationen und eine Berechnungshilfe für Standardsituationen. Es ist keine Steuer- oder Rechtsberatung. Die Prozentsätze für die Bewertung entsprechen der veröffentlichten Praxis des Kantons Zürich zum Zeitpunkt der Erstellung. Das Steueramt kann Ihren Fall anders beurteilen. Für Ihre Steuererklärung bleiben Sie selbst verantwortlich. Wenden Sie sich bei komplexen Situationen an einen zugelassenen Treuhänder oder Steuerberater oder an Ihr Steueramt.",
-    "privacyTitle": "Datenschutz",
-    "privacy": [
-      "Alles, was Sie im Rechner eingeben, wird nur in Ihrem Browser verarbeitet und gespeichert (Local Storage). Es wird nie an uns übermittelt.",
-      "Wenn Sie Ihre E-Mail-Adresse hinterlassen, damit wir Sie informieren, sobald ein Formular bereit ist, erreicht sie uns als E-Mail in unserem eigenen Postfach, das in der Schweiz gehostet wird. Wir verwenden sie nur dafür und löschen sie auf Wunsch.",
-      "Wir verwenden keine Analyse-, Werbe- oder Tracking-Cookies. Ein funktionales Cookie merkt sich Ihre Sprache.",
-      "Unser Hosting-Anbieter verarbeitet technische Verbindungsdaten wie IP-Adressen in Server-Logs, um die Website sicher auszuliefern."
-    ],
-    "contactTitle": "Verantwortlich für diese Website",
-    "contactBody": "Aleksej Dix, Zürich, Schweiz",
-    "contactEmail": "Kontakt"
+    "formsTitle": "Formulare",
+    "companyTitle": "Dix.Tax",
+    "legalNotice": "Impressum",
+    "privacy": "Datenschutz",
+    "contact": "Kontakt",
+    "tagline": "Steuerformulare für Menschen mit einer Liegenschaft im Ausland.",
+    "copyright": "© {year} {name}. Alle Rechte vorbehalten.",
+    "made": "Entwickelt in Zürich"
   },
   "hub": {
     "title": "Zu einer Liegenschaft im Ausland gehört ein Steuerformular. Wir bereiten es vor.",

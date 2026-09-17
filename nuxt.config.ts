@@ -1,6 +1,6 @@
 // One file per product keeps translations manageable as forms are added.
 const localeFiles = (code: string) =>
-  ['common', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
+  ['common', 'legal', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-01-01',
@@ -27,6 +27,12 @@ export default defineNuxtConfig({
     baseUrl: 'https://dix.tax',
     defaultLocale: 'en',
     strategy: 'prefix_except_default',
+    // Readers look for the familiar words in the address too ("Impressum", "Aviso legal").
+    customRoutes: 'config',
+    pages: {
+      'legal-notice': { de: '/impressum', es: '/aviso-legal' },
+      privacy: { de: '/datenschutz', es: '/privacidad' },
+    },
     locales: [
       { code: 'en', language: 'en', name: 'English', files: localeFiles('en') },
       { code: 'de', language: 'de-CH', name: 'Deutsch', files: localeFiles('de') },
@@ -52,7 +58,16 @@ export default defineNuxtConfig({
     ],
   },
 
-  // Everything is computed in the browser, so the whole site can be prerendered.
+  // The legal page used to live at /legal; keep old links and bookmarks working.
+  routeRules: {
+    '/legal': { redirect: { to: '/legal-notice', statusCode: 301 } },
+    '/de/legal': { redirect: { to: '/de/impressum', statusCode: 301 } },
+    '/es/legal': { redirect: { to: '/es/aviso-legal', statusCode: 301 } },
+    '/uk/legal': { redirect: { to: '/uk/legal-notice', statusCode: 301 } },
+    '/ru/legal': { redirect: { to: '/ru/legal-notice', statusCode: 301 } },
+  },
+
+  // Pages are prerendered; only the signup route under /api runs on the server.
   nitro: {
     prerender: { crawlLinks: true, routes: ['/', '/de', '/uk', '/ru', '/es'] },
   },

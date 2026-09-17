@@ -23,10 +23,12 @@ pnpm generate   # static site in .output/public
 - `app/pages/ch/zurich/` landing, calculator and guide for the Zurich declaration
 - `app/pages/modelo-210.vue`, `app/pages/anlage-v.vue` use `ProductSoon.vue` until their tools exist
 - `app/components/FormSheet.vue` facsimile of the Liegenschaftenverzeichnis, used as hero and as live result
+- `app/pages/legal-notice.vue`, `app/pages/privacy.vue` legal notice and privacy policy (German: `/de/impressum`, `/de/datenschutz`; Spanish: `/es/aviso-legal`, `/es/privacidad`). Operator details come from `company` in `app/app.config.ts`
+- `server/api/interest.post.ts` signup form: emails the owner over SMTP (`SMTP_USER`, `SMTP_PASS`)
 - `app/components/TrustBlock.vue` trust signals; shows "Independent review" only for entries in `app.config.ts`
 - `app/composables/useDeclaration.ts` Zurich tax logic and the German note for the remarks field
 - `tests/` reference cases with hand-calculated results
-- `i18n/locales/<lang>/<file>.json` copy, one file per product plus `common.json`. English is the source;
+- `i18n/locales/<lang>/<file>.json` copy, one file per product plus `common.json` and `legal.json`. English is the source;
   keep keys and array lengths identical across languages. Zurich keys live under `zh.`.
   Do not use `@`, `|` or braces (other than placeholders) in values, vue-i18n treats them as syntax.
 

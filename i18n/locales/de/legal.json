@@ -1,0 +1,81 @@
+{
+  "legal": {
+    "metaTitle": "Impressum",
+    "title": "Impressum",
+    "operatorTitle": "Betreiber dieser Website",
+    "contactTitle": "Kontakt",
+    "emailLabel": "E-Mail",
+    "uidLabel": "Unternehmens-Identifikationsnummer (UID)",
+    "responsibleTitle": "Verantwortlich für den Inhalt",
+    "adviceTitle": "Keine Steuer- oder Rechtsberatung",
+    "advice": "Dix.Tax bietet allgemeine Informationen und eine Berechnungshilfe für Standardfälle. Das ist keine Steuer- oder Rechtsberatung und ersetzt keinen Steuerberater oder Treuhänder. Die Prozentsätze und Regeln entsprechen der veröffentlichten Praxis der Behörden zum Zeitpunkt der Erstellung. Das Steueramt kann Ihren Fall anders beurteilen. Für Ihre Steuererklärung bleiben Sie selbst verantwortlich.",
+    "liabilityTitle": "Haftung",
+    "liability": "Wir erstellen die Inhalte dieser Website mit Sorgfalt. Wir können aber nicht gewährleisten, dass sie jederzeit vollständig, richtig und aktuell sind. Soweit gesetzlich zulässig, haften wir nicht für Schäden, die aus der Nutzung der Informationen oder Berechnungen auf dieser Website entstehen.",
+    "linksTitle": "Links zu anderen Websites",
+    "links": "Diese Website verweist auf Websites von Behörden und anderen Dritten. Auf deren Inhalte haben wir keinen Einfluss und übernehmen dafür keine Verantwortung.",
+    "copyrightTitle": "Urheberrecht",
+    "copyright": "Die Texte, die Gestaltung und die Software dieser Website gehören dem Betreiber. Die gezeigten amtlichen Formularbezeichnungen und Formularvorlagen gehören den jeweiligen Behörden und dienen hier ausschliesslich der Erläuterung."
+  },
+  "privacy": {
+    "metaTitle": "Datenschutzerklärung",
+    "title": "Datenschutzerklärung",
+    "updated": "Stand: {date}",
+    "intro": "Diese Datenschutzerklärung erläutert, welche Personendaten Dix.Tax bearbeitet, zu welchem Zweck das geschieht und welche Rechte Sie haben. Sie richtet sich nach dem schweizerischen Bundesgesetz über den Datenschutz (DSG) und, soweit sie auf Sie anwendbar ist, nach der Datenschutz-Grundverordnung (DSGVO) der EU.",
+    "sections": [
+      {
+        "title": "Wer verantwortlich ist",
+        "body": [
+          "Verantwortlich für die Datenbearbeitung auf dieser Website ist der im Impressum genannte Betreiber. Bei Fragen zu Ihren Daten schreiben Sie bitte an die dort angegebene E-Mail-Adresse."
+        ]
+      },
+      {
+        "title": "Der Rechner: Ihre Zahlen bleiben in Ihrem Browser",
+        "body": [
+          "Alles, was Sie in einen Rechner eingeben, wird in Ihrem Browser verarbeitet. Gespeichert wird es ausschliesslich im lokalen Speicher des Browsers (Local Storage) auf Ihrem eigenen Gerät, damit Ihre Eingaben noch vorhanden sind, wenn Sie zurückkehren. Diese Zahlen werden nicht an uns übermittelt, und wir können sie nicht einsehen.",
+          "Sie können sie jederzeit löschen, entweder über die Schaltfläche unterhalb des Rechners oder indem Sie die Websitedaten in Ihrem Browser löschen."
+        ]
+      },
+      {
+        "title": "Wenn Sie uns Ihre E-Mail-Adresse hinterlassen",
+        "body": [
+          "Wenn Sie uns über ein Formular mitteilen, welches Steuerformular Sie benötigen, erhalten wir Ihre E-Mail-Adresse, das gewählte Formular, die Sprache der Seite und das, was Sie ins Textfeld geschrieben haben. Diese Angaben gelangen als E-Mail in unser eigenes Postfach.",
+          "Wir verwenden sie nur, um Ihnen zu antworten und Sie zu informieren, sobald das angefragte Formular bereitsteht. Wir versenden keine Newsletter und geben Ihre Adresse nicht weiter. Wir löschen sie, sobald Sie das verlangen, spätestens aber zwei Jahre nach Ihrer Nachricht.",
+          "Unsere Postfächer werden von der Migadu-Mail GmbH bereitgestellt, einem Schweizer Unternehmen, dessen Mailserver in Frankreich stehen."
+        ]
+      },
+      {
+        "title": "Hosting und Server-Logdateien",
+        "body": [
+          "Diese Website wird von Vercel Inc., USA, gehostet. Wenn Sie eine Seite aufrufen, bearbeitet Vercel technische Daten, die Ihr Browser automatisch übermittelt, etwa Ihre IP-Adresse, den Zeitpunkt der Anfrage, die aufgerufene Seite und den Typ Ihres Browsers. Das ist nötig, um die Website sicher und zuverlässig bereitzustellen.",
+          "Diese Daten können in den USA und in weiteren Ländern bearbeitet werden. Vercel ist an vertragliche Datenschutzgarantien gebunden, darunter die von der Schweiz und der EU anerkannten Standardvertragsklauseln."
+        ]
+      },
+      {
+        "title": "Cookies, Schriften und Tracking",
+        "body": [
+          "Wir setzen ein einziges funktionales Cookie ein, das sich Ihre Sprache merkt. Es enthält keine Personendaten und erfordert keine Einwilligung.",
+          "Wir verzichten auf Analysedienste, Werbung und Tracking. Die Schriften werden von unserem eigenen Server ausgeliefert. Beim Aufruf der Website wird deshalb keine Verbindung zu Schriftdiensten wie Google Fonts hergestellt."
+        ]
+      },
+      {
+        "title": "Rechtsgrundlage",
+        "body": [
+          "Soweit die DSGVO anwendbar ist, bearbeiten wir Ihre Daten gestützt auf Ihre Einwilligung, wenn Sie uns ein Formular senden (Art. 6 Abs. 1 lit. a DSGVO), sowie gestützt auf unser berechtigtes Interesse am Betrieb einer sicheren Website (Art. 6 Abs. 1 lit. f DSGVO). Ihre Einwilligung können Sie jederzeit widerrufen, indem Sie uns schreiben."
+        ]
+      },
+      {
+        "title": "Ihre Rechte",
+        "body": [
+          "Sie haben das Recht zu erfahren, welche Daten wir über Sie bearbeiten, diese berichtigen oder löschen zu lassen, ihre Bearbeitung einzuschränken oder ihr zu widersprechen und die Daten in einem gängigen Format zu erhalten. Um diese Rechte auszuüben, schreiben Sie an die Adresse im Impressum. Wir antworten innerhalb von 30 Tagen.",
+          "Sie können sich ausserdem bei einer Aufsichtsbehörde beschweren. In der Schweiz ist das der Eidgenössische Datenschutz- und Öffentlichkeitsbeauftragte (EDÖB). Wenn Sie in der EU oder im EWR wohnen, können Sie sich an die Datenschutzbehörde Ihres Landes wenden."
+        ]
+      },
+      {
+        "title": "Änderungen dieser Datenschutzerklärung",
+        "body": [
+          "Wenn sich die Website ändert, zum Beispiel wenn Benutzerkonten oder eine Bezahlfunktion hinzukommen, passen wir diese Datenschutzerklärung an. Das Datum oben zeigt den aktuellen Stand."
+        ]
+      }
+    ]
+  }
+}

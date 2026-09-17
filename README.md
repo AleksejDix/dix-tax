@@ -32,6 +32,15 @@ pnpm generate   # static site in .output/public
   keep keys and array lengths identical across languages. Zurich keys live under `zh.`.
   Do not use `@`, `|` or braces (other than placeholders) in values, vue-i18n treats them as syntax.
 
+## Security, robots and sitemap
+
+- `nuxt-security`: security headers, a content security policy (script hashes for the prerendered pages),
+  a 20 KB body limit and a rate limit of five posts a minute on `/api/interest`. Configured under `security`
+  in `nuxt.config.ts`. When you add a third-party script, font or API, it must be allowed there or the
+  browser will block it.
+- `@nuxtjs/robots` and `@nuxtjs/sitemap`: `robots.txt` and one sitemap per language with alternates.
+  Both read `site.url`. Preview deployments are kept out of search engines automatically.
+
 ## Adding a product
 
 1. Add an entry to `app/utils/products.ts` and `products.<key>` texts to every `common.json`.

@@ -114,6 +114,11 @@
     "sending": "Wird gesendet",
     "done": "Danke. Wir schreiben Ihnen, sobald dieses Formular bereit ist, und nicht vorher.",
     "error": "Das hat nicht geklappt. Bitte versuchen Sie es gleich nochmals oder schreiben Sie an",
-    "consent": "Wir verwenden Ihre Adresse nur, um Sie über dieses Formular zu informieren. Kein Newsletter, und wir löschen sie auf Wunsch."
+    "consent": "Wir verwenden Ihre Adresse nur, um Sie über dieses Formular zu informieren. Kein Newsletter, und wir löschen sie auf Wunsch.",
+    "mail": {
+      "submit": "Schreiben Sie uns",
+      "hint": "Das öffnet Ihr E-Mail-Programm mit einer vorbereiteten Nachricht. Gesendet wird erst, wenn Sie auf Senden klicken.",
+      "greeting": "Guten Tag, bitte informieren Sie mich, sobald dieses Formular bereit ist."
+    }
   }
 }

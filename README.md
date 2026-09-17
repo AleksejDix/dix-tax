@@ -24,7 +24,7 @@ pnpm generate   # static site in .output/public
 - `app/pages/modelo-210.vue`, `app/pages/anlage-v.vue` use `ProductSoon.vue` until their tools exist
 - `app/components/FormSheet.vue` facsimile of the Liegenschaftenverzeichnis, used as hero and as live result
 - `app/pages/legal-notice.vue`, `app/pages/privacy.vue` legal notice and privacy policy (German: `/de/impressum`, `/de/datenschutz`; Spanish: `/es/aviso-legal`, `/es/privacidad`). Operator details come from `company` in `app/app.config.ts`
-- `server/api/interest.post.ts` signup form: emails the owner over SMTP (`SMTP_USER`, `SMTP_PASS`)
+- `server/api/interest.post.ts` signup form: emails the owner over SMTP (`SMTP_USER`, `SMTP_PASS`). The form only renders when both variables exist at build time (`signupEnabled` in `nuxt.config.ts`); otherwise visitors get a "write to us" mail link, so a form that cannot deliver is never shown
 - `app/components/TrustBlock.vue` trust signals; shows "Independent review" only for entries in `app.config.ts`
 - `app/composables/useDeclaration.ts` Zurich tax logic and the German note for the remarks field
 - `tests/` reference cases with hand-calculated results

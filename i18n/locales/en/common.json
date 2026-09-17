@@ -114,6 +114,11 @@
     "sending": "Sending",
     "done": "Thank you. We will write to you when this form is ready, and not before.",
     "error": "That did not work. Please try again in a moment, or write to",
-    "consent": "We use your address only to tell you about this form. No newsletter, and we delete it on request."
+    "consent": "We use your address only to tell you about this form. No newsletter, and we delete it on request.",
+    "mail": {
+      "submit": "Write to us",
+      "hint": "This opens your email app with a prepared message. Nothing is sent until you press send.",
+      "greeting": "Hello, please tell me when this form is ready."
+    }
   }
 }

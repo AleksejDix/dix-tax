@@ -54,7 +54,8 @@
         "title": "Cookies, Schriften und Tracking",
         "body": [
           "Wir setzen ein einziges funktionales Cookie ein, das sich Ihre Sprache merkt. Es enthält keine Personendaten und erfordert keine Einwilligung.",
-          "Wir verzichten auf Analysedienste, Werbung und Tracking. Die Schriften werden von unserem eigenen Server ausgeliefert. Beim Aufruf der Website wird deshalb keine Verbindung zu Schriftdiensten wie Google Fonts hergestellt."
+          "Wir messen die Nutzung der Website mit PostHog, gehostet in der EU (Frankfurt). Das geschieht ohne Cookies, und auf Ihrem Gerät wird nichts gespeichert. Wir zählen Seitenaufrufe und wenige Ereignisse: dass eine Berechnung begonnen oder abgeschlossen wurde, für welches Land, welche Art von Liegenschaft und welche Nutzung, und ob das Blatt gedruckt oder ein Formular gesendet wurde. Beträge, Adressen und alles andere, was Sie eingeben, sind nie dabei. Sitzungsaufzeichnungen sind ausgeschaltet, es wird kein Profil von Ihnen erstellt, und die Einstellung «Do Not Track» Ihres Browsers wird respektiert.",
+          "Wir verwenden keine Werbung und kein Tracking über andere Websites hinweg. Schriften werden von unserem eigenen Server geliefert. Beim Öffnen der Website werden deshalb keine Schriftdienste wie Google Fonts kontaktiert."
         ]
       },
       {

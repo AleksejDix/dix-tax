@@ -54,7 +54,8 @@
         "title": "Cookies, tipografías y seguimiento",
         "body": [
           "Utilizamos una sola cookie funcional que recuerda su idioma. No contiene información personal y no requiere consentimiento.",
-          "No utilizamos herramientas de analítica, publicidad ni seguimiento. Las tipografías se sirven desde nuestro propio servidor, de modo que al abrir el sitio no se establece conexión con servicios de fuentes como Google Fonts."
+          "Medimos el uso del sitio con PostHog, alojado en la UE (Fráncfort). Funciona sin cookies y no guarda nada en su dispositivo. Contamos las páginas vistas y unos pocos eventos: que se ha empezado o terminado un cálculo, para qué país, tipo de inmueble y uso, y si se ha impreso la hoja o enviado un formulario. Los importes, las direcciones y cualquier otra cosa que usted escriba nunca se incluyen. La grabación de sesiones está desactivada, no se crea ningún perfil suyo y se respeta la opción Do Not Track de su navegador.",
+          "No usamos publicidad ni seguimiento en otros sitios web. Las tipografías se sirven desde nuestro propio servidor, por lo que al abrir el sitio no se contacta con servicios de tipografías como Google Fonts."
         ]
       },
       {

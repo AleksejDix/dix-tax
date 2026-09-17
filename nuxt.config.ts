@@ -10,11 +10,13 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  // Used by the sitemap and robots modules. Preview deployments are not the production
-  // site, so they are kept out of search engines automatically.
+  // Used by the sitemap and robots modules.
   site: {
     url: 'https://dix.tax',
     name: 'Dix.Tax',
+    // Vercel builds previews in production mode, so say explicitly that only the real
+    // deployment may be indexed. Outside Vercel (local builds) the default applies.
+    indexable: process.env.VERCEL_ENV ? process.env.VERCEL_ENV === 'production' : true,
   },
 
   // Security headers, a content security policy and limits for the one server route.

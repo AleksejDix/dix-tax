@@ -229,7 +229,9 @@
         "usageUnusable": "Cannot be used",
         "usageUnusableHint": "Destroyed, badly damaged or out of reach, for example because of war",
         "rent": "Rent received per year",
-        "rentHint": "Without utilities the tenant pays on top. Same currency as above."
+        "rentHint": "Without utilities the tenant pays on top. Same currency as above.",
+        "rentRate": "Average rate for the year: 1 {currency} in CHF",
+        "rentRateHint": "Rent is income earned over the year, so it uses the federal average rate, not the year-end rate. Prefilled with an approximate value."
       },
       "result": {
         "title": "Your numbers",
@@ -252,11 +254,20 @@
         "assumptions": [
           "Tax value: 70% of the purchase price or estimated market value, in francs.",
           "Notional rent: 4.25% of the tax value for apartments, 3.5% for houses. None if the property cannot be used.",
-          "Rented property: the rent actually received instead of the notional rent.",
+          "Rented property: the rent actually received instead of the notional rent, converted with the average rate for the year.",
           "Maintenance: flat deduction of 20% of the notional rent or rent received.",
           "Amounts are rounded to whole francs and multiplied by your ownership share."
         ],
         "guideLink": "Open the step by step guide"
+      },
+      "sources": {
+        "title": "Where the rules come from",
+        "items": [
+          "All property, also abroad, is declared in the Liegenschaftenverzeichnis. Notional rent of 4.25% and 3.5%, the 20% flat deduction, and lines 6 and 31.1 of the tax return.",
+          "Property abroad is not taxed in Switzerland and counts only for the rate.",
+          "Official year-end and annual average exchange rates.",
+          "Tax value at 70% of the purchase price. This is practice reported by Zurich fiduciaries, not an official directive."
+        ]
       }
     },
     "guide": {

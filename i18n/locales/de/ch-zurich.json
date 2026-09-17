@@ -229,7 +229,9 @@
         "usageUnusable": "Nicht nutzbar",
         "usageUnusableHint": "Zerstört, stark beschädigt oder nicht erreichbar, zum Beispiel wegen eines Krieges",
         "rent": "Erhaltene Miete pro Jahr",
-        "rentHint": "Ohne Nebenkosten, die die Mieterschaft zusätzlich zahlt. Gleiche Währung wie oben."
+        "rentHint": "Ohne Nebenkosten, die die Mieterschaft zusätzlich zahlt. Gleiche Währung wie oben.",
+        "rentRate": "Jahresmittelkurs: 1 {currency} in CHF",
+        "rentRateHint": "Miete ist Einkommen über das ganze Jahr. Dafür gilt der Jahresmittelkurs des Bundes, nicht der Jahresendkurs. Vorausgefüllt mit einem ungefähren Wert."
       },
       "result": {
         "title": "Ihre Zahlen",
@@ -252,11 +254,20 @@
         "assumptions": [
           "Steuerwert: 70% des Kaufpreises oder des geschätzten Marktwerts, in Franken.",
           "Eigenmietwert: 4.25% des Steuerwerts bei Wohnungen, 3.5% bei Häusern. Kein Eigenmietwert, wenn die Liegenschaft nicht nutzbar ist.",
-          "Vermietete Liegenschaft: die tatsächlich erhaltene Miete anstelle des Eigenmietwerts.",
+          "Vermietete Liegenschaft: die tatsächlich erhaltene Miete statt des Eigenmietwerts, umgerechnet zum Jahresmittelkurs.",
           "Unterhalt: Pauschalabzug von 20% des Eigenmietwerts oder der erhaltenen Miete.",
           "Die Beträge werden auf ganze Franken gerundet und mit Ihrem Eigentumsanteil multipliziert."
         ],
         "guideLink": "Schritt-für-Schritt-Anleitung öffnen"
+      },
+      "sources": {
+        "title": "Woher die Regeln stammen",
+        "items": [
+          "Alle Liegenschaften, auch im Ausland, gehören ins Liegenschaftenverzeichnis. Eigenmietwert von 4.25% und 3.5%, Pauschalabzug von 20% sowie die Ziffern 6 und 31.1 der Steuererklärung.",
+          "Liegenschaften im Ausland werden in der Schweiz nicht besteuert und zählen nur für den Steuersatz.",
+          "Offizielle Jahresend- und Jahresmittelkurse.",
+          "Steuerwert von 70% des Kaufpreises. Das ist die von Zürcher Treuhändern beschriebene Praxis, keine offizielle Weisung."
+        ]
       }
     },
     "guide": {

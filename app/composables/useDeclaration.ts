@@ -16,9 +16,12 @@ export interface PropertyInput {
   basis: ValueBasis
   amount: number | null
   currency: Currency
+  /** Year-end rate: converts the value, because wealth is measured on 31 December */
   rate: number | null
   usage: PropertyUsage
   rent: number | null
+  /** Average rate of the year: converts rent, because income is earned over the year */
+  rentRate: number | null
 }
 
 export interface PropertyResult {
@@ -43,6 +46,15 @@ export const APPROX_RATES: Record<Currency, number> = {
   USD: 0.79,
   GBP: 1.06,
   UAH: 0.0187,
+  CHF: 1,
+}
+
+// Approximate annual average rates, used to prefill the rate for rent.
+export const APPROX_AVERAGE_RATES: Record<Currency, number> = {
+  EUR: 0.94,
+  USD: 0.83,
+  GBP: 1.1,
+  UAH: 0.02,
   CHF: 1,
 }
 
@@ -97,6 +109,7 @@ export function newProperty(): PropertyInput {
     rate: APPROX_RATES.EUR,
     usage: 'self',
     rent: null,
+    rentRate: APPROX_AVERAGE_RATES.EUR,
   }
 }
 
@@ -106,8 +119,11 @@ export function calculate(input: PropertyInput): PropertyResult {
   const valueChf = (input.amount || 0) * rate * share
   const taxValue = Math.round(valueChf * TAX_VALUE_FACTOR)
 
+  // Rent is income: the federal annual average rate applies, not the year-end rate.
+  const rentRate = input.currency === 'CHF' ? 1 : input.rentRate || rate
+
   let gross = 0
-  if (input.usage === 'rented') gross = Math.round((input.rent || 0) * rate * share)
+  if (input.usage === 'rented') gross = Math.round((input.rent || 0) * rentRate * share)
   else if (input.usage !== 'unusable') gross = Math.round(taxValue * NOTIONAL_RENT_RATE[input.kind])
 
   const maintenance = Math.round(gross * MAINTENANCE_FLAT_RATE)
@@ -155,7 +171,10 @@ export function remarkDe(results: PropertyResult[], year: number) {
       const usage: Record<PropertyUsage, string> = {
         self: `Die Liegenschaft steht zur eigenen Verfügung. Eigenmietwert: ${formatPercentDe(NOTIONAL_RENT_RATE[p.kind])}% des Steuerwerts.`,
         family: `Die Liegenschaft wird unentgeltlich von Angehörigen bewohnt. Eigenmietwert: ${formatPercentDe(NOTIONAL_RENT_RATE[p.kind])}% des Steuerwerts.`,
-        rented: 'Die Liegenschaft ist vermietet. Deklariert sind die effektiven Mietzinseinnahmen.',
+        rented:
+          p.currency === 'CHF'
+            ? 'Die Liegenschaft ist vermietet. Deklariert sind die effektiven Mietzinseinnahmen.'
+            : `Die Liegenschaft ist vermietet. Deklariert sind die effektiven Mietzinseinnahmen von ${p.currency} ${formatAmount(p.rent || 0)}, umgerechnet zum Jahresmittelkurs ${p.rentRate || p.rate}.`,
         unusable:
           'Die Liegenschaft ist nicht nutzbar (zerstört, stark beschädigt oder nicht zugänglich). Es wird deshalb kein Eigenmietwert deklariert. Belege können auf Wunsch nachgereicht werden.',
       }
@@ -196,7 +215,12 @@ export function useDeclaration() {
       const saved = JSON.parse(raw)
       if (TAX_YEARS.includes(saved.year)) year.value = saved.year
       if (Array.isArray(saved.properties) && saved.properties.length) {
-        properties.value = saved.properties.map((p: Partial<PropertyInput>) => ({ ...newProperty(), ...p }))
+        // Entries saved before the rent rate existed get the average rate of their own currency.
+        properties.value = saved.properties.map((p: Partial<PropertyInput>) => ({
+          ...newProperty(),
+          ...p,
+          rentRate: p.rentRate ?? APPROX_AVERAGE_RATES[p.currency ?? 'EUR'],
+        }))
       }
     } catch {
       // Corrupt or blocked storage: start with an empty form.
@@ -251,5 +275,6 @@ export function sampleResult(): PropertyResult {
     rate: APPROX_RATES.EUR,
     usage: 'self',
     rent: null,
+    rentRate: APPROX_AVERAGE_RATES.EUR,
   })
 }

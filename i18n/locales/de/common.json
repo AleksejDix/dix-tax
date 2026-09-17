@@ -80,18 +80,21 @@
       "anlageV": "Deutsche Erklärung {year} mit Anlage V",
       "anlageVAdviser": "Deutsche Erklärung {year} über einen Steuerberater"
     },
-    "kinds": {
-      "due": "Fällig am {date}",
-      "extended": "Erstreckte Frist {date}",
-      "final": "Letzte mögliche Erstreckung {date}"
-    },
     "left": {
       "days": "in {days} Tagen",
       "tomorrow": "morgen",
       "today": "heute"
     },
-    "next": "Nächste Frist",
-    "note": "Ihre eigene Frist kann abweichen, wenn Sie eine Erstreckung verlangt haben oder ein Treuhänder für Sie einreicht."
+    "note": "Ihre eigene Frist kann abweichen, wenn Sie eine Erstreckung verlangt haben oder ein Treuhänder für Sie einreicht.",
+    "colForm": "Deklaration",
+    "colKind": "Art der Frist",
+    "colDate": "Termin",
+    "kindNames": {
+      "due": "Ordentlich",
+      "extended": "Erstreckt",
+      "final": "Letzte Erstreckung"
+    },
+    "next": "Frist für {year}: {date}"
   },
   "trust": {
     "title": "Warum Sie sich auf die Zahlen verlassen können",

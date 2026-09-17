@@ -80,18 +80,21 @@
       "anlageV": "German return {year} with Anlage V",
       "anlageVAdviser": "German return {year}, filed by a tax adviser"
     },
-    "kinds": {
-      "due": "Due {date}",
-      "extended": "Extended deadline {date}",
-      "final": "Last possible extension {date}"
-    },
     "left": {
       "days": "in {days} days",
       "tomorrow": "tomorrow",
       "today": "today"
     },
-    "next": "Next deadline",
-    "note": "Your own deadline can differ if you asked for an extension or an adviser files for you."
+    "note": "Your own deadline can differ if you asked for an extension or an adviser files for you.",
+    "colForm": "Filing",
+    "colKind": "Kind of date",
+    "colDate": "Deadline",
+    "kindNames": {
+      "due": "Deadline",
+      "extended": "Extended",
+      "final": "Last extension"
+    },
+    "next": "Deadline for {year}: {date}"
   },
   "trust": {
     "title": "Why you can rely on the numbers",

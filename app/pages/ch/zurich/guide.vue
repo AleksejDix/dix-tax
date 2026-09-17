@@ -27,178 +27,63 @@ const terms = [
 </script>
 
 <template>
-  <div class="wrap page">
-    <header class="page-head">
-      <h1>{{ t('zh.guide.title') }}</h1>
-      <p class="lead">{{ t('zh.guide.lead') }}</p>
+  <div class="wrap pt-10 sm:pt-16">
+    <header class="mb-10 max-w-[48rem] sm:mb-16">
+      <h1 class="text-3xl">{{ t('zh.guide.title') }}</h1>
+      <p class="lead mt-4">{{ t('zh.guide.lead') }}</p>
     </header>
 
-    <div class="layout">
+    <div class="grid items-start gap-12 lg:grid-cols-[minmax(0,1.5fr)_minmax(0,1fr)] lg:gap-20">
       <div>
         <section aria-labelledby="steps-title">
-          <h2 id="steps-title">{{ t('zh.guide.stepsTitle') }}</h2>
-          <ol class="steps">
-            <li v-for="(step, i) in steps" :key="i">
-              <span class="n num" aria-hidden="true">{{ i + 1 }}</span>
-              <div>
-                <h3>{{ step.title }}</h3>
-                <p>{{ step.body }}</p>
-              </div>
-            </li>
-          </ol>
+          <h2 id="steps-title" class="mb-7 text-2xl">{{ t('zh.guide.stepsTitle') }}</h2>
+          <UiSteps :items="steps" />
         </section>
 
-        <section class="docs" aria-labelledby="docs-title">
-          <h2 id="docs-title">{{ t('zh.guide.docsTitle') }}</h2>
-          <ul>
-            <li v-for="(d, i) in docs" :key="i">{{ d }}</li>
+        <section class="mt-14 mb-10" aria-labelledby="docs-title">
+          <h2 id="docs-title" class="mb-7 text-2xl">{{ t('zh.guide.docsTitle') }}</h2>
+          <ul class="grid gap-3">
+            <li v-for="(d, i) in docs" :key="i" class="box relative max-w-[60ch] pl-8">{{ d }}</li>
           </ul>
         </section>
 
-        <NuxtLink :to="localePath('/ch/zurich/calculator')" class="btn btn-primary">{{ t('zh.guide.cta') }}</NuxtLink>
+        <UiButton :to="localePath('/ch/zurich/calculator')" variant="primary">{{ t('zh.guide.cta') }}</UiButton>
       </div>
 
-      <aside class="glossary" aria-labelledby="glossary-title">
-        <h2 id="glossary-title">{{ t('zh.guide.glossaryTitle') }}</h2>
-        <dl>
-          <div v-for="term in terms" :key="term.key">
-            <dt lang="de">{{ term.de }}</dt>
-            <dd>{{ t(`zh.guide.glossary.${term.key}`) }}</dd>
+      <UiCard as="aside" aria-labelledby="glossary-title" class="lg:sticky lg:top-22">
+        <h2 id="glossary-title" class="mb-4 text-lg">{{ t('zh.guide.glossaryTitle') }}</h2>
+        <dl class="m-0">
+          <div v-for="term in terms" :key="term.key" class="border-t border-dashed border-rule py-3.5">
+            <dt lang="de" class="marked inline font-semibold [overflow-wrap:anywhere]">{{ term.de }}</dt>
+            <dd class="mt-1.5 mb-0 ml-0 text-xs text-ink-soft">{{ t(`zh.guide.glossary.${term.key}`) }}</dd>
           </div>
         </dl>
-      </aside>
+      </UiCard>
     </div>
   </div>
 </template>
 
 <style scoped>
-.page {
-  padding-top: clamp(2.5rem, 1rem + 4vw, 5rem);
-}
-
-.page-head {
-  max-width: 48rem;
-  margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
-}
-
-.page-head h1 {
-  font-size: var(--step-3);
-  letter-spacing: -0.02em;
-}
-
-.page-head .lead {
-  margin-top: 1rem;
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
-  gap: clamp(2.5rem, 1rem + 5vw, 6rem);
-  align-items: start;
-}
-
-h2 {
-  font-size: var(--step-2);
-  margin-bottom: 1.75rem;
-}
-
-.steps li {
-  display: grid;
-  grid-template-columns: 2.75rem minmax(0, 1fr);
-  gap: 1.1rem;
-  padding-block: 1.4rem;
-  border-top: 1px solid var(--rule);
-}
-
-.n {
-  display: grid;
-  place-items: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  background: var(--field);
-  border-bottom: 2px solid var(--field-strong);
-  border-radius: 3px 3px 0 0;
-  font-size: var(--step-1);
-  font-weight: 700;
-  color: var(--blue-deep);
-}
-
-.steps p {
-  margin-top: 0.4rem;
-  color: var(--ink-soft);
-  max-width: 56ch;
-}
-
-.docs {
-  margin-block: 3.5rem 2.5rem;
-}
-
-.docs ul {
-  display: grid;
-  gap: 0.75rem;
-}
-
-.docs li {
-  position: relative;
-  padding-left: 2rem;
-  max-width: 60ch;
-}
-
-.docs li::before {
+/* An empty checkbox, so the list of documents looks like something to tick off. */
+.box::before {
   content: '';
   position: absolute;
   left: 0.1rem;
   top: 0.3em;
   width: 1rem;
   height: 1rem;
-  border: 1.5px solid var(--ink-soft);
+  border: 1.5px solid var(--color-ink-soft);
   border-radius: 2px;
-  background: var(--surface);
+  background: var(--color-surface);
 }
 
-.glossary {
-  position: sticky;
-  top: 5.5rem;
-  padding: clamp(1.25rem, 1rem + 1vw, 2rem);
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-lg);
-}
-
-.glossary h2 {
-  font-size: var(--step-1);
-  margin-bottom: 1rem;
-}
-
-.glossary dl {
-  margin: 0;
-}
-
-.glossary dl > div {
-  padding-block: 0.85rem;
-  border-top: 1px dashed var(--rule);
-}
-
-.glossary dt {
-  display: inline;
-  font-weight: 600;
-  background: linear-gradient(transparent 58%, var(--marker) 58%, var(--marker) 92%, transparent 92%);
-  overflow-wrap: anywhere;
-}
-
-.glossary dd {
-  margin: 0.3rem 0 0;
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-}
-
-@media (max-width: 58rem) {
-  .layout {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .glossary {
-    position: static;
-  }
+/* A highlighter stroke through the German term, not a solid block behind it. */
+.marked {
+  background: linear-gradient(
+    transparent 58%,
+    var(--color-marker) 58%,
+    var(--color-marker) 92%,
+    transparent 92%
+  );
 }
 </style>

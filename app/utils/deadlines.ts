@@ -88,3 +88,21 @@ export function daysUntil(deadline: Deadline, today: Date): number {
 function startOfDay(date: Date) {
   return utc(date.getUTCFullYear(), date.getUTCMonth() + 1, date.getUTCDate())
 }
+
+/** The deadline date as the reader's language writes it. */
+export function formatDeadlineDate(date: Date, language: string) {
+  // Readers are in Europe, so plain "en" must not turn into the American "September 30, 2026".
+  return new Intl.DateTimeFormat(language === 'en' ? 'en-GB' : language, {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric',
+    timeZone: 'UTC',
+  }).format(date)
+}
+
+/** "in 13 days", and its own word for today and tomorrow: the locale files carry no plurals. */
+export function deadlineDaysLeft(days: number, t: (key: string, values?: Record<string, unknown>) => string) {
+  if (days === 0) return t('deadlines.left.today')
+  if (days === 1) return t('deadlines.left.tomorrow')
+  return t('deadlines.left.days', { days })
+}

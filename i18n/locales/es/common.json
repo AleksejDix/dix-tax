@@ -80,18 +80,21 @@
       "anlageV": "Declaración alemana {year} con Anlage V",
       "anlageVAdviser": "Declaración alemana {year} presentada por un asesor"
     },
-    "kinds": {
-      "due": "Hasta el {date}",
-      "extended": "Plazo prorrogado: {date}",
-      "final": "Última prórroga posible: {date}"
-    },
     "left": {
       "days": "en {days} días",
       "tomorrow": "mañana",
       "today": "hoy"
     },
-    "next": "Próximo plazo",
-    "note": "Tu plazo puede ser otro si has pedido una prórroga o si presenta un asesor por ti."
+    "note": "Tu plazo puede ser otro si has pedido una prórroga o si presenta un asesor por ti.",
+    "colForm": "Declaración",
+    "colKind": "Tipo de plazo",
+    "colDate": "Fecha límite",
+    "kindNames": {
+      "due": "Ordinario",
+      "extended": "Prorrogado",
+      "final": "Última prórroga"
+    },
+    "next": "Plazo para {year}: {date}"
   },
   "trust": {
     "title": "Por qué puedes fiarte de las cifras",

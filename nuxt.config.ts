@@ -5,6 +5,8 @@ if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production') {
   process.env.NUXT_SITE_INDEXABLE = 'false'
 }
 
+import tailwindcss from '@tailwindcss/vite'
+
 // One file per product keeps translations manageable as forms are added.
 const localeFiles = (code: string) =>
   ['common', 'legal', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
@@ -126,6 +128,11 @@ export default defineNuxtConfig({
     '/ru/legal': { redirect: { to: '/ru/legal-notice', statusCode: 301 } },
     // A person signs up once. Five tries a minute stops scripts without blocking anyone real.
     '/api/interest': { security: { rateLimiter: { tokensPerInterval: 5, interval: 60_000 } } },
+  },
+
+  // Tailwind v4 is a Vite plugin; the theme lives in app/assets/css/main.css.
+  vite: {
+    plugins: [tailwindcss()],
   },
 
   // Pages are prerendered; only the signup route under /api runs on the server.

@@ -45,672 +45,150 @@ useHead(() => ({
 
 <template>
   <div>
-    <section class="hero">
-      <div class="wrap hero-grid">
-        <div class="hero-copy">
+    <section
+      class="border-b border-rule bg-paper py-10 sm:py-14 lg:bg-[linear-gradient(var(--color-field),var(--color-field))] lg:bg-[length:38%_100%] lg:bg-right-top lg:bg-no-repeat"
+    >
+      <div class="wrap grid items-center gap-8 lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-16">
+        <div>
           <h1>{{ t('zh.hero.title') }}</h1>
-          <p class="lead">{{ t('zh.hero.lead', { price }) }}</p>
-          <div class="hero-actions">
-            <NuxtLink :to="localePath('/ch/zurich/calculator')" class="btn btn-primary">{{ t('zh.hero.cta') }}</NuxtLink>
-            <NuxtLink :to="{ path: localePath('/ch/zurich'), hash: '#how' }" class="btn btn-quiet">
-              {{ t('zh.hero.secondary') }}
-            </NuxtLink>
+          <p class="lead mt-6">{{ t('zh.hero.lead', { price }) }}</p>
+          <div class="mt-9 flex flex-wrap gap-3">
+            <UiButton :to="localePath('/ch/zurich/calculator')" variant="primary">{{ t('zh.hero.cta') }}</UiButton>
+            <UiButton :to="{ path: localePath('/ch/zurich'), hash: '#how' }">{{ t('zh.hero.secondary') }}</UiButton>
           </div>
-          <p class="hero-note">
-            <svg viewBox="0 0 16 16" aria-hidden="true">
+          <p class="mt-5 flex items-center gap-2 text-xs text-ink-soft">
+            <svg viewBox="0 0 16 16" aria-hidden="true" class="size-4 flex-none text-ok">
               <path d="M4.5 7V5a3.5 3.5 0 017 0v2" fill="none" stroke="currentColor" stroke-width="1.5" />
               <rect x="3" y="7" width="10" height="7" rx="1.5" fill="currentColor" />
             </svg>
             {{ t('zh.hero.note', { price }) }}
           </p>
-          <DeadlineList only="chZurich" compact class="hero-deadline" />
+          <DeadlineNote product="chZurich" class="mt-2" />
         </div>
 
-        <figure class="hero-sheet">
+        <figure class="m-0 max-w-[34rem] lg:max-w-none">
           <FormSheet :results="sample" :year="2025" notes animate />
-          <figcaption>{{ t('zh.sheet.caption') }}</figcaption>
+          <figcaption class="mt-3.5 text-center text-xs text-ink-soft">{{ t('zh.sheet.caption') }}</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section facts" aria-labelledby="facts-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="facts-title">{{ t('zh.facts.title') }}</h2>
-        </div>
-        <ul class="facts-row">
-          <li v-for="(fact, i) in facts" :key="i" :class="{ good: i === 1 }">
-            <h3>{{ fact.title }}</h3>
-            <p>{{ fact.body }}</p>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <UiSection :title="t('zh.facts.title')" title-id="facts-title">
+      <ul class="grid gap-6 lg:grid-cols-3 lg:gap-12">
+        <li
+          v-for="(fact, i) in facts"
+          :key="i"
+          class="border-t-[3px] pt-5"
+          :class="i === 1 ? 'border-ok' : 'border-ink'"
+        >
+          <h3 class="text-2xl" :class="{ 'text-ok': i === 1 }">{{ fact.title }}</h3>
+          <p class="mt-3 text-ink-soft">{{ fact.body }}</p>
+        </li>
+      </ul>
+    </UiSection>
 
-    <section id="how" class="section how" aria-labelledby="how-title">
-      <div class="wrap how-grid">
-        <div class="how-head">
+    <section id="how" class="section scroll-mt-24 border-y border-rule bg-surface" aria-labelledby="how-title">
+      <div class="wrap grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-16">
+        <div class="grid justify-items-start gap-8 lg:sticky lg:top-26">
           <h2 id="how-title">{{ t('zh.steps.title') }}</h2>
-          <NuxtLink :to="localePath('/ch/zurich/calculator')" class="btn btn-primary">{{ t('zh.hero.cta') }}</NuxtLink>
+          <UiButton :to="localePath('/ch/zurich/calculator')" variant="primary">{{ t('zh.hero.cta') }}</UiButton>
         </div>
-        <ol class="steps">
-          <li v-for="(step, i) in steps" :key="i">
-            <span class="step-n num" aria-hidden="true">{{ i + 1 }}</span>
-            <div>
-              <h3>{{ step.title }}</h3>
-              <p>{{ step.body }}</p>
-            </div>
-          </li>
-        </ol>
+        <UiSteps :items="steps" />
       </div>
     </section>
 
     <section class="section" aria-labelledby="report-title">
-      <div class="wrap report-grid">
+      <div class="wrap grid items-center gap-8 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-16">
         <div>
-          <div class="section-head">
+          <div class="section-head !mb-8">
             <h2 id="report-title">{{ t('zh.report.title') }}</h2>
             <p>{{ t('zh.report.lead') }}</p>
           </div>
-          <ul class="checks">
-            <li v-for="(item, i) in reportItems" :key="i">{{ item }}</li>
-          </ul>
+          <UiCheckList :items="reportItems" />
         </div>
-        <figure class="note-preview">
-          <figcaption>{{ t('zh.calc.result.remarkTitle') }}</figcaption>
-          <p lang="de">{{ sampleRemark }}</p>
+        <figure class="m-0 rounded-md border border-rule border-l-4 border-l-blue-deep bg-surface px-6 pt-6 pb-7 shadow-sheet">
+          <figcaption class="mb-3 text-xs font-semibold text-blue-deep">
+            {{ t('zh.calc.result.remarkTitle') }}
+          </figcaption>
+          <p lang="de" class="text-[0.9375rem] leading-relaxed hyphens-auto whitespace-pre-line">{{ sampleRemark }}</p>
         </figure>
       </div>
     </section>
 
-    <section class="section compare" aria-labelledby="compare-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="compare-title">{{ t('zh.compare.title') }}</h2>
-        </div>
-        <div class="table-scroll">
-          <table>
-            <thead>
-              <tr>
-                <th scope="col">{{ t('zh.compare.colOption') }}</th>
-                <th scope="col">{{ t('zh.compare.colCost') }}</th>
-                <th scope="col">{{ t('zh.compare.colEffort') }}</th>
-                <th scope="col">{{ t('zh.compare.colResult') }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(row, i) in compareRows" :key="i" :class="{ ours: i === compareRows.length - 1 }">
-                <th scope="row">{{ row.option }}</th>
-                <td :data-label="t('zh.compare.colCost')">{{ row.cost }}</td>
-                <td :data-label="t('zh.compare.colEffort')">{{ row.effort }}</td>
-                <td :data-label="t('zh.compare.colResult')">{{ row.result }}</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+    <UiSection :title="t('zh.compare.title')" title-id="compare-title" tone="field">
+      <div class="overflow-hidden rounded-lg border border-rule bg-surface">
+        <table class="stack-table">
+          <thead>
+            <tr>
+              <th scope="col">{{ t('zh.compare.colOption') }}</th>
+              <th scope="col">{{ t('zh.compare.colCost') }}</th>
+              <th scope="col">{{ t('zh.compare.colEffort') }}</th>
+              <th scope="col">{{ t('zh.compare.colResult') }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr
+              v-for="(row, i) in compareRows"
+              :key="i"
+              :class="
+                i === compareRows.length - 1
+                  ? 'bg-linear-to-r from-marker/55 to-marker/20 font-semibold [&>*]:border-t-transparent'
+                  : ''
+              "
+            >
+              <th scope="row">{{ row.option }}</th>
+              <td :data-label="t('zh.compare.colCost')">{{ row.cost }}</td>
+              <td :data-label="t('zh.compare.colEffort')">{{ row.effort }}</td>
+              <td :data-label="t('zh.compare.colResult')">{{ row.result }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </section>
+    </UiSection>
 
-    <section class="section" aria-labelledby="fit-title">
-      <div class="wrap">
-        <div class="section-head">
-          <h2 id="fit-title">{{ t('zh.fit.title') }}</h2>
-        </div>
-        <div class="fit-grid">
-          <div class="fit fit--yes">
-            <h3>{{ t('zh.fit.yesTitle') }}</h3>
-            <ul>
-              <li v-for="(item, i) in fitYes" :key="i">{{ item }}</li>
-            </ul>
-          </div>
-          <div class="fit fit--no">
-            <h3>{{ t('zh.fit.noTitle') }}</h3>
-            <ul>
-              <li v-for="(item, i) in fitNo" :key="i">{{ item }}</li>
-            </ul>
-          </div>
-        </div>
+    <UiSection :title="t('zh.fit.title')" title-id="fit-title">
+      <div class="grid gap-6 lg:grid-cols-2 lg:gap-12">
+        <UiCard>
+          <h3 class="mb-5">{{ t('zh.fit.yesTitle') }}</h3>
+          <UiCheckList :items="fitYes" />
+        </UiCard>
+        <UiCard tone="quiet" class="border-dashed bg-transparent">
+          <h3 class="mb-5">{{ t('zh.fit.noTitle') }}</h3>
+          <UiCheckList :items="fitNo" tone="no" />
+        </UiCard>
       </div>
-    </section>
+    </UiSection>
 
-    <section class="section founder" aria-labelledby="founder-title">
-      <div class="wrap founder-grid">
+    <section class="section border-y border-rule bg-surface" aria-labelledby="founder-title">
+      <div class="wrap grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-20">
         <h2 id="founder-title">{{ t('founder.title') }}</h2>
-        <div class="founder-body">
+        <div class="grid max-w-[40rem] gap-5 text-lg">
           <p v-for="(p, i) in founder" :key="i">{{ p }}</p>
-          <p class="signature">
-            <span class="signature-name" lang="de">Aleksej Dix</span>
+          <p class="mt-2 grid text-xs text-ink-soft">
+            <span
+              class="mb-1.5 origin-bottom-left -rotate-2 font-hand text-[2.4rem] leading-none font-semibold text-blue-deep"
+              lang="de"
+            >
+              Aleksej Dix
+            </span>
             <span>{{ t('founder.role') }}</span>
           </p>
         </div>
       </div>
     </section>
 
-    <section id="faq" class="section" aria-labelledby="faq-title">
-      <div class="wrap faq-grid">
-        <h2 id="faq-title">{{ t('zh.faq.title') }}</h2>
-        <div class="faq-list">
-          <details v-for="(item, i) in faq" :key="i" :open="i === 0">
-            <summary>
-              <h3>{{ item.q }}</h3>
-              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 6l5 5 5-5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" /></svg>
-            </summary>
-            <p>{{ item.a }}</p>
-          </details>
-        </div>
+    <section id="faq" class="section scroll-mt-24" aria-labelledby="faq-title">
+      <div class="wrap grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-20">
+        <h2 id="faq-title" class="lg:sticky lg:top-26">{{ t('zh.faq.title') }}</h2>
+        <UiFaq :items="faq" />
       </div>
     </section>
 
-    <section class="closing" aria-labelledby="closing-title">
-      <div class="wrap closing-inner">
-        <div>
-          <h2 id="closing-title">{{ t('zh.cta.title') }}</h2>
-          <p>{{ t('zh.cta.body') }}</p>
-        </div>
-        <NuxtLink :to="localePath('/ch/zurich/calculator')" class="btn btn-light">{{ t('zh.cta.button') }}</NuxtLink>
-      </div>
-    </section>
+    <UiCtaBand
+      :title="t('zh.cta.title')"
+      :body="t('zh.cta.body')"
+      :label="t('zh.cta.button')"
+      :to="localePath('/ch/zurich/calculator')"
+    />
   </div>
 </template>
-
-<style scoped>
-/* Hero */
-.hero-deadline {
-  margin-top: 1rem;
-  max-width: 30rem;
-}
-
-.hero {
-  padding-block: clamp(2.5rem, 1rem + 5vw, 5.5rem) clamp(3rem, 2rem + 4vw, 6rem);
-  background:
-    linear-gradient(var(--field), var(--field)) right top / 38% 100% no-repeat,
-    var(--paper);
-  border-bottom: 1px solid var(--rule);
-}
-
-.hero-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
-  gap: clamp(2rem, 1rem + 4vw, 5rem);
-  align-items: center;
-}
-
-.hero-copy .lead {
-  margin-top: 1.5rem;
-}
-
-.hero-actions {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 2.25rem;
-}
-
-.hero-note {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  margin-top: 1.25rem;
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-}
-
-.hero-note svg {
-  width: 1rem;
-  height: 1rem;
-  color: var(--ok);
-  flex: none;
-}
-
-.hero-sheet {
-  margin: 0;
-}
-
-.hero-sheet figcaption {
-  margin-top: 0.9rem;
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-  text-align: center;
-}
-
-/* Facts */
-.facts-row {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: clamp(1.5rem, 1rem + 2vw, 3rem);
-}
-
-.facts-row li {
-  padding-top: 1.25rem;
-  border-top: 3px solid var(--ink);
-}
-
-.facts-row li.good {
-  border-top-color: var(--ok);
-}
-
-.facts-row li.good h3 {
-  color: var(--ok);
-}
-
-.facts-row h3 {
-  font-size: var(--step-2);
-  letter-spacing: -0.02em;
-  line-height: 1.15;
-}
-
-.facts-row p {
-  margin-top: 0.75rem;
-  color: var(--ink-soft);
-}
-
-/* Steps */
-.how {
-  background: var(--surface);
-  border-block: 1px solid var(--rule);
-}
-
-.how-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
-  gap: clamp(2rem, 1rem + 4vw, 5rem);
-  align-items: start;
-}
-
-.how-head {
-  position: sticky;
-  top: 6.5rem;
-  display: grid;
-  gap: 2rem;
-  justify-items: start;
-}
-
-.steps li {
-  display: grid;
-  grid-template-columns: 3.5rem minmax(0, 1fr);
-  gap: 1.25rem;
-  padding-block: 1.75rem;
-  border-top: 1px solid var(--rule);
-}
-
-.steps li:first-child {
-  padding-top: 0;
-  border-top: 0;
-}
-
-.step-n {
-  display: grid;
-  place-items: center;
-  width: 3.5rem;
-  height: 3.5rem;
-  background: var(--field);
-  border-bottom: 2px solid var(--field-strong);
-  border-radius: 3px 3px 0 0;
-  font-size: var(--step-2);
-  font-weight: 700;
-  color: var(--blue-deep);
-}
-
-.steps p {
-  margin-top: 0.5rem;
-  color: var(--ink-soft);
-  max-width: 52ch;
-}
-
-/* Report */
-.report-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
-  gap: clamp(2rem, 1rem + 4vw, 5rem);
-  align-items: center;
-}
-
-.report-grid .section-head {
-  margin-bottom: 2rem;
-}
-
-.checks {
-  display: grid;
-  gap: 0.9rem;
-  max-width: 54ch;
-}
-
-.checks li,
-.fit li {
-  position: relative;
-  padding-left: 2rem;
-}
-
-.checks li::before,
-.fit--yes li::before {
-  content: '';
-  position: absolute;
-  left: 0.15rem;
-  top: 0.4em;
-  width: 0.95rem;
-  height: 0.5rem;
-  border-left: 2.5px solid var(--ok);
-  border-bottom: 2.5px solid var(--ok);
-  transform: rotate(-45deg);
-}
-
-.note-preview {
-  margin: 0;
-  padding: 1.5rem 1.6rem 1.7rem;
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-left: 4px solid var(--blue-deep);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sheet);
-}
-
-.note-preview figcaption {
-  font-size: var(--step--1);
-  font-weight: 600;
-  color: var(--blue-deep);
-  margin-bottom: 0.75rem;
-}
-
-.note-preview p {
-  white-space: pre-line;
-  font-size: 0.9375rem;
-  line-height: 1.55;
-  hyphens: auto;
-}
-
-/* Compare */
-.compare {
-  background: var(--field);
-}
-
-.table-scroll {
-  background: var(--surface);
-  border: 1px solid var(--rule);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: left;
-}
-
-th,
-td {
-  padding: 1.1rem 1.25rem;
-  vertical-align: top;
-  border-top: 1px solid var(--rule);
-}
-
-thead th {
-  border-top: 0;
-  font-size: var(--step--1);
-  font-weight: 500;
-  color: var(--ink-soft);
-}
-
-tbody th {
-  font-weight: 600;
-  width: 22%;
-}
-
-tr.ours {
-  background: linear-gradient(90deg, color-mix(in srgb, var(--marker) 55%, white), color-mix(in srgb, var(--marker) 22%, white));
-}
-
-tr.ours th,
-tr.ours td {
-  font-weight: 600;
-  border-top-color: transparent;
-}
-
-/* Fit */
-.fit-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: clamp(1.5rem, 1rem + 2vw, 3rem);
-}
-
-.fit {
-  padding: clamp(1.5rem, 1rem + 1.5vw, 2.25rem);
-  border-radius: var(--radius-lg);
-  border: 1px solid var(--rule);
-  background: var(--surface);
-}
-
-.fit--no {
-  background: transparent;
-  border-style: dashed;
-}
-
-.fit h3 {
-  margin-bottom: 1.25rem;
-}
-
-.fit ul {
-  display: grid;
-  gap: 0.8rem;
-}
-
-.fit--no li::before {
-  content: '';
-  position: absolute;
-  left: 0.2rem;
-  top: 0.72em;
-  width: 0.85rem;
-  height: 2.5px;
-  background: var(--warn);
-}
-
-/* Founder */
-.founder {
-  background: var(--surface);
-  border-block: 1px solid var(--rule);
-}
-
-.founder-grid,
-.faq-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: clamp(1.5rem, 1rem + 4vw, 5rem);
-  align-items: start;
-}
-
-.founder-body {
-  display: grid;
-  gap: 1.25rem;
-  font-size: var(--step-1);
-  line-height: 1.5;
-  max-width: 40rem;
-}
-
-.signature {
-  display: grid;
-  margin-top: 0.5rem;
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-}
-
-.signature-name {
-  font-family: var(--font-hand);
-  font-size: 2.4rem;
-  font-weight: 600;
-  line-height: 1;
-  color: var(--blue-deep);
-  transform: rotate(-2deg);
-  transform-origin: left bottom;
-  margin-bottom: 0.35rem;
-}
-
-/* FAQ */
-.faq-grid h2 {
-  position: sticky;
-  top: 6.5rem;
-}
-
-.faq-list {
-  border-bottom: 1px solid var(--rule);
-}
-
-details {
-  border-top: 1px solid var(--rule);
-}
-
-summary {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1.35rem 0;
-  cursor: pointer;
-  list-style: none;
-}
-
-summary::-webkit-details-marker {
-  display: none;
-}
-
-summary h3 {
-  font-size: var(--step-1);
-  font-weight: 600;
-}
-
-summary:hover h3 {
-  color: var(--blue-deep);
-}
-
-summary svg {
-  flex: none;
-  width: 1.1rem;
-  height: 1.1rem;
-  margin-top: 0.35rem;
-  color: var(--blue);
-  transition: transform 0.2s ease;
-}
-
-details[open] summary svg {
-  transform: rotate(180deg);
-}
-
-details p {
-  padding-bottom: 1.6rem;
-  max-width: var(--measure);
-  color: var(--ink-soft);
-}
-
-/* Closing */
-.closing {
-  background: var(--blue-deep);
-  color: #fff;
-  margin-bottom: calc(var(--space-section) * -1);
-}
-
-.closing-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem 3rem;
-  flex-wrap: wrap;
-  padding-block: clamp(3rem, 2rem + 4vw, 5rem);
-}
-
-.closing h2 {
-  max-width: 22ch;
-}
-
-.closing p {
-  margin-top: 0.9rem;
-  color: #c9d8f5;
-  font-size: var(--step-1);
-}
-
-.btn-light {
-  background: var(--marker);
-  color: var(--ink);
-}
-
-.btn-light:hover {
-  background: #fff;
-  color: var(--ink);
-}
-
-@media (max-width: 60rem) {
-  .hero {
-    background: var(--paper);
-  }
-
-  .hero-grid,
-  .how-grid,
-  .report-grid,
-  .founder-grid,
-  .faq-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .how-head,
-  .faq-grid h2 {
-    position: static;
-  }
-
-  .facts-row,
-  .fit-grid {
-    grid-template-columns: minmax(0, 1fr);
-  }
-
-  .hero-sheet {
-    max-width: 34rem;
-  }
-}
-
-@media (max-width: 44rem) {
-  thead {
-    display: none;
-  }
-
-  tr,
-  th,
-  td {
-    display: block;
-    width: auto;
-  }
-
-  tbody th {
-    width: auto;
-    padding-bottom: 0.25rem;
-    font-size: var(--step-1);
-  }
-
-  tbody tr:first-child th {
-    border-top: 0;
-  }
-
-  td {
-    border-top: 0;
-    padding-block: 0.35rem;
-  }
-
-  td:last-child {
-    padding-bottom: 1.25rem;
-  }
-
-  td::before {
-    content: attr(data-label);
-    display: block;
-    font-size: 0.8125rem;
-    font-weight: 400;
-    color: var(--ink-soft);
-  }
-
-  .steps li {
-    grid-template-columns: 2.75rem minmax(0, 1fr);
-    gap: 1rem;
-  }
-
-  .step-n {
-    width: 2.75rem;
-    height: 2.75rem;
-    font-size: var(--step-1);
-  }
-}
-</style>

@@ -20,15 +20,15 @@ const updated = computed(() =>
 </script>
 
 <template>
-  <div class="wrap page">
-    <h1>{{ t('privacy.title') }}</h1>
-    <p class="updated">{{ t('privacy.updated', { date: updated }) }}</p>
-    <p class="intro">{{ t('privacy.intro') }}</p>
+  <div class="wrap max-w-[54rem] pt-10 sm:pt-16">
+    <h1 class="text-3xl">{{ t('privacy.title') }}</h1>
+    <p class="mt-3 text-xs text-ink-soft">{{ t('privacy.updated', { date: updated }) }}</p>
+    <p class="lead mt-7">{{ t('privacy.intro') }}</p>
 
-    <ol class="sections">
-      <li v-for="(s, i) in sections" :key="i">
-        <h2>{{ s.title }}</h2>
-        <p v-for="(p, j) in s.body" :key="j">{{ p }}</p>
+    <ol class="mt-10 [counter-reset:section]">
+      <li v-for="(s, i) in sections" :key="i" class="grid gap-3 border-t border-rule py-7 [counter-increment:section]">
+        <h2 class="text-lg before:text-blue-deep before:content-[counter(section)'._']">{{ s.title }}</h2>
+        <p v-for="(p, j) in s.body" :key="j" class="max-w-(--spacing-measure) text-ink-soft">{{ p }}</p>
         <p v-if="i === 0">
           <NuxtLink :to="localePath('legal-notice')">{{ t('footer.legalNotice') }}</NuxtLink>
         </p>
@@ -36,56 +36,3 @@ const updated = computed(() =>
     </ol>
   </div>
 </template>
-
-<style scoped>
-.page {
-  padding-top: clamp(2.5rem, 1rem + 4vw, 5rem);
-  max-width: 54rem;
-}
-
-h1 {
-  font-size: var(--step-3);
-  letter-spacing: -0.02em;
-}
-
-.updated {
-  margin-top: 0.75rem;
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-}
-
-.intro {
-  margin-top: 1.75rem;
-  font-size: var(--step-1);
-  line-height: 1.5;
-  color: var(--ink-soft);
-  max-width: var(--measure);
-}
-
-.sections {
-  margin-top: 2.5rem;
-  counter-reset: section;
-}
-
-.sections li {
-  counter-increment: section;
-  display: grid;
-  gap: 0.8rem;
-  padding-block: 1.75rem;
-  border-top: 1px solid var(--rule);
-}
-
-h2 {
-  font-size: var(--step-1);
-}
-
-h2::before {
-  content: counter(section) '. ';
-  color: var(--blue-deep);
-}
-
-.sections p {
-  color: var(--ink-soft);
-  max-width: var(--measure);
-}
-</style>

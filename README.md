@@ -26,7 +26,8 @@ pnpm generate   # static site in .output/public
 - `app/pages/legal-notice.vue`, `app/pages/privacy.vue` legal notice and privacy policy (German: `/de/impressum`, `/de/datenschutz`; Spanish: `/es/aviso-legal`, `/es/privacidad`). Operator details come from `company` in `app/app.config.ts`
 - `server/api/interest.post.ts` signup form: emails the owner over SMTP (`SMTP_USER`, `SMTP_PASS`). The form only renders when both variables exist at build time (`signupEnabled` in `nuxt.config.ts`); otherwise visitors get a "write to us" mail link, so a form that cannot deliver is never shown
 - `app/components/TrustBlock.vue` trust signals; shows "Independent review" only for entries in `app.config.ts`
-- `app/utils/deadlines.ts` filing deadlines, with the source of every date in a comment; `DeadlineList.vue` shows them
+- `app/components/Ui/` the design system: Button, Card, Badge, Section, Field, Segmented, ChoiceGroup, CheckList, Steps, Faq, CtaBand
+- `app/utils/deadlines.ts` filing deadlines, with the source of every date in a comment; `DeadlineTable.vue` and `DeadlineNote.vue` show them
 - `scripts/og-images.mjs` builds the social preview images from the locale files (`pnpm og`), committed under `public/og/`
 - `app/composables/useDeclaration.ts` Zurich tax logic and the German note for the remarks field
 - `tests/` reference cases with hand-calculated results
@@ -43,12 +44,35 @@ pnpm generate   # static site in .output/public
 - `@nuxtjs/robots` and `@nuxtjs/sitemap`: `robots.txt` and one sitemap per language with alternates.
   Both read `site.url`. Preview deployments are kept out of search engines automatically.
 
+## Styling
+
+Tailwind v4, loaded as a Vite plugin (`nuxt.config.ts`). The whole design system lives in
+`app/assets/css/main.css`:
+
+- `@theme` holds the tokens and is what makes `bg-field`, `text-ink-soft`, `text-2xs` and
+  `shadow-sheet` exist. Change a colour or a step of the type scale there and it changes
+  everywhere.
+- The `:root` block below it keeps the short names (`--ink`, `--step-1`) alive for the
+  component styles that are still hand written, above all the form facsimile.
+- `@layer base` styles the bare elements, `@layer components` holds the four patterns that
+  only CSS can express: `.wrap`, `.section`, `.ui-control` (one form control for the whole
+  site) and `.stack-table` (a table that becomes labelled rows on a narrow screen).
+
+Everything with a shape of its own is a component under `app/components/Ui/`, auto-imported
+as `<UiButton>`, `<UiCard>`, `<UiField>` and so on. Reach for one of those before writing a
+`<style>` block; the next calculator should be assembled from the same parts.
+
+The look is meant to read as an official document: hairline rules instead of shadows, small
+radii, a restrained type scale, one accent colour and the yellow used only to mark a number
+the reader has to copy.
+
 ## Filing deadlines
 
 `app/utils/deadlines.ts` holds the deadline for each form, with the tax administration it comes
 from named in the file. `tests/deadlines.test.ts` pins every date. The dates are worked out in the
-browser and `DeadlineList.vue` renders nothing on the server: the pages are prerendered, so a
+browser and the two components render nothing on the server: the pages are prerendered, so a
 deadline baked in at build time would keep counting down to a date that has passed.
+`DeadlineTable.vue` is the full calendar, `DeadlineNote.vue` the one line under a product card.
 
 Two facts on the Modelo 210 page repeat these dates in prose. When a deadline moves, change
 `deadlines.ts`, its test and that fact in all five locale files together.

@@ -18,146 +18,46 @@ useSocialImage(props.ns === 'modelo210' ? 'modelo-210' : 'anlage-v')
 </script>
 
 <template>
-  <div class="wrap page">
-    <header class="page-head">
-      <p class="status">{{ t('soon.status') }}</p>
-      <h1>{{ t(`${ns}.title`) }}</h1>
-      <p class="lead">{{ t(`${ns}.lead`) }}</p>
+  <div class="wrap pt-10 sm:pt-16">
+    <header class="mb-10 max-w-[50rem] sm:mb-16">
+      <UiBadge class="mb-5">{{ t('soon.status') }}</UiBadge>
+      <h1 class="text-3xl">{{ t(`${ns}.title`) }}</h1>
+      <p class="lead mt-4">{{ t(`${ns}.lead`) }}</p>
     </header>
 
-    <div class="layout">
+    <div class="grid items-start gap-12 lg:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)] lg:gap-20">
       <section aria-labelledby="facts-title">
-        <h2 id="facts-title">{{ t('soon.factsTitle') }}</h2>
-        <dl class="facts">
-          <div v-for="(f, i) in facts" :key="i">
-            <dt>{{ f.label }}</dt>
-            <dd>{{ f.value }}</dd>
+        <h2 id="facts-title" class="text-lg">{{ t('soon.factsTitle') }}</h2>
+        <dl class="mt-6">
+          <div
+            v-for="(f, i) in facts"
+            :key="i"
+            class="grid gap-x-8 gap-y-2 border-t border-rule py-5 sm:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
+          >
+            <dt class="font-semibold">{{ f.label }}</dt>
+            <dd class="m-0 max-w-[52ch] text-ink-soft">{{ f.value }}</dd>
           </div>
         </dl>
-        <h2 class="deadline-title">{{ t('deadlines.title') }}</h2>
-        <DeadlineList :only="ns" />
-        <p class="deadline-note">{{ t('deadlines.note') }}</p>
+
+        <h2 class="mt-12 text-lg">{{ t('deadlines.title') }}</h2>
+        <div class="mt-4">
+          <DeadlineTable :only="ns" />
+        </div>
+        <p class="mt-3 text-2xs text-ink-soft">{{ t('deadlines.note') }}</p>
       </section>
 
-      <aside class="side">
-        <div class="box">
-          <h2>{{ t('soon.notifyTitle') }}</h2>
-          <p>{{ t('soon.notifyBody') }}</p>
+      <aside class="grid gap-5">
+        <UiCard tone="accent" class="grid justify-items-start gap-3.5">
+          <h2 class="text-lg">{{ t('soon.notifyTitle') }}</h2>
+          <p class="text-xs text-ink-soft">{{ t('soon.notifyBody') }}</p>
           <InterestForm :product="ns" />
-        </div>
-        <div class="box box--quiet">
-          <h2>{{ t('soon.swissTitle') }}</h2>
-          <p>{{ t('soon.swissBody') }}</p>
+        </UiCard>
+        <UiCard tone="quiet" class="grid justify-items-start gap-3.5 border-dashed">
+          <h2 class="text-lg">{{ t('soon.swissTitle') }}</h2>
+          <p class="text-xs text-ink-soft">{{ t('soon.swissBody') }}</p>
           <NuxtLink :to="localePath('/ch/zurich')">{{ t('soon.swissCta') }}</NuxtLink>
-        </div>
+        </UiCard>
       </aside>
     </div>
   </div>
 </template>
-
-<style scoped>
-.deadline-title {
-  margin-top: 2.5rem;
-}
-
-.deadline-note {
-  margin-top: 0.75rem;
-  font-size: var(--step--1);
-  color: var(--ink-soft);
-}
-
-.page {
-  padding-top: clamp(2.5rem, 1rem + 4vw, 5rem);
-}
-
-.page-head {
-  max-width: 50rem;
-  margin-bottom: clamp(2.5rem, 1.5rem + 3vw, 4.5rem);
-}
-
-.status {
-  display: inline-block;
-  margin-bottom: 1.25rem;
-  padding: 0.2rem 0.7rem;
-  border-radius: 99px;
-  background: var(--field);
-  color: var(--ink-soft);
-  font-size: 0.8125rem;
-  font-weight: 600;
-}
-
-.page-head h1 {
-  font-size: var(--step-3);
-  letter-spacing: -0.02em;
-}
-
-.page-head .lead {
-  margin-top: 1rem;
-}
-
-.layout {
-  display: grid;
-  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
-  gap: clamp(2.5rem, 1rem + 5vw, 6rem);
-  align-items: start;
-}
-
-h2 {
-  font-size: var(--step-1);
-}
-
-.facts {
-  margin: 1.5rem 0 0;
-}
-
-.facts > div {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
-  gap: 0.5rem 2rem;
-  padding-block: 1.25rem;
-  border-top: 1px solid var(--rule);
-}
-
-.facts dt {
-  font-weight: 600;
-}
-
-.facts dd {
-  margin: 0;
-  color: var(--ink-soft);
-  max-width: 52ch;
-}
-
-.side {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.box {
-  display: grid;
-  gap: 0.9rem;
-  justify-items: start;
-  padding: clamp(1.25rem, 1rem + 1vw, 2rem);
-  border: 1px solid var(--blue-deep);
-  border-radius: var(--radius-lg);
-  background: var(--surface);
-}
-
-.box--quiet {
-  border-color: var(--rule);
-  border-style: dashed;
-  background: transparent;
-}
-
-.box p {
-  color: var(--ink-soft);
-  font-size: var(--step--1);
-}
-
-@media (max-width: 58rem) {
-  .layout,
-  .facts > div {
-    grid-template-columns: minmax(0, 1fr);
-  }
-}
-</style>

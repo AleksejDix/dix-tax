@@ -1,3 +1,10 @@
+// Vercel builds preview deployments in production mode, so the robots module would call
+// them indexable. It honours this variable (setting `site.indexable` below had no effect),
+// so derive it from Vercel's environment: only the production deployment may be indexed.
+if (process.env.VERCEL_ENV && process.env.VERCEL_ENV !== 'production') {
+  process.env.NUXT_SITE_INDEXABLE = 'false'
+}
+
 // One file per product keeps translations manageable as forms are added.
 const localeFiles = (code: string) =>
   ['common', 'legal', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
@@ -14,9 +21,6 @@ export default defineNuxtConfig({
   site: {
     url: 'https://dix.tax',
     name: 'Dix.Tax',
-    // Vercel builds previews in production mode, so say explicitly that only the real
-    // deployment may be indexed. Outside Vercel (local builds) the default applies.
-    indexable: process.env.VERCEL_ENV ? process.env.VERCEL_ENV === 'production' : true,
   },
 
   // Security headers, a content security policy and limits for the one server route.

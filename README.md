@@ -41,6 +41,21 @@ pnpm generate   # static site in .output/public
 - `@nuxtjs/robots` and `@nuxtjs/sitemap`: `robots.txt` and one sitemap per language with alternates.
   Both read `site.url`. Preview deployments are kept out of search engines automatically.
 
+## Analytics
+
+PostHog (EU cloud), switched on by setting `NUXT_PUBLIC_POSTHOG_KEY` at build time; without it the
+library is not even downloaded. `app/plugins/analytics.client.ts` configures it: no cookies or device
+storage, no session recording, no automatic capture, no person profiles, Do Not Track respected.
+
+Events are sent only through `useAnalytics().track`, and the list in `app/composables/useAnalytics.ts`
+is the complete list: `calculator_started`, `property_completed` (country code, property type, use,
+currency), `sheet_printed`, `note_copied`, `signup_sent`. Never pass amounts, addresses or free text.
+When this list changes, the privacy policy (`legal.json`, section "Cookies, fonts and tracking") and the
+trust block must change with it. PostHog's endpoint is allowed in the content security policy.
+
+PostHog drops traffic from automated browsers, so end-to-end tests see no events unless they call
+`set_config({ opt_out_useragent_filter: true })` at runtime.
+
 ## Adding a product
 
 1. Add an entry to `app/utils/products.ts` and `products.<key>` texts to every `common.json`.

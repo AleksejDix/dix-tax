@@ -8,8 +8,47 @@ const { year, properties, results, remark, hasResult, load, persist, add, remove
 
 useHead({ title: () => t('zh.meta.calcTitle') })
 
-onMounted(load)
+const { track } = useAnalytics()
+
+// Properties that were already complete when the page opened (restored from this browser)
+// are not news; only count what gets completed during this visit.
+const counted = new Set<string>()
+let started = false
+let ready = false
+
+onMounted(async () => {
+  load()
+  for (const r of results.value) if (r.complete) counted.add(r.input.id)
+  // Restoring saved entries changes the form too; start listening only after that settled.
+  await nextTick()
+  ready = true
+})
+
 watch([year, properties], persist, { deep: true })
+
+watch(
+  properties,
+  () => {
+    if (!ready) return
+    if (!started) {
+      started = true
+      track('calculator_started')
+    }
+    for (const r of results.value) {
+      if (!r.complete || counted.has(r.input.id)) continue
+      counted.add(r.input.id)
+      // Coarse facts only. Never amounts, city, street or the free-text country name.
+      track('property_completed', {
+        country: r.input.country,
+        kind: r.input.kind,
+        usage: r.input.usage,
+        currency: r.input.currency,
+        properties: counted.size,
+      })
+    }
+  },
+  { deep: true },
+)
 
 const nextSteps = computed(() => strings('zh.calc.result.next'))
 const assumptions = computed(() => strings('zh.calc.result.assumptions'))
@@ -53,6 +92,7 @@ async function copyRemark() {
   try {
     await navigator.clipboard.writeText(remark.value)
     copied.value = true
+    track('note_copied')
     setTimeout(() => (copied.value = false), 2000)
   } catch {
     // Clipboard blocked: the text stays selectable on the page.
@@ -60,6 +100,7 @@ async function copyRemark() {
 }
 
 function printSheet() {
+  track('sheet_printed', { properties: results.value.filter((r) => r.complete).length })
   window.print()
 }
 

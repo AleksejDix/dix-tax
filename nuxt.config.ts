@@ -31,7 +31,9 @@ export default defineNuxtConfig({
         'default-src': ["'self'"],
         'img-src': ["'self'", 'data:'],
         'font-src': ["'self'"],
-        'connect-src': ["'self'"],
+        // PostHog's EU endpoint is the only third party the browser may talk to. Its library is
+        // bundled with the site, so no third-party script has to be allowed.
+        'connect-src': ["'self'", 'https://eu.i.posthog.com'],
         'form-action': ["'self'"],
         'frame-ancestors': ["'none'"],
         'object-src': ["'none'"],
@@ -60,6 +62,10 @@ export default defineNuxtConfig({
       // build time: add SMTP_USER and SMTP_PASS on Vercel, redeploy, and the form turns on.
       // Without them visitors get a plain "write to us" link instead of a form that fails.
       signupEnabled: Boolean(process.env.SMTP_USER && process.env.SMTP_PASS),
+      // Analytics stays off until a PostHog project key exists (NUXT_PUBLIC_POSTHOG_KEY).
+      // The key is public by design: it can only send events, not read them.
+      posthogKey: process.env.NUXT_PUBLIC_POSTHOG_KEY || '',
+      posthogHost: process.env.NUXT_PUBLIC_POSTHOG_HOST || 'https://eu.i.posthog.com',
     },
   },
 

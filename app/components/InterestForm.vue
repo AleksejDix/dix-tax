@@ -9,6 +9,7 @@ const id = useId()
 const address = useAppConfig().contactEmail
 // False until the server has a mail login (see runtimeConfig in nuxt.config.ts).
 const enabled = useRuntimeConfig().public.signupEnabled
+const { track } = useAnalytics()
 
 const options = ['modelo210', 'anlageV', 'chOther', 'other'] as const
 const email = ref('')
@@ -34,6 +35,7 @@ async function submit() {
       body: { email: email.value, note: note.value, product: chosen.value, locale: locale.value, website: website.value },
     })
     state.value = 'done'
+    track('signup_sent', { product: chosen.value, via: 'form' })
   } catch {
     state.value = 'error'
   }
@@ -54,7 +56,9 @@ async function submit() {
       <textarea v-model="note" rows="3" maxlength="1000" :placeholder="t('interest.notePlaceholder')" />
     </label>
 
-    <a class="btn btn-primary" :href="mailto">{{ t('interest.mail.submit') }}</a>
+    <a class="btn btn-primary" :href="mailto" @click="track('signup_sent', { product: chosen, via: 'mail' })">
+      {{ t('interest.mail.submit') }}
+    </a>
     <p class="consent">{{ t('interest.mail.hint') }}</p>
   </div>
 

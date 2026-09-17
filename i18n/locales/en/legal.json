@@ -54,7 +54,8 @@
         "title": "Cookies, fonts and tracking",
         "body": [
           "We use one functional cookie that remembers your language. It contains no personal information and needs no consent.",
-          "We use no analytics, no advertising and no tracking. Fonts are delivered from our own server, so opening the site does not contact font services such as Google Fonts."
+          "We measure how the site is used with PostHog, hosted in the EU (Frankfurt). It runs without cookies and stores nothing on your device. We count page views and a few events: that a calculation was started or completed, for which country, type of property and kind of use, and whether the sheet was printed or a form was sent. Amounts, addresses and anything else you type are never included. Session recording is switched off, no profile of you is built, and your browser's Do Not Track setting is respected.",
+          "We use no advertising and no tracking across other websites. Fonts are delivered from our own server, so opening the site does not contact font services such as Google Fonts."
         ]
       },
       {

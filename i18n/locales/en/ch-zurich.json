@@ -7,9 +7,9 @@
       "guideTitle": "Guide: filling in the Zurich form"
     },
     "hero": {
-      "title": "Your property abroad, correctly declared in Zurich",
-      "lead": "If you live in the canton of Zurich and file a tax return, your property abroad belongs in it. Answer a few questions and get the exact number for every line of the form, explained in your language.",
-      "cta": "Prepare my declaration",
+      "title": "Your property abroad in the Zurich tax return, in about ten minutes",
+      "lead": "If you live in the canton of Zurich and file a tax return, your property abroad belongs in it. Answer a few questions and get the exact number for every line of the form, explained in your language. About ten minutes, {price} per apartment.",
+      "cta": "Prepare my declaration · 10 minutes",
       "secondary": "See how it works",
       "note": "{price} per apartment. No account. Your data stays in your browser.",
       "noteValue": "70% of what you paid",
@@ -180,7 +180,7 @@
     "cta": {
       "title": "Ten minutes now saves a letter from the tax office later",
       "body": "Have the purchase price and the size of the apartment ready. That is all you need.",
-      "button": "Prepare my declaration"
+      "button": "Prepare my declaration · 10 minutes"
     },
     "calc": {
       "title": "Prepare the declaration",

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Dix.Tax: formularios fiscales para tu inmueble en el extranjero",
-    "description": "¿Tienes una vivienda en otro país? Dix.Tax prepara las cifras para los formularios que conlleva: la declaración de impuestos suiza, el Modelo 210 español y la Anlage V alemana."
+    "description": "¿Vives en Suiza y tienes una vivienda en el extranjero? Dix.Tax te da en unos diez minutos las cifras exactas para la declaración de Zúrich. El Modelo 210 y el Anlage V vienen después."
   },
   "nav": {
     "how": "Cómo funciona",
@@ -34,9 +34,14 @@
     "made": "Hecho en Zúrich"
   },
   "hub": {
-    "title": "Un inmueble en el extranjero trae un formulario fiscal. Nosotros lo preparamos.",
-    "lead": "Una vivienda en otro país implica una declaración donde vives, donde está la vivienda, o en ambos sitios. Dix.Tax te hace unas preguntas sencillas y te da la cifra exacta para cada casilla, explicada en tu idioma.",
+    "title": "Vives en Suiza y tienes una vivienda en el extranjero. Eso son dos declaraciones.",
+    "lead": "Una donde vives y, en la mayoría de los países, otra donde está la vivienda. Dix.Tax prepara hoy la declaración de Zúrich: unas preguntas sencillas y la cifra exacta para cada casilla, explicada en tu idioma.",
+    "cta": "Preparar mi declaración de Zúrich · 10 minutos",
+    "ctaNote": "Unos diez minutos. {price} por vivienda. Sin cuenta, y tus cifras no salen del navegador.",
+    "secondary": "Necesito otro formulario",
+    "liveNote": "Cantón de Zúrich. Otros cantones y los formularios extranjeros están en preparación.",
     "chooseTitle": "¿Qué formulario necesitas?",
+    "chooseLead": "La declaración suiza ya está lista. El Modelo 210 y el Anlage V vienen después, y las respuestas de abajo deciden cuál primero.",
     "bothTitle": "Una vivienda, a menudo dos declaraciones",
     "bothBody": "Un piso en Valencia cuyo propietario vive en Zúrich necesita el Modelo 210 en España y una línea en la declaración de Zúrich. Las dos usan valores y reglas distintos. Dix.Tax las mantiene separadas y hace bien ambas."
   },
@@ -64,6 +69,29 @@
       "who": "Alquilas un inmueble en Alemania y vives en otro lugar.",
       "what": "El anexo de alquileres de la declaración alemana, con amortización y gastos deducibles."
     }
+  },
+  "deadlines": {
+    "title": "Próximos plazos",
+    "lead": "Las fechas que publican las propias administraciones tributarias. Hay prórrogas, pero hay que pedirlas a tiempo.",
+    "labels": {
+      "zurich": "Declaración de Zúrich {year}",
+      "modelo210Own": "Modelo 210 {year}, vivienda no alquilada",
+      "modelo210Rented": "Modelo 210 {year}, vivienda alquilada",
+      "anlageV": "Declaración alemana {year} con Anlage V",
+      "anlageVAdviser": "Declaración alemana {year} presentada por un asesor"
+    },
+    "kinds": {
+      "due": "Hasta el {date}",
+      "extended": "Plazo prorrogado: {date}",
+      "final": "Última prórroga posible: {date}"
+    },
+    "left": {
+      "days": "en {days} días",
+      "tomorrow": "mañana",
+      "today": "hoy"
+    },
+    "next": "Próximo plazo",
+    "note": "Tu plazo puede ser otro si has pedido una prórroga o si presenta un asesor por ti."
   },
   "trust": {
     "title": "Por qué puedes fiarte de las cifras",

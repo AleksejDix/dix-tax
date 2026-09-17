@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Dix.Tax: Steuerformulare für Ihre Liegenschaft im Ausland",
-    "description": "Sie besitzen ein Zuhause in einem anderen Land? Dix.Tax bereitet die Zahlen für die Formulare vor, die dazugehören: die Schweizer Steuererklärung, das spanische Modelo 210 und die deutsche Anlage V."
+    "description": "Zuhause im Ausland und Wohnsitz in der Schweiz? Dix.Tax liefert in rund zehn Minuten die genauen Zahlen für die Zürcher Steuererklärung. Modelo 210 und Anlage V folgen."
   },
   "nav": {
     "how": "So funktioniert es",
@@ -34,9 +34,14 @@
     "made": "Entwickelt in Zürich"
   },
   "hub": {
-    "title": "Zu einer Liegenschaft im Ausland gehört ein Steuerformular. Wir bereiten es vor.",
-    "lead": "Ein Zuhause in einem anderen Land bedeutet eine Deklaration dort, wo Sie wohnen, dort, wo die Liegenschaft steht, oder an beiden Orten. Dix.Tax stellt Ihnen einige einfache Fragen und liefert die genaue Zahl für jede Zeile, erklärt in Ihrer Sprache.",
+    "title": "Sie wohnen in der Schweiz und besitzen ein Zuhause im Ausland. Das sind zwei Steuerformulare.",
+    "lead": "Eines dort, wo Sie wohnen, und in den meisten Ländern eines dort, wo die Liegenschaft steht. Die Zürcher Steuererklärung bereitet Dix.Tax heute vor: ein paar einfache Fragen, die genaue Zahl für jede Zeile, erklärt in Ihrer Sprache.",
+    "cta": "Zürcher Deklaration vorbereiten · 10 Minuten",
+    "ctaNote": "Rund zehn Minuten. {price} pro Wohnung. Ohne Konto, Ihre Zahlen bleiben im Browser.",
+    "secondary": "Ich brauche ein anderes Formular",
+    "liveNote": "Kanton Zürich. Weitere Kantone und die ausländischen Formulare sind in Vorbereitung.",
     "chooseTitle": "Welches Formular brauchen Sie?",
+    "chooseLead": "Die Schweizer Deklaration ist fertig. Modelo 210 und Anlage V kommen als Nächstes, und die Antworten unten entscheiden, welches zuerst.",
     "bothTitle": "Eine Liegenschaft, oft zwei Deklarationen",
     "bothBody": "Eine Wohnung in Valencia, die jemandem in Zürich gehört, braucht das Modelo 210 in Spanien und eine Zeile in der Zürcher Steuererklärung. Für beide gelten andere Werte und andere Regeln. Dix.Tax hält sie auseinander und rechnet beide richtig."
   },
@@ -64,6 +69,29 @@
       "who": "Sie vermieten eine Liegenschaft in Deutschland und wohnen in einem anderen Land.",
       "what": "Die Anlage der deutschen Steuererklärung für Mieteinkünfte, mit Abschreibung (AfA) und abzugsfähigen Kosten."
     }
+  },
+  "deadlines": {
+    "title": "Nächste Fristen",
+    "lead": "Die Termine, wie sie die Steuerverwaltungen selbst veröffentlichen. Fristerstreckungen gibt es, sie müssen aber rechtzeitig verlangt werden.",
+    "labels": {
+      "zurich": "Zürcher Steuererklärung {year}",
+      "modelo210Own": "Modelo 210 {year}, Wohnung nicht vermietet",
+      "modelo210Rented": "Modelo 210 {year}, Wohnung vermietet",
+      "anlageV": "Deutsche Erklärung {year} mit Anlage V",
+      "anlageVAdviser": "Deutsche Erklärung {year} über einen Steuerberater"
+    },
+    "kinds": {
+      "due": "Fällig am {date}",
+      "extended": "Erstreckte Frist {date}",
+      "final": "Letzte mögliche Erstreckung {date}"
+    },
+    "left": {
+      "days": "in {days} Tagen",
+      "tomorrow": "morgen",
+      "today": "heute"
+    },
+    "next": "Nächste Frist",
+    "note": "Ihre eigene Frist kann abweichen, wenn Sie eine Erstreckung verlangt haben oder ein Treuhänder für Sie einreicht."
   },
   "trust": {
     "title": "Warum Sie sich auf die Zahlen verlassen können",

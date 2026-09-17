@@ -7,9 +7,9 @@
       "guideTitle": "Anleitung: das Zürcher Formular ausfüllen"
     },
     "hero": {
-      "title": "Ihre Liegenschaft im Ausland, korrekt deklariert in Zürich",
-      "lead": "Wenn Sie im Kanton Zürich wohnen und eine Steuererklärung einreichen, gehört Ihre Liegenschaft im Ausland dazu. Beantworten Sie einige Fragen und Sie erhalten die genaue Zahl für jede Zeile des Formulars, erklärt in Ihrer Sprache.",
-      "cta": "Deklaration vorbereiten",
+      "title": "Ihre Liegenschaft im Ausland in der Zürcher Steuererklärung, in rund zehn Minuten",
+      "lead": "Wenn Sie im Kanton Zürich wohnen und eine Steuererklärung einreichen, gehört Ihre Liegenschaft im Ausland dazu. Beantworten Sie einige Fragen und Sie erhalten die genaue Zahl für jede Zeile des Formulars, erklärt in Ihrer Sprache. Rund zehn Minuten, {price} pro Wohnung.",
+      "cta": "Deklaration vorbereiten · 10 Minuten",
       "secondary": "So funktioniert es",
       "note": "{price} pro Wohnung. Ohne Konto. Ihre Daten bleiben in Ihrem Browser.",
       "noteValue": "70% des Kaufpreises",
@@ -180,7 +180,7 @@
     "cta": {
       "title": "Zehn Minuten heute ersparen Ihnen später einen Brief vom Steueramt",
       "body": "Halten Sie den Kaufpreis und die Grösse der Wohnung bereit. Mehr brauchen Sie nicht.",
-      "button": "Deklaration vorbereiten"
+      "button": "Deklaration vorbereiten · 10 Minuten"
     },
     "calc": {
       "title": "Deklaration vorbereiten",

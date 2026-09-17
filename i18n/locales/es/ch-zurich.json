@@ -7,9 +7,9 @@
       "guideTitle": "Guía: cómo rellenar el formulario de Zúrich"
     },
     "hero": {
-      "title": "Tu inmueble en el extranjero, bien declarado en Zúrich",
-      "lead": "Si vives en el cantón de Zúrich y presentas la declaración de impuestos, tu inmueble en el extranjero tiene que figurar en ella. Responde a unas preguntas y obtén la cifra exacta para cada casilla del formulario, explicada en tu idioma.",
-      "cta": "Preparar mi declaración",
+      "title": "Tu inmueble en el extranjero en la declaración de Zúrich, en unos diez minutos",
+      "lead": "Si vives en el cantón de Zúrich y presentas la declaración de impuestos, tu inmueble en el extranjero tiene que figurar en ella. Responde a unas preguntas y obtén la cifra exacta para cada casilla del formulario, explicada en tu idioma. Unos diez minutos, {price} por apartamento.",
+      "cta": "Preparar mi declaración · 10 minutos",
       "secondary": "Ver cómo funciona",
       "note": "{price} por apartamento. Sin cuenta. Tus datos se quedan en tu navegador.",
       "noteValue": "el 70% de lo que pagaste",
@@ -180,7 +180,7 @@
     "cta": {
       "title": "Diez minutos ahora te ahorran una carta de la oficina tributaria después",
       "body": "Ten a mano el precio de compra y la superficie del apartamento. Es todo lo que necesitas.",
-      "button": "Preparar mi declaración"
+      "button": "Preparar mi declaración · 10 minutos"
     },
     "calc": {
       "title": "Preparar la declaración",

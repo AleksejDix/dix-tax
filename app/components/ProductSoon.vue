@@ -14,6 +14,7 @@ useSeoMeta({
   ogTitle: () => t(`${props.ns}.metaTitle`),
   ogDescription: () => t(`${props.ns}.metaDescription`),
 })
+useSocialImage(props.ns === 'modelo210' ? 'modelo-210' : 'anlage-v')
 </script>
 
 <template>
@@ -33,6 +34,9 @@ useSeoMeta({
             <dd>{{ f.value }}</dd>
           </div>
         </dl>
+        <h2 class="deadline-title">{{ t('deadlines.title') }}</h2>
+        <DeadlineList :only="ns" />
+        <p class="deadline-note">{{ t('deadlines.note') }}</p>
       </section>
 
       <aside class="side">
@@ -52,6 +56,16 @@ useSeoMeta({
 </template>
 
 <style scoped>
+.deadline-title {
+  margin-top: 2.5rem;
+}
+
+.deadline-note {
+  margin-top: 0.75rem;
+  font-size: var(--step--1);
+  color: var(--ink-soft);
+}
+
 .page {
   padding-top: clamp(2.5rem, 1rem + 4vw, 5rem);
 }

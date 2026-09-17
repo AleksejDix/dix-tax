@@ -4,6 +4,7 @@ const localePath = useLocalePath()
 const { strings, objects } = useList()
 
 useHead({ title: () => t('zh.meta.guideTitle') })
+useSocialImage('ch-zurich')
 
 const steps = computed(() => objects('zh.guide.steps', ['title', 'body']))
 const docs = computed(() => strings('zh.guide.docs'))

@@ -7,6 +7,7 @@ const { strings } = useList()
 const { year, properties, results, remark, hasResult, load, persist, add, remove, reset } = useDeclaration()
 
 useHead({ title: () => t('zh.meta.calcTitle') })
+useSocialImage('ch-zurich')
 
 const { track } = useAnalytics()
 

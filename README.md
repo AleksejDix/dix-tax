@@ -26,6 +26,8 @@ pnpm generate   # static site in .output/public
 - `app/pages/legal-notice.vue`, `app/pages/privacy.vue` legal notice and privacy policy (German: `/de/impressum`, `/de/datenschutz`; Spanish: `/es/aviso-legal`, `/es/privacidad`). Operator details come from `company` in `app/app.config.ts`
 - `server/api/interest.post.ts` signup form: emails the owner over SMTP (`SMTP_USER`, `SMTP_PASS`). The form only renders when both variables exist at build time (`signupEnabled` in `nuxt.config.ts`); otherwise visitors get a "write to us" mail link, so a form that cannot deliver is never shown
 - `app/components/TrustBlock.vue` trust signals; shows "Independent review" only for entries in `app.config.ts`
+- `app/utils/deadlines.ts` filing deadlines, with the source of every date in a comment; `DeadlineList.vue` shows them
+- `scripts/og-images.mjs` builds the social preview images from the locale files (`pnpm og`), committed under `public/og/`
 - `app/composables/useDeclaration.ts` Zurich tax logic and the German note for the remarks field
 - `tests/` reference cases with hand-calculated results
 - `i18n/locales/<lang>/<file>.json` copy, one file per product plus `common.json` and `legal.json`. English is the source;
@@ -40,6 +42,24 @@ pnpm generate   # static site in .output/public
   browser will block it.
 - `@nuxtjs/robots` and `@nuxtjs/sitemap`: `robots.txt` and one sitemap per language with alternates.
   Both read `site.url`. Preview deployments are kept out of search engines automatically.
+
+## Filing deadlines
+
+`app/utils/deadlines.ts` holds the deadline for each form, with the tax administration it comes
+from named in the file. `tests/deadlines.test.ts` pins every date. The dates are worked out in the
+browser and `DeadlineList.vue` renders nothing on the server: the pages are prerendered, so a
+deadline baked in at build time would keep counting down to a date that has passed.
+
+Two facts on the Modelo 210 page repeat these dates in prose. When a deadline moves, change
+`deadlines.ts`, its test and that fact in all five locale files together.
+
+## Social previews
+
+`pnpm og` writes `public/og/<page>-<locale>.png`, one 1200 by 630 image per page and language,
+from the titles and descriptions in the locale files. The images are committed, so the build and
+the request path stay untouched and nothing new has to be allowed in the content security policy.
+Run it and commit the result whenever a page title or description changes. `useSocialImage()`
+points a page at its own image.
 
 ## Analytics
 

@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Dix.Tax: tax forms for your property abroad",
-    "description": "Own a home in another country? Dix.Tax prepares the numbers for the forms that come with it: the Swiss tax return, Spain's Modelo 210 and Germany's Anlage V."
+    "description": "Own a home abroad and live in Switzerland? Dix.Tax gives you the exact numbers for the Zurich tax return in about ten minutes. Spain's Modelo 210 and Germany's Anlage V are next."
   },
   "nav": {
     "how": "How it works",
@@ -34,9 +34,14 @@
     "made": "Made in Zurich"
   },
   "hub": {
-    "title": "Property abroad comes with a tax form. We prepare it.",
-    "lead": "A home in another country means a filing where you live, where the home stands, or both. Dix.Tax asks a few plain questions and gives you the exact number for every line, explained in your language.",
+    "title": "You live in Switzerland and own a home abroad. That is two tax filings.",
+    "lead": "One where you live and, in most countries, one where the home stands. Dix.Tax prepares the Zurich declaration today: a few plain questions, the exact number for every line, explained in your language.",
+    "cta": "Prepare my Zurich declaration · 10 minutes",
+    "ctaNote": "About ten minutes. {price} per apartment. No account, and your figures stay in your browser.",
+    "secondary": "I need another form",
+    "liveNote": "Canton of Zurich. Other cantons and the foreign forms are in preparation.",
     "chooseTitle": "Which form do you need?",
+    "chooseLead": "The Swiss declaration is ready today. Modelo 210 and Anlage V come next, and the answers below decide which one first.",
     "bothTitle": "One home, often two filings",
     "bothBody": "A flat in Valencia owned from Zurich needs Modelo 210 in Spain and a line in the Zurich tax return. The two use different values and different rules. Dix.Tax keeps them apart and gets both right."
   },
@@ -64,6 +69,29 @@
       "who": "You rent out property in Germany and live somewhere else.",
       "what": "The rental schedule of the German tax return, with depreciation and deductible costs."
     }
+  },
+  "deadlines": {
+    "title": "Deadlines coming up",
+    "lead": "The dates the tax administrations publish themselves. Extensions exist, but they have to be asked for in time.",
+    "labels": {
+      "zurich": "Zurich tax return {year}",
+      "modelo210Own": "Modelo 210 {year}, home not rented out",
+      "modelo210Rented": "Modelo 210 {year}, home rented out",
+      "anlageV": "German return {year} with Anlage V",
+      "anlageVAdviser": "German return {year}, filed by a tax adviser"
+    },
+    "kinds": {
+      "due": "Due {date}",
+      "extended": "Extended deadline {date}",
+      "final": "Last possible extension {date}"
+    },
+    "left": {
+      "days": "in {days} days",
+      "tomorrow": "tomorrow",
+      "today": "today"
+    },
+    "next": "Next deadline",
+    "note": "Your own deadline can differ if you asked for an extension or an adviser files for you."
   },
   "trust": {
     "title": "Why you can rely on the numbers",

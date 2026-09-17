@@ -15,6 +15,9 @@ useSeoMeta({
   ogDescription: () => t('meta.description'),
   ogType: 'website',
 })
+
+// Default link preview; pages with their own picture call this again with their own name.
+useSocialImage('home')
 </script>
 
 <template>

@@ -22,6 +22,7 @@ useSeoMeta({
   ogTitle: () => t('zh.meta.title'),
   ogDescription: () => t('zh.meta.description'),
 })
+useSocialImage('ch-zurich')
 
 // FAQ rich result, in the language of the page.
 useHead(() => ({
@@ -48,7 +49,7 @@ useHead(() => ({
       <div class="wrap hero-grid">
         <div class="hero-copy">
           <h1>{{ t('zh.hero.title') }}</h1>
-          <p class="lead">{{ t('zh.hero.lead') }}</p>
+          <p class="lead">{{ t('zh.hero.lead', { price }) }}</p>
           <div class="hero-actions">
             <NuxtLink :to="localePath('/ch/zurich/calculator')" class="btn btn-primary">{{ t('zh.hero.cta') }}</NuxtLink>
             <NuxtLink :to="{ path: localePath('/ch/zurich'), hash: '#how' }" class="btn btn-quiet">
@@ -62,6 +63,7 @@ useHead(() => ({
             </svg>
             {{ t('zh.hero.note', { price }) }}
           </p>
+          <DeadlineList only="chZurich" compact class="hero-deadline" />
         </div>
 
         <figure class="hero-sheet">
@@ -213,6 +215,11 @@ useHead(() => ({
 
 <style scoped>
 /* Hero */
+.hero-deadline {
+  margin-top: 1rem;
+  max-width: 30rem;
+}
+
 .hero {
   padding-block: clamp(2.5rem, 1rem + 5vw, 5.5rem) clamp(3rem, 2rem + 4vw, 6rem);
   background:

@@ -1,0 +1,322 @@
+{
+  "zh": {
+    "meta": {
+      "title": "Dix.Tax: Liegenschaft im Ausland in der Zürcher Steuererklärung deklarieren",
+      "description": "Für Personen im Kanton Zürich, denen ein Zuhause im Ausland gehört. Sie erhalten die genauen Zahlen für das Liegenschaftenverzeichnis, erklärt auf Englisch, Deutsch, Spanisch, Ukrainisch und Russisch.",
+      "calcTitle": "Deklaration vorbereiten",
+      "guideTitle": "Anleitung: das Zürcher Formular ausfüllen"
+    },
+    "hero": {
+      "title": "Ihre Liegenschaft im Ausland, korrekt deklariert in Zürich",
+      "lead": "Wenn Sie im Kanton Zürich wohnen und eine Steuererklärung einreichen, gehört Ihre Liegenschaft im Ausland dazu. Beantworten Sie einige Fragen und Sie erhalten die genaue Zahl für jede Zeile des Formulars, erklärt in Ihrer Sprache.",
+      "cta": "Deklaration vorbereiten",
+      "secondary": "So funktioniert es",
+      "note": "{price} pro Wohnung. Ohne Konto. Ihre Daten bleiben in Ihrem Browser.",
+      "noteValue": "70% des Kaufpreises",
+      "noteIncome": "ein fiktiver Mietertrag, kein echtes Geld",
+      "noteResult": "diese zwei Zahlen in die Steuererklärung übertragen"
+    },
+    "sheet": {
+      "caption": "Beispiel: eine Wohnung in Valencia mit 68 m², gekauft für EUR 120'000",
+      "place": "Stadt",
+      "street": "Strasse",
+      "country": "Land",
+      "kind": "Art",
+      "kindApartment": "Wohnung",
+      "kindHouse": "Haus",
+      "area": "Fläche",
+      "gross": "Fiktive Miete oder erhaltene Miete",
+      "maintenance": "Pauschaler Unterhaltsabzug, 20%",
+      "net": "Verbleibender Ertrag",
+      "value": "Steuerwert",
+      "totalNet": "Ertrag aus Liegenschaften nach Abzügen",
+      "totalValue": "Wert Ihrer Liegenschaften",
+      "transfer": "Gehört in die Steuererklärung, Ziffer {line}",
+      "code": "Code {code}",
+      "empty": "Hier erscheint Ihre Wohnung"
+    },
+    "facts": {
+      "title": "Was Zürich wissen will und was es Sie kostet",
+      "items": [
+        {
+          "title": "Sie müssen die Wohnung deklarieren",
+          "body": "Wer in Zürich eine Steuererklärung einreicht, deklariert Einkommen und Vermögen weltweit. Dazu gehört auch eine Wohnung in Valencia, Berlin oder Kiew, selbst wenn niemand darin wohnt."
+        },
+        {
+          "title": "Die Schweiz besteuert sie nicht",
+          "body": "Nach Schweizer Recht werden Liegenschaften nur in dem Land besteuert, in dem sie stehen, und die Doppelbesteuerungsabkommen der Schweiz sagen dasselbe. Zürich nimmt die Wohnung aus Ihrem steuerbaren Vermögen und Einkommen heraus."
+        },
+        {
+          "title": "Sie beeinflusst nur Ihren Steuersatz",
+          "body": "Der Wert und der Eigenmietwert (ein fiktiver Mietertrag) dienen nur dazu, Ihren Steuersatz zu bestimmen. Bei einer typischen Wohnung ist die Wirkung gering. Teuer wird es erst, wenn Sie die Wohnung weglassen: Nachsteuer, Verzugszins und Busse."
+        }
+      ]
+    },
+    "steps": {
+      "title": "Drei Schritte, etwa zehn Minuten",
+      "items": [
+        {
+          "title": "Wohnung beschreiben",
+          "body": "Land, Ort, Grösse, was Sie bezahlt haben oder was sie wert ist, und wie sie heute genutzt wird: selbst genutzt, von der Familie bewohnt, vermietet oder nicht nutzbar."
+        },
+        {
+          "title": "Zürcher Werte erhalten",
+          "body": "Steuerwert von 70% des Kaufpreises. Eigenmietwert von 4.25% bei Wohnungen oder 3.5% bei Häusern. Der Pauschalabzug von 20% für den Unterhalt. Alles in Franken umgerechnet."
+        },
+        {
+          "title": "Zahlen in die Steuererklärung übertragen",
+          "body": "Das Ergebnis bildet das Zürcher Liegenschaftenverzeichnis Zeile für Zeile ab, mit einem fertigen deutschen Text für das Feld Bemerkungen. Tippen Sie die Zahlen in ZHprivateTax oder in das Papierformular ein."
+        }
+      ]
+    },
+    "report": {
+      "title": "Was Sie erhalten",
+      "lead": "Ein Blatt, das Sie ausdrucken oder als PDF speichern und bei Ihren Steuerunterlagen aufbewahren können.",
+      "items": [
+        "Jedes Feld des Liegenschaftenverzeichnisses, ausgefüllt für jede Liegenschaft",
+        "Die zwei Totale für Ihre Steuererklärung: Ziffer 6 (Code 188) und Ziffer 31.1 (Code 421)",
+        "Ein deutscher Text für das Steueramt, der die Bewertung erklärt und um die Steuerausscheidung ins Ausland bittet",
+        "Eine Checkliste der Unterlagen, die Sie für Rückfragen des Steueramts aufbewahren sollten",
+        "Eine Erklärung zu jedem Fachbegriff, damit Sie wissen, was Sie unterschreiben"
+      ]
+    },
+    "compare": {
+      "title": "Ihre Möglichkeiten",
+      "colOption": "Möglichkeit",
+      "colCost": "Kosten",
+      "colEffort": "Aufwand",
+      "colResult": "Was Sie am Ende haben",
+      "rows": [
+        {
+          "option": "Wohnung weglassen",
+          "cost": "Heute nichts",
+          "effort": "Keiner",
+          "result": "Falls es später auffällt: Nachsteuer für bis zu 10 Jahre, Verzugszins und Busse"
+        },
+        {
+          "option": "Treuhänder oder Steuerberater beauftragen",
+          "cost": "Mehrere hundert Franken, jedes Jahr",
+          "effort": "Termine und Unterlagen, oft nur auf Deutsch",
+          "result": "Die richtige Wahl für komplizierte Fälle"
+        },
+        {
+          "option": "Dix.Tax",
+          "cost": "{price} pro Wohnung beim ersten Mal, in den Folgejahren weniger",
+          "effort": "Etwa 10 Minuten",
+          "result": "Korrekte Zahlen für Standardfälle, erklärt in Ihrer Sprache"
+        }
+      ]
+    },
+    "fit": {
+      "title": "Ist das etwas für Sie?",
+      "yesTitle": "Das Hilfsmittel passt für Sie, wenn",
+      "yes": [
+        "Sie im Kanton Zürich wohnen und eine Steuererklärung einreichen oder dazu aufgefordert wurden",
+        "Ihnen eine oder mehrere Wohnungen oder Häuser im Ausland gehören, allein oder gemeinsam mit Ihrer Ehepartnerin oder Ihrem Ehepartner",
+        "die Liegenschaft selbst genutzt wird, von der Familie bewohnt wird, vermietet ist oder nicht nutzbar ist"
+      ],
+      "noTitle": "Wenden Sie sich an einen Treuhänder, einen Steuerberater oder das Steueramt, wenn",
+      "no": [
+        "auf der Liegenschaft eine Hypothek oder ein anderes Darlehen lastet",
+        "Sie die Liegenschaft im Steuerjahr gekauft, verkauft oder geerbt haben",
+        "es sich um ein Geschäftsgebäude, Landwirtschaftsland oder Bauland handelt",
+        "Sie die Liegenschaft in früheren Jahren nicht deklariert haben und das korrigieren möchten",
+        "Ihre Frage die Sozialhilfe betrifft, denn dort gelten andere Regeln"
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Zahle ich in der Schweiz Steuern auf meine Wohnung im Ausland?",
+          "a": "Nein. Nach Schweizer Recht werden Liegenschaften nur in dem Land besteuert, in dem sie stehen, und die Doppelbesteuerungsabkommen der Schweiz sagen dasselbe. Zürich will die Wohnung trotzdem sehen, weil Ihr gesamtes Vermögen und Einkommen bestimmen, welcher Steuersatz für den in der Schweiz steuerbaren Teil gilt. Im Steuerrecht heisst das satzbestimmend: Es zählt nur für den Steuersatz."
+        },
+        {
+          "q": "Das andere Land besteuert die Wohnung bereits. Ist das nicht eine Doppelbesteuerung?",
+          "a": "Nein. Das andere Land besteuert die Liegenschaft und allfällige Mieteinnahmen daraus. Die Schweiz besteuert sie nicht noch einmal, sondern verwendet sie nur, um den Steuersatz für Ihr Schweizer Einkommen und Vermögen zu bestimmen. Was Sie im Ausland schulden, zum Beispiel die deutsche Steuer auf Mieteinnahmen (Anlage V) oder die spanische Steuer für Nichtansässige (Modelo 210), deklarieren Sie separat in jenem Land."
+        },
+        {
+          "q": "Was kostet es?",
+          "a": "{price} pro Wohnung für die erste Deklaration. In den Folgejahren kostet es weniger, weil Ihre Wohnung bereits erfasst ist. Ein Treuhänder oder Steuerberater verlangt für dieselbe Arbeit meist mehrere hundert Franken, und das jedes Jahr."
+        },
+        {
+          "q": "Meine Steuer wird vom Lohn abgezogen. Muss ich überhaupt eine Steuererklärung einreichen?",
+          "a": "Wer Quellensteuer zahlt, zum Beispiel mit einer Bewilligung B oder mit dem Schutzstatus S, reicht meistens keine Steuererklärung ein. Einreichen müssen Sie eine, wenn Sie weitere Einkünfte von CHF 3'000 oder mehr pro Jahr haben, ein steuerbares Vermögen von CHF 80'000 oder mehr (CHF 160'000 bei Ehepaaren) oder einen Bruttolohn von CHF 120'000 oder mehr. Mit Status S werden Sie zudem unbeschränkt steuerpflichtig, sobald Sie mehr als zwei Jahre ohne Unterbruch in der Schweiz wohnen und Ihr Lebensmittelpunkt hier liegt. Und wenn Ihre Gemeinde Ihnen eine Steuererklärung zugestellt hat, müssen Sie diese in jedem Fall ausfüllen. Wenn Sie unsicher sind, fragen Sie Ihr Gemeindesteueramt."
+        },
+        {
+          "q": "Wie bewerte ich die Wohnung?",
+          "a": "Die Zürcher Praxis für Liegenschaften im Ausland sind 70% des Kaufpreises, umgerechnet in Franken. Gab es keinen Kaufpreis, zum Beispiel weil die Wohnung geerbt oder geschenkt wurde, schätzen Sie realistisch, für wie viel sie sich verkaufen liesse, und nehmen Sie davon 70%. Bewahren Sie auf, was Ihre Zahl stützt: den Kaufvertrag, einen Grundbuchauszug oder vergleichbare Inserate."
+        },
+        {
+          "q": "Meine Wohnung ist beschädigt oder nicht nutzbar. Was nun?",
+          "a": "Sie führen sie trotzdem auf, denn sie gehört Ihnen weiterhin. Setzen Sie einen Wert ein, der der Realität entspricht, und deklarieren Sie keinen Eigenmietwert, wenn die Wohnung wirklich nicht nutzbar ist, zum Beispiel nach Kriegsschäden oder einem Brand oder weil sie in einem Gebiet liegt, das Sie nicht erreichen können. Das Hilfsmittel schreibt eine kurze deutsche Erklärung für das Feld Bemerkungen. Bewahren Sie Fotos, amtliche Berichte oder Medienberichte auf, falls das Steueramt nachfragt."
+        },
+        {
+          "q": "Meine Eltern wohnen gratis in der Wohnung. Ist das ein Mietertrag?",
+          "a": "Es ist keine Miete. Zürich behandelt eine Wohnung, die Sie oder Ihre Angehörigen unentgeltlich nutzen, aber wie eine selbst genutzte Wohnung. Deshalb gilt ein Eigenmietwert (ein fiktiver Mietertrag) von 4.25% des Steuerwerts. Er wirkt sich nur auf Ihren Steuersatz aus."
+        },
+        {
+          "q": "Was ist der Eigenmietwert, und wurde er nicht abgeschafft?",
+          "a": "Der Eigenmietwert ist ein fiktives Einkommen: der Betrag, den Sie einnehmen könnten, wenn Sie ein selbst genutztes Zuhause vermieten würden. Die Schweizer Stimmberechtigten haben am 28. September 2025 die Abschaffung beschlossen, und der Bundesrat hat das Inkrafttreten auf den 1. Januar 2029 festgelegt. Bis und mit Steuerjahr 2028 muss der Eigenmietwert weiterhin deklariert werden."
+        },
+        {
+          "q": "Ich habe die Wohnung in früheren Jahren nicht deklariert. Was soll ich tun?",
+          "a": "Einmal im Leben können Sie das ohne Busse korrigieren, mit einer straflosen Selbstanzeige. Das gilt nur, solange das Steueramt nicht von sich aus darauf gestossen ist. Sie zahlen die Nachsteuer für bis zu zehn Jahre samt Verzugszins. Bei einer Wohnung im Ausland ist das meistens ein kleiner Betrag. Wenden Sie sich vor dem Einreichen an das kantonale Steueramt, an einen Treuhänder oder an einen Steuerberater, und führen Sie die Wohnung nicht einfach ohne Erklärung neu auf."
+        },
+        {
+          "q": "Was ist mit meinen Bankkonten im Ausland?",
+          "a": "Sobald Sie in der Schweiz unbeschränkt steuerpflichtig sind, gehören ausländische Konten ins Wertschriftenverzeichnis (die Liste der Wertpapiere und Konten), mit dem Saldo per 31. Dezember und den erhaltenen Zinsen. Dieses Hilfsmittel deckt nur Liegenschaften ab."
+        },
+        {
+          "q": "Hat das Auswirkungen auf meine Sozialhilfe?",
+          "a": "Für die Sozialhilfe, die Asylfürsorge und die Ergänzungsleistungen gelten eigene Regeln, und zuständig ist eine andere Stelle. Dieses Hilfsmittel deckt nur die Steuererklärung ab. Informieren Sie Ihre Betreuungsperson wahrheitsgemäss über die Liegenschaft und fragen Sie, wie Ihre Gemeinde damit umgeht."
+        },
+        {
+          "q": "Wo werden meine Daten gespeichert?",
+          "a": "In Ihrem Browser und sonst nirgends. Nichts von dem, was Sie eingeben, wird an einen Server gesendet. Es gibt kein Konto und kein Tracking. Sie können alles mit einem Klick löschen."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Zehn Minuten heute ersparen Ihnen später einen Brief vom Steueramt",
+      "body": "Halten Sie den Kaufpreis und die Grösse der Wohnung bereit. Mehr brauchen Sie nicht.",
+      "button": "Deklaration vorbereiten"
+    },
+    "calc": {
+      "title": "Deklaration vorbereiten",
+      "lead": "Tragen Sie ein, was Sie wissen. Ihr Formular passt sich laufend an.",
+      "privacy": "Nur in diesem Browser gespeichert.",
+      "year": {
+        "label": "Steuerjahr",
+        "hint": "Die Steuererklärung für ein Jahr wird im Frühling des Folgejahres eingereicht. Massgebend sind die Werte per 31. Dezember."
+      },
+      "property": {
+        "heading": "Liegenschaft {n}",
+        "add": "Weitere Liegenschaft hinzufügen",
+        "remove": "Entfernen"
+      },
+      "fields": {
+        "country": "Land",
+        "countryPlaceholder": "Land wählen",
+        "countryOther": "Anderes Land",
+        "countryOtherLabel": "Name des Landes",
+        "city": "Stadt oder Dorf",
+        "cityPlaceholder": "Valencia",
+        "street": "Strasse und Nummer",
+        "streetHint": "Optional, in lateinischen Buchstaben",
+        "type": "Art",
+        "apartment": "Wohnung",
+        "house": "Haus",
+        "area": "Gesamtfläche in m²",
+        "share": "Ihr Anteil in %",
+        "shareHint": "100, wenn sie Ihnen allein oder gemeinsam mit Ihrer Ehepartnerin oder Ihrem Ehepartner gehört",
+        "basis": "Welchen Wert kennen Sie?",
+        "basisPurchase": "Kaufpreis",
+        "basisMarket": "Geschätzter Marktwert heute",
+        "basisHint": "Verwenden Sie die Schätzung, wenn die Wohnung geerbt oder geschenkt wurde oder wenn sie stark an Wert verloren hat.",
+        "amount": "Betrag",
+        "currency": "Währung",
+        "rate": "Kurs: 1 {currency} in CHF",
+        "rateHint": "Vorausgefüllt mit einem ungefähren Jahresendkurs. Ersetzen Sie ihn durch den offiziellen Kurs aus der Kursliste des Bundes.",
+        "rateLink": "Offizielle Kursliste öffnen (ICTax)",
+        "usage": "Wie wird sie heute genutzt?",
+        "usageSelf": "Leer oder für mich selbst",
+        "usageSelfHint": "Es gilt ein Eigenmietwert",
+        "usageFamily": "Familie wohnt gratis dort",
+        "usageFamilyHint": "Gilt wie Eigennutzung",
+        "usageRented": "An Dritte vermietet",
+        "usageRentedHint": "Erhaltene Miete deklarieren",
+        "usageUnusable": "Nicht nutzbar",
+        "usageUnusableHint": "Zerstört, stark beschädigt oder nicht erreichbar, zum Beispiel wegen eines Krieges",
+        "rent": "Erhaltene Miete pro Jahr",
+        "rentHint": "Ohne Nebenkosten, die die Mieterschaft zusätzlich zahlt. Gleiche Währung wie oben."
+      },
+      "result": {
+        "title": "Ihre Zahlen",
+        "notTaxed": "Nichts davon wird in der Schweiz besteuert. Es dient nur dazu, Ihren Steuersatz zu bestimmen.",
+        "remarkTitle": "Deutscher Text für das Feld Bemerkungen",
+        "remarkHint": "Fügen Sie diesen Text in die Bemerkungen Ihrer Steuererklärung ein oder legen Sie ihn als separates Blatt bei.",
+        "copy": "Text kopieren",
+        "copied": "Kopiert",
+        "print": "Drucken oder als PDF speichern",
+        "reset": "Alle Eingaben löschen",
+        "resetConfirm": "Möchten Sie alle Eingaben löschen?",
+        "nextTitle": "So geht es weiter",
+        "next": [
+          "Öffnen Sie Ihre Steuererklärung in ZHprivateTax oder auf Papier und gehen Sie zum Liegenschaftenverzeichnis.",
+          "Erfassen Sie jede Liegenschaft mit ihrem Land und übertragen Sie die Zahlen Feld für Feld.",
+          "Wählen Sie für den Unterhalt den Pauschalabzug (einen festen Abzug ohne Belege).",
+          "Fügen Sie den deutschen Text in die Bemerkungen ein und bewahren Sie Ihre Unterlagen zu Hause auf."
+        ],
+        "assumptionsTitle": "So rechnen wir",
+        "assumptions": [
+          "Steuerwert: 70% des Kaufpreises oder des geschätzten Marktwerts, in Franken.",
+          "Eigenmietwert: 4.25% des Steuerwerts bei Wohnungen, 3.5% bei Häusern. Kein Eigenmietwert, wenn die Liegenschaft nicht nutzbar ist.",
+          "Vermietete Liegenschaft: die tatsächlich erhaltene Miete anstelle des Eigenmietwerts.",
+          "Unterhalt: Pauschalabzug von 20% des Eigenmietwerts oder der erhaltenen Miete.",
+          "Die Beträge werden auf ganze Franken gerundet und mit Ihrem Eigentumsanteil multipliziert."
+        ],
+        "guideLink": "Schritt-für-Schritt-Anleitung öffnen"
+      }
+    },
+    "guide": {
+      "title": "Das Zürcher Formular ausfüllen, Schritt für Schritt",
+      "lead": "Die Online-Steuererklärung des Kantons heisst ZHprivateTax. Das Papierformular hat dieselben Felder. Hier sehen Sie, wo Ihre Wohnung hingehört.",
+      "stepsTitle": "In der Steuererklärung",
+      "steps": [
+        {
+          "title": "Liegenschaftenverzeichnis öffnen",
+          "body": "Das ist die Liste der Liegenschaften. Seit dem Steuerjahr 2024 werden alle Liegenschaften nur noch hier deklariert, auch jene in anderen Kantonen und im Ausland."
+        },
+        {
+          "title": "Wohnung erfassen",
+          "body": "Geben Sie Ort und Strasse in lateinischen Buchstaben ein. Wählen Sie unter «Kanton / Land» das Land. Wählen Sie als Art «Stockwerkeigentum» für eine Wohnung oder «Einfamilienhaus» für ein Haus und geben Sie die Fläche in m² ein."
+        },
+        {
+          "title": "Ertrag eintragen",
+          "body": "Tragen Sie im Feld «Eigenmietwert / Mietzinseinnahmen» den Eigenmietwert aus Ihrem Dix.Tax Blatt ein, oder die erhaltene Miete, falls die Wohnung vermietet ist."
+        },
+        {
+          "title": "Pauschalabzug wählen",
+          "body": "Wählen Sie bei «Unterhalts- und Verwaltungskosten» den Pauschalabzug. Er beträgt 20% und braucht keine Belege. Die tatsächlichen Kosten lohnen sich nur, wenn sie höher waren, und dann brauchen Sie eine detaillierte Aufstellung."
+        },
+        {
+          "title": "Steuerwert eintragen",
+          "body": "Tragen Sie im Feld «Verkehrswert» den Steuerwert aus Ihrem Blatt ein. Das Programm überträgt die Totale in Ziffer 6 (Nettoertrag aus Liegenschaften) und Ziffer 31.1 (Liegenschaften) des Hauptformulars."
+        },
+        {
+          "title": "Deutschen Text einfügen",
+          "body": "Fügen Sie den Text aus Ihrem Blatt in die Bemerkungen ein. Er erklärt, wie Sie die Wohnung bewertet haben, und bittet das Steueramt um die Steuerausscheidung ins Ausland. Die Ausscheidung nimmt das Steueramt selbst vor."
+        },
+        {
+          "title": "Einreichen und Unterlagen aufbewahren",
+          "body": "Die Frist in Zürich läuft bis zum 31. März. Sie können sie online und kostenlos bis zum 30. November erstrecken. Unterlagen zur Wohnung müssen Sie nicht mitschicken. Bewahren Sie sie aber auf, falls das Steueramt nachfragt."
+        }
+      ],
+      "docsTitle": "Unterlagen, die Sie aufbewahren sollten",
+      "docs": [
+        "Kaufvertrag, Erbschafts- oder Schenkungsdokument",
+        "Grundbuchauszug aus dem Land, in dem die Liegenschaft steht",
+        "Mietvertrag und Belege über die erhaltene Miete, falls vermietet",
+        "Fotos, Schadensberichte oder amtliche Bestätigungen, falls die Liegenschaft nicht nutzbar ist",
+        "Der verwendete Wechselkurs und seine Quelle"
+      ],
+      "glossaryTitle": "Fachbegriffe auf dem Formular",
+      "glossary": {
+        "liegenschaftenverzeichnis": "Liste der Liegenschaften. Das Formular, in dem jede Immobilie deklariert wird.",
+        "eigenmietwert": "Fiktiver Mietertrag. Ein Einkommen, das Ihnen für ein Zuhause angerechnet wird, das Sie selbst nutzen.",
+        "steuerwert": "Der Wert der Liegenschaft für die Vermögenssteuer. Auf dem Zürcher Formular heisst das Feld auch Verkehrswert.",
+        "pauschalabzug": "Fester Abzug. Ein fixer Prozentsatz, den Sie ohne Belege abziehen dürfen.",
+        "satzbestimmend": "Zählt nur für den Steuersatz. Der Posten wird selbst nicht besteuert, erhöht aber den Satz auf allem anderen.",
+        "steuerausscheidung": "Aufteilung zwischen Steuerorten. Das Steueramt trennt, was in Zürich steuerbar ist und was zu einem anderen Land gehört.",
+        "quellensteuer": "Steuer an der Quelle. Der Arbeitgeber zieht die Steuer direkt vom Lohn ab.",
+        "schutzstatus": "Schutzstatus S. Der Aufenthaltsstatus für Menschen, die vor dem Krieg in der Ukraine geflüchtet sind.",
+        "gemeindesteueramt": "Steueramt Ihrer Wohngemeinde. Ihre erste Anlaufstelle für Formulare, Fristen und Fragen.",
+        "fristerstreckung": "Verlängerung der Frist. Mehr Zeit zum Einreichen, online beantragt.",
+        "bemerkungen": "Freies Textfeld für Erklärungen an das Steueramt.",
+        "selbstanzeige": "Frühere Versäumnisse selbst melden. Einmal im Leben ist das ohne Busse möglich."
+      },
+      "cta": "Meine Zahlen berechnen"
+    }
+  }
+}

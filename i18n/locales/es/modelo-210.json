@@ -1,0 +1,30 @@
+{
+  "modelo210": {
+    "metaTitle": "Modelo 210 para propietarios que viven fuera de España",
+    "metaDescription": "Quién tiene que presentar el Modelo 210, cómo se calcula el impuesto y cuándo vence. Estamos preparando una calculadora guiada.",
+    "title": "Modelo 210: el impuesto español para propietarios que viven en otro país",
+    "lead": "Si tienes una vivienda en España pero no eres residente fiscal allí, España espera un Modelo 210 cada año. Esto vale aunque la vivienda nunca se alquile y no genere ingresos.",
+    "facts": [
+      {
+        "label": "Quién lo presenta",
+        "value": "Toda persona que tenga un inmueble en España y no sea residente fiscal allí. Cada copropietario presenta el suyo por separado."
+      },
+      {
+        "label": "Uso propio o vivienda vacía",
+        "value": "España grava una renta imputada: el 1,1% del valor catastral si ese valor se revisó en los últimos 10 años, y el 2% en caso contrario."
+      },
+      {
+        "label": "Alquilada",
+        "value": "El alquiler que has cobrado. Los residentes en la UE y el EEE pueden deducir gastos, los demás no."
+      },
+      {
+        "label": "Tipo impositivo",
+        "value": "19% para residentes en la UE y el EEE, 24% para todos los demás, incluidos Suiza y el Reino Unido."
+      },
+      {
+        "label": "Plazos",
+        "value": "Uso propio: hasta el 31 de diciembre del año siguiente. Alquiler: entre el 1 y el 20 de enero del año siguiente."
+      }
+    ]
+  }
+}

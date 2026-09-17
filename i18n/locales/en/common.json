@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Dix.Tax: tax forms for your property abroad",
+    "description": "Own a home in another country? Dix.Tax prepares the numbers for the forms that come with it: the Swiss tax return, Spain's Modelo 210 and Germany's Anlage V.",
+    "legalTitle": "Legal notice and privacy"
+  },
+  "nav": {
+    "how": "How it works",
+    "guide": "Guide",
+    "faq": "Questions",
+    "start": "Prepare my declaration",
+    "language": "Language",
+    "home": "Dix.Tax home",
+    "menu": "Menu",
+    "forms": "All forms"
+  },
+  "founder": {
+    "title": "Why I built this",
+    "body": [
+      "I am Aleksej Dix. I file my taxes in Switzerland and own several apartments abroad. The first time they had to go into my tax return, I paid for the answers myself: advisers, evenings with German directives, and a lot of second guessing.",
+      "The rules turned out to be simple once somebody explains them. Many people in Switzerland own a home in another country and face the same form, often in a language that is not their own. Dix.Tax puts what I learned into ten minutes."
+    ],
+    "role": "Founder of Dix.Tax"
+  },
+  "footer": {
+    "disclaimer": "Dix.Tax is an information and calculation tool. It is not tax or legal advice and does not replace an adviser. Rules and practice can change; check your figures before you file.",
+    "legal": "Legal notice and privacy",
+    "sources": "Based on the Zurich tax return guide (Wegleitung) and the cantonal valuation directive.",
+    "rights": "Built in Zurich by Aleksej Dix"
+  },
+  "legal": {
+    "title": "Legal notice and privacy",
+    "disclaimerTitle": "No tax advice",
+    "disclaimer": "Dix.Tax provides general information and a calculation aid for standard situations. It is not tax or legal advice. The valuation percentages reflect the published practice of the canton of Zurich at the time of writing; the tax office can assess your case differently. You remain responsible for your tax return. For complex situations consult a licensed adviser or your tax office.",
+    "privacyTitle": "Privacy",
+    "privacy": [
+      "Everything you enter in the calculator is processed and stored only in your browser (local storage). It is never transmitted to us.",
+      "If you leave your email address so we can tell you when a form is ready, it reaches us as an email in our own mailbox, hosted in Switzerland. We use it only for that purpose and delete it on request.",
+      "We do not use analytics, advertising or tracking cookies. One functional cookie remembers your language.",
+      "Our hosting provider processes technical connection data such as IP addresses in server logs to deliver the site securely."
+    ],
+    "contactTitle": "Responsible for this site",
+    "contactBody": "Aleksej Dix, Zurich, Switzerland",
+    "contactEmail": "Contact"
+  },
+  "hub": {
+    "title": "Property abroad comes with a tax form. We prepare it.",
+    "lead": "A home in another country means a filing where you live, where the home stands, or both. Dix.Tax asks a few plain questions and gives you the exact number for every line, explained in your language.",
+    "chooseTitle": "Which form do you need?",
+    "bothTitle": "One home, often two filings",
+    "bothBody": "A flat in Valencia owned from Zurich needs Modelo 210 in Spain and a line in the Zurich tax return. The two use different values and different rules. Dix.Tax keeps them apart and gets both right."
+  },
+  "products": {
+    "statusLive": "Available",
+    "statusSoon": "In preparation",
+    "more": "Read more",
+    "chZurich": {
+      "name": "Swiss tax return",
+      "place": "Canton of Zurich",
+      "who": "You live in Switzerland and own property in another country.",
+      "what": "Tax value, notional rent and the flat deduction for the Liegenschaftenverzeichnis, plus a German note for the tax office.",
+      "cta": "Prepare my declaration",
+      "note": "Other cantons are in preparation."
+    },
+    "modelo210": {
+      "name": "Modelo 210",
+      "place": "Spain",
+      "who": "You own a home in Spain and live somewhere else.",
+      "what": "Spain's tax for owners who are not resident there. Due every year, even if the home is never rented."
+    },
+    "anlageV": {
+      "name": "Anlage V",
+      "place": "Germany",
+      "who": "You rent out property in Germany and live somewhere else.",
+      "what": "The rental schedule of the German tax return, with depreciation and deductible costs."
+    }
+  },
+  "trust": {
+    "title": "Why you can rely on the numbers",
+    "items": [
+      {
+        "title": "Every rule has a source",
+        "body": "Each percentage and form line comes from an official guide, law or directive, and we name it next to the number."
+      },
+      {
+        "title": "Calculations are tested",
+        "body": "Reference cases with known results run automatically on every change, so a fix in one place cannot quietly break another."
+      },
+      {
+        "title": "Your data stays with you",
+        "body": "Everything is calculated in your browser. Nothing you type into a calculator is sent to us."
+      },
+      {
+        "title": "A person stands behind it",
+        "body": "Dix.Tax is built by Aleksej Dix in Zurich, who files these forms for his own properties."
+      }
+    ],
+    "reviewTitle": "Independent review",
+    "reviewedBy": "Reviewed by {name}, {firm}. {date}."
+  },
+  "soon": {
+    "status": "In preparation",
+    "factsTitle": "The essentials",
+    "notifyTitle": "Want to know when it is ready?",
+    "notifyBody": "Write to us and we will tell you when this form goes live.",
+    "swissTitle": "Do you live in the canton of Zurich?",
+    "swissBody": "Then the same property also belongs in your Swiss tax return. That part is ready today.",
+    "swissCta": "Open the Swiss declaration"
+  },
+  "interest": {
+    "title": "Is this something you need?",
+    "lead": "We build the forms people ask for first. Tell us which one you need and we will write to you when it is ready.",
+    "which": "Which form do you need?",
+    "options": {
+      "modelo210": "Modelo 210 (Spain)",
+      "anlageV": "Anlage V (Germany)",
+      "chOther": "Swiss tax return, another canton",
+      "other": "Something else"
+    },
+    "email": "Your email",
+    "note": "Your situation, in a sentence (optional)",
+    "notePlaceholder": "For example: I live in Basel and rent out a flat in Munich.",
+    "submit": "Tell me when it is ready",
+    "sending": "Sending",
+    "done": "Thank you. We will write to you when this form is ready, and not before.",
+    "error": "That did not work. Please try again in a moment, or write to",
+    "consent": "We use your address only to tell you about this form. No newsletter, and we delete it on request."
+  }
+}

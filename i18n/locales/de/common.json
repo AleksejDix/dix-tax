@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "title": "Dix.Tax: Steuerformulare für Ihre Liegenschaft im Ausland",
+    "description": "Sie besitzen ein Zuhause in einem anderen Land? Dix.Tax bereitet die Zahlen für die Formulare vor, die dazugehören: die Schweizer Steuererklärung, das spanische Modelo 210 und die deutsche Anlage V.",
+    "legalTitle": "Impressum und Datenschutz"
+  },
+  "nav": {
+    "how": "So funktioniert es",
+    "guide": "Anleitung",
+    "faq": "Fragen",
+    "start": "Deklaration vorbereiten",
+    "language": "Sprache",
+    "home": "Dix.Tax Startseite",
+    "menu": "Menü",
+    "forms": "Alle Formulare"
+  },
+  "founder": {
+    "title": "Warum ich das gebaut habe",
+    "body": [
+      "Ich bin Aleksej Dix. Ich versteuere mein Einkommen in der Schweiz und besitze mehrere Wohnungen im Ausland. Als sie zum ersten Mal in meine Steuererklärung gehörten, habe ich die Antworten selbst bezahlt: mit Beratern, mit Abenden über deutschen Weisungen und mit vielen Zweifeln.",
+      "Die Regeln sind einfach, sobald sie jemand erklärt. Viele Menschen in der Schweiz besitzen ein Zuhause in einem anderen Land und stehen vor demselben Formular, oft in einer Sprache, die nicht ihre eigene ist. Dix.Tax fasst in zehn Minuten zusammen, was ich gelernt habe."
+    ],
+    "role": "Gründer von Dix.Tax"
+  },
+  "footer": {
+    "disclaimer": "Dix.Tax ist ein Informations- und Berechnungshilfsmittel. Es ist keine Steuer- oder Rechtsberatung und ersetzt keine Fachperson. Regeln und Praxis können sich ändern. Prüfen Sie Ihre Zahlen, bevor Sie die Steuererklärung einreichen.",
+    "legal": "Impressum und Datenschutz",
+    "sources": "Grundlage sind die Wegleitung zur Zürcher Steuererklärung und die kantonale Weisung zur Bewertung von Liegenschaften.",
+    "rights": "In Zürich entwickelt von Aleksej Dix"
+  },
+  "legal": {
+    "title": "Impressum und Datenschutz",
+    "disclaimerTitle": "Keine Steuerberatung",
+    "disclaimer": "Dix.Tax bietet allgemeine Informationen und eine Berechnungshilfe für Standardsituationen. Es ist keine Steuer- oder Rechtsberatung. Die Prozentsätze für die Bewertung entsprechen der veröffentlichten Praxis des Kantons Zürich zum Zeitpunkt der Erstellung. Das Steueramt kann Ihren Fall anders beurteilen. Für Ihre Steuererklärung bleiben Sie selbst verantwortlich. Wenden Sie sich bei komplexen Situationen an einen zugelassenen Treuhänder oder Steuerberater oder an Ihr Steueramt.",
+    "privacyTitle": "Datenschutz",
+    "privacy": [
+      "Alles, was Sie im Rechner eingeben, wird nur in Ihrem Browser verarbeitet und gespeichert (Local Storage). Es wird nie an uns übermittelt.",
+      "Wenn Sie Ihre E-Mail-Adresse hinterlassen, damit wir Sie informieren, sobald ein Formular bereit ist, erreicht sie uns als E-Mail in unserem eigenen Postfach, das in der Schweiz gehostet wird. Wir verwenden sie nur dafür und löschen sie auf Wunsch.",
+      "Wir verwenden keine Analyse-, Werbe- oder Tracking-Cookies. Ein funktionales Cookie merkt sich Ihre Sprache.",
+      "Unser Hosting-Anbieter verarbeitet technische Verbindungsdaten wie IP-Adressen in Server-Logs, um die Website sicher auszuliefern."
+    ],
+    "contactTitle": "Verantwortlich für diese Website",
+    "contactBody": "Aleksej Dix, Zürich, Schweiz",
+    "contactEmail": "Kontakt"
+  },
+  "hub": {
+    "title": "Zu einer Liegenschaft im Ausland gehört ein Steuerformular. Wir bereiten es vor.",
+    "lead": "Ein Zuhause in einem anderen Land bedeutet eine Deklaration dort, wo Sie wohnen, dort, wo die Liegenschaft steht, oder an beiden Orten. Dix.Tax stellt Ihnen einige einfache Fragen und liefert die genaue Zahl für jede Zeile, erklärt in Ihrer Sprache.",
+    "chooseTitle": "Welches Formular brauchen Sie?",
+    "bothTitle": "Eine Liegenschaft, oft zwei Deklarationen",
+    "bothBody": "Eine Wohnung in Valencia, die jemandem in Zürich gehört, braucht das Modelo 210 in Spanien und eine Zeile in der Zürcher Steuererklärung. Für beide gelten andere Werte und andere Regeln. Dix.Tax hält sie auseinander und rechnet beide richtig."
+  },
+  "products": {
+    "statusLive": "Verfügbar",
+    "statusSoon": "In Vorbereitung",
+    "more": "Mehr erfahren",
+    "chZurich": {
+      "name": "Schweizer Steuererklärung",
+      "place": "Kanton Zürich",
+      "who": "Sie wohnen in der Schweiz und besitzen eine Liegenschaft in einem anderen Land.",
+      "what": "Steuerwert, Eigenmietwert und Pauschalabzug für das Liegenschaftenverzeichnis, dazu ein deutscher Text für das Steueramt.",
+      "cta": "Deklaration vorbereiten",
+      "note": "Weitere Kantone sind in Vorbereitung."
+    },
+    "modelo210": {
+      "name": "Modelo 210",
+      "place": "Spanien",
+      "who": "Sie besitzen ein Zuhause in Spanien und wohnen in einem anderen Land.",
+      "what": "Die spanische Steuer für Eigentümer, die nicht in Spanien ansässig sind. Jedes Jahr fällig, auch wenn die Liegenschaft nie vermietet wird."
+    },
+    "anlageV": {
+      "name": "Anlage V",
+      "place": "Deutschland",
+      "who": "Sie vermieten eine Liegenschaft in Deutschland und wohnen in einem anderen Land.",
+      "what": "Die Anlage der deutschen Steuererklärung für Mieteinkünfte, mit Abschreibung (AfA) und abzugsfähigen Kosten."
+    }
+  },
+  "trust": {
+    "title": "Warum Sie sich auf die Zahlen verlassen können",
+    "items": [
+      {
+        "title": "Jede Regel hat eine Quelle",
+        "body": "Jeder Prozentsatz und jede Formularzeile stammt aus einer amtlichen Wegleitung, einem Gesetz oder einer Weisung. Wir nennen die Quelle direkt bei der Zahl."
+      },
+      {
+        "title": "Die Berechnungen sind getestet",
+        "body": "Referenzfälle mit bekanntem Ergebnis laufen bei jeder Änderung automatisch durch. So kann eine Korrektur an einer Stelle nicht unbemerkt eine andere Stelle verfälschen."
+      },
+      {
+        "title": "Ihre Daten bleiben bei Ihnen",
+        "body": "Alles wird in Ihrem Browser berechnet. Nichts, was Sie in einen Rechner eingeben, wird an uns gesendet."
+      },
+      {
+        "title": "Dahinter steht ein Mensch",
+        "body": "Dix.Tax wird in Zürich von Aleksej Dix entwickelt, der diese Formulare für seine eigenen Liegenschaften einreicht."
+      }
+    ],
+    "reviewTitle": "Unabhängige Prüfung",
+    "reviewedBy": "Geprüft von {name}, {firm}. {date}."
+  },
+  "soon": {
+    "status": "In Vorbereitung",
+    "factsTitle": "Das Wichtigste in Kürze",
+    "notifyTitle": "Möchten Sie erfahren, wann es so weit ist?",
+    "notifyBody": "Schreiben Sie uns, und wir melden uns, sobald dieses Formular verfügbar ist.",
+    "swissTitle": "Wohnen Sie im Kanton Zürich?",
+    "swissBody": "Dann gehört dieselbe Liegenschaft auch in Ihre Schweizer Steuererklärung. Dieser Teil ist heute schon verfügbar.",
+    "swissCta": "Schweizer Deklaration öffnen"
+  },
+  "interest": {
+    "title": "Brauchen Sie das?",
+    "lead": "Wir bauen zuerst die Formulare, nach denen gefragt wird. Sagen Sie uns, welches Sie brauchen, und wir schreiben Ihnen, sobald es bereit ist.",
+    "which": "Welches Formular brauchen Sie?",
+    "options": {
+      "modelo210": "Modelo 210 (Spanien)",
+      "anlageV": "Anlage V (Deutschland)",
+      "chOther": "Schweizer Steuererklärung, anderer Kanton",
+      "other": "Etwas anderes"
+    },
+    "email": "Ihre E-Mail-Adresse",
+    "note": "Ihre Situation in einem Satz (freiwillig)",
+    "notePlaceholder": "Zum Beispiel: Ich wohne in Basel und vermiete eine Wohnung in München.",
+    "submit": "Benachrichtigen, wenn es bereit ist",
+    "sending": "Wird gesendet",
+    "done": "Danke. Wir schreiben Ihnen, sobald dieses Formular bereit ist, und nicht vorher.",
+    "error": "Das hat nicht geklappt. Bitte versuchen Sie es gleich nochmals oder schreiben Sie an",
+    "consent": "Wir verwenden Ihre Adresse nur, um Sie über dieses Formular zu informieren. Kein Newsletter, und wir löschen sie auf Wunsch."
+  }
+}

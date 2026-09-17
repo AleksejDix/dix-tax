@@ -1,0 +1,30 @@
+{
+  "modelo210": {
+    "metaTitle": "Modelo 210 für Eigentümer, die ausserhalb Spaniens wohnen",
+    "metaDescription": "Wer das spanische Modelo 210 einreichen muss, wie die Steuer berechnet wird und wann sie fällig ist. Ein geführter Rechner ist in Vorbereitung.",
+    "title": "Modelo 210: die spanische Steuer für Eigentümer, die anderswo wohnen",
+    "lead": "Wenn Sie ein Zuhause in Spanien besitzen, dort aber nicht steuerlich ansässig sind, erwartet Spanien jedes Jahr ein Modelo 210. Das gilt auch dann, wenn die Liegenschaft nie vermietet wird und nichts einbringt.",
+    "facts": [
+      {
+        "label": "Wer einreicht",
+        "value": "Alle, die eine Liegenschaft in Spanien besitzen und dort nicht steuerlich ansässig sind. Jede Miteigentümerin und jeder Miteigentümer reicht ein eigenes Formular ein."
+      },
+      {
+        "label": "Selbst genutzt oder leer stehend",
+        "value": "Spanien besteuert ein fiktives Einkommen: 1.1% des Katasterwerts, wenn dieser in den letzten 10 Jahren neu festgelegt wurde, sonst 2%."
+      },
+      {
+        "label": "Vermietet",
+        "value": "Die Miete, die Sie erhalten haben. Wer in der EU und im EWR ansässig ist, darf Kosten abziehen, alle anderen nicht."
+      },
+      {
+        "label": "Steuersatz",
+        "value": "19% für Personen, die in der EU und im EWR ansässig sind, 24% für alle anderen, auch für die Schweiz und das Vereinigte Königreich."
+      },
+      {
+        "label": "Fristen",
+        "value": "Eigennutzung: bis 31. Dezember des Folgejahres. Vermietung: vom 1. bis 20. Januar des Folgejahres."
+      }
+    ]
+  }
+}

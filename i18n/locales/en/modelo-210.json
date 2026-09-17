@@ -1,0 +1,30 @@
+{
+  "modelo210": {
+    "metaTitle": "Modelo 210 for property owners who live outside Spain",
+    "metaDescription": "Who has to file Spain's Modelo 210, how the tax is calculated and when it is due. A guided calculator is in preparation.",
+    "title": "Modelo 210: Spain's tax for owners who live elsewhere",
+    "lead": "If you own a home in Spain but are not tax resident there, Spain expects a Modelo 210 every year. That applies even if the home is never rented and earns nothing.",
+    "facts": [
+      {
+        "label": "Who files",
+        "value": "Anyone who owns property in Spain and is not tax resident there. Each co-owner files separately."
+      },
+      {
+        "label": "Used by you or standing empty",
+        "value": "Spain taxes a notional income: 1.1% of the cadastral value if that value was revised in the last 10 years, otherwise 2%."
+      },
+      {
+        "label": "Rented out",
+        "value": "The rent you received. Residents of the EU and EEA may deduct costs, others may not."
+      },
+      {
+        "label": "Tax rate",
+        "value": "19% for residents of the EU and EEA, 24% for everyone else, including Switzerland and the United Kingdom."
+      },
+      {
+        "label": "Deadlines",
+        "value": "Own use: by 31 December of the following year. Rent: between 1 and 20 January of the following year."
+      }
+    ]
+  }
+}

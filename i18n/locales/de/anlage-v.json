@@ -1,0 +1,26 @@
+{
+  "anlageV": {
+    "metaTitle": "Anlage V für Vermieter, die ausserhalb Deutschlands wohnen",
+    "metaDescription": "Wer die deutsche Anlage V aus dem Ausland einreichen muss, welche Formulare dazugehören und wann sie fällig ist. Ein geführter Rechner ist in Vorbereitung.",
+    "title": "Anlage V: deutsche Mieteinkünfte für Eigentümer, die im Ausland wohnen",
+    "lead": "Wenn Sie eine Liegenschaft in Deutschland vermieten, ohne dort zu wohnen, wird die Miete trotzdem in Deutschland besteuert. Sie deklarieren sie einmal im Jahr in der Anlage V.",
+    "facts": [
+      {
+        "label": "Wer einreicht",
+        "value": "Alle, die eine Liegenschaft in Deutschland vermieten, ohne dort einen Wohnsitz zu haben. Deutschland nennt das beschränkte Steuerpflicht."
+      },
+      {
+        "label": "Formulare",
+        "value": "Das Hauptformular ESt 1 C und je eine Anlage V pro Liegenschaft, online eingereicht über ELSTER."
+      },
+      {
+        "label": "Was besteuert wird",
+        "value": "Die erhaltene Miete abzüglich der abzugsfähigen Kosten, zum Beispiel Abschreibung (AfA) des Gebäudes, Schuldzinsen, Verwaltung und Reparaturen."
+      },
+      {
+        "label": "Frist",
+        "value": "31. Juli des Folgejahres, wenn Sie die Erklärung selbst einreichen."
+      }
+    ]
+  }
+}

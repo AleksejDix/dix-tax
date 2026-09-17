@@ -1,0 +1,322 @@
+{
+  "zh": {
+    "meta": {
+      "title": "Dix.Tax: declara tu inmueble en el extranjero en la declaración de Zúrich",
+      "description": "Para quienes viven en el cantón de Zúrich y tienen una vivienda en el extranjero. Obtén las cifras exactas para el Liegenschaftenverzeichnis, explicadas en español, inglés, alemán, ucraniano y ruso.",
+      "calcTitle": "Preparar la declaración",
+      "guideTitle": "Guía: cómo rellenar el formulario de Zúrich"
+    },
+    "hero": {
+      "title": "Tu inmueble en el extranjero, bien declarado en Zúrich",
+      "lead": "Si vives en el cantón de Zúrich y presentas la declaración de impuestos, tu inmueble en el extranjero tiene que figurar en ella. Responde a unas preguntas y obtén la cifra exacta para cada casilla del formulario, explicada en tu idioma.",
+      "cta": "Preparar mi declaración",
+      "secondary": "Ver cómo funciona",
+      "note": "{price} por apartamento. Sin cuenta. Tus datos se quedan en tu navegador.",
+      "noteValue": "el 70% de lo que pagaste",
+      "noteIncome": "un alquiler imputado, no dinero real",
+      "noteResult": "copia estas dos en tu declaración"
+    },
+    "sheet": {
+      "caption": "Ejemplo: un apartamento de 68 m² en Valencia comprado por EUR 120'000",
+      "place": "Localidad",
+      "street": "Calle",
+      "country": "País",
+      "kind": "Tipo",
+      "kindApartment": "Apartamento",
+      "kindHouse": "Casa",
+      "area": "Superficie",
+      "gross": "Alquiler imputado o alquiler cobrado",
+      "maintenance": "Deducción a tanto alzado por mantenimiento, 20%",
+      "net": "Renta restante",
+      "value": "Valor fiscal",
+      "totalNet": "Renta neta de inmuebles",
+      "totalValue": "Inmuebles a valor de mercado",
+      "transfer": "Pasa a la declaración, línea {line}",
+      "code": "Código {code}",
+      "empty": "Tu apartamento aparecerá aquí"
+    },
+    "facts": {
+      "title": "Qué quiere saber Zúrich y cuánto te cuesta",
+      "items": [
+        {
+          "title": "Tienes que declararlo",
+          "body": "Quien presenta la declaración en Zúrich declara sus ingresos y su patrimonio en todo el mundo. Eso incluye un apartamento en Valencia, Berlín o Kiev, aunque no viva nadie en él."
+        },
+        {
+          "title": "Suiza no lo grava",
+          "body": "La ley suiza grava los inmuebles solo en el país donde están, y los convenios fiscales de Suiza dicen lo mismo. Zúrich excluye el apartamento de tu patrimonio y tus ingresos imponibles."
+        },
+        {
+          "title": "Solo cambia tu tipo impositivo",
+          "body": "El valor y un alquiler imputado se usan para fijar tu tipo. En un apartamento normal el efecto es pequeño. Lo que sale caro es no declararlo: impuestos atrasados, intereses y una multa."
+        }
+      ]
+    },
+    "steps": {
+      "title": "Tres pasos, unos diez minutos",
+      "items": [
+        {
+          "title": "Describe tu apartamento",
+          "body": "País, localidad, superficie, lo que pagaste o lo que vale, y cómo se usa hoy: para ti, lo habita tu familia, alquilado o inutilizable."
+        },
+        {
+          "title": "Obtén los valores de Zúrich",
+          "body": "Valor fiscal al 70% del precio. Alquiler imputado del 4,25% para apartamentos o del 3,5% para casas. La deducción a tanto alzado del 20% por mantenimiento. Todo convertido a francos."
+        },
+        {
+          "title": "Copia las cifras en tu declaración",
+          "body": "El resultado sigue línea por línea el formulario de inmuebles de Zúrich, con una nota en alemán lista para el campo de observaciones. Introdúcelo en ZHprivateTax o en el formulario en papel."
+        }
+      ]
+    },
+    "report": {
+      "title": "Qué obtienes",
+      "lead": "Una hoja que puedes imprimir o guardar como PDF y conservar con tus documentos fiscales.",
+      "items": [
+        "Cada campo del Liegenschaftenverzeichnis, rellenado para cada inmueble",
+        "Los dos totales para tu declaración: línea 6 (código 188) y línea 31.1 (código 421)",
+        "Una nota en alemán para la oficina tributaria que explica la valoración y pide la asignación al extranjero",
+        "Una lista de documentos que conviene guardar por si la oficina tributaria los pide",
+        "Cada término alemán traducido, para que sepas lo que firmas"
+      ]
+    },
+    "compare": {
+      "title": "Tus opciones",
+      "colOption": "Opción",
+      "colCost": "Coste",
+      "colEffort": "Esfuerzo",
+      "colResult": "Con qué te quedas",
+      "rows": [
+        {
+          "option": "No declarar el apartamento",
+          "cost": "Nada por ahora",
+          "effort": "Ninguno",
+          "result": "Si sale a la luz más adelante: impuestos atrasados de hasta 10 años, intereses y una multa"
+        },
+        {
+          "option": "Contratar a un asesor fiscal",
+          "cost": "Varios cientos de francos, cada año",
+          "effort": "Citas y documentos, a menudo solo en alemán",
+          "result": "La opción correcta para casos complicados"
+        },
+        {
+          "option": "Dix.Tax",
+          "cost": "{price} por apartamento la primera vez, menos en los años siguientes",
+          "effort": "Unos 10 minutos",
+          "result": "Cifras correctas para casos estándar, explicadas en tu idioma"
+        }
+      ]
+    },
+    "fit": {
+      "title": "¿Es para ti?",
+      "yesTitle": "La herramienta te sirve si",
+      "yes": [
+        "vives en el cantón de Zúrich y presentas la declaración, o te han pedido que la presentes",
+        "tienes uno o varios apartamentos o casas en el extranjero, solo o con tu cónyuge",
+        "el inmueble es para ti, lo habita tu familia, está alquilado a un inquilino o no se puede usar"
+      ],
+      "noTitle": "Consulta a un asesor o a la oficina tributaria si",
+      "no": [
+        "hay una hipoteca u otro préstamo sobre el inmueble",
+        "lo compraste, vendiste o heredaste durante el año fiscal",
+        "es un edificio comercial, un terreno agrícola o un solar",
+        "no lo declaraste en años anteriores y quieres corregirlo",
+        "tu pregunta es sobre la ayuda social, que sigue otras reglas"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "¿Pago impuestos en Suiza por mi apartamento en el extranjero?",
+          "a": "No. La ley suiza grava los inmuebles solo en el país donde están, y los convenios fiscales de Suiza dicen lo mismo. Aun así, Zúrich quiere ver el apartamento, porque tu patrimonio y tus ingresos totales deciden qué tipo se aplica a la parte que tributa en Suiza. En el ámbito fiscal se llama satzbestimmend: solo cuenta para el tipo."
+        },
+        {
+          "q": "El otro país ya grava el apartamento. ¿No es eso doble imposición?",
+          "a": "No. El otro país grava el inmueble y el alquiler que genere. Suiza no los vuelve a gravar, solo los usa para fijar el tipo sobre tus ingresos y tu patrimonio suizos. Lo que debas en el extranjero, por ejemplo el impuesto alemán sobre alquileres (Anlage V) o el impuesto español de no residentes (Modelo 210), es una declaración aparte en ese país."
+        },
+        {
+          "q": "¿Cuánto cuesta?",
+          "a": "{price} por apartamento en tu primera declaración. En los años siguientes cuesta menos, porque tu apartamento ya está configurado. Un asesor fiscal suele cobrar varios cientos de francos por el mismo trabajo, cada año."
+        },
+        {
+          "q": "Mis impuestos se descuentan del salario. ¿Tengo que presentar declaración?",
+          "a": "Quienes tributan en la fuente (Quellensteuer), por ejemplo con permiso B o estatus de protección S, normalmente no la presentan. Tienes que presentarla si tienes otros ingresos de CHF 3'000 o más al año, un patrimonio imponible de CHF 80'000 o más (CHF 160'000 para matrimonios) o un salario bruto de CHF 120'000 o más. Con el estatus S también pasas a tributar de forma ordinaria cuando llevas más de dos años viviendo en Suiza sin interrupción y tu vida está centrada aquí. Y si tu municipio te ha enviado una declaración, tienes que rellenarla en cualquier caso. Si tienes dudas, pregunta en tu Gemeindesteueramt."
+        },
+        {
+          "q": "¿Cómo valoro el apartamento?",
+          "a": "La práctica de Zúrich para inmuebles en el extranjero es el 70% del precio de compra, convertido a francos. Si no hubo precio de compra, por ejemplo porque heredaste el apartamento o te lo regalaron, usa una estimación realista de lo que se obtendría al venderlo y toma el 70% de esa cifra. Guarda lo que respalde tu cifra: la escritura de compraventa, una nota simple del registro de la propiedad o anuncios comparables."
+        },
+        {
+          "q": "Mi apartamento está dañado o no se puede usar. ¿Y ahora qué?",
+          "a": "Lo sigues declarando, porque sigue siendo tuyo. Usa un valor que refleje la realidad y no declares alquiler imputado si el apartamento de verdad no se puede usar, por ejemplo tras daños de guerra o un incendio, o porque está en una zona a la que no puedes llegar. La herramienta escribe una breve explicación en alemán para el campo de observaciones. Guarda fotos, informes oficiales o noticias por si la oficina tributaria los pide."
+        },
+        {
+          "q": "Mis padres viven gratis en el apartamento. ¿Es eso una renta de alquiler?",
+          "a": "No es alquiler, pero Zúrich trata un apartamento que usas tú o tus familiares de forma gratuita como uso propio. Eso significa que se aplica un alquiler imputado (Eigenmietwert) del 4,25% del valor fiscal. Solo afecta a tu tipo."
+        },
+        {
+          "q": "¿Qué es el Eigenmietwert? ¿No se había abolido?",
+          "a": "Es una renta imputada: lo que podrías ganar si alquilaras una vivienda que reservas para ti. Los votantes suizos decidieron abolirlo el 28 de septiembre de 2025, y el Consejo Federal fijó el 1 de enero de 2029 como fecha de entrada en vigor. Hasta el año fiscal 2028 inclusive hay que seguir declarándolo."
+        },
+        {
+          "q": "No declaré el apartamento en años anteriores. ¿Qué hago?",
+          "a": "Una vez en la vida puedes corregirlo sin multa mediante una autodenuncia voluntaria (straflose Selbstanzeige), siempre que la oficina tributaria no lo haya descubierto por su cuenta. Pagas el impuesto que faltaba de hasta diez años más intereses, lo que para un apartamento en el extranjero suele ser una cantidad pequeña. Contacta con la oficina tributaria cantonal o con un asesor antes de presentar la declaración, y no empieces simplemente a declarar el apartamento sin dar explicaciones."
+        },
+        {
+          "q": "¿Y mis cuentas bancarias en el extranjero?",
+          "a": "Cuando tributas de forma ordinaria en Suiza, las cuentas extranjeras van en la lista de valores y cuentas (Wertschriftenverzeichnis) con el saldo a 31 de diciembre y los intereses obtenidos. Esta herramienta solo cubre inmuebles."
+        },
+        {
+          "q": "¿Afecta esto a mi ayuda social?",
+          "a": "La ayuda social, la asistencia a solicitantes de asilo y las prestaciones complementarias siguen sus propias reglas y las gestiona otra oficina. Esta herramienta solo cubre la declaración de impuestos. Informa del inmueble con sinceridad a la persona que lleva tu caso y pregunta cómo se trata en tu municipio."
+        },
+        {
+          "q": "¿Dónde se guardan mis datos?",
+          "a": "En tu navegador y en ningún otro sitio. Nada de lo que escribes se envía a un servidor, no hay cuenta ni seguimiento. Puedes borrarlo todo con un clic."
+        }
+      ]
+    },
+    "cta": {
+      "title": "Diez minutos ahora te ahorran una carta de la oficina tributaria después",
+      "body": "Ten a mano el precio de compra y la superficie del apartamento. Es todo lo que necesitas.",
+      "button": "Preparar mi declaración"
+    },
+    "calc": {
+      "title": "Preparar la declaración",
+      "lead": "Rellena lo que sepas. Tu formulario se actualiza mientras escribes.",
+      "privacy": "Guardado solo en este navegador.",
+      "year": {
+        "label": "Año fiscal",
+        "hint": "La declaración de un año se presenta en primavera del año siguiente. Los valores son a 31 de diciembre."
+      },
+      "property": {
+        "heading": "Inmueble {n}",
+        "add": "Añadir otro inmueble",
+        "remove": "Eliminar"
+      },
+      "fields": {
+        "country": "País",
+        "countryPlaceholder": "Elige un país",
+        "countryOther": "Otro país",
+        "countryOtherLabel": "Nombre del país, en alemán si lo sabes",
+        "city": "Ciudad o pueblo",
+        "cityPlaceholder": "Valencia",
+        "street": "Calle y número",
+        "streetHint": "Opcional, en caracteres latinos",
+        "type": "Tipo",
+        "apartment": "Apartamento",
+        "house": "Casa",
+        "area": "Superficie total en m²",
+        "share": "Tu participación en %",
+        "shareHint": "100 si es solo tuyo o lo compartes con tu cónyuge",
+        "basis": "¿Qué valor conoces?",
+        "basisPurchase": "Precio de compra",
+        "basisMarket": "Valor de mercado estimado hoy",
+        "basisHint": "Usa la estimación si heredaste el apartamento o te lo regalaron, o si ha perdido gran parte de su valor.",
+        "amount": "Importe",
+        "currency": "Moneda",
+        "rate": "Cambio: 1 {currency} en CHF",
+        "rateHint": "Rellenado con un tipo de cambio aproximado a final de año. Sustitúyelo por el tipo oficial de la lista federal de cambios.",
+        "rateLink": "Abrir la lista oficial de cambios (ICTax)",
+        "usage": "¿Cómo se usa hoy?",
+        "usageSelf": "Vacío o para mí",
+        "usageSelfHint": "Se aplica alquiler imputado",
+        "usageFamily": "Mi familia vive allí gratis",
+        "usageFamilyHint": "Se trata como uso propio",
+        "usageRented": "Alquilado a un inquilino",
+        "usageRentedHint": "Declara el alquiler que cobras",
+        "usageUnusable": "No se puede usar",
+        "usageUnusableHint": "Destruido, muy dañado o inaccesible, por ejemplo a causa de una guerra",
+        "rent": "Alquiler cobrado al año",
+        "rentHint": "Sin los gastos que el inquilino paga aparte. En la misma moneda que arriba."
+      },
+      "result": {
+        "title": "Tus cifras",
+        "notTaxed": "Nada de esto tributa en Suiza. Solo se usa para fijar tu tipo impositivo.",
+        "remarkTitle": "Nota para el campo de observaciones, en alemán",
+        "remarkHint": "Pégala en las observaciones (Bemerkungen) de tu declaración o añádela como hoja aparte.",
+        "copy": "Copiar texto",
+        "copied": "Copiado",
+        "print": "Imprimir o guardar como PDF",
+        "reset": "Borrar todos los datos",
+        "resetConfirm": "¿Borrar todo lo que has introducido?",
+        "nextTitle": "Qué hacer con esto",
+        "next": [
+          "Abre tu declaración en ZHprivateTax o en papel y ve al Liegenschaftenverzeichnis.",
+          "Añade cada inmueble con su país y copia las cifras campo por campo.",
+          "Elige la deducción a tanto alzado (Pauschalabzug) por mantenimiento.",
+          "Pega la nota en alemán en las observaciones y guarda tus documentos en casa."
+        ],
+        "assumptionsTitle": "Cómo calculamos",
+        "assumptions": [
+          "Valor fiscal: 70% del precio de compra o del valor de mercado estimado, en francos.",
+          "Alquiler imputado: 4,25% del valor fiscal para apartamentos, 3,5% para casas. Ninguno si el inmueble no se puede usar.",
+          "Inmueble alquilado: el alquiler realmente cobrado en lugar del alquiler imputado.",
+          "Mantenimiento: deducción a tanto alzado del 20% del alquiler imputado o cobrado.",
+          "Los importes se redondean a francos enteros y se multiplican por tu participación."
+        ],
+        "guideLink": "Abrir la guía paso a paso"
+      }
+    },
+    "guide": {
+      "title": "Cómo rellenar el formulario de Zúrich, paso a paso",
+      "lead": "La declaración en línea del cantón se llama ZHprivateTax. El formulario en papel tiene los mismos campos. Aquí ves dónde va tu apartamento.",
+      "stepsTitle": "En la declaración",
+      "steps": [
+        {
+          "title": "Abre el Liegenschaftenverzeichnis",
+          "body": "Es la lista de inmuebles. Desde el año fiscal 2024 todos los inmuebles se declaran solo aquí, incluidos los de otros cantones y los del extranjero."
+        },
+        {
+          "title": "Añade el apartamento",
+          "body": "Introduce la localidad y la calle en caracteres latinos. En Kanton / Land elige el país. Como tipo elige Stockwerkeigentum para un apartamento o Einfamilienhaus para una casa, e introduce la superficie en m²."
+        },
+        {
+          "title": "Introduce la renta",
+          "body": "En el campo Eigenmietwert / Mietzinseinnahmen introduce el alquiler imputado de tu hoja de Dix.Tax, o el alquiler cobrado si el apartamento está alquilado."
+        },
+        {
+          "title": "Elige la deducción a tanto alzado",
+          "body": "En Unterhalts- und Verwaltungskosten elige Pauschalabzug. Es del 20% y no requiere justificantes. Los gastos reales solo compensan si fueron mayores, y entonces necesitas una lista detallada."
+        },
+        {
+          "title": "Introduce el valor fiscal",
+          "body": "En el campo Verkehrswert introduce el valor fiscal de tu hoja. El programa lleva los totales a la línea 6 (renta neta de inmuebles) y a la línea 31.1 (inmuebles) del formulario principal."
+        },
+        {
+          "title": "Añade la nota en alemán",
+          "body": "Pega la nota de tu hoja en las observaciones (Bemerkungen). Explica cómo valoraste el apartamento y pide a la oficina tributaria que lo asigne al extranjero. La oficina hace la asignación por su cuenta."
+        },
+        {
+          "title": "Presenta y guarda tus documentos",
+          "body": "En Zúrich el plazo es el 31 de marzo. Puedes prorrogarlo en línea, sin coste, hasta el 30 de noviembre. No hace falta enviar documentos del apartamento, pero guárdalos por si la oficina los pide."
+        }
+      ],
+      "docsTitle": "Documentos que conviene guardar",
+      "docs": [
+        "Escritura de compraventa, o el documento de herencia o donación",
+        "Nota simple del registro de la propiedad del país donde está el inmueble",
+        "Contrato de alquiler y justificantes del alquiler cobrado, si está alquilado",
+        "Fotos, informes de daños o certificados oficiales, si el inmueble no se puede usar",
+        "El tipo de cambio que usaste y de dónde lo sacaste"
+      ],
+      "glossaryTitle": "Palabras alemanas del formulario",
+      "glossary": {
+        "liegenschaftenverzeichnis": "Lista de inmuebles. El formulario donde se declara cada inmueble.",
+        "eigenmietwert": "Alquiler imputado. La renta que se considera que obtienes de una vivienda que reservas para tu propio uso.",
+        "steuerwert": "Valor fiscal. El valor del inmueble para el impuesto sobre el patrimonio; en el formulario de Zúrich también se llama Verkehrswert.",
+        "pauschalabzug": "Deducción a tanto alzado. Un porcentaje fijo que puedes deducir sin justificantes.",
+        "satzbestimmend": "Solo cuenta para el tipo. La partida no tributa por sí misma, pero eleva el tipo sobre todo lo demás.",
+        "steuerausscheidung": "Reparto fiscal. La oficina tributaria separa lo que tributa en Zúrich de lo que corresponde a otro país.",
+        "quellensteuer": "Impuesto en la fuente. El impuesto que el empleador descuenta directamente del salario.",
+        "schutzstatus": "Estatus de protección S. El permiso de residencia para las personas que huyeron de la guerra en Ucrania.",
+        "gemeindesteueramt": "Oficina tributaria municipal. Tu primer contacto para formularios, plazos y preguntas.",
+        "fristerstreckung": "Prórroga del plazo. Más tiempo para presentar la declaración, que se solicita en línea.",
+        "bemerkungen": "Observaciones. Campo de texto libre para dar explicaciones a la oficina tributaria.",
+        "selbstanzeige": "Autodenuncia voluntaria. Comunicar tú mismo omisiones anteriores, una vez en la vida sin multa."
+      },
+      "cta": "Calcular mis cifras"
+    }
+  }
+}

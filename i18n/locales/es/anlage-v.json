@@ -1,0 +1,26 @@
+{
+  "anlageV": {
+    "metaTitle": "Anlage V para arrendadores que viven fuera de Alemania",
+    "metaDescription": "Quién tiene que presentar la Anlage V alemana desde el extranjero, qué formularios la acompañan y cuándo vence. Estamos preparando una calculadora guiada.",
+    "title": "Anlage V: rentas de alquiler en Alemania para propietarios que viven en el extranjero",
+    "lead": "Si alquilas un inmueble en Alemania sin vivir allí, el alquiler sigue tributando en Alemania. Lo declaras una vez al año en la Anlage V.",
+    "facts": [
+      {
+        "label": "Quién la presenta",
+        "value": "Toda persona que alquile un inmueble en Alemania sin tener allí su vivienda. Alemania lo llama obligación tributaria limitada."
+      },
+      {
+        "label": "Formularios",
+        "value": "El formulario principal ESt 1 C más una Anlage V por cada inmueble, presentados en línea a través de ELSTER."
+      },
+      {
+        "label": "Qué tributa",
+        "value": "El alquiler cobrado menos los gastos deducibles, como la amortización del edificio, los intereses del préstamo, la administración y las reparaciones."
+      },
+      {
+        "label": "Plazo",
+        "value": "El 31 de julio del año siguiente si la presentas tú mismo."
+      }
+    ]
+  }
+}

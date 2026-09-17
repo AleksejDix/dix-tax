@@ -1,0 +1,26 @@
+{
+  "anlageV": {
+    "metaTitle": "Anlage V for landlords who live outside Germany",
+    "metaDescription": "Who has to file Germany's Anlage V from abroad, which forms belong to it and when it is due. A guided calculator is in preparation.",
+    "title": "Anlage V: German rental income for owners who live abroad",
+    "lead": "If you rent out property in Germany without living there, the rent is still taxed in Germany. You declare it once a year on Anlage V.",
+    "facts": [
+      {
+        "label": "Who files",
+        "value": "Anyone who rents out property in Germany without a home there. Germany calls this limited tax liability."
+      },
+      {
+        "label": "Forms",
+        "value": "The main form ESt 1 C plus one Anlage V for each property, filed online through ELSTER."
+      },
+      {
+        "label": "What is taxed",
+        "value": "Rent received minus deductible costs, such as depreciation of the building, loan interest, management and repairs."
+      },
+      {
+        "label": "Deadline",
+        "value": "31 July of the following year if you file yourself."
+      }
+    ]
+  }
+}

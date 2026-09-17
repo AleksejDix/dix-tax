@@ -10,6 +10,15 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
+  runtimeConfig: {
+    public: {
+      // The signup form only appears when the server can actually deliver it. Decided at
+      // build time: add SMTP_USER and SMTP_PASS on Vercel, redeploy, and the form turns on.
+      // Without them visitors get a plain "write to us" link instead of a form that fails.
+      signupEnabled: Boolean(process.env.SMTP_USER && process.env.SMTP_PASS),
+    },
+  },
+
   app: {
     head: {
       meta: [

@@ -7,6 +7,8 @@ const props = defineProps<{ product?: string; choose?: boolean }>()
 const { t, locale } = useI18n()
 const id = useId()
 const address = useAppConfig().contactEmail
+// False until the server has a mail login (see runtimeConfig in nuxt.config.ts).
+const enabled = useRuntimeConfig().public.signupEnabled
 
 const options = ['modelo210', 'anlageV', 'chOther', 'other'] as const
 const email = ref('')
@@ -14,6 +16,15 @@ const note = ref('')
 const website = ref('')
 const chosen = ref<string>(props.product ?? 'modelo210')
 const state = ref<'idle' | 'sending' | 'done' | 'error'>('idle')
+
+// Fallback while the form is off: the same answers, sent from the visitor's own mail app.
+const mailto = computed(() => {
+  const form = t(`interest.options.${chosen.value}`)
+  const body = [t('interest.mail.greeting'), '', note.value.trim(), '', `[${chosen.value} / ${locale.value}]`]
+    .join('\n')
+    .replace(/\n{3,}/g, '\n\n')
+  return `mailto:${address}?subject=${encodeURIComponent(`Dix.Tax: ${form}`)}&body=${encodeURIComponent(body)}`
+})
 
 async function submit() {
   state.value = 'sending'
@@ -30,7 +41,24 @@ async function submit() {
 </script>
 
 <template>
-  <p v-if="state === 'done'" class="done" role="status">{{ t('interest.done') }}</p>
+  <div v-if="!enabled" class="form">
+    <label v-if="choose" class="field">
+      <span>{{ t('interest.which') }}</span>
+      <select v-model="chosen">
+        <option v-for="o in options" :key="o" :value="o">{{ t(`interest.options.${o}`) }}</option>
+      </select>
+    </label>
+
+    <label class="field">
+      <span>{{ t('interest.note') }}</span>
+      <textarea v-model="note" rows="3" maxlength="1000" :placeholder="t('interest.notePlaceholder')" />
+    </label>
+
+    <a class="btn btn-primary" :href="mailto">{{ t('interest.mail.submit') }}</a>
+    <p class="consent">{{ t('interest.mail.hint') }}</p>
+  </div>
+
+  <p v-else-if="state === 'done'" class="done" role="status">{{ t('interest.done') }}</p>
 
   <form v-else class="form" @submit.prevent="submit">
     <label v-if="choose" class="field">

@@ -114,6 +114,11 @@
     "sending": "Enviando",
     "done": "Gracias. Te escribiremos cuando este formulario esté listo, y no antes.",
     "error": "No ha funcionado. Inténtalo de nuevo en un momento o escribe a",
-    "consent": "Usamos tu dirección solo para avisarte sobre este formulario. Sin boletines, y la borramos si nos lo pides."
+    "consent": "Usamos tu dirección solo para avisarte sobre este formulario. Sin boletines, y la borramos si nos lo pides.",
+    "mail": {
+      "submit": "Escríbenos",
+      "hint": "Se abrirá tu aplicación de correo con un mensaje preparado. No se envía nada hasta que pulses enviar.",
+      "greeting": "Hola, avisadme por favor cuando este formulario esté listo."
+    }
   }
 }

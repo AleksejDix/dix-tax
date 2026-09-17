@@ -55,8 +55,9 @@ really reviewed a product, add them to `reviews` in `app/app.config.ts`; the blo
 | Source-taxed residents must file | other income >= CHF 3'000 or wealth >= CHF 80'000 / 160'000 | Wegleitung ZH 2024 |
 | Eigenmietwert abolished | from 1 January 2029 | Federal Council, 1 April 2026 |
 
-The prefilled exchange rates in `useDeclaration.ts` are approximations. Update them
-each January from the ICTax rate list.
+Two exchange rates are used, both prefilled with approximations in `useDeclaration.ts`:
+the year-end rate for the value (wealth) and the annual average rate for rent (income).
+Update both each January from the ICTax rate list.
 
 ## Before launch
 

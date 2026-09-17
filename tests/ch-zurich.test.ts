@@ -18,6 +18,7 @@ const base: PropertyInput = {
   rate: 0.93,
   usage: 'self',
   rent: null,
+  rentRate: 0.94,
 }
 
 describe('Zurich: property abroad', () => {
@@ -41,12 +42,21 @@ describe('Zurich: property abroad', () => {
     expect(calculate({ ...base, usage: 'family' }).gross).toBe(3320)
   })
 
-  it('rented property declares the rent received, not a notional rent', () => {
+  it('rented property declares the rent received, converted with the annual average rate', () => {
     const r = calculate({ ...base, usage: 'rented', rent: 9600 })
-    expect(r.gross).toBe(8928)
-    expect(r.maintenance).toBe(1786)
-    expect(r.net).toBe(7142)
-    expect(r.taxValue).toBe(78120)
+    expect(r.gross).toBe(9024) // 9600 x 0.94, not x 0.93 (the year-end rate)
+    expect(r.maintenance).toBe(1805)
+    expect(r.net).toBe(7219)
+    expect(r.taxValue).toBe(78120) // the value still uses the year-end rate
+  })
+
+  it('rent falls back to the year-end rate when no average rate is given', () => {
+    expect(calculate({ ...base, usage: 'rented', rent: 9600, rentRate: null }).gross).toBe(8928)
+  })
+
+  it('rent in francs ignores both rates', () => {
+    const r = calculate({ ...base, currency: 'CHF', amount: 200000, usage: 'rented', rent: 12000, rentRate: 9 })
+    expect(r.gross).toBe(12000)
   })
 
   it('unusable property has a tax value but no income', () => {
@@ -105,6 +115,11 @@ describe('Zurich: what goes on the form', () => {
     expect(note).toContain("EUR 120'000 (Kurs 0.93)")
     expect(note).toContain('4,25% des Steuerwerts')
     expect(note).toContain('Art. 6 Abs. 1 DBG')
+  })
+
+  it('German note states the average rate used for rent', () => {
+    const note = remarkDe([calculate({ ...base, usage: 'rented', rent: 9600 })], 2025)
+    expect(note).toContain("EUR 9'600, umgerechnet zum Jahresmittelkurs 0.94")
   })
 
   it('German note skips incomplete properties and is empty when nothing is complete', () => {

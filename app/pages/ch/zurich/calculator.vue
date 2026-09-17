@@ -21,6 +21,20 @@ const countries = computed(() =>
   ),
 )
 
+// Where each rule comes from. Official names stay in German; what the source covers is translated.
+const SOURCES = [
+  {
+    name: 'Wegleitung zur Steuererklärung 2024, Kanton Zürich',
+    url: 'https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/steuern-finanzen/steuern/natuerlichepersonen/2024/est-wegleitungen/305_Wegleitung_ZH_2024_HA%20bf%20DEF.pdf',
+  },
+  { name: 'Art. 6 Abs. 1 DBG', url: 'https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_6' },
+  { name: 'Kurslisten der ESTV (ICTax)', url: 'https://www.ictax.admin.ch/extern/de.html#/ratelist' },
+  {
+    name: 'Findea: Eigenmietwert einer ausländischen Liegenschaft',
+    url: 'https://blog.findea.ch/de-blog/eigenmietwert-einer-auslandischen-liegenschaft',
+  },
+]
+
 const usages = [
   { value: 'self', label: 'usageSelf', hint: 'usageSelfHint' },
   { value: 'family', label: 'usageFamily', hint: 'usageFamilyHint' },
@@ -31,6 +45,7 @@ const usages = [
 function onCurrencyChange(p: PropertyInput, currency: Currency) {
   p.currency = currency
   p.rate = APPROX_RATES[currency]
+  p.rentRate = APPROX_AVERAGE_RATES[currency]
 }
 
 const copied = ref(false)
@@ -181,11 +196,18 @@ function confirmReset() {
             </div>
           </div>
 
-          <label v-if="p.usage === 'rented'" class="field">
-            <span>{{ t('zh.calc.fields.rent') }} ({{ p.currency }})</span>
-            <input v-model.number="p.rent" type="number" inputmode="decimal" min="0" step="any" />
-            <small>{{ t('zh.calc.fields.rentHint') }}</small>
-          </label>
+          <div v-if="p.usage === 'rented'" class="row row--2">
+            <label class="field">
+              <span>{{ t('zh.calc.fields.rent') }} ({{ p.currency }})</span>
+              <input v-model.number="p.rent" type="number" inputmode="decimal" min="0" step="any" />
+              <small>{{ t('zh.calc.fields.rentHint') }}</small>
+            </label>
+            <label v-if="p.currency !== 'CHF'" class="field">
+              <span>{{ t('zh.calc.fields.rentRate', { currency: p.currency }) }}</span>
+              <input v-model.number="p.rentRate" type="number" inputmode="decimal" min="0" step="any" />
+              <small>{{ t('zh.calc.fields.rentRateHint') }}</small>
+            </label>
+          </div>
         </fieldset>
 
         <div class="form-actions">
@@ -232,6 +254,13 @@ function confirmReset() {
       <summary>{{ t('zh.calc.result.assumptionsTitle') }}</summary>
       <ul>
         <li v-for="(a, i) in assumptions" :key="i">{{ a }}</li>
+      </ul>
+      <h3>{{ t('zh.calc.sources.title') }}</h3>
+      <ul class="sources">
+        <li v-for="(src, i) in SOURCES" :key="i">
+          <a :href="src.url" target="_blank" rel="noopener" lang="de">{{ src.name }}</a>
+          <span>{{ t(`zh.calc.sources.items[${i}]`) }}</span>
+        </li>
       </ul>
     </details>
 
@@ -608,6 +637,22 @@ select:focus-visible {
 .assumptions summary {
   font-weight: 600;
   cursor: pointer;
+}
+
+.assumptions h3 {
+  margin-top: 1.25rem;
+  font-size: var(--step--1);
+  font-weight: 600;
+}
+
+.assumptions .sources {
+  list-style: none;
+  padding-left: 0;
+}
+
+.assumptions .sources li {
+  display: grid;
+  gap: 0.1rem;
 }
 
 .assumptions ul {

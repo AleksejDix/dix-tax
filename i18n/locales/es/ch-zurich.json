@@ -229,7 +229,9 @@
         "usageUnusable": "No se puede usar",
         "usageUnusableHint": "Destruido, muy dañado o inaccesible, por ejemplo a causa de una guerra",
         "rent": "Alquiler cobrado al año",
-        "rentHint": "Sin los gastos que el inquilino paga aparte. En la misma moneda que arriba."
+        "rentHint": "Sin los gastos que el inquilino paga aparte. En la misma moneda que arriba.",
+        "rentRate": "Tipo medio del año: 1 {currency} en CHF",
+        "rentRateHint": "El alquiler es un ingreso de todo el año, por eso se usa el tipo medio federal y no el de fin de año. Rellenado con un valor aproximado."
       },
       "result": {
         "title": "Tus cifras",
@@ -252,11 +254,20 @@
         "assumptions": [
           "Valor fiscal: 70% del precio de compra o del valor de mercado estimado, en francos.",
           "Alquiler imputado: 4,25% del valor fiscal para apartamentos, 3,5% para casas. Ninguno si el inmueble no se puede usar.",
-          "Inmueble alquilado: el alquiler realmente cobrado en lugar del alquiler imputado.",
+          "Inmueble alquilado: el alquiler realmente cobrado en lugar de la renta imputada, convertido con el tipo medio del año.",
           "Mantenimiento: deducción a tanto alzado del 20% del alquiler imputado o cobrado.",
           "Los importes se redondean a francos enteros y se multiplican por tu participación."
         ],
         "guideLink": "Abrir la guía paso a paso"
+      },
+      "sources": {
+        "title": "De dónde salen las reglas",
+        "items": [
+          "Todos los inmuebles, también en el extranjero, se declaran en el Liegenschaftenverzeichnis. Renta imputada del 4,25% y del 3,5%, deducción fija del 20% y las líneas 6 y 31.1 de la declaración.",
+          "Los inmuebles en el extranjero no tributan en Suiza y solo cuentan para el tipo impositivo.",
+          "Tipos de cambio oficiales de fin de año y medios anuales.",
+          "Valor fiscal del 70% del precio de compra. Es la práctica que describen las asesorías de Zúrich, no una directiva oficial."
+        ]
       }
     },
     "guide": {

@@ -5,13 +5,9 @@ const props = defineProps<{ product: Product['key'] }>()
 
 const { t, localeProperties } = useI18n()
 
-const today = ref<Date | null>(null)
-onMounted(() => {
-  today.value = new Date()
-})
+const today = useToday()
 
 const next = computed(() => {
-  if (!today.value) return null
   const deadline = nextDeadline(props.product, today.value)
   if (!deadline) return null
   const days = daysUntil(deadline, today.value)
@@ -26,14 +22,7 @@ const next = computed(() => {
 </script>
 
 <template>
-  <ClientOnly>
-    <p v-if="next" class="text-xs text-ink-soft">
-      {{ next.text }}<template v-if="next.left">, <span class="font-semibold text-warn">{{ next.left }}</span></template>
-    </p>
-    <!-- The date is worked out in the browser, so the server has nothing to render. Hold the
-         line's height anyway, or every card under it jumps down once the script runs. -->
-    <template #fallback>
-      <p class="text-xs" aria-hidden="true">&nbsp;</p>
-    </template>
-  </ClientOnly>
+  <p v-if="next" class="text-xs text-ink-soft">
+    {{ next.text }}<template v-if="next.left">, <span class="font-semibold text-warn">{{ next.left }}</span></template>
+  </p>
 </template>

@@ -1,17 +1,23 @@
 <script setup lang="ts">
-// The row under the header while the reader is inside a country: where they are, and the rest
-// of that country's pages. Not sticky, so the scroll padding for the anchors stays as it is.
+// The row under the header: where the reader is, and the rest of that country's pages. It is
+// on every page, including the hub, so that moving between them never changes the height of
+// what sits under the header. Not sticky, so the scroll padding for the anchors stays as it is.
 const { t } = useI18n()
-const { product, trail, sections } = useProductNav()
+const { trail, sections } = useProductNav()
 
-const sectionLink = 'py-1 text-xs font-medium text-ink no-underline hover:text-blue aria-[current=page]:text-blue-deep'
+const sectionLink = 'text-xs font-medium text-ink no-underline hover:text-blue aria-[current=page]:text-blue-deep'
 </script>
 
 <template>
-  <div v-if="product" class="no-print border-b border-rule bg-surface">
-    <div class="wrap flex flex-wrap items-center justify-between gap-x-8 gap-y-1.5 py-2.5">
+  <div class="no-print border-b border-rule bg-surface">
+    <!-- A fixed height that cannot wrap, at any width: a country page carries section links
+         that the hub does not, and without this the row grew and pushed the whole page down by
+         ten pixels on the way in. Cramped strips scroll sideways instead of growing. -->
+    <div
+      class="wrap flex h-11 items-center justify-between gap-x-8 overflow-x-auto whitespace-nowrap [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+    >
       <nav :aria-label="t('nav.here')">
-        <ol class="flex flex-wrap items-center gap-x-2 text-2xs text-ink-soft">
+        <ol class="flex items-center gap-x-2 text-2xs text-ink-soft">
           <li v-for="(crumb, i) in trail" :key="crumb.label" class="flex items-center gap-2">
             <NuxtLink v-if="crumb.to" :to="crumb.to" class="text-ink-soft no-underline hover:text-blue">
               {{ crumb.label }}
@@ -22,7 +28,7 @@ const sectionLink = 'py-1 text-xs font-medium text-ink no-underline hover:text-b
         </ol>
       </nav>
 
-      <nav v-if="sections.length" :aria-label="t('nav.menu')" class="flex flex-wrap gap-x-6">
+      <nav v-if="sections.length" :aria-label="t('nav.menu')" class="flex items-center gap-x-6">
         <template v-for="s in sections" :key="s.key">
           <NuxtLink v-if="s.to" :to="s.to" :class="sectionLink">{{ s.label }}</NuxtLink>
           <NuxtLink v-else :to="s.anchor" custom>

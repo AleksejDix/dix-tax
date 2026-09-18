@@ -28,13 +28,30 @@ export function useProductNav() {
     return section ? t(`nav.${section.key}`) : undefined
   })
 
+  // Route names carry the locale as a suffix (`privacy___de`).
+  const page = computed(() => String(route.name ?? '').split('___')[0])
+
+  const OUTSIDE: Record<string, string> = {
+    'legal-notice': 'footer.legalNotice',
+    privacy: 'footer.privacy',
+  }
+
   const trail = computed<Crumb[]>(() => {
+    const home: Crumb = { label: t('nav.forms'), to: localePath('/') }
     const p = product.value
-    if (!p) return []
-    const crumbs: Crumb[] = [{ label: t('nav.forms'), to: localePath('/') }]
-    crumbs.push(leaf.value ? { label: name(p), to: localePath(p.path) } : { label: name(p) })
-    if (leaf.value) crumbs.push({ label: leaf.value })
-    return crumbs
+
+    if (p) {
+      const crumbs: Crumb[] = [home]
+      crumbs.push(leaf.value ? { label: name(p), to: localePath(p.path) } : { label: name(p) })
+      if (leaf.value) crumbs.push({ label: leaf.value })
+      return crumbs
+    }
+
+    const outside = OUTSIDE[page.value]
+    if (outside) return [home, { label: t(outside) }]
+
+    // The hub is the top of the tree, so there it is the only crumb there is.
+    return [{ label: t('nav.forms') }]
   })
 
   // Anchors travel through the router like everything else, but they cannot be plain
@@ -51,11 +68,20 @@ export function useProductNav() {
     }))
   })
 
-  // One step forward, and never on the page it leads to.
+  /**
+   * The one step forward, and the header's only action.
+   *
+   * It is deliberately not conditional. A header that gains and loses a button as the reader
+   * moves between the hub and a country page re-lays itself out on every navigation, which is
+   * the kind of change that makes a site feel unsteady. So the action is always there, always
+   * in the same place: the tool of the country the reader is in when that country has one, and
+   * otherwise the tool that is ready. It scales by itself as more countries go live.
+   */
   const cta = computed(() => {
-    const p = product.value
-    if (!p?.start || route.path.endsWith('/calculator')) return undefined
-    return { to: localePath(p.start), label: t('nav.start'), short: t('nav.startShort') }
+    const here = product.value
+    const live = here?.start ? here : PRODUCTS.find((p) => p.start)
+    if (!live?.start) return undefined
+    return { to: localePath(live.start), label: t('nav.start'), short: t('nav.startShort') }
   })
 
   return { product, trail, sections, cta }

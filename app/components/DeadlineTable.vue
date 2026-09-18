@@ -3,24 +3,19 @@
 // dates in one column, figures aligned. Only the deadline that is actually close is
 // marked, so the mark still means something.
 //
-// The pages are prerendered, so "today" cannot come from the build: a static page would
-// still be counting down to a date that passed weeks ago. The dates are therefore worked
-// out in the browser, and the server renders nothing.
-// A product page shows only its own rows; the hub shows the whole calendar.
+// A product page shows only its own rows; the hub shows the whole calendar. The dates come
+// from `useToday`, which the browser corrects after hydration; the row count is the same on
+// any date, so the table never changes height.
 const props = withDefaults(defineProps<{ only?: Product['key'] }>(), { only: undefined })
 
 const { t, localeProperties } = useI18n()
 
-const today = ref<Date | null>(null)
-onMounted(() => {
-  today.value = new Date()
-})
+const today = useToday()
 
 const rows = computed(() => {
-  if (!today.value) return []
   const all = upcomingDeadlines(today.value)
   return (props.only ? all.filter((d) => d.product === props.only) : all).map((d) => {
-    const days = daysUntil(d, today.value!)
+    const days = daysUntil(d, today.value)
     return {
       key: `${d.label}-${d.year}`,
       label: t(`deadlines.labels.${d.label}`, { year: d.year }),
@@ -33,8 +28,7 @@ const rows = computed(() => {
 </script>
 
 <template>
-  <ClientOnly>
-    <table v-if="rows.length" class="w-full border-collapse text-left">
+  <table v-if="rows.length" class="w-full border-collapse text-left">
       <caption class="sr-only">
         {{ t('deadlines.title') }}
       </caption>
@@ -51,10 +45,11 @@ const rows = computed(() => {
           <td class="py-3.5 pr-4 text-xs text-ink-soft">{{ row.kind }}</td>
           <td class="num py-3.5 text-right whitespace-nowrap">
             {{ row.date }}
-            <span v-if="row.left" class="block text-2xs font-semibold text-warn">{{ row.left }}</span>
+            <!-- Always on its own line, empty or not, so a countdown appearing near a deadline
+                 does not make the row taller than it was a moment ago. -->
+            <span class="block text-2xs font-semibold text-warn">{{ row.left || '\u00A0' }}</span>
           </td>
         </tr>
       </tbody>
-    </table>
-  </ClientOnly>
+  </table>
 </template>

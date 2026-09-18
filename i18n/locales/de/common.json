@@ -156,5 +156,12 @@
       "hint": "Das öffnet Ihr E-Mail-Programm mit einer vorbereiteten Nachricht. Gesendet wird erst, wenn Sie auf Senden klicken.",
       "greeting": "Guten Tag, bitte informieren Sie mich, sobald dieses Formular bereit ist."
     }
+  },
+  "reminder": {
+    "title": "Vor der nächsten Frist erinnern",
+    "body": "Die nächste ist am {date}. Wir schreiben einmal, ein paar Wochen vorher, und danach nicht mehr.",
+    "submit": "Erinnert mich",
+    "done": "Notiert. Wir schreiben Ihnen einmal, vor diesem Datum.",
+    "consent": "Ihre Adresse bleibt für diese eine Erinnerung gespeichert und wird gelöscht, sobald Sie es wünschen. Kein Newsletter, und sie geht an niemanden sonst."
   }
 }

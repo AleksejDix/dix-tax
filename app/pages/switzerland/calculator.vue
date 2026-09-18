@@ -319,6 +319,10 @@ function confirmReset() {
       </section>
     </div>
 
+    <!-- Where the value has just been delivered is the only place asking for an address is
+         not an interruption. -->
+    <ReminderForm v-if="hasResult" product="switzerland" class="no-print mt-10" />
+
     <details class="assumptions mt-10 border-t border-rule pt-4 text-xs">
       <summary class="cursor-pointer font-semibold">{{ t('zh.calc.result.assumptionsTitle') }}</summary>
       <ul class="mt-3 grid list-disc gap-2 pl-4.5 text-ink-soft">

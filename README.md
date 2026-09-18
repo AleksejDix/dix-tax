@@ -99,9 +99,14 @@ Two facts on the Modelo 210 page repeat these dates in prose. When a deadline mo
 
 `pnpm og` writes `public/og/<page>-<locale>.png`, one 1200 by 630 image per page and language,
 from the titles and descriptions in the locale files. The images are committed, so the build and
-the request path stay untouched and nothing new has to be allowed in the content security policy.
-Run it and commit the result whenever a page title or description changes. `useSocialImage()`
-points a page at its own image.
+the request path stay untouched and a shared link renders the same picture whether or not the
+visitor's chat app can reach our server.
+
+The page list is not written in the script: it reads `PRODUCTS` and `GUIDES` directly, so a
+country or a guide added to a registry gets a picture without anyone remembering to add it.
+CI redraws them on every push and fails if the committed files differ, so a changed title
+cannot leave a stale preview behind. `useSocialImage()` points a page at its own image, and the
+allowed names come from the same registries.
 
 ## Analytics
 

@@ -32,6 +32,19 @@ jobs:
       - name: Types
         run: pnpm typecheck
 
-      # Prerenders all 126 routes, so a broken page or a missing translation key fails here.
+      # The social images are committed, which means they can go stale the moment a title
+      # changes and nobody would notice until a link was shared. Draw them again and fail if
+      # the result differs from what is in the repository. `pnpm og` reads the product and
+      # guide registries directly, which needs Node's TypeScript stripping, hence Node 24.
+      - name: Social images are current
+        run: |
+          pnpm og
+          if [ -n "$(git status --porcelain public/og)" ]; then
+            echo "::error::Social images are out of date. Run 'pnpm og' and commit public/og."
+            git status --porcelain public/og
+            exit 1
+          fi
+
+      # Prerenders every route, so a broken page or a missing translation key fails here.
       - name: Build
         run: pnpm generate

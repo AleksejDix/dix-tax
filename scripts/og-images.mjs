@@ -8,15 +8,28 @@
 // The wording comes from the locale files, so translating a page translates its preview.
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs'
 import { Resvg } from '@resvg/resvg-js'
+import { PRODUCTS } from '../app/utils/products.ts'
+import { GUIDES } from '../app/utils/guides.ts'
 
 const LOCALES = ['en', 'de', 'uk', 'ru', 'es']
 
-// Which image belongs to which page, and where its words come from.
+// The page list is not written here. It comes from the same two registries the site itself
+// reads, so a country or a guide added there cannot be forgotten in the pictures: it simply
+// appears the next time this runs, and CI fails if the committed files are out of date.
 const PAGES = [
   { name: 'home', file: 'common', title: 'meta.title', description: 'meta.description' },
-  { name: 'ch-zurich', file: 'ch-zurich', title: 'zh.meta.title', description: 'zh.meta.description' },
-  { name: 'modelo-210', file: 'modelo-210', title: 'modelo210.metaTitle', description: 'modelo210.metaDescription' },
-  { name: 'anlage-v', file: 'anlage-v', title: 'anlageV.metaTitle', description: 'anlageV.metaDescription' },
+  ...PRODUCTS.map((product) => ({
+    name: product.content.image,
+    file: product.content.file,
+    title: product.content.title,
+    description: product.content.description,
+  })),
+  ...GUIDES.map((guide) => ({
+    name: guide.image,
+    file: 'guides',
+    title: `guides.${guide.key}.metaTitle`,
+    description: `guides.${guide.key}.metaDescription`,
+  })),
 ]
 
 const WIDTH = 1200
@@ -69,14 +82,18 @@ function width(text, size) {
   return sum * size
 }
 
-/** Greedy wrap to a pixel width. */
+/** Greedy wrap to a pixel width. What does not fit is marked as cut, not dropped silently. */
 function wrap(text, size, maxWidth, maxLines) {
   const lines = []
   let line = ''
   for (const word of text.split(' ')) {
     const candidate = line ? `${line} ${word}` : word
     if (width(candidate, size) > maxWidth && line) {
-      if (lines.length === maxLines - 1) break
+      if (lines.length === maxLines - 1) {
+        // A sentence that simply stops mid-phrase reads as a broken preview card.
+        line = `${line}\u2026`
+        break
+      }
       lines.push(line)
       line = word
     } else {

@@ -28,7 +28,7 @@ useSeoMeta({
   ogDescription: () => t(`guides.${props.guide}.metaDescription`),
   ogType: 'article',
 })
-useSocialImage(entry.value.country === 'switzerland' ? 'ch-zurich' : 'modelo-210')
+useSocialImage(entry.value.image)
 useFaqSchema(faq)
 useSchemaOrg([
   defineArticle({

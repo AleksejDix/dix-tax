@@ -12,6 +12,17 @@ export interface ProductSection {
   hash?: string
 }
 
+/** Where a country's own copy lives, and the social image drawn from it. */
+export interface ProductContent {
+  /** Locale file under i18n/locales/<lang>/ */
+  file: 'ch-zurich' | 'modelo-210' | 'anlage-v'
+  /** Keys inside that file */
+  title: string
+  description: string
+  /** Base name under public/og/ */
+  image: 'ch-zurich' | 'modelo-210' | 'anlage-v'
+}
+
 export interface Product {
   /** Key under `products.*` in common.json */
   key: 'switzerland' | 'spain' | 'germany'
@@ -26,6 +37,7 @@ export interface Product {
   /** Whether `products.<key>.note` exists and should be shown under the card */
   note?: boolean
   sections?: ProductSection[]
+  content: ProductContent
 }
 
 export const PRODUCTS: Product[] = [
@@ -35,14 +47,40 @@ export const PRODUCTS: Product[] = [
     start: '/switzerland/calculator',
     status: 'live',
     note: true,
+    content: {
+      file: 'ch-zurich',
+      title: 'zh.meta.title',
+      description: 'zh.meta.description',
+      image: 'ch-zurich',
+    },
     sections: [
       { key: 'how', hash: '#how' },
       { key: 'guide', path: '/switzerland/guide' },
       { key: 'faq', hash: '#faq' },
     ],
   },
-  { key: 'spain', path: '/spain', status: 'soon' },
-  { key: 'germany', path: '/germany', status: 'soon' },
+  {
+    key: 'spain',
+    path: '/spain',
+    status: 'soon',
+    content: {
+      file: 'modelo-210',
+      title: 'modelo210.metaTitle',
+      description: 'modelo210.metaDescription',
+      image: 'modelo-210',
+    },
+  },
+  {
+    key: 'germany',
+    path: '/germany',
+    status: 'soon',
+    content: {
+      file: 'anlage-v',
+      title: 'anlageV.metaTitle',
+      description: 'anlageV.metaDescription',
+      image: 'anlage-v',
+    },
+  },
 ]
 
 /**

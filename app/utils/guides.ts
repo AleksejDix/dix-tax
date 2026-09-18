@@ -15,6 +15,8 @@ export interface Guide {
   country: Product['key']
   /** When its facts were last checked against the sources, shown on the page */
   checked: string
+  /** Base name under public/og/, drawn by `pnpm og` from this guide's own title */
+  image: 'guide-swiss-from-abroad' | 'guide-spanish-holiday'
 }
 
 export const GUIDES: Guide[] = [
@@ -23,11 +25,13 @@ export const GUIDES: Guide[] = [
     path: '/guides/swiss-property-when-you-live-abroad',
     country: 'switzerland',
     checked: '2026-09',
+    image: 'guide-swiss-from-abroad',
   },
   {
     key: 'spanishHoliday',
     path: '/guides/spanish-holiday-home-tax',
     country: 'spain',
     checked: '2026-09',
+    image: 'guide-spanish-holiday',
   },
 ]

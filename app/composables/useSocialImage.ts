@@ -5,7 +5,11 @@
  * or a group has to show the form it is about rather than a blank rectangle. The images
  * are plain files under `public/og`, rebuilt from the locale files by `pnpm og`.
  */
-export type SocialImage = 'home' | 'ch-zurich' | 'modelo-210' | 'anlage-v'
+import type { Product } from '~/utils/products'
+import type { Guide } from '~/utils/guides'
+
+/** Every picture `pnpm og` draws: the home page, one per country, one per guide. */
+export type SocialImage = 'home' | Product['content']['image'] | Guide['image']
 
 export function useSocialImage(name: SocialImage) {
   const { locale, localeProperties } = useI18n()

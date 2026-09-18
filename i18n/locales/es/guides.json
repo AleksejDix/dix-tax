@@ -1,0 +1,157 @@
+{
+  "guides": {
+    "kicker": "Guía",
+    "shortTitle": "La respuesta corta",
+    "checked": "Datos contrastados con la ley en {date}.",
+    "swissFromAbroad": {
+      "metaTitle": "Vive fuera y tiene un piso en Suiza: ¿qué impuesto hay?",
+      "metaDescription": "Tener un inmueble en Suiza le hace contribuyente allí aunque nunca haya vivido en el país. Qué se grava, por qué un piso de vacaciones vacío cuesta igualmente, cuánta hipoteca cuenta y qué cambia en 2029.",
+      "title": "Vive fuera y tiene un piso en Suiza. ¿Qué impuesto hay?",
+      "lead": "Todo lo que se escribe sobre impuestos suizos y pisos de vacaciones está escrito para quien vive en Suiza y tiene algo fuera. Aquí va la dirección contraria: su piso está en Suiza y usted no.",
+      "points": [
+        "Tener un inmueble en un cantón suizo le hace contribuyente en Suiza, sea cual sea su dirección y su pasaporte",
+        "Solo se grava el inmueble. Su sueldo y sus ahorros en casa se declaran pero no tributan",
+        "Un piso de vacaciones vacío tributa por el alquiler teórico que fijó el cantón, no por lo que ganó",
+        "Solo es deducible la parte suiza de los intereses de su hipoteca, en proporción a dónde están sus bienes",
+        "Desde el 1 de enero de 2029 desaparece el alquiler teórico y los cantones podrán gravar las segundas viviendas"
+      ],
+      "sections": [
+        {
+          "title": "Sí, y su nacionalidad no tiene nada que ver",
+          "body": "La ley suiza grava a una persona allí donde está su inmueble, sea quien sea y viva donde viva. Un piso o una casa en un cantón basta por sí solo para crear una obligación fiscal allí, y por eso el municipio donde está la propiedad le envía una declaración aunque usted nunca haya vivido en el país. Se llama obligación fiscal limitada: se grava el inmueble, no usted entero."
+        },
+        {
+          "title": "Qué grava Suiza en realidad",
+          "body": "Dos cosas, y solo dos. El rendimiento del inmueble, que es el alquiler que cobra o un alquiler teórico si lo guarda para usted. Y el inmueble como patrimonio, por el valor que le ha puesto el cantón. Su sueldo en el extranjero, su pensión y sus ahorros no tributan en Suiza y no empiezan a hacerlo por tener el piso."
+        },
+        {
+          "title": "El piso vacío es donde se equivoca la gente",
+          "body": "Un piso de vacaciones que está vacío once meses al año tributa como si se lo hubiera alquilado a usted mismo. El cantón fija ese alquiler teórico y aparece, junto al valor fiscal, en la notificación de valoración. Nadie le ha pagado nada y el impuesto se debe igual. Solo se estudia una reducción cuando el inmueble realmente no se puede usar, por ejemplo tras un incendio, y eso es una conversación con la oficina, no una casilla del formulario."
+        },
+        {
+          "title": "No se estima nada, porque el cantón ya lo hizo",
+          "body": "Esta es la buena noticia. No tiene que valorar su propio inmueble ni adivinar un alquiler de mercado: la valoración cantonal fija el valor fiscal y el alquiler teórico, y la declaración solo quiere esas dos cifras. Si no encuentra la notificación, la oficina municipal de impuestos del lugar donde está el inmueble le manda una copia."
+        },
+        {
+          "title": "Su hipoteca solo es deducible en parte aquí",
+          "body": "Las deudas y sus intereses se reparten sobre todo lo que usted tiene, en proporción a dónde están sus bienes. Si el piso suizo es un tercio de su patrimonio mundial, un tercio de los intereses es deducible en Suiza y el resto corresponde a su propio país. Es el error más frecuente de todos: quien deduce la hipoteca suiza entera ha declarado de menos su renta suiza y acabará oyéndolo."
+        },
+        {
+          "title": "Su renta de casa va en el formulario y no tributa",
+          "body": "Suiza grava el piso al tipo que corresponde a su renta y su patrimonio totales, así que la declaración pide cifras que no piensa gravar. Omitirlas no baja la factura, solo invita a la oficina a estimarlas. En el impuesto federal hay además un suelo: el tipo es al menos el que corresponde a la renta obtenida en Suiza, de modo que una renta mundial modesta no le consigue un tipo casi nulo."
+        },
+        {
+          "title": "El correo tiene que poder llegarle",
+          "body": "Si está en el extranjero y no tiene a nadie en Suiza que reciba su correo fiscal, una resolución puede notificársele mediante publicación en el boletín oficial cantonal, y el plazo para recurrir corre lo haya visto usted o no. La oficina suele pedirle que designe aquí una dirección de notificación. Un familiar, un vecino, el administrador o un asesor sirven, y conviene tenerlo resuelto antes de necesitarlo."
+        },
+        {
+          "title": "Qué cambia en 2029",
+          "body": "Suiza votó en septiembre de 2025 acabar con la tributación del alquiler teórico, y el Consejo Federal fijó la entrada en vigor el 1 de enero de 2029. Las segundas viviendas, que es lo que suele ser una propiedad en manos de alguien que vive fuera, son la categoría que los cantones podrán gravar en su lugar con un nuevo impuesto sobre el inmueble. La deducción de los gastos de mantenimiento desaparece a la vez. Hasta entonces vale lo que dice esta página."
+        },
+        {
+          "title": "Si nunca ha presentado nada",
+          "body": "Esperar a que se olviden no es una estrategia: la propiedad consta en el registro y el municipio sabe perfectamente quién es usted. Una oficina que no recibe nada acaba liquidando según su propia estimación, que no es generosa a propósito y cuesta mucho revertir, y añade una multa. Ponerse al día por iniciativa propia cuesta menos, y es un caso para un asesor, no para un formulario rellenado deprisa."
+        }
+      ],
+      "faq": {
+        "title": "Preguntas que vienen después",
+        "items": [
+          {
+            "q": "¿Importa que yo no sea suizo?",
+            "a": "No. La obligación sigue al inmueble, no al pasaporte. Un suizo que vive en Berlín y un alemán que vive en Berlín están exactamente igual respecto de un piso en Zúrich."
+          },
+          {
+            "q": "El piso se alquila a turistas unas semanas al año. ¿Entonces?",
+            "a": "Durante el periodo alquilado, el alquiler realmente cobrado sustituye al alquiler teórico, y el resto del año sigue el teórico. El alquiler de corta duración puede además llevar tasas turísticas municipales y, por encima de ciertos umbrales, otras obligaciones, que nada tienen que ver con la declaración."
+          },
+          {
+            "q": "¿Y si lo vendo?",
+            "a": "La ganancia sobre un inmueble suizo tributa en Suiza, mediante un impuesto cantonal específico sobre las ganancias inmobiliarias y no a través de esta declaración. Su convenio casi con seguridad deja ese derecho a Suiza, así que cuente con ello antes de firmar nada."
+          },
+          {
+            "q": "¿Gravará mi país el piso también?",
+            "a": "Suiza tiene el primer derecho a gravar los inmuebles situados en Suiza. Su país de residencia lo deja exento computándolo como mucho para el tipo, o le deduce el impuesto suizo. Cuál de las dos cosas se aplica está en su convenio con Suiza. Lo que presente en Suiza no sustituye a su declaración."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Preparar la declaración de Zúrich",
+        "body": "Para el cantón de Zúrich, dix.tax convierte las dos cifras de su valoración en los números exactos de cada casilla, con la nota en alemán para la oficina. Unos diez minutos.",
+        "label": "Abrir la declaración suiza"
+      }
+    },
+    "spanishHoliday": {
+      "metaTitle": "Impuesto de una vivienda vacacional en España cuando vive fuera",
+      "metaDescription": "España grava una vivienda vacacional que no produce nada. Cómo funciona la renta imputada del 1,1 o el 2 por ciento del valor catastral, por qué vivir fuera de la UE sale mucho más caro y cuándo vence el Modelo 210.",
+      "title": "El impuesto de una vivienda vacacional en España cuando usted vive fuera",
+      "lead": "Un piso en España que nadie alquila produce igualmente una factura fiscal cada año. Aquí está de dónde sale la cifra, y por qué dos propietarios de pisos idénticos pueden pagar cantidades muy distintas.",
+      "points": [
+        "España grava una renta que nadie le ha pagado: el 1,1 por ciento del valor catastral, o el 2 por ciento si ese valor tiene más de diez años",
+        "El tipo es del 19 por ciento si vive en la UE o el EEE y del 24 por ciento en cualquier otro sitio, Suiza y el Reino Unido incluidos",
+        "Solo los residentes en otro Estado de la UE pueden deducir gastos. Desde fuera, la hipoteca, la comunidad y las reparaciones no cuentan",
+        "Cada copropietario presenta su propio formulario, por su parte",
+        "El IBI, el impuesto sobre el patrimonio y el Modelo 210 son tres cosas distintas"
+      ],
+      "sections": [
+        {
+          "title": "España grava el piso aunque esté vacío",
+          "body": "La ley española grava la posibilidad de usar un inmueble, no solo el dinero que produce. Si usted no es residente fiscal en España y el piso no está alquilado, un porcentaje de su valor catastral cuenta como renta del año y tributa. Solo se libra la vivienda habitual, y quien vive fuera no tiene una en España. Un piso que usa tres semanas en agosto tributa por los doce meses."
+        },
+        {
+          "title": "De dónde sale la cifra",
+          "body": "Empieza por el valor catastral, que está en el recibo del IBI que el ayuntamiento envía cada año. Ese valor no es lo que vale el piso en el mercado; suele quedar muy por debajo. El recibo dice además cuándo se revisó por última vez, y eso decide su porcentaje: el 1,1 por ciento si la revisión entró en vigor en los diez últimos períodos impositivos, y el 2 por ciento si no."
+        },
+        {
+          "title": "Dónde vive decide su tipo",
+          "body": "Un residente en otro Estado de la UE, o en Islandia, Noruega o Liechtenstein, paga el 19 por ciento. Todos los demás pagan el 24, y ahí entran Suiza y el Reino Unido, que no son ninguna de las dos cosas. Su nacionalidad da igual: un español que vive en Zúrich paga el mismo 24 por ciento que un británico que vive en Zúrich."
+        },
+        {
+          "title": "Desde fuera de la UE no deduce nada",
+          "body": "Esta es la diferencia que pesa en cuanto el piso se alquila. Quien reside en otro Estado de la UE puede deducir los gastos de obtener ese alquiler. Los demás tributan sobre el alquiler bruto, y los intereses de la hipoteca, la comunidad, el seguro y las reparaciones no cuentan absolutamente nada. Dos vecinos con pisos idénticos e inquilinos idénticos pueden pagar muy distinto solo porque uno vive dentro de la UE y el otro no."
+        },
+        {
+          "title": "Un formulario por propietario",
+          "body": "España quiere un Modelo 210 de cada propietario, por su parte y con su NIE. Una pareja al cincuenta por ciento presenta dos formularios sobre la mitad de la base, no uno conjunto. Es más trabajo que dinero, pero pilla a mucha gente."
+        },
+        {
+          "title": "Cuándo vence",
+          "body": "Para un piso de uso propio, la declaración de un año vence el 31 de diciembre del siguiente. Para uno alquilado hay una ventana anual a principios del año siguiente. Ambas han cambiado en los últimos años, así que compruebe la fecha vigente y no se fíe de un artículo viejo, tampoco de este."
+        },
+        {
+          "title": "IBI, patrimonio y Modelo 210 no son lo mismo",
+          "body": "El IBI es el impuesto municipal sobre el inmueble, y es el recibo que lleva el valor catastral. El Modelo 210 es el impuesto estatal sobre la renta del piso. Y España cobra además un impuesto sobre el patrimonio que puede alcanzar a un propietario no residente con un inmueble caro, o sea una tercera declaración. Haber pagado uno no dice nada de los otros dos."
+        },
+        {
+          "title": "Si nunca ha presentado nada",
+          "body": "Presentar tarde por iniciativa propia cuesta menos que que le encuentren. España puede remontarse varios años y añadir un recargo, y la Administración acaba enterándose: su propiedad está en el registro y el ayuntamiento le gira el IBI cada año. Si hay varios años abiertos, eso es una conversación con un asesor y no un formulario rellenado deprisa."
+        }
+      ],
+      "faq": {
+        "title": "Preguntas que vienen después",
+        "items": [
+          {
+            "q": "El piso no produce nada. ¿De verdad hay impuesto?",
+            "a": "Sí. Ese es justamente el sentido de la renta imputada: se grava el uso que usted podría hacer del inmueble. Las cantidades suelen ser modestas, unos cientos de euros al año en un piso de vacaciones corriente, y precisamente por eso sorprende tanto descubrir que llevaba una década debiéndolo."
+          },
+          {
+            "q": "¿Dónde encuentro el valor catastral?",
+            "a": "En el recibo anual del IBI del ayuntamiento, que también indica el año de la última revisión. La sede del Catastro lo muestra igualmente, con NIE y certificado. No use el precio de compra: es otra magnitud por completo."
+          },
+          {
+            "q": "Vivo en Suiza. ¿De verdad no hay forma de deducir la hipoteca?",
+            "a": "Contra el impuesto español, no. La deducción de la ley del impuesto sobre la renta de no residentes está escrita para residentes en otro Estado de la UE, y Suiza no lo es. Conviene saberlo antes de comprar con préstamo, porque cambia bastante las cuentas de alquilar un piso español."
+          },
+          {
+            "q": "¿Declaro el piso también en mi país?",
+            "a": "Normalmente sí. España tiene el primer derecho a gravar los inmuebles situados en España, y su país lo deja exento computándolo para el tipo o le deduce el impuesto español. Cuál de las dos cosas se aplica está en su convenio con España."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Modelo 210, en su idioma",
+        "body": "dix.tax está construyendo un Modelo 210 guiado para propietarios que viven fuera. La página lo explica y desde ahí puede decirnos que lo necesita.",
+        "label": "Abrir la página del Modelo 210"
+      }
+    }
+  }
+}

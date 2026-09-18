@@ -9,7 +9,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // One file per product keeps translations manageable as forms are added.
 const localeFiles = (code: string) =>
-  ['common', 'legal', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
+  ['common', 'legal', 'guides', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
 
 // Paths retired when the site moved from form names to the country the property stands in
 // (docs/adr/0001-site-navigation.md). Old links, bookmarks and search results keep working,
@@ -134,6 +134,17 @@ export default defineNuxtConfig({
     pages: {
       'legal-notice': { de: '/impressum', es: '/aviso-legal' },
       privacy: { de: '/datenschutz', es: '/privacidad' },
+      // A guide exists to match what somebody typed, so where the language carries real
+      // search volume the address is in that language too. Ukrainian and Russian keep the
+      // English slug: a transliterated one helps nobody read it.
+      'guides/swiss-property-when-you-live-abroad': {
+        de: '/ratgeber/schweizer-liegenschaft-mit-wohnsitz-im-ausland',
+        es: '/guias/vivienda-en-suiza-viviendo-fuera',
+      },
+      'guides/spanish-holiday-home-tax': {
+        de: '/ratgeber/ferienwohnung-spanien-steuern',
+        es: '/guias/impuesto-vivienda-vacacional-espana',
+      },
     },
     locales: [
       { code: 'en', language: 'en', name: 'English', files: localeFiles('en') },

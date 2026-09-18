@@ -1,0 +1,157 @@
+{
+  "guides": {
+    "kicker": "Ratgeber",
+    "shortTitle": "Die kurze Antwort",
+    "checked": "Angaben im {date} am Gesetz überprüft.",
+    "swissFromAbroad": {
+      "metaTitle": "Sie leben im Ausland und besitzen eine Wohnung in der Schweiz: welche Steuer?",
+      "metaDescription": "Grundeigentum in der Schweiz macht Sie dort steuerpflichtig, auch wenn Sie nie dort gewohnt haben. Was besteuert wird, warum eine leere Ferienwohnung trotzdem kostet, wie viel Hypothek zählt und was sich 2029 ändert.",
+      "title": "Sie leben im Ausland und besitzen eine Wohnung in der Schweiz. Welche Steuer fällt an?",
+      "lead": "Alles, was über Schweizer Steuern und Ferienwohnungen geschrieben wird, ist für Leute geschrieben, die in der Schweiz wohnen und im Ausland etwas besitzen. Hier geht es um die andere Richtung: Ihre Wohnung steht in der Schweiz, Sie nicht.",
+      "points": [
+        "Grundeigentum in einem Kanton macht Sie in der Schweiz steuerpflichtig, unabhängig von Adresse und Pass",
+        "Besteuert wird nur die Liegenschaft. Lohn und Ersparnisse zu Hause werden deklariert, aber nicht besteuert",
+        "Eine leere Ferienwohnung wird mit dem Eigenmietwert besteuert, den der Kanton festgelegt hat, nicht mit dem, was sie eingebracht hat",
+        "Abziehbar ist nur der Schweizer Anteil Ihrer Schuldzinsen, im Verhältnis zur Lage Ihrer Aktiven",
+        "Ab dem 1. Januar 2029 fällt der Eigenmietwert weg, und die Kantone dürfen stattdessen Zweitliegenschaften besteuern"
+      ],
+      "sections": [
+        {
+          "title": "Ja, und Ihre Staatsangehörigkeit hat damit nichts zu tun",
+          "body": "Das Schweizer Recht besteuert eine Person dort, wo ihre Liegenschaft steht, wer sie auch sei und wo sie auch wohne. Eine Wohnung oder ein Haus in einem Kanton genügt für sich allein, um dort eine Steuerpflicht zu begründen. Darum schickt Ihnen die Gemeinde, in der die Liegenschaft liegt, eine Steuererklärung, obwohl Sie nie im Land gewohnt haben. Fachleute nennen das beschränkte Steuerpflicht: besteuert wird die Liegenschaft, nicht Sie als ganze Person."
+        },
+        {
+          "title": "Was die Schweiz tatsächlich besteuert",
+          "body": "Zwei Dinge, und nur zwei. Den Ertrag der Liegenschaft, also entweder die Miete, die Sie erhalten, oder einen Eigenmietwert, wenn Sie sie für sich behalten. Und die Liegenschaft als Vermögen, zu dem Wert, den der Kanton ihr gegeben hat. Ihr Lohn im Ausland, Ihre Rente und Ihre Ersparnisse sind in der Schweiz nicht steuerbar und werden es durch die Wohnung auch nicht."
+        },
+        {
+          "title": "Die leere Wohnung ist der Punkt, den man falsch einschätzt",
+          "body": "Eine Ferienwohnung, die elf Monate im Jahr leer steht, wird besteuert, als hätten Sie sie sich selbst vermietet. Diesen Eigenmietwert legt der Kanton fest, und er steht zusammen mit dem Steuerwert auf der Schätzungsanzeige. Niemand hat Ihnen etwas gezahlt, die Steuer fällt trotzdem an. Eine Herabsetzung kommt nur in Frage, wenn die Liegenschaft wirklich nicht nutzbar ist, etwa nach einem Brand, und das ist ein Gespräch mit dem Steueramt und kein Feld auf dem Formular."
+        },
+        {
+          "title": "Geschätzt wird nichts, das hat der Kanton bereits getan",
+          "body": "Das ist die gute Nachricht. Sie müssen Ihre Liegenschaft nicht selbst bewerten und keine Marktmiete erraten: Die amtliche Schätzung legt Steuerwert und Eigenmietwert fest, und die Erklärung will genau diese beiden Zahlen. Fehlt Ihnen die Anzeige, schickt das Gemeindesteueramt am Ort der Liegenschaft eine Kopie."
+        },
+        {
+          "title": "Ihre Hypothek ist hier nur teilweise abziehbar",
+          "body": "Schulden und Schuldzinsen werden auf alles verlegt, was Sie besitzen, im Verhältnis zur Lage der Aktiven. Macht die Schweizer Wohnung einen Drittel Ihres weltweiten Vermögens aus, ist ein Drittel der Zinsen in der Schweiz abziehbar, der Rest gehört zu Ihrem eigenen Land. Das ist der häufigste Fehler überhaupt: Wer die ganze Schweizer Hypothek abzieht, hat sein Schweizer Einkommen zu tief deklariert und hört davon wieder."
+        },
+        {
+          "title": "Ihr Einkommen zu Hause gehört aufs Formular und wird nicht besteuert",
+          "body": "Die Schweiz besteuert die Wohnung zu dem Satz, der Ihrem gesamten Einkommen und Vermögen entspricht. Die Erklärung fragt also nach Zahlen, die sie gar nicht besteuern will. Sie wegzulassen senkt die Rechnung nicht, es lädt das Amt bloss ein, sie zu schätzen. Bei der direkten Bundessteuer gibt es zudem eine Untergrenze: der Satz entspricht mindestens dem in der Schweiz erzielten Einkommen, ein bescheidenes Welteinkommen bringt also keinen Satz gegen null."
+        },
+        {
+          "title": "Die Post muss Sie erreichen können",
+          "body": "Wer sich im Ausland befindet und in der Schweiz niemanden hat, der die Steuerpost entgegennimmt, dem kann eine Verfügung durch Publikation im kantonalen Amtsblatt eröffnet werden, und die Frist für ein Rechtsmittel läuft, ob Sie davon wussten oder nicht. Das Amt fordert Sie in der Regel auf, eine Zustelladresse hier zu bezeichnen. Verwandte, Nachbarn, die Verwaltung oder eine Fachperson können das übernehmen, und es lohnt sich, das vorher zu regeln."
+        },
+        {
+          "title": "Was sich 2029 ändert",
+          "body": "Die Schweiz hat im September 2025 beschlossen, die Besteuerung des Eigenmietwerts zu beenden, und der Bundesrat hat den Systemwechsel auf den 1. Januar 2029 in Kraft gesetzt. Zweitliegenschaften, und das ist aus dem Ausland gehaltenes Wohneigentum meistens, sind die Kategorie, die die Kantone stattdessen mit einer neuen Objektsteuer belegen dürfen. Der Abzug der Unterhaltskosten fällt gleichzeitig weg. Bis dahin gilt, was auf dieser Seite steht."
+        },
+        {
+          "title": "Wenn Sie nie eingereicht haben",
+          "body": "Darauf zu warten, vergessen zu werden, ist keine Strategie: Das Eigentum steht im Grundbuch und die Gemeinde weiss genau, wer Sie sind. Ein Amt, das nichts hört, veranlagt irgendwann nach eigenem Ermessen, und diese Schätzung ist bewusst nicht grosszügig und schwer umzustossen, dazu kommt eine Busse. Freiwillig nachzuholen kostet weniger und ist ein Fall für eine Fachperson, nicht für ein rasch ausgefülltes Formular."
+        }
+      ],
+      "faq": {
+        "title": "Fragen, die sich anschliessen",
+        "items": [
+          {
+            "q": "Spielt es eine Rolle, dass ich keine Schweizerin bin?",
+            "a": "Nein. Die Steuerpflicht folgt der Liegenschaft, nicht dem Pass. Eine Schweizerin mit Wohnsitz in Berlin und eine Deutsche mit Wohnsitz in Berlin stehen bei einer Wohnung in Zürich genau gleich da."
+          },
+          {
+            "q": "Die Wohnung ist ein paar Wochen im Jahr an Feriengäste vermietet. Was dann?",
+            "a": "Für die Zeit der Vermietung tritt die tatsächlich erhaltene Miete an die Stelle des Eigenmietwerts, für den Rest des Jahres gilt der Eigenmietwert. Kurzfristige Vermietung kann zusätzlich Kur- und Tourismusabgaben der Gemeinde auslösen und ab gewissen Grenzen weitere Pflichten, die mit der Steuererklärung nichts zu tun haben."
+          },
+          {
+            "q": "Und wenn ich verkaufe?",
+            "a": "Ein Gewinn auf Schweizer Grundeigentum ist in der Schweiz steuerbar, über eine eigene kantonale Grundstückgewinnsteuer und nicht über diese Erklärung. Ihr Abkommen lässt dieses Recht mit grosser Sicherheit bei der Schweiz, rechnen Sie also damit, bevor Sie etwas unterschreiben."
+          },
+          {
+            "q": "Besteuert mein eigenes Land die Wohnung auch?",
+            "a": "Die Schweiz hat das erste Besteuerungsrecht für Liegenschaften, die in der Schweiz stehen. Ihr Wohnsitzland stellt sie danach entweder frei und berücksichtigt sie höchstens für den Satz, oder es rechnet die Schweizer Steuer an. Was für Sie gilt, steht in Ihrem Abkommen mit der Schweiz. Die Schweizer Erklärung ersetzt Ihre eigene nicht."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Die Zürcher Deklaration vorbereiten",
+        "body": "Für den Kanton Zürich macht dix.tax aus den beiden Zahlen Ihrer Schätzung die genauen Werte für jede Zeile, samt deutschem Text für das Steueramt. Rund zehn Minuten.",
+        "label": "Zur Schweizer Deklaration"
+      }
+    },
+    "spanishHoliday": {
+      "metaTitle": "Steuern auf eine Ferienwohnung in Spanien, wenn Sie anderswo leben",
+      "metaDescription": "Spanien besteuert eine Ferienwohnung, die nichts einbringt. Wie das fiktive Einkommen von 1,1 oder 2 Prozent des Katasterwerts funktioniert, warum ein Wohnsitz ausserhalb der EU deutlich teurer ist und wann das Modelo 210 fällig wird.",
+      "title": "Die Steuer auf eine spanische Ferienwohnung, wenn Sie anderswo leben",
+      "lead": "Eine Wohnung in Spanien, die niemand vermietet, erzeugt trotzdem jedes Jahr eine Steuerrechnung. Hier steht, woher die Zahl kommt und warum zwei Eigentümer identischer Wohnungen sehr unterschiedlich viel zahlen können.",
+      "points": [
+        "Spanien besteuert ein Einkommen, das Ihnen niemand gezahlt hat: 1,1 Prozent des Katasterwerts, oder 2 Prozent, wenn dieser älter als zehn Jahre ist",
+        "Der Satz beträgt 19 Prozent bei Wohnsitz in der EU oder im EWR und 24 Prozent überall sonst, die Schweiz und das Vereinigte Königreich eingeschlossen",
+        "Kosten abziehen darf nur, wer in einem anderen EU-Staat wohnt. Von ausserhalb zählen Hypothek, Gemeinschaftskosten und Reparaturen gar nicht",
+        "Jeder Miteigentümer reicht sein eigenes Formular für seinen Anteil ein",
+        "IBI, Vermögenssteuer und Modelo 210 sind drei verschiedene Dinge"
+      ],
+      "sections": [
+        {
+          "title": "Spanien besteuert die Wohnung auch leer",
+          "body": "Das spanische Recht besteuert die Möglichkeit, eine Liegenschaft zu nutzen, und nicht nur das Geld, das sie einbringt. Wer in Spanien nicht steuerlich ansässig ist und die Wohnung nicht vermietet, dem gilt ein Prozentsatz des Katasterwerts als Einkommen des Jahres und wird besteuert. Befreit ist nur der Hauptwohnsitz, und wer im Ausland lebt, hat in Spanien keinen. Eine Wohnung, die Sie drei Wochen im August nutzen, wird für zwölf Monate besteuert."
+        },
+        {
+          "title": "Woher die Zahl kommt",
+          "body": "Am Anfang steht der Katasterwert, der auf der IBI-Rechnung steht, die die Gemeinde jedes Jahr schickt. Dieser Wert ist nicht der Verkaufspreis, er liegt meist weit darunter. Die Rechnung nennt auch das Jahr der letzten Revision, und das entscheidet Ihren Prozentsatz: 1,1 Prozent, wenn die Revision in den letzten zehn Steuerperioden wirksam wurde, sonst 2 Prozent."
+        },
+        {
+          "title": "Ihr Wohnsitz entscheidet über den Satz",
+          "body": "Wer in einem anderen EU-Staat oder in Island, Norwegen oder Liechtenstein wohnt, zahlt 19 Prozent. Alle anderen zahlen 24 Prozent, und dazu gehören die Schweiz und das Vereinigte Königreich, die zu keinem von beiden gehören. Die Staatsangehörigkeit spielt keine Rolle: ein Spanier mit Wohnsitz in Zürich zahlt dieselben 24 Prozent wie ein Brite mit Wohnsitz in Zürich."
+        },
+        {
+          "title": "Von ausserhalb der EU ziehen Sie nichts ab",
+          "body": "Das ist der Unterschied, der zählt, sobald vermietet wird. Wer in einem anderen EU-Staat wohnt, darf die Kosten abziehen, die die Miete erzeugt hat. Alle anderen versteuern die Bruttomiete, und Hypothekarzinsen, comunidad, Versicherung und Reparaturen zählen überhaupt nicht. Zwei Nachbarn mit gleichen Wohnungen und gleichen Mietern können sehr unterschiedlich viel zahlen, nur weil der eine in der EU wohnt und der andere nicht."
+        },
+        {
+          "title": "Ein Formular pro Eigentümer",
+          "body": "Spanien will von jedem Eigentümer ein Modelo 210 für seinen Anteil, mit seiner eigenen NIE. Ein Paar mit je der Hälfte reicht zwei Formulare über die halbe Grundlage ein, nicht eines gemeinsam. Das ist eher Aufwand als Kosten, überrascht aber regelmässig."
+        },
+        {
+          "title": "Wann es fällig ist",
+          "body": "Für eine selbst genutzte Wohnung ist die Erklärung für ein Jahr bis zum 31. Dezember des Folgejahres fällig. Für eine vermietete gibt es ein jährliches Fenster früh im Folgejahr. Beide Fenster haben sich in den letzten Jahren verschoben, prüfen Sie also das aktuelle Datum und verlassen Sie sich nicht auf einen alten Artikel, auch nicht auf diesen."
+        },
+        {
+          "title": "IBI, Vermögenssteuer und Modelo 210 sind nicht dasselbe",
+          "body": "IBI ist die Gemeindesteuer auf die Liegenschaft, und es ist die Rechnung, auf der der Katasterwert steht. Das Modelo 210 ist die staatliche Einkommenssteuer auf die Wohnung. Und Spanien erhebt zusätzlich eine Vermögenssteuer, die nicht ansässige Eigentümer teurer Objekte treffen kann, also noch eine dritte Erklärung. Das eine bezahlt zu haben sagt über die beiden anderen nichts."
+        },
+        {
+          "title": "Wenn Sie nie eingereicht haben",
+          "body": "Freiwillig nachzureichen kostet weniger, als gefunden zu werden. Spanien kann mehrere Jahre zurückgehen und einen Zuschlag erheben, und die Behörde merkt es irgendwann: Ihr Eigentum steht im Register und die Gemeinde stellt jedes Jahr IBI in Rechnung. Sind mehrere Jahre offen, ist das ein Gespräch mit einer Fachperson und kein schnell ausgefülltes Formular."
+        }
+      ],
+      "faq": {
+        "title": "Fragen, die sich anschliessen",
+        "items": [
+          {
+            "q": "Die Wohnung bringt nichts ein. Fällt wirklich Steuer an?",
+            "a": "Ja. Genau das ist der Sinn des fiktiven Einkommens: besteuert wird die Nutzung, die Sie von der Liegenschaft machen könnten. Die Beträge sind oft bescheiden, ein paar hundert Euro im Jahr bei einer typischen Ferienwohnung, und genau deshalb sind Leute überrascht, wenn sie erfahren, dass sie das seit zehn Jahren hätten zahlen sollen."
+          },
+          {
+            "q": "Wo finde ich den Katasterwert?",
+            "a": "Auf der jährlichen IBI-Rechnung der Gemeinde, die auch das Jahr der letzten Revision nennt. Die Katasterbehörde zeigt ihn ebenfalls, mit NIE und Zertifikat. Nehmen Sie nicht den Kaufpreis, das ist eine ganz andere Grösse."
+          },
+          {
+            "q": "Ich wohne in der Schweiz. Gibt es wirklich keinen Abzug für die Hypothek?",
+            "a": "Nicht gegen die spanische Steuer. Der Abzug im Gesetz über die Steuer nicht ansässiger Personen ist für Ansässige eines anderen EU-Staats geschrieben, und die Schweiz ist keiner. Das sollte man wissen, bevor man mit einem Darlehen kauft, denn es verändert die Rechnung einer vermieteten spanischen Wohnung erheblich."
+          },
+          {
+            "q": "Muss ich die Wohnung zu Hause auch deklarieren?",
+            "a": "In der Regel ja. Spanien hat das erste Besteuerungsrecht für Liegenschaften in Spanien, und Ihr eigenes Land stellt sie danach entweder frei und berücksichtigt sie für den Satz, oder es rechnet die spanische Steuer an. Was gilt, steht in Ihrem Abkommen mit Spanien."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Modelo 210, in Ihrer Sprache",
+        "body": "dix.tax baut ein geführtes Modelo 210 für Eigentümer, die anderswo leben. Die Seite dazu sagt, was es können wird, und dort können Sie sagen, dass Sie es brauchen.",
+        "label": "Zur Modelo-210-Seite"
+      }
+    }
+  }
+}

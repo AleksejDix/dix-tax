@@ -161,6 +161,12 @@ useFaqSchema(faq)
       </div>
     </section>
 
+    <UiSection tone="field">
+      <div class="max-w-[46rem]">
+        <GuideLinks country="switzerland" />
+      </div>
+    </UiSection>
+
     <section id="faq" class="section scroll-mt-24" aria-labelledby="faq-title">
       <div class="wrap grid items-start gap-6 lg:grid-cols-[minmax(0,1fr)_minmax(0,2fr)] lg:gap-20">
         <h2 id="faq-title" class="lg:sticky lg:top-26">{{ t('zh.faq.title') }}</h2>

@@ -1,0 +1,157 @@
+{
+  "guides": {
+    "kicker": "Guide",
+    "shortTitle": "The short answer",
+    "checked": "Facts checked against the law in {date}.",
+    "swissFromAbroad": {
+      "metaTitle": "You live abroad and own a flat in Switzerland: what tax is there?",
+      "metaDescription": "Owning property in Switzerland makes you taxable there even if you have never lived there. What is taxed, why an empty holiday flat still costs you, how much of your mortgage counts, and what changes in 2029.",
+      "title": "You live abroad and own a flat in Switzerland. What tax is there?",
+      "lead": "Everything written about Swiss tax and holiday flats is written for people who live in Switzerland and own something abroad. This is the other direction: your flat is in Switzerland and you are not.",
+      "points": [
+        "Owning property in a Swiss canton makes you taxable in Switzerland, whatever your address and whatever your passport",
+        "Only the property is taxed. Your salary and savings at home are declared but not taxed",
+        "An empty holiday flat is taxed on the notional rent the canton assessed, not on what it earned",
+        "Only the Swiss share of your mortgage interest is deductible, in proportion to where your assets lie",
+        "From 1 January 2029 the notional rent disappears and cantons may tax second homes instead"
+      ],
+      "sections": [
+        {
+          "title": "Yes, and your nationality has nothing to do with it",
+          "body": "Swiss law taxes a person where their real estate lies, whoever they are and wherever they live. Owning a flat or a house in a canton is enough on its own to create a tax liability there, which is why the municipality where the property stands sends you a tax return even though you have never lived in the country. Tax people call it limited liability: the property is taxed, not you as a whole."
+        },
+        {
+          "title": "What Switzerland actually taxes",
+          "body": "Two things, and only two. The income from the property, which is either the rent you receive or a notional rent when you keep it for yourself. And the property as wealth, at the value the canton has put on it. Your salary abroad, your pension and your savings are not taxable in Switzerland and never become so because of the flat."
+        },
+        {
+          "title": "The empty flat is the part people get wrong",
+          "body": "A holiday flat that stands empty eleven months of the year is taxed as though you had rented it to yourself. The canton assesses that notional rent, the Eigenmietwert, and it appears on the assessment notice along with the tax value. Nobody paid you anything and the tax is due anyway. A reduction is only considered when the property genuinely cannot be used, after a fire for example, and that is a conversation with the tax office rather than a box on the form."
+        },
+        {
+          "title": "Nothing is estimated, because the canton already did it",
+          "body": "This is the good news. You do not have to value your own property or guess at a market rent: the cantonal assessment sets both the tax value and the notional rent, and the return simply wants those two figures. If you cannot find the notice, the municipal tax office where the property lies will send you a copy."
+        },
+        {
+          "title": "Your mortgage is only partly deductible here",
+          "body": "Debts and debt interest are spread across everything you own, in proportion to where your assets lie. If the Swiss flat is a third of your worldwide assets, a third of your interest is deductible in Switzerland and the rest belongs to your own country. This is the single most common mistake, because an owner who deducts the whole Swiss mortgage has understated their Swiss income and will hear about it."
+        },
+        {
+          "title": "Your income at home goes on the form, and is not taxed",
+          "body": "Switzerland taxes the flat at the rate that matches your total income and wealth, so the return asks for figures it has no intention of taxing. Leaving them out does not lower the bill, it invites the office to estimate them. For the federal tax there is also a floor: the rate is at least the one that matches the income earned in Switzerland, so a modest worldwide income does not buy you a near-zero rate."
+        },
+        {
+          "title": "The post has to be able to reach you",
+          "body": "If you are abroad without anybody in Switzerland to receive your tax post, a decision can be served on you by publication in the cantonal official gazette, and the period for appealing it runs whether you saw it or not. The office will normally ask you to name an address for service here. A relative, a neighbour, the property manager or an adviser can all do it, and it is worth having one before you need it."
+        },
+        {
+          "title": "What changes in 2029",
+          "body": "Switzerland voted in September 2025 to end the taxation of notional rent, and the Federal Council set the change in force for 1 January 2029. Second homes, which is what most property owned from abroad is, are the category cantons may tax instead with a new property tax. The deduction for maintenance costs goes at the same time. Until then the rules on this page apply unchanged."
+        },
+        {
+          "title": "If you have never filed",
+          "body": "Waiting to be forgotten is not a strategy: ownership is recorded in the land register and the municipality knows exactly who you are. An office that hears nothing eventually assesses you at its own estimate, which is deliberately not generous and hard to overturn, and adds a fine for not filing. Catching up voluntarily costs less, and it is a case for an adviser rather than for a form filled in a hurry."
+        }
+      ],
+      "faq": {
+        "title": "Questions that follow",
+        "items": [
+          {
+            "q": "Does it matter that I am not Swiss?",
+            "a": "No. Liability follows the property, not the passport. A Swiss citizen living in Berlin and a German citizen living in Berlin are in exactly the same position with regard to a flat in Zurich."
+          },
+          {
+            "q": "The flat is rented to tourists a few weeks a year. What then?",
+            "a": "The rent you actually received replaces the notional rent for the period it was let, and the notional rent covers the rest of the year. Short-term letting can also bring cantonal or communal tourist taxes and, above certain thresholds, other obligations, which are separate from the tax return."
+          },
+          {
+            "q": "What if I sell it?",
+            "a": "A gain on Swiss real estate is taxable in Switzerland, through a separate cantonal property gains tax rather than through this return. Your treaty will almost certainly leave that right with Switzerland, so plan for it before you sign anything."
+          },
+          {
+            "q": "Will my own country tax the flat as well?",
+            "a": "Switzerland has the first right to tax property that stands in Switzerland. Your country of residence then either exempts it while still counting it when it sets your rate, or credits the Swiss tax against its own. Which of the two applies depends on your treaty with Switzerland, so check that at home. Nothing you file in Switzerland replaces your own return."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Prepare the Zurich declaration",
+        "body": "For the canton of Zurich, dix.tax turns the two figures on your assessment into the exact numbers for every line, with the German note for the tax office. About ten minutes.",
+        "label": "Open the Swiss declaration"
+      }
+    },
+    "spanishHoliday": {
+      "metaTitle": "Tax on a Spanish holiday home when you live somewhere else",
+      "metaDescription": "Spain taxes a holiday home that earns nothing. How the imputed income of 1.1 or 2 percent of the cadastral value works, why living outside the EU costs you far more, and when the Modelo 210 is due.",
+      "title": "The tax on a Spanish holiday home when you live somewhere else",
+      "lead": "A flat in Spain that nobody rents out still produces a tax bill every year. Here is where the number comes from, and why two owners of identical flats can pay very different amounts.",
+      "points": [
+        "Spain taxes an income nobody paid you: 1.1 percent of the cadastral value, or 2 percent where that value is older than ten years",
+        "The rate is 19 percent if you live in the EU or the EEA and 24 percent if you live anywhere else, Switzerland and the United Kingdom included",
+        "Only residents of another EU state may deduct costs. From outside, the mortgage, the community fee and the repairs count for nothing",
+        "Every co-owner files their own form, for their own share",
+        "IBI, the wealth tax and the Modelo 210 are three separate things"
+      ],
+      "sections": [
+        {
+          "title": "Spain taxes the flat even when it is empty",
+          "body": "Spanish law taxes the possibility of using a property, not only the money it makes. If you are not tax resident in Spain and the flat is not let, a percentage of its cadastral value counts as your income for the year and is taxed. Only a habitual residence escapes this, and somebody who lives abroad does not have one in Spain. A flat you use for three weeks in August is taxed for the whole twelve months."
+        },
+        {
+          "title": "Where the number comes from",
+          "body": "It starts with the cadastral value, which is on the IBI receipt the town hall sends every year. That value is not what the flat would sell for; it is usually far below the market price. The receipt also says when the value was last revised, and that decides your percentage: 1.1 percent where the revision took effect within the last ten tax periods, and 2 percent where it did not."
+        },
+        {
+          "title": "Where you live decides your rate",
+          "body": "A resident of another EU state, or of Iceland, Norway or Liechtenstein, pays 19 percent. Everybody else pays 24 percent, and that includes Switzerland and the United Kingdom, which belong to neither. Your nationality is irrelevant: a Spaniard living in Zurich pays the same 24 percent as a Briton living in Zurich."
+        },
+        {
+          "title": "From outside the EU you deduct nothing",
+          "body": "This is the difference that matters when the flat is let. A resident of another EU state may deduct the costs of earning the rent. Everybody else is taxed on the gross rent, with the mortgage interest, the community fee, the insurance and the repairs counting for nothing at all. Two neighbours with identical flats and identical tenants can end up paying very different tax purely because one of them lives inside the EU and the other does not."
+        },
+        {
+          "title": "One form per owner",
+          "body": "Spain wants a Modelo 210 from each owner, for their own share, with their own NIE. A couple who own half each file two forms on half the value or half the rent, not one form between them. It is administrative rather than expensive, but it catches people out."
+        },
+        {
+          "title": "When it is due",
+          "body": "For a flat you keep for yourself, the return for one year is due by 31 December of the next. For a let flat there is an annual window early in the following year. Both windows have moved in recent years, so check the current date rather than trusting an old article, including this one."
+        },
+        {
+          "title": "IBI, wealth tax and Modelo 210 are not the same thing",
+          "body": "IBI is the municipal property tax, paid to the town hall, and it is the receipt that carries the cadastral value. Modelo 210 is the national income tax on the flat. And Spain also levies a wealth tax that can reach a non-resident owner of an expensive property, which is a third filing again. Paying one of them says nothing about the other two."
+        },
+        {
+          "title": "If you have never filed",
+          "body": "Filing late of your own accord costs less than being found. Spain can go back several years and add a surcharge, and the tax office does eventually notice: your ownership is in the land register and the town hall bills you for IBI every year. If several years are open, that is a conversation with an adviser rather than a form filled in a hurry."
+        }
+      ],
+      "faq": {
+        "title": "Questions that follow",
+        "items": [
+          {
+            "q": "The flat earns nothing. Is there really tax?",
+            "a": "Yes. That is the whole point of imputed income: the law taxes the use you could make of the property. The amounts are often modest, a few hundred euros a year on a typical holiday flat, which is exactly why people are surprised to learn they should have been paying it for a decade."
+          },
+          {
+            "q": "Where do I find the cadastral value?",
+            "a": "On the annual IBI receipt from the town hall, which also gives the year of the last revision. The Catastro's own site shows it as well, with your NIE and a certificate. Do not use the purchase price: it is a different figure entirely."
+          },
+          {
+            "q": "I live in Switzerland. Is there really no way to deduct the mortgage?",
+            "a": "Not against the Spanish tax. The deduction in the non-resident income tax act is written for residents of another EU state, and Switzerland is not one. It is worth knowing before you buy with a loan, because it changes the arithmetic of letting a Spanish flat considerably."
+          },
+          {
+            "q": "Do I declare the flat at home as well?",
+            "a": "Usually yes. Spain has the first right to tax property that stands in Spain, and your own country then either exempts it while counting it for your rate or credits the Spanish tax. Which one applies is in your treaty with Spain."
+          }
+        ]
+      },
+      "cta": {
+        "title": "Modelo 210, in your language",
+        "body": "dix.tax is building a guided Modelo 210 for owners who live elsewhere. The page for it says what it will do and lets you say you want it.",
+        "label": "Open the Modelo 210 page"
+      }
+    }
+  }
+}

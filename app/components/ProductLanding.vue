@@ -122,9 +122,12 @@ useFaqSchema(faq)
     </UiSection>
 
     <UiSection :title="t(`${ns}.docs.title`)" title-id="docs-title" tone="field">
-      <ul class="grid max-w-[60ch] gap-3">
-        <li v-for="(d, i) in docs" :key="i" class="border-t border-rule pt-3">{{ d }}</li>
-      </ul>
+      <div class="grid items-start gap-10 lg:grid-cols-[minmax(0,1.2fr)_minmax(0,1fr)] lg:gap-16">
+        <ul class="grid max-w-[60ch] gap-3">
+          <li v-for="(d, i) in docs" :key="i" class="border-t border-rule pt-3">{{ d }}</li>
+        </ul>
+        <GuideLinks :country="country" />
+      </div>
     </UiSection>
 
     <section id="faq" class="section scroll-mt-24" aria-labelledby="faq-title">

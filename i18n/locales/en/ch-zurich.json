@@ -8,9 +8,9 @@
     },
     "hero": {
       "title": "Your flat is in Zurich. You are not. The tax return still is.",
-      "lead": "Owning property in the canton of Zurich makes you taxable here even if you have never lived here. Only the property is taxed, but the return asks for more than that. Answer a few questions and get the exact number for every line, explained in your language.",
+      "lead": "Own a flat in the canton of Zurich but live somewhere else? You still have to file a Zurich tax return. Answer a few plain questions and get the exact number for every line.",
       "cta": "Prepare my declaration · 10 minutes",
-      "secondary": "See how it works",
+      "secondary": "How the tax works",
       "note": "{price} per property. No account. Your data stays in your browser.",
       "noteValue": "the value the canton assessed",
       "noteIncome": "rent you receive, or the rent the canton assumes",
@@ -37,19 +37,19 @@
       "empty": "Your property will appear here"
     },
     "facts": {
-      "title": "What Zurich wants from an owner who lives abroad",
+      "title": "What Zurich wants from you",
       "items": [
         {
-          "title": "The property makes you taxable here",
-          "body": "Owning real estate in the canton creates a tax liability of its own, whatever your address is (Art. 4 DBG). It applies to a holiday flat nobody rents out just as much as to a rented one, and the municipality will send you a return."
+          "title": "You have to file",
+          "body": "A flat in Zurich makes you a taxpayer here, even if you have never lived in Switzerland. Empty or rented, it counts. The municipality will send you a form."
         },
         {
-          "title": "Only the property is taxed",
-          "body": "Your salary, your pension and your savings abroad stay out of Swiss taxation. They still have to be declared, because Switzerland taxes the property at the rate that matches your whole income and wealth. Tax people call that satzbestimmend."
+          "title": "Only the flat is taxed",
+          "body": "Your salary and savings at home are not taxed here. You still write them down, because they set the rate on the flat."
         },
         {
-          "title": "The canton already valued it",
-          "body": "You do not estimate anything. The amtliche Schätzung sets both the Steuerwert and the Eigenmietwert, and those are the two figures the return wants. If you cannot find the notice, the Gemeindesteueramt sends it again."
+          "title": "The canton did the maths",
+          "body": "You guess nothing. Zurich has already set the two numbers the form wants. They are on your assessment letter, and the local tax office will send it again."
         }
       ]
     },
@@ -57,124 +57,16 @@
       "title": "Three steps, about ten minutes",
       "items": [
         {
-          "title": "Find your assessment",
-          "body": "The Schätzungsanzeige from the canton, or last year's tax bill. It carries the Steuerwert and the Eigenmietwert, and nothing here works without them."
+          "title": "Find the letter",
+          "body": "The Schätzungsanzeige from the canton, or last year's tax bill. Both carry the two numbers you need."
         },
         {
-          "title": "Say how the property is used",
-          "body": "Kept for yourself, lived in by family, or rented out. Add your mortgage and what you own and earn elsewhere, so the debt can be split the way the law requires."
+          "title": "Answer a few questions",
+          "body": "Who uses the flat, and what you own elsewhere. The second part decides how much of your mortgage counts here."
         },
         {
-          "title": "Copy the numbers into your tax return",
-          "body": "The result mirrors the Zurich property form line by line, with a ready German note for the remarks field. Type it into ZHprivateTax or the paper form."
-        }
-      ]
-    },
-    "report": {
-      "title": "What you get",
-      "lead": "A sheet you can print or save as PDF and keep with your tax documents.",
-      "items": [
-        "Every field of the Liegenschaftenverzeichnis, filled in for each property",
-        "The two totals for your tax return: line 6 (code 188) and line 31.1 (code 421)",
-        "The share of your debt and debt interest that Zurich accepts, worked out for you",
-        "A German note for the tax office, stating the basis of liability and asking for the debt split",
-        "Each German term translated, so you know what you sign"
-      ]
-    },
-    "compare": {
-      "title": "Your options",
-      "colOption": "Option",
-      "colCost": "Cost",
-      "colEffort": "Effort",
-      "colResult": "What you end up with",
-      "rows": [
-        {
-          "option": "Ignore the return",
-          "cost": "Nothing today",
-          "effort": "None",
-          "result": "The office assesses you at its own estimate, which is rarely in your favour, plus a fine. The land register says the property is yours, so it will not be overlooked"
-        },
-        {
-          "option": "Hire a Swiss tax adviser",
-          "cost": "Several hundred francs, every year",
-          "effort": "Appointments and documents, usually only in German",
-          "result": "The right choice once there is a business, a sale or an inheritance in play"
-        },
-        {
-          "option": "dix.tax",
-          "cost": "{price} per property the first time, less in later years",
-          "effort": "About 10 minutes",
-          "result": "Correct numbers for a straightforward property, explained in your language"
-        }
-      ]
-    },
-    "fit": {
-      "title": "Is this for you?",
-      "yesTitle": "The tool covers you if",
-      "yes": [
-        "you live outside Switzerland and own a flat or a house in the canton of Zurich",
-        "you keep it for yourself, let family use it, or rent it to a tenant",
-        "you have the cantonal assessment with the Steuerwert and the Eigenmietwert on it"
-      ],
-      "noTitle": "Talk to an adviser or the Gemeindesteueramt if",
-      "no": [
-        "you also live, work or run a business in Switzerland, which makes you taxable on far more than the property",
-        "you bought, sold or inherited the property during the tax year",
-        "it is a commercial building, farmland or a building plot",
-        "the property is held through a company or a trust",
-        "you did not file in earlier years and want to put that right"
-      ]
-    },
-    "faq": {
-      "title": "Questions people ask",
-      "items": [
-        {
-          "q": "I live abroad. Why do I have to file in Switzerland at all?",
-          "a": "Because the property is here. Swiss law makes an owner taxable in the place where the real estate lies, whatever their address (Art. 4 DBG for the federal tax, the same rule in the Zurich tax act). It is called limited liability: only the property is taxed, not you as a whole. The municipality where the property lies sends the return, and it is due even in a year when nothing happened with the flat."
-        },
-        {
-          "q": "Is my salary abroad taxed in Switzerland?",
-          "a": "No. Only the property and its income are taxable here. Your salary, pension and other assets are asked for so that Switzerland can apply the rate that matches your full income and wealth to the Swiss part (Art. 7 Abs. 1 DBG). A larger income abroad therefore raises the rate on the flat, but never makes the income itself taxable here. For the federal tax there is also a floor: the rate is at least the one that matches the income earned in Switzerland (Art. 7 Abs. 2 DBG), so a small worldwide income does not buy a near-zero rate."
-        },
-        {
-          "q": "Where do I find the Eigenmietwert and the Steuerwert?",
-          "a": "On the Schätzungsanzeige, the assessment notice the canton sends after a valuation, and on your last tax bill. Both figures are set by the canton, not by you and not by an estate agent. If you do not have the notice, ask the Gemeindesteueramt of the municipality where the property lies; they send a copy."
-        },
-        {
-          "q": "The flat is empty. Nobody lives there and it earns nothing.",
-          "a": "It is still taxed on the Eigenmietwert, the rent the canton assumes you would otherwise pay. An empty holiday flat that is available to you counts as used by you. A reduction is only considered when the property truly cannot be used, for example after a fire, and that is a case for the tax office rather than for this tool."
-        },
-        {
-          "q": "I rent it out. What do I declare?",
-          "a": "The rent you actually received over the year, without the utilities the tenant pays on top. That replaces the Eigenmietwert. You may then deduct either the flat 20% for maintenance and administration, or what you really spent if it was more, with receipts."
-        },
-        {
-          "q": "Can I deduct the interest on my mortgage?",
-          "a": "Only part of it. Debts and debt interest are spread over everything you own, in proportion to where your assets lie. If the Zurich flat is a third of your assets worldwide, a third of your interest is deductible here. That is why the tool asks what you own elsewhere, and it is the single point most people get wrong."
-        },
-        {
-          "q": "Will my own country tax the flat as well?",
-          "a": "The country where real estate lies has the first right to tax it, and Switzerland uses it. Most treaties then require your country of residence either to exempt the Swiss property while still counting it for your rate, or to credit the Swiss tax. Which of the two applies depends on your treaty, so check it at home. Nothing you file in Zurich replaces your own tax return."
-        },
-        {
-          "q": "What does it cost?",
-          "a": "{price} per property for your first declaration. In the following years it costs less, because your property is already set up. A Swiss adviser usually charges several hundred francs for the same work, every year."
-        },
-        {
-          "q": "When is it due?",
-          "a": "The Zurich deadline is 31 March for the previous year. You can extend it online, free of charge, until 30 November. The extension is for filing, not for paying: interest runs on the tax from the general due date."
-        },
-        {
-          "q": "What happens if I do not file?",
-          "a": "The office reminds you, then assesses you at its own estimate (Ermessensveranlagung). That estimate is deliberately not generous, it is hard to overturn, and it comes with a fine for not filing. Since ownership is recorded in the land register, waiting to be forgotten is not a strategy."
-        },
-        {
-          "q": "Do I need somebody in Switzerland to receive my post?",
-          "a": "Somebody has to be able to reach you. Federal law says that if you are abroad without a representative in Switzerland, a decision can be served on you validly by publication in the cantonal official gazette (Art. 116 Abs. 2 DBG), and the appeal period then runs whether you saw it or not. The cantonal office will normally ask you to name a delivery address here, and it is in your own interest to have one: a relative, a neighbour, a property manager or an adviser."
-        },
-        {
-          "q": "Eigenmietwert is being abolished. What changes for me?",
-          "a": "Parliament decided to end the taxation of notional rent, with the change taking effect on 1 January 2029. Second homes are meant to be covered instead by a new cantonal property tax, which is precisely the category most owners living abroad fall into. Until then the rules on this page apply unchanged, and we will update the tool when the cantonal rules are published."
+          "title": "Copy the numbers across",
+          "body": "You get the Zurich form, line by line, plus a German note to paste in. Type it into ZHprivateTax or the paper form."
         }
       ]
     },

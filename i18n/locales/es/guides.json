@@ -71,6 +71,50 @@
           {
             "q": "¿Gravará mi país el piso también?",
             "a": "Suiza tiene el primer derecho a gravar los inmuebles situados en Suiza. Su país de residencia lo deja exento computándolo como mucho para el tipo, o le deduce el impuesto suizo. Cuál de las dos cosas se aplica está en su convenio con Suiza. Lo que presente en Suiza no sustituye a su declaración."
+          },
+          {
+            "q": "Vivo fuera. ¿Por qué tengo que presentar algo en Suiza?",
+            "a": "Porque el inmueble está aquí. La ley suiza hace contribuyente al propietario en el lugar donde está el inmueble, sea cual sea su domicilio (art. 4 LIFD para el impuesto federal, y la misma regla en la ley fiscal de Zúrich). Se llama obligación fiscal limitada: se grava el inmueble, no usted entero. El municipio donde está la propiedad le envía la declaración, y hay que presentarla incluso en un año en el que no pasó nada con el piso."
+          },
+          {
+            "q": "¿Se grava en Suiza mi sueldo del extranjero?",
+            "a": "No. Aquí solo tributan el inmueble y su rendimiento. Le preguntan por su sueldo, su pensión y su patrimonio para aplicar a la parte suiza el tipo que corresponde a su renta y patrimonio completos (art. 7 párr. 1 LIFD). Una renta mayor fuera sube el tipo sobre el piso, pero nunca hace tributar esa renta aquí. En el impuesto federal hay además un suelo: el tipo es al menos el que corresponde a la renta obtenida en Suiza (art. 7 párr. 2 LIFD), así que una renta mundial pequeña no le consigue un tipo casi nulo."
+          },
+          {
+            "q": "¿Dónde encuentro el alquiler teórico y el valor fiscal?",
+            "a": "En la Schätzungsanzeige, la notificación que envía el cantón tras una valoración, y en su última liquidación. Ambas cifras las fija el cantón, no usted ni una agencia inmobiliaria. Si no tiene la notificación, pídala a la oficina municipal de impuestos del municipio donde está el inmueble."
+          },
+          {
+            "q": "El piso está vacío. No vive nadie y no genera nada.",
+            "a": "Aun así tributa por el alquiler teórico, el alquiler que el cantón supone. Un piso de vacaciones vacío pero disponible para usted cuenta como usado por usted. Solo se estudia una reducción cuando el inmueble realmente no se puede usar, por ejemplo tras un incendio, y eso corresponde a la oficina, no a esta herramienta."
+          },
+          {
+            "q": "Lo tengo alquilado. ¿Qué declaro?",
+            "a": "El alquiler que realmente cobró durante el año, sin los gastos que el inquilino paga aparte. Sustituye al alquiler teórico. Después puede deducir el 20% a tanto alzado por mantenimiento y administración, o lo que gastó de verdad si fue más, con facturas."
+          },
+          {
+            "q": "¿Puedo deducir los intereses de mi hipoteca?",
+            "a": "Solo una parte. Las deudas y sus intereses se reparten sobre todo lo que usted tiene, en proporción a dónde están sus bienes. Si el piso de Zúrich es un tercio de su patrimonio mundial, un tercio de los intereses es deducible aquí. Por eso la herramienta pregunta qué tiene en otros sitios, y es el punto en el que más gente se equivoca."
+          },
+          {
+            "q": "¿Cuánto cuesta?",
+            "a": "{price} por propiedad la primera declaración. Los años siguientes cuesta menos, porque su propiedad ya está dada de alta. Un asesor suizo suele cobrar varios cientos de francos por el mismo trabajo, cada año."
+          },
+          {
+            "q": "¿Cuál es el plazo?",
+            "a": "En Zúrich el plazo es el 31 de marzo para el año anterior. Se puede prorrogar por internet, gratis, hasta el 30 de noviembre. La prórroga es para presentar, no para pagar: el impuesto devenga intereses desde el vencimiento general."
+          },
+          {
+            "q": "¿Qué pasa si no presento nada?",
+            "a": "La oficina le requiere y después liquida según su propia estimación. Esa estimación no es generosa a propósito, cuesta mucho revertirla y viene con una multa por no presentar. Como la propiedad consta en el registro, esperar a que se olviden no es una estrategia."
+          },
+          {
+            "q": "¿Necesito a alguien en Suiza que reciba el correo?",
+            "a": "Alguien tiene que poder localizarle. La ley federal dice que, si está en el extranjero sin representante en Suiza, una resolución puede notificársele válidamente mediante publicación en el boletín oficial cantonal (art. 116 párr. 2 LIFD), y el plazo de recurso corre lo haya visto usted o no. La oficina cantonal suele pedirle que designe una dirección de notificación aquí, y le conviene tenerla: un familiar, un vecino, un administrador o un asesor."
+          },
+          {
+            "q": "Van a suprimir el alquiler teórico. ¿Qué cambia para mí?",
+            "a": "El parlamento aprobó el cambio de sistema, que entra en vigor el 1 de enero de 2029. Para las segundas viviendas se prevé en su lugar un nuevo impuesto cantonal sobre el inmueble, y es justo la categoría en la que cae la mayoría de los propietarios que viven fuera. Hasta entonces vale lo que dice esta página, y actualizaremos la herramienta cuando se publiquen las reglas cantonales."
           }
         ]
       },

@@ -56,7 +56,6 @@ export const PRODUCTS: Product[] = [
     sections: [
       { key: 'how', hash: '#how' },
       { key: 'guide', path: '/switzerland/guide' },
-      { key: 'faq', hash: '#faq' },
     ],
   },
   {

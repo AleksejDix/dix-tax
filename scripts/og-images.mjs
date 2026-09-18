@@ -7,6 +7,7 @@
 //
 // The wording comes from the locale files, so translating a page translates its preview.
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs'
+import { fileURLToPath } from 'node:url'
 import { Resvg } from '@resvg/resvg-js'
 import { PRODUCTS } from '../app/utils/products.ts'
 import { GUIDES } from '../app/utils/guides.ts'
@@ -41,7 +42,14 @@ const PAPER = '#fbfcfe'
 const FIELD = '#eaf1fb'
 const RULE = '#c5d3e8'
 const MARKER = '#ffe26a'
-const FONT = 'Helvetica Neue, Helvetica, Arial, sans-serif'
+// The one font, bundled rather than borrowed from the machine. resvg falls back to whatever
+// a system happens to have installed, so the same command produced a different typeface on a
+// Mac and on CI, which is no way to keep a brand. Inter is close to the system grotesk the
+// site itself uses, covers Latin and Cyrillic, and is an OFL font shipped as a dependency.
+const FONT = 'Inter'
+const FONT_FILES = ['400Regular', '600SemiBold', '700Bold', '900Black'].map((weight) =>
+  fileURLToPath(new URL(`../node_modules/@expo-google-fonts/inter/${weight}/Inter_${weight}.ttf`, import.meta.url)),
+)
 
 function read(locale, file) {
   return JSON.parse(readFileSync(new URL(`../i18n/locales/${locale}/${file}.json`, import.meta.url), 'utf8'))
@@ -185,7 +193,12 @@ for (const locale of LOCALES) {
       title: at(messages, page.title),
       subtitle: at(messages, page.description),
     })
-    const png = new Resvg(markup, { fitTo: { mode: 'width', value: WIDTH } }).render().asPng()
+    const png = new Resvg(markup, {
+      fitTo: { mode: 'width', value: WIDTH },
+      font: { loadSystemFonts: false, fontFiles: FONT_FILES, defaultFontFamily: FONT },
+    })
+      .render()
+      .asPng()
     const name = `${page.name}-${locale}.png`
     writeFileSync(new URL(name, out), png)
     console.log(`${name}  ${(png.length / 1024).toFixed(0)} KB`)

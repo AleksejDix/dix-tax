@@ -105,7 +105,9 @@ visitor's chat app can reach our server.
 The page list is not written in the script: it reads `PRODUCTS` and `GUIDES` directly, so a
 country or a guide added to a registry gets a picture without anyone remembering to add it.
 CI redraws them on every push and fails if the committed files differ, so a changed title
-cannot leave a stale preview behind. `useSocialImage()` points a page at its own image, and the
+cannot leave a stale preview behind. The font is bundled (Inter, as a dev dependency) and
+system fonts are switched off: resvg otherwise borrows whatever the machine has, which made
+the same command produce a different typeface on macOS and on CI. `useSocialImage()` points a page at its own image, and the
 allowed names come from the same registries.
 
 ## Analytics

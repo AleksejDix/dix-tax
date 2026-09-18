@@ -27,7 +27,7 @@ useSocialImage('home')
             <UiButton :to="{ path: localePath('/'), hash: '#choose' }">{{ t('hub.secondary') }}</UiButton>
           </div>
           <p class="mt-4 max-w-[34rem] text-xs text-ink-soft">{{ t('hub.ctaNote', { price }) }}</p>
-          <p class="mt-1.5 max-w-[34rem] text-xs text-ink-soft/80">{{ t('hub.liveNote') }}</p>
+          <p class="mt-1.5 max-w-[34rem] text-xs text-ink-soft">{{ t('hub.liveNote') }}</p>
         </div>
 
         <figure class="m-0">

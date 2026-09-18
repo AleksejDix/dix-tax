@@ -75,8 +75,7 @@ const short = (code: string) => (code === 'uk' ? 'UA' : code.toUpperCase())
             <path d="M0 1h18M0 7h18M0 13h18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
           </svg>
         </template>
-        <nav :aria-label="t('nav.menu')">
-          <ul class="grid gap-0.5">
+        <ul class="grid gap-0.5">
             <li v-for="p in PRODUCTS" :key="p.key">
               <NuxtLink :to="localePath(p.path)" :class="menuLink">
                 {{ t(`products.${p.key}.country`) }}
@@ -85,8 +84,7 @@ const short = (code: string) => (code === 'uk' ? 'UA' : code.toUpperCase())
                 </span>
               </NuxtLink>
             </li>
-          </ul>
-        </nav>
+        </ul>
       </UiDisclosure>
     </div>
   </header>

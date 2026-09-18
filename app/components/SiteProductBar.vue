@@ -42,7 +42,7 @@ useSchemaOrg(
         </ol>
       </nav>
 
-      <nav v-if="sections.length" :aria-label="t('nav.menu')" class="flex items-center gap-x-6">
+      <nav v-if="sections.length" :aria-label="t('nav.onThisPage')" class="flex items-center gap-x-6">
         <template v-for="s in sections" :key="s.key">
           <NuxtLink v-if="s.to" :to="s.to" :class="sectionLink">{{ s.label }}</NuxtLink>
           <NuxtLink v-else :to="s.anchor" custom>

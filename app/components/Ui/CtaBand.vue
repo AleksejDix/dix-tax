@@ -11,9 +11,7 @@ defineProps<{ title: string; body: string; label: string; to: string }>()
         <h2 id="closing-title" class="max-w-[22ch]">{{ title }}</h2>
         <p class="mt-3.5 text-lg text-[#c9d8f5]">{{ body }}</p>
       </div>
-      <UiButton :to="to" class="border-marker bg-marker text-ink hover:border-white hover:bg-white hover:text-ink">
-        {{ label }}
-      </UiButton>
+      <UiButton :to="to" variant="marker">{{ label }}</UiButton>
     </div>
   </section>
 </template>

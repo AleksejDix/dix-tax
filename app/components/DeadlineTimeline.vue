@@ -31,11 +31,16 @@ const stops = computed(() => {
 
 <template>
   <!-- Bleeds into the page gutter so a long calendar can be scrolled without a cut edge. -->
+  <!-- `tabindex` is what lets somebody scroll this strip with the keyboard; without it the
+       later deadlines cannot be reached at all without a mouse. -->
   <div
     v-if="stops.length"
+    tabindex="0"
+    role="group"
+    :aria-label="t('deadlines.title')"
     class="-mx-gutter overflow-x-auto px-gutter [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
   >
-    <ol class="flex min-w-max" :aria-label="t('deadlines.title')">
+    <ol class="flex min-w-max">
       <li
         v-for="(stop, i) in stops"
         :key="stop.key"

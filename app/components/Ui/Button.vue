@@ -9,7 +9,7 @@ const props = withDefaults(
     to?: string | { path: string; hash?: string }
     href?: string
     type?: 'button' | 'submit'
-    variant?: 'primary' | 'quiet' | 'light'
+    variant?: 'primary' | 'quiet' | 'light' | 'marker'
     size?: 'md' | 'sm'
     disabled?: boolean
     block?: boolean
@@ -21,6 +21,8 @@ const VARIANTS = {
   primary: 'border-blue-deep bg-blue-deep text-white hover:border-ink hover:bg-ink hover:text-white',
   quiet: 'border-rule bg-transparent text-ink hover:border-blue hover:text-blue-deep',
   light: 'border-white/35 bg-transparent text-white hover:border-white hover:bg-white/10 hover:text-white',
+  // The step forward on a dark band: the highlighter yellow, with ink on it.
+  marker: 'border-marker bg-marker text-ink hover:border-white hover:bg-white hover:text-ink',
 } as const
 
 const SIZES = {

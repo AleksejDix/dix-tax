@@ -53,6 +53,17 @@ All three run on every push and pull request (`.github/workflows/ci.yml`).
   keep keys and array lengths identical across languages. Zurich keys live under `zh.`.
   Do not use `@`, `|` or braces (other than placeholders) in values, vue-i18n treats them as syntax.
 
+## Accessibility
+
+Audited with axe-core against the built site: eleven pages, including both hub languages, the
+calculator, both landing pages and a guide, all clean. To repeat it, build, copy
+`node_modules/axe-core/axe.min.js` into `.output/public/`, serve with `pnpm preview` and load
+it from the page. Loading it from a CDN will not work: the content security policy allows
+scripts from our own origin only, which is the point of it.
+
+What that does not cover was checked by hand: the tab order, that focus is refused inside a
+closed disclosure, and that the one region which scrolls sideways can be reached by keyboard.
+
 ## Security, robots and sitemap
 
 - `nuxt-security`: security headers, a content security policy (script hashes for the prerendered pages),

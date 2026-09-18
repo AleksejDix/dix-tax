@@ -45,7 +45,7 @@ function chf(value: number) {
     <p v-if="!shown.length" class="sheet-empty" :lang="$i18n.locale">{{ t('zh.sheet.empty') }}</p>
 
     <section v-for="(r, i) in shown" :key="r.input.id" class="prop">
-      <h3 class="prop-title">Liegenschaft {{ i + 1 }}</h3>
+      <p class="prop-title">Liegenschaft {{ i + 1 }}</p>
 
       <dl class="prop-facts">
         <div class="fact fact--wide">
@@ -78,9 +78,14 @@ function chf(value: number) {
           </dt>
           <dd class="num"><span class="cur">CHF</span>{{ chf(r.gross) }}</dd>
         </div>
-        <p v-if="notes && i === 0" class="hand hand--1" :lang="$i18n.locale">
-          <HandArrow />{{ t('zh.hero.noteIncome') }}
-        </p>
+      </dl>
+      <!-- The marginalia are not list items, and a `dl` may hold nothing but dt, dd and
+           groups of them. The rows carry their own rules and the list has no margins, so
+           closing it around a note costs nothing visually. -->
+      <p v-if="notes && i === 0" class="hand hand--1" :lang="$i18n.locale">
+        <HandArrow />{{ t('zh.hero.noteIncome') }}
+      </p>
+      <dl class="lines">
         <div class="line">
           <dt>
             {{
@@ -108,10 +113,10 @@ function chf(value: number) {
           </dt>
           <dd class="num">{{ chf(r.taxValue) }}</dd>
         </div>
-        <p v-if="notes && i === 0" class="hand hand--2" :lang="$i18n.locale">
-          <HandArrow />{{ t('zh.hero.noteValue') }}
-        </p>
       </dl>
+      <p v-if="notes && i === 0" class="hand hand--2" :lang="$i18n.locale">
+        <HandArrow />{{ t('zh.hero.noteValue') }}
+      </p>
     </section>
 
     <footer v-if="shown.length" class="totals">

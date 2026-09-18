@@ -45,20 +45,20 @@ function chf(value: number) {
     <p v-if="!shown.length" class="sheet-empty" :lang="$i18n.locale">{{ t('zh.sheet.empty') }}</p>
 
     <section v-for="(r, i) in shown" :key="r.input.id" class="prop">
-      <h3 class="prop-title">Liegenschaft {{ i + 1 }}</h3>
+      <p class="prop-title">Liegenschaft {{ i + 1 }}</p>
 
       <dl class="prop-facts">
         <div class="fact fact--wide">
           <dt>Ort <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.place') }}</span></dt>
-          <dd>{{ r.input.city }}</dd>
+          <dd>{{ r.input.municipality }}</dd>
         </div>
         <div v-if="r.input.street" class="fact fact--wide">
           <dt>Strasse <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.street') }}</span></dt>
           <dd>{{ r.input.street }}</dd>
         </div>
         <div class="fact">
-          <dt>Kanton / Land <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.country') }}</span></dt>
-          <dd>{{ countryDe(r.input) }}</dd>
+          <dt>Kanton <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.canton') }}</span></dt>
+          <dd>Zürich</dd>
         </div>
         <div class="fact">
           <dt>Art <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.kind') }}</span></dt>
@@ -78,13 +78,24 @@ function chf(value: number) {
           </dt>
           <dd class="num"><span class="cur">CHF</span>{{ chf(r.gross) }}</dd>
         </div>
-        <p v-if="notes && i === 0" class="hand hand--1" :lang="$i18n.locale">
-          <HandArrow />{{ t('zh.hero.noteIncome') }}
-        </p>
+      </dl>
+      <!-- The marginalia are not list items, and a `dl` may hold nothing but dt, dd and
+           groups of them. The rows carry their own rules and the list has no margins, so
+           closing it around a note costs nothing visually. -->
+      <p v-if="notes && i === 0" class="hand hand--1" :lang="$i18n.locale">
+        <HandArrow />{{ t('zh.hero.noteIncome') }}
+      </p>
+      <dl class="lines">
         <div class="line">
           <dt>
-            Unterhalts- und Verwaltungskosten, pauschal
-            <span :lang="$i18n.locale">{{ t('zh.sheet.maintenance') }}</span>
+            {{
+              r.input.maintenanceBasis === 'actual'
+                ? 'Unterhalts- und Verwaltungskosten, effektiv'
+                : 'Unterhalts- und Verwaltungskosten, pauschal'
+            }}
+            <span :lang="$i18n.locale">
+              {{ r.input.maintenanceBasis === 'actual' ? t('zh.sheet.maintenanceActual') : t('zh.sheet.maintenance') }}
+            </span>
           </dt>
           <dd class="num"><span class="cur">−</span>{{ chf(r.maintenance) }}</dd>
         </div>
@@ -97,15 +108,15 @@ function chf(value: number) {
         </div>
         <div class="line line--sum">
           <dt>
-            Verkehrswert
+            Steuerwert
             <span :lang="$i18n.locale">{{ t('zh.sheet.value') }}</span>
           </dt>
           <dd class="num">{{ chf(r.taxValue) }}</dd>
         </div>
-        <p v-if="notes && i === 0" class="hand hand--2" :lang="$i18n.locale">
-          <HandArrow />{{ t('zh.hero.noteValue') }}
-        </p>
       </dl>
+      <p v-if="notes && i === 0" class="hand hand--2" :lang="$i18n.locale">
+        <HandArrow />{{ t('zh.hero.noteValue') }}
+      </p>
     </section>
 
     <footer v-if="shown.length" class="totals">
@@ -124,7 +135,7 @@ function chf(value: number) {
         </div>
         <div class="total">
           <dt>
-            Liegenschaften zum Verkehrswert
+            Liegenschaften zum Steuerwert
             <span :lang="$i18n.locale">
               {{ t('zh.sheet.totalValue') }}. {{ t('zh.sheet.transfer', { line: '31.1' }) }}
             </span>

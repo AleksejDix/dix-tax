@@ -1,26 +1,143 @@
 {
   "anlageV": {
-    "metaTitle": "Anlage V für Vermieter, die ausserhalb Deutschlands wohnen",
-    "metaDescription": "Wer die deutsche Anlage V aus dem Ausland einreichen muss, welche Formulare dazugehören und wann sie fällig ist. Ein geführter Rechner ist in Vorbereitung.",
-    "title": "Anlage V: deutsche Mieteinkünfte für Eigentümer, die im Ausland wohnen",
-    "lead": "Wenn Sie eine Liegenschaft in Deutschland vermieten, ohne dort zu wohnen, wird die Miete trotzdem in Deutschland besteuert. Sie deklarieren sie einmal im Jahr in der Anlage V.",
+    "metaTitle": "Anlage V für Vermieter, die im Ausland leben",
+    "metaDescription": "Wer die deutsche Anlage V aus dem Ausland einreicht, was abziehbar ist, warum der Grundfreibetrag für Sie nicht gilt und wann die Erklärung fällig ist. Ein geführtes Werkzeug ist in Vorbereitung.",
+    "title": "Anlage V: deutsche Mieteinnahmen für Eigentümer im Ausland",
+    "lead": "Wer in Deutschland vermietet, ohne dort zu wohnen, versteuert die Miete trotzdem in Deutschland. Erklärt wird sie einmal im Jahr auf der Anlage V, und der Tarif behandelt Sie anders als Ihren Nachbarn.",
+    "hero": {
+      "cta": "Benachrichtigen, sobald es bereit ist",
+      "secondary": "Wie die Steuer berechnet wird",
+      "note": "Das geführte Werkzeug entsteht noch. Was auf dieser Seite steht, ist die ganze Regel, in Ihrer Sprache, mit dem Gesetz dazu."
+    },
     "facts": [
       {
         "label": "Wer einreicht",
-        "value": "Alle, die eine Liegenschaft in Deutschland vermieten, ohne dort einen Wohnsitz zu haben. Deutschland nennt das beschränkte Steuerpflicht."
+        "value": "Wer in Deutschland vermietet, ohne dort eine Wohnung zu haben. Das Gesetz nennt es beschränkte Steuerpflicht, und sie beruht allein auf der Liegenschaft."
       },
       {
         "label": "Formulare",
-        "value": "Das Hauptformular ESt 1 C und je eine Anlage V pro Liegenschaft, online eingereicht über ELSTER."
+        "value": "Der Mantelbogen ESt 1 C und je eine Anlage V pro Objekt, meist online über ELSTER eingereicht."
       },
       {
         "label": "Was besteuert wird",
-        "value": "Die erhaltene Miete abzüglich der abzugsfähigen Kosten, zum Beispiel Abschreibung (AfA) des Gebäudes, Schuldzinsen, Verwaltung und Reparaturen."
+        "value": "Die Mieteinnahmen abzüglich der Kosten, die sie erzeugt haben: Abschreibung des Gebäudes, Darlehenszinsen, Verwaltung, Reparaturen und Grundsteuer."
+      },
+      {
+        "label": "Kein Grundfreibetrag",
+        "value": "Wer in Deutschland wohnt, zahlt erst nach dem Grundfreibetrag. Bei Ihnen wird er wieder hinzugerechnet, die Steuer beginnt also beim ersten Euro, der Ihnen bleibt."
       },
       {
         "label": "Frist",
-        "value": "31. Juli des Folgejahres, wenn Sie die Erklärung selbst einreichen."
+        "value": "31. Juli des Folgejahres, wenn Sie selbst einreichen, und Ende Februar des übernächsten Jahres, wenn ein Steuerberater für Sie einreicht."
       }
-    ]
+    ],
+    "how": {
+      "title": "Wie Deutschland die Steuer berechnet",
+      "lead": "Miete, minus was sie gekostet hat, und dann ein Tarif, der beim ersten Euro beginnt, weil Sie im Ausland wohnen.",
+      "steps": [
+        {
+          "title": "Mieteinnahmen zusammenzählen",
+          "body": "Die Miete, die Sie im Jahr erhalten haben, samt den Nebenkosten, die der Mieter Ihnen zahlt, denn was Sie für Heizung und Wasser wieder ausgeben, kommt auf der anderen Seite in Abzug."
+        },
+        {
+          "title": "Die Kosten abziehen, die sie erzeugt haben",
+          "body": "Abschreibung des Gebäudes, Darlehenszinsen, Verwaltung, Reparaturen und Grundsteuer. Der Wohnsitz im Ausland verengt das: eine Ausgabe zählt nur, soweit sie wirtschaftlich mit der deutschen Liegenschaft zusammenhängt."
+        },
+        {
+          "title": "Die Abschreibung ist der grösste Posten",
+          "body": "Nur auf das Gebäude, nie auf den Boden: 2% im Jahr für ein Gebäude von 1925 bis 2022, 2,5% für ältere, 3% für Fertigstellung nach 2022 und 5% vom fallenden Buchwert für neue Wohngebäude, die zwischen Oktober 2023 und Oktober 2029 begonnen wurden."
+        },
+        {
+          "title": "Rechnen Sie ohne Grundfreibetrag",
+          "body": "Bei einer Person mit Wohnsitz in Deutschland bleiben die ersten Tausender steuerfrei. Wer nur für eine deutsche Liegenschaft steuerpflichtig ist, bekommt den Betrag wieder hinzugerechnet, versteuert die Miete also ab dem ersten Euro. Es gibt einen Ausweg: den Antrag, als unbeschränkt steuerpflichtig behandelt zu werden. Dafür müssen mindestens 90 Prozent Ihrer Einkünfte in Deutschland steuerpflichtig sein oder die übrigen unter dem Grundfreibetrag bleiben."
+        },
+        {
+          "title": "Dort einreichen, wo das Gebäude steht",
+          "body": "Nicht dort, wo Sie wohnen, und nicht dort, wo Sie gekauft haben: zuständig ist das Finanzamt, in dessen Bezirk die Liegenschaft liegt. Die meisten reichen über ELSTER ein, das kostenlos ist."
+        }
+      ],
+      "exampleTitle": "Eine Wohnung in Leipzig, ganzjährig vermietet",
+      "example": [
+        { "label": "Mieteinnahmen", "value": "EUR 9'600" },
+        { "label": "Abschreibung, 2% von EUR 150'000", "value": "− EUR 3'000" },
+        { "label": "Darlehenszinsen", "value": "− EUR 2'400" },
+        { "label": "Verwaltung, Reparaturen, Grundsteuer", "value": "− EUR 900" },
+        { "label": "Steuerbare Mieteinkünfte", "value": "EUR 3'300" }
+      ],
+      "exampleNote": "Wer in Deutschland wohnt, zahlt darauf gar nichts, weil der Grundfreibetrag das deckt. Bei Ihnen wird er hinzugerechnet, diese 3'300 Euro werden also ab dem ersten Euro versteuert."
+    },
+    "offer": {
+      "title": "Das wird dix.tax für Sie tun",
+      "lead": "Die Anlage V ist nicht schwer, sobald jemand sagt, welche Zeile welche ist. Teuer sind das Deutsch, die Abschreibung und dass es nur einmal im Jahr vorkommt.",
+      "items": [
+        "Ihr Mietergebnis berechnen, mit dem Abschreibungssatz, der zum Baujahr Ihres Gebäudes passt",
+        "Jede Zahl in die Zeile der Anlage V setzen, in die sie gehört, bereit zum Eintippen in ELSTER",
+        "Sagen, ob sich der Antrag auf unbeschränkte Steuerpflicht in Ihrem Fall lohnen würde",
+        "Jeden deutschen Begriff auf dem Formular übersetzen, damit Sie wissen, was Sie unterschreiben",
+        "Sie vor der Frist erinnern, einmal im Jahr und nicht öfter"
+      ],
+      "note": "Was es kosten wird, ist noch nicht entschieden. Die Schweizer Deklaration, die heute bereit ist, kostet {price} pro Liegenschaft."
+    },
+    "docs": {
+      "title": "Das brauchen Sie dafür",
+      "items": [
+        "Den Kaufvertrag und die Aufteilung des Preises auf Boden und Gebäude, denn abgeschrieben wird nur das Gebäude",
+        "Die Jahresbescheinigung der Bank mit den bezahlten Zinsen",
+        "Die Hausgeldabrechnung und die Rechnungen für Reparaturen",
+        "Den Grundsteuerbescheid der Gemeinde",
+        "Ihr ELSTER-Zertifikat oder die Unterlagen, um eines zu beantragen"
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Ich wohne nicht in Deutschland. Warum besteuert Deutschland meine Miete?",
+          "a": "Weil das Gebäude dort steht. Das deutsche Recht besteuert Mieten aus Liegenschaften in Deutschland, wem sie auch gehören und wo diese Person auch wohnt. Das ist die beschränkte Steuerpflicht: Deutschland besteuert die Miete aus dieser Liegenschaft und sonst nichts von Ihnen, aber das jedes Jahr."
+        },
+        {
+          "q": "Bekomme ich den deutschen Grundfreibetrag?",
+          "a": "Im Normalfall nein. Das Gesetz wendet den Tarif auf das um den Grundfreibetrag erhöhte Einkommen an, was ihn aufhebt, sodass die Steuer beim ersten Euro Miete beginnt, der Ihnen bleibt. Jemand mit Wohnsitz in Deutschland zahlte bei derselben Wohnung oft nichts. Sie können stattdessen den Antrag stellen, als unbeschränkt steuerpflichtig behandelt zu werden, dafür müssen aber mindestens 90 Prozent Ihrer Einkünfte in Deutschland steuerpflichtig sein oder die übrigen unter dem Grundfreibetrag bleiben, was bei einem Lohn zu Hause meist ausscheidet."
+        },
+        {
+          "q": "Was kann ich tatsächlich abziehen?",
+          "a": "Die Abschreibung des Gebäudes, die Zinsen des Darlehens, mit dem Sie gekauft haben, Verwaltung, Reparaturen, die Grundsteuer und die Kosten, die Sie dem Mieter weiterbelasten. Die Grenze für jemanden im Ausland: die Ausgabe muss wirtschaftlich mit der deutschen Liegenschaft zusammenhängen. Ihr Treuhänder zu Hause, Ihre Reise zur Besichtigung und die Hypothek auf Ihrem eigenen Haus zählen nicht."
+        },
+        {
+          "q": "Wie hoch ist die Abschreibung?",
+          "a": "Sie richtet sich nach dem Jahr der Fertigstellung: 2 Prozent im Jahr für 1925 bis 2022, 2,5 Prozent für ältere Gebäude und 3 Prozent nach 2022. Neue Wohngebäude, die zwischen Oktober 2023 und Oktober 2029 begonnen wurden, können stattdessen mit 5 Prozent vom fallenden Buchwert abgeschrieben werden. Alles gilt nur für das Gebäude, der Anteil des Kaufpreises für den Boden wird nie abgeschrieben."
+        },
+        {
+          "q": "An welches Finanzamt geht das?",
+          "a": "An das, in dessen Bezirk die Liegenschaft liegt. Nicht an das an Ihrem früheren Wohnort und nicht an eine zentrale Stelle für Auslandsfälle. Haben Sie zwei Wohnungen in verschiedenen Bezirken, ist das Amt mit dem wertvolleren Teil zuständig."
+        },
+        {
+          "q": "Bis wann muss sie eingereicht sein?",
+          "a": "31. Juli des Jahres nach dem Steuerjahr, wenn Sie selbst einreichen. Reicht ein Steuerberater ein, verschiebt sich die Frist auf Ende Februar des Jahres darauf. Die Tabelle auf dieser Seite zählt zur nächsten Frist herunter."
+        },
+        {
+          "q": "Muss ich ELSTER benutzen?",
+          "a": "Für Mieteinkünfte besteht kein Zwang zur elektronischen Abgabe, fast alle tun es trotzdem, weil ELSTER kostenlos ist und der Papierweg aus dem Ausland langsam. Die Registrierung läuft über einen Brief mit Aktivierungscode, der auch an eine ausländische Adresse geht."
+        },
+        {
+          "q": "Die Wohnung steht leer. Reiche ich trotzdem ein?",
+          "a": "Deutschland besteuert keinen Eigenmietwert auf einer leeren Wohnung, darin unterscheidet es sich von der Schweiz und von Spanien. Ohne Miete gibt es meist nichts zu erklären, Kosten aus einer Zeit, in der Sie ernsthaft vermieten wollten, können sich aber trotzdem lohnen. Die Grundsteuer fällt so oder so an."
+        },
+        {
+          "q": "Besteuert mein eigenes Land die Miete auch?",
+          "a": "Deutschland hat das erste Besteuerungsrecht für Liegenschaften, die in Deutschland stehen. Ihr Wohnsitzland stellt die deutsche Miete danach entweder frei und berücksichtigt sie höchstens für den Satz, oder es rechnet die deutsche Steuer an. Was für Sie gilt, steht in Ihrem Abkommen mit Deutschland. Die deutsche Erklärung ersetzt Ihre Erklärung zu Hause nicht."
+        }
+      ]
+    },
+    "sources": {
+      "title": "Woher diese Regeln stammen",
+      "items": [
+        "Mieten aus deutschen Liegenschaften sind in Deutschland steuerbar, auch für jemanden, der anderswo wohnt",
+        "Der Grundfreibetrag wird hinzugerechnet, und Kosten zählen nur, soweit sie zu den deutschen Einkünften gehören",
+        "Der Antrag auf Behandlung als unbeschränkt steuerpflichtig und seine Voraussetzungen",
+        "Die Abschreibungssätze nach dem Jahr der Fertigstellung",
+        "Zuständig ist das Finanzamt, in dessen Bezirk die Liegenschaft liegt"
+      ]
+    }
   }
 }

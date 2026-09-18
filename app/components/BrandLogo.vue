@@ -5,24 +5,17 @@
 </script>
 
 <template>
-  <span class="logo" role="img" aria-label="Dix.Tax">
+  <span
+    class="logo inline-block font-logo text-lg leading-none font-black tracking-[0.09em] whitespace-nowrap uppercase sm:text-xl"
+    role="img"
+    aria-label="dix.tax"
+  >
     <span aria-hidden="true">dix</span><span class="tld" aria-hidden="true">.tax</span>
   </span>
 </template>
 
 <style scoped>
-.logo {
-  display: inline-block;
-  font-family: var(--font-logo);
-  font-size: 1.25rem;
-  font-weight: 900;
-  line-height: 1;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  white-space: nowrap;
-}
-
 .tld {
-  color: var(--logo-accent, var(--blue-deep));
+  color: var(--logo-accent, var(--color-blue-deep));
 }
 </style>

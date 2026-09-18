@@ -1,26 +1,143 @@
 {
   "anlageV": {
     "metaTitle": "Anlage V para arrendadores que viven fuera de Alemania",
-    "metaDescription": "Quién tiene que presentar la Anlage V alemana desde el extranjero, qué formularios la acompañan y cuándo vence. Estamos preparando una calculadora guiada.",
-    "title": "Anlage V: rentas de alquiler en Alemania para propietarios que viven en el extranjero",
-    "lead": "Si alquilas un inmueble en Alemania sin vivir allí, el alquiler sigue tributando en Alemania. Lo declaras una vez al año en la Anlage V.",
+    "metaDescription": "Quién presenta la Anlage V alemana desde el extranjero, qué se puede deducir, por qué el mínimo exento no le corresponde y cuándo vence la declaración. Una herramienta guiada está en preparación.",
+    "title": "Anlage V: rentas de alquiler alemanas para propietarios que viven fuera",
+    "lead": "Si alquila un inmueble en Alemania sin vivir allí, el alquiler tributa igualmente en Alemania. Se declara una vez al año en la Anlage V, y la tarifa le trata distinto que a su vecino.",
+    "hero": {
+      "cta": "Avisadme cuando esté lista",
+      "secondary": "Cómo se calcula el impuesto",
+      "note": "La herramienta guiada aún se está construyendo. Lo que hay en esta página es la regla completa, en su idioma, con la ley de la que sale."
+    },
     "facts": [
       {
-        "label": "Quién la presenta",
-        "value": "Toda persona que alquile un inmueble en Alemania sin tener allí su vivienda. Alemania lo llama obligación tributaria limitada."
+        "label": "Quién presenta",
+        "value": "Quien alquila un inmueble en Alemania sin tener vivienda allí. La ley alemana lo llama obligación fiscal limitada y se apoya solo en el inmueble."
       },
       {
         "label": "Formularios",
-        "value": "El formulario principal ESt 1 C más una Anlage V por cada inmueble, presentados en línea a través de ELSTER."
+        "value": "El formulario principal ESt 1 C más una Anlage V por cada inmueble, normalmente presentados por internet a través de ELSTER."
       },
       {
         "label": "Qué tributa",
-        "value": "El alquiler cobrado menos los gastos deducibles, como la amortización del edificio, los intereses del préstamo, la administración y las reparaciones."
+        "value": "El alquiler cobrado menos lo que ha costado obtenerlo: amortización del edificio, intereses del préstamo, administración, reparaciones y el impuesto sobre bienes inmuebles."
+      },
+      {
+        "label": "Sin mínimo exento",
+        "value": "Un residente no paga nada hasta agotar el mínimo exento. A usted se lo vuelven a sumar, así que el impuesto alemán empieza en el primer euro que le queda."
       },
       {
         "label": "Plazo",
-        "value": "El 31 de julio del año siguiente si la presentas tú mismo."
+        "value": "31 de julio del año siguiente si presenta usted mismo, y finales de febrero del año posterior si lo presenta un asesor fiscal alemán."
       }
-    ]
+    ],
+    "how": {
+      "title": "Cómo calcula Alemania el impuesto",
+      "lead": "Alquiler, menos lo que ha costado obtenerlo, y después una tarifa que empieza en el primer euro porque usted vive fuera.",
+      "steps": [
+        {
+          "title": "Sume el alquiler",
+          "body": "El alquiler cobrado durante el año, incluidos los gastos que el inquilino le paga, porque lo que usted vuelve a pagar por calefacción y agua se resta por el otro lado."
+        },
+        {
+          "title": "Reste lo que ha costado obtenerlo",
+          "body": "Amortización del edificio, intereses del préstamo, administración, reparaciones y el impuesto sobre bienes inmuebles. Vivir fuera lo estrecha: un gasto solo cuenta si está económicamente ligado al inmueble alemán."
+        },
+        {
+          "title": "La amortización es la partida mayor",
+          "body": "Solo del edificio, nunca del suelo: 2% al año para un edificio terminado entre 1925 y 2022, 2,5% para uno anterior a 1925, 3% después de 2022 y 5% del valor contable decreciente para vivienda nueva iniciada entre octubre de 2023 y octubre de 2029."
+        },
+        {
+          "title": "Cuente sin mínimo exento",
+          "body": "A un residente los primeros miles de euros le salen libres. A quien tributa solo por un inmueble alemán se le vuelve a sumar ese importe, de modo que el alquiler que le queda tributa desde el primer euro. Hay una salida: pedir que le traten como sujeto por obligación personal, lo que exige que al menos el 90 por ciento de sus rentas tribute en Alemania, o que el resto no supere el mínimo exento."
+        },
+        {
+          "title": "Preséntela donde está el edificio",
+          "body": "No donde vive usted ni donde compró: es competente la oficina tributaria en cuyo distrito se encuentra el inmueble. La mayoría presenta por ELSTER, que es gratuito."
+        }
+      ],
+      "exampleTitle": "Un piso en Leipzig, alquilado todo el año",
+      "example": [
+        { "label": "Alquiler cobrado", "value": "EUR 9.600" },
+        { "label": "Amortización, 2% de EUR 150.000", "value": "− EUR 3.000" },
+        { "label": "Intereses del préstamo", "value": "− EUR 2.400" },
+        { "label": "Administración, reparaciones, impuesto municipal", "value": "− EUR 900" },
+        { "label": "Renta de alquiler gravable", "value": "EUR 3.300" }
+      ],
+      "exampleNote": "Alguien que viva en Alemania no pagaría nada por eso, porque su mínimo exento lo cubre. A usted se lo vuelven a sumar, así que esos 3.300 euros tributan desde el primero."
+    },
+    "offer": {
+      "title": "Lo que dix.tax hará por usted",
+      "lead": "La Anlage V no es difícil en cuanto alguien le dice qué casilla es cuál. Lo caro es el alemán, la amortización y que solo ocurre una vez al año.",
+      "items": [
+        "Calcular su resultado del alquiler, con el porcentaje de amortización que corresponde al año en que se terminó su edificio",
+        "Poner cada cifra en la casilla de la Anlage V a la que pertenece, lista para teclear en ELSTER",
+        "Decirle si en su caso valdría la pena pedir la tributación por obligación personal",
+        "Traducir cada término alemán del formulario, para que sepa qué firma",
+        "Avisarle antes del plazo, una vez al año y no más"
+      ],
+      "note": "Lo que costará aún no está decidido. La declaración suiza, que ya está lista, cuesta {price} por propiedad."
+    },
+    "docs": {
+      "title": "Lo que necesitará",
+      "items": [
+        "El contrato de compra y el reparto del precio entre suelo y edificio, porque solo se amortiza el edificio",
+        "El certificado anual del banco con los intereses pagados",
+        "La liquidación de la comunidad (Hausgeld) y las facturas de las reparaciones",
+        "La notificación del impuesto municipal (Grundsteuer)",
+        "Su certificado de ELSTER, o los papeles para solicitarlo"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "No vivo en Alemania. ¿Por qué grava Alemania mi alquiler?",
+          "a": "Porque el edificio está allí. La ley alemana grava los alquileres de inmuebles situados en Alemania, sean de quien sean y viva donde viva su dueño. Es la obligación fiscal limitada: Alemania grava el alquiler de ese inmueble y nada más suyo, pero lo grava todos los años."
+        },
+        {
+          "q": "¿Me corresponde el mínimo exento alemán?",
+          "a": "En el caso normal, no. La ley aplica la tarifa a su renta aumentada en el mínimo exento, lo que lo anula, así que el impuesto empieza en el primer euro de alquiler que le queda. Alguien que viva en Alemania con el mismo piso muchas veces no pagaría nada. Puede pedir que le traten como sujeto por obligación personal, pero eso exige que al menos el 90 por ciento de sus rentas tribute en Alemania, o que el resto no supere el mínimo exento, lo que descarta a casi todo el que tiene un sueldo en casa."
+        },
+        {
+          "q": "¿Qué puedo deducir de verdad?",
+          "a": "La amortización del edificio, los intereses del préstamo con que lo compró, la administración, las reparaciones, el impuesto municipal y los gastos que repercute al inquilino. El límite para quien vive fuera es que el gasto esté económicamente ligado al inmueble alemán: su asesor en casa, su viaje para verlo y la hipoteca de su propia casa no valen."
+        },
+        {
+          "q": "¿Cuánta amortización puedo aplicar?",
+          "a": "Depende del año en que se terminó el edificio: 2 por ciento al año de 1925 a 2022, 2,5 por ciento para los anteriores y 3 por ciento para los terminados después de 2022. La vivienda nueva iniciada entre octubre de 2023 y octubre de 2029 puede amortizarse al 5 por ciento del valor contable decreciente. Todo ello solo sobre el edificio: la parte del precio que pagó por el suelo no se amortiza nunca."
+        },
+        {
+          "q": "¿A qué oficina tributaria me dirijo?",
+          "a": "A la de cuyo distrito depende el inmueble. No a la de donde vivía antes ni a una oficina central para extranjeros. Si tiene dos pisos en distritos distintos, se ocupa la del inmueble de mayor valor."
+        },
+        {
+          "q": "¿Cuándo vence?",
+          "a": "El 31 de julio del año siguiente al ejercicio si la presenta usted. Si la presenta un asesor fiscal alemán, el plazo pasa a finales de febrero del año posterior. La tabla de esta página cuenta atrás hasta el próximo."
+        },
+        {
+          "q": "¿Tengo que usar ELSTER?",
+          "a": "Para rentas de alquiler no hay obligación de presentar por vía electrónica, pero casi todo el mundo lo hace, porque ELSTER es gratuito y el papel desde el extranjero es lento. Registrarse pasa por una carta con un código de activación, que también llega a una dirección fuera de Alemania."
+        },
+        {
+          "q": "El piso está vacío. ¿Presento igualmente?",
+          "a": "Alemania no grava una renta imputada por una vivienda vacía, y ahí se diferencia de Suiza y de España. Sin alquiler no suele haber nada que declarar, aunque los gastos de una época en la que intentaba alquilar de verdad pueden valer la pena. El impuesto municipal se paga en cualquier caso."
+        },
+        {
+          "q": "¿Gravará mi país también el alquiler?",
+          "a": "Alemania tiene el primer derecho a gravar los inmuebles situados en Alemania. Su país después deja exento el alquiler alemán computándolo como mucho para el tipo, o le deduce el impuesto alemán. Cuál de las dos cosas se aplica depende de su convenio con Alemania. Lo que presente en Alemania no sustituye a su declaración de allí."
+        }
+      ]
+    },
+    "sources": {
+      "title": "De dónde salen estas reglas",
+      "items": [
+        "Los alquileres de inmuebles alemanes tributan en Alemania aunque el dueño viva en otro sitio",
+        "El mínimo exento se vuelve a sumar, y los gastos solo cuentan si pertenecen a la renta alemana",
+        "La solicitud para ser tratado como sujeto por obligación personal, y sus condiciones",
+        "Los porcentajes de amortización según el año en que se terminó el edificio",
+        "La oficina competente es la del distrito donde está el inmueble"
+      ]
+    }
   }
 }

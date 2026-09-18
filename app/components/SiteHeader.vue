@@ -2,146 +2,90 @@
 const { t, locale, locales } = useI18n()
 const localePath = useLocalePath()
 const switchLocalePath = useSwitchLocalePath()
-const route = useRoute()
+const { cta } = useProductNav()
 
-// Inside a product the menu belongs to that product; elsewhere it lists the forms.
-const inZurich = computed(() => route.path.includes('/ch/zurich'))
-const isCalculator = computed(() => route.path.endsWith('/calculator'))
+// The header never swaps out. Search drops readers straight into a country page, and from
+// there the other countries have to stay one click away. What belongs to a single country is
+// in `SiteProductBar`, on its own row.
+// `router-link-active` also covers the pages under a country, so the country a reader is
+// inside stays marked while they are on its guide or its calculator.
+const navLink =
+  'py-2 text-xs font-medium text-ink no-underline hover:text-blue [&.router-link-active]:text-blue-deep'
+const menuLink =
+  'flex items-center justify-between gap-3 rounded-sm px-2 py-2.5 text-base font-medium text-ink no-underline hover:bg-field'
+
+// Ukrainian is `uk`, which reads as the United Kingdom on a flag-free switcher.
+const short = (code: string) => (code === 'uk' ? 'UA' : code.toUpperCase())
 </script>
 
 <template>
-  <header class="header no-print">
-    <div class="wrap bar">
-      <NuxtLink :to="localePath('/')" class="brand" :aria-label="t('nav.home')">
+  <header class="no-print sticky top-0 z-50 border-b border-rule bg-paper/90 backdrop-blur-md backdrop-saturate-150">
+    <div class="wrap flex min-h-17 items-center gap-2.5 sm:gap-5 lg:gap-8">
+      <NuxtLink
+        :to="localePath('/')"
+        :aria-label="t('nav.home')"
+        class="mr-auto inline-flex items-center text-ink no-underline"
+      >
         <BrandLogo />
       </NuxtLink>
 
-      <nav v-if="inZurich" class="nav" :aria-label="t('nav.menu')">
-        <NuxtLink :to="{ path: localePath('/ch/zurich'), hash: '#how' }">{{ t('nav.how') }}</NuxtLink>
-        <NuxtLink :to="localePath('/ch/zurich/guide')">{{ t('nav.guide') }}</NuxtLink>
-        <NuxtLink :to="{ path: localePath('/ch/zurich'), hash: '#faq' }">{{ t('nav.faq') }}</NuxtLink>
-      </nav>
-      <nav v-else class="nav" :aria-label="t('nav.menu')">
-        <NuxtLink v-for="p in PRODUCTS" :key="p.key" :to="localePath(p.path)">
-          {{ t(`products.${p.key}.name`) }}
+      <nav class="hidden gap-7 lg:flex" :aria-label="t('nav.menu')">
+        <NuxtLink v-for="p in PRODUCTS" :key="p.key" :to="localePath(p.path)" :class="navLink">
+          {{ t(`products.${p.key}.country`) }}
         </NuxtLink>
       </nav>
 
-      <ul class="langs" :aria-label="t('nav.language')">
-        <li v-for="l in locales" :key="l.code">
-          <NuxtLink
-            :to="switchLocalePath(l.code)"
-            :aria-current="l.code === locale ? 'true' : undefined"
-            :lang="l.language"
-            :title="l.name"
-          >
-            {{ l.code === 'uk' ? 'UA' : l.code.toUpperCase() }}
-            <span class="visually-hidden">{{ l.name }}</span>
-          </NuxtLink>
-        </li>
-      </ul>
-
-      <NuxtLink
-        v-if="inZurich && !isCalculator"
-        :to="localePath('/ch/zurich/calculator')"
-        class="btn btn-primary btn-small cta"
+      <UiDisclosure
+        summary-class="rounded-md border border-rule bg-surface px-2.5 py-1.5 text-2xs font-semibold text-ink-soft hover:text-ink"
       >
-        {{ t('nav.start') }}
-      </NuxtLink>
+        <template #summary>
+          <span class="visually-hidden">{{ t('nav.language') }}</span>
+          <span aria-hidden="true">{{ short(locale) }}</span>
+          <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          </svg>
+        </template>
+        <ul>
+          <li v-for="l in locales" :key="l.code">
+            <NuxtLink
+              :to="switchLocalePath(l.code)"
+              :lang="l.language"
+              :aria-current="l.code === locale ? 'page' : undefined"
+              class="block rounded-sm px-2.5 py-2 text-xs whitespace-nowrap text-ink-soft no-underline hover:bg-field hover:text-ink aria-[current=page]:font-semibold aria-[current=page]:text-ink"
+            >
+              {{ l.name }}
+            </NuxtLink>
+          </li>
+        </ul>
+      </UiDisclosure>
+
+      <UiButton v-if="cta" :to="cta.to" variant="primary" size="sm">
+        <span class="sm:hidden">{{ cta.short }}</span>
+        <span class="hidden sm:inline">{{ cta.label }}</span>
+      </UiButton>
+
+      <UiDisclosure
+        panel="sheet"
+        class="lg:hidden"
+        summary-class="rounded-md border border-rule bg-surface p-2 text-ink-soft hover:text-ink"
+      >
+        <template #summary>
+          <span class="visually-hidden">{{ t('nav.menu') }}</span>
+          <svg width="18" height="14" viewBox="0 0 18 14" fill="none" aria-hidden="true">
+            <path d="M0 1h18M0 7h18M0 13h18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" />
+          </svg>
+        </template>
+        <ul class="grid gap-0.5">
+            <li v-for="p in PRODUCTS" :key="p.key">
+              <NuxtLink :to="localePath(p.path)" :class="menuLink">
+                {{ t(`products.${p.key}.country`) }}
+                <span v-if="p.status === 'soon'" class="text-2xs font-normal text-ink-soft">
+                  {{ t('products.statusSoon') }}
+                </span>
+              </NuxtLink>
+            </li>
+        </ul>
+      </UiDisclosure>
     </div>
   </header>
 </template>
-
-<style scoped>
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: color-mix(in srgb, var(--paper) 88%, transparent);
-  backdrop-filter: saturate(1.4) blur(10px);
-  border-bottom: 1px solid var(--rule);
-}
-
-.bar {
-  display: flex;
-  align-items: center;
-  gap: clamp(0.75rem, 2vw, 2rem);
-  min-height: 4.25rem;
-}
-
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-weight: 700;
-  font-size: var(--step-1);
-  letter-spacing: -0.03em;
-  color: var(--ink);
-  text-decoration: none;
-  margin-right: auto;
-}
-
-.nav {
-  display: flex;
-  gap: 1.75rem;
-}
-
-.nav a {
-  color: var(--ink);
-  text-decoration: none;
-  font-size: var(--step--1);
-  font-weight: 500;
-  padding-block: 0.5rem;
-}
-
-.nav a:hover {
-  color: var(--blue);
-}
-
-.langs {
-  display: flex;
-  border: 1px solid var(--rule);
-  border-radius: var(--radius);
-  overflow: hidden;
-  background: var(--surface);
-}
-
-.langs a {
-  display: block;
-  padding: 0.35rem 0.6rem;
-  font-size: 0.8125rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: var(--ink-soft);
-}
-
-.langs a:hover {
-  background: var(--field);
-  color: var(--ink);
-}
-
-.langs a[aria-current] {
-  background: var(--ink);
-  color: #fff;
-}
-
-.langs a:focus-visible {
-  outline-offset: -3px;
-}
-
-@media (max-width: 56rem) {
-  .nav {
-    display: none;
-  }
-}
-
-@media (max-width: 38rem) {
-  .cta {
-    display: none;
-  }
-
-  .brand :deep(.logo) {
-    font-size: 1.125rem;
-  }
-}
-</style>

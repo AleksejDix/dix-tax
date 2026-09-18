@@ -3,3 +3,5 @@ allowBuilds:
   '@parcel/watcher': true
   sharp: true
   unrs-resolver: true
+  # posthog-js pulls in core-js, whose install script only prints a funding message
+  core-js: false

@@ -1,0 +1,82 @@
+{
+  "legal": {
+    "metaTitle": "Aviso legal",
+    "title": "Aviso legal",
+    "operatorTitle": "Titular de este sitio web",
+    "contactTitle": "Contacto",
+    "emailLabel": "Correo electrónico",
+    "uidLabel": "Número de identificación de empresa (UID)",
+    "responsibleTitle": "Responsable del contenido",
+    "adviceTitle": "Sin asesoramiento fiscal ni jurídico",
+    "advice": "dix.tax ofrece información general y una ayuda de cálculo para situaciones habituales. No constituye asesoramiento fiscal ni jurídico y no sustituye a un asesor fiscal. Los porcentajes y las reglas reflejan la práctica publicada por las autoridades en el momento de redactar estos textos, y la administración tributaria puede valorar su caso de otra manera. La responsabilidad de su declaración de impuestos sigue siendo suya.",
+    "liabilityTitle": "Responsabilidad",
+    "liability": "Elaboramos el contenido de este sitio web con esmero, pero no podemos garantizar que sea completo, correcto y actual en todo momento. En la medida en que la ley lo permita, no asumimos responsabilidad alguna por los daños derivados del uso de la información o de los cálculos de este sitio web.",
+    "linksTitle": "Enlaces a otros sitios web",
+    "links": "Este sitio web contiene enlaces a sitios de autoridades y de otros terceros. No tenemos ninguna influencia sobre su contenido y no nos hacemos responsables de él.",
+    "copyrightTitle": "Derechos de autor",
+    "copyright": "Los textos, el diseño y el software de este sitio web pertenecen a su titular. Los nombres y los diseños de los formularios oficiales que se muestran pertenecen a las autoridades correspondientes y figuran aquí únicamente con fines explicativos."
+  },
+  "privacy": {
+    "metaTitle": "Política de privacidad",
+    "title": "Política de privacidad",
+    "updated": "Última actualización: {date}",
+    "intro": "Esta política explica qué datos personales trata dix.tax, con qué finalidad y qué derechos le asisten. Se rige por la Ley federal suiza de protección de datos (LPD) y, cuando le resulte aplicable, por el Reglamento General de Protección de Datos (RGPD) de la UE.",
+    "sections": [
+      {
+        "title": "Quién es el responsable",
+        "body": [
+          "El responsable del tratamiento de datos en este sitio web es el titular indicado en el aviso legal. Para cualquier consulta sobre sus datos, escriba a la dirección de correo electrónico que figura allí."
+        ]
+      },
+      {
+        "title": "La calculadora: sus cifras se quedan en su navegador",
+        "body": [
+          "Todo lo que usted escribe en una calculadora se procesa en su navegador. Se guarda únicamente en el almacenamiento local del navegador, en su propio dispositivo, para que sus datos sigan ahí cuando vuelva. Estas cifras no se nos envían y no podemos verlas.",
+          "Puede borrarlas en cualquier momento con el botón situado debajo de la calculadora o eliminando los datos del sitio en su navegador."
+        ]
+      },
+      {
+        "title": "Cuando nos deja su dirección de correo electrónico",
+        "body": [
+          "Si utiliza un formulario para indicarnos qué formulario fiscal necesita, recibimos su dirección de correo electrónico, el formulario elegido, el idioma de la página y lo que haya escrito en el campo de texto. Todo ello nos llega como un mensaje de correo a nuestro propio buzón.",
+          "Lo utilizamos únicamente para responderle y para avisarle cuando el formulario por el que preguntó esté disponible. No enviamos boletines ni cedemos su dirección a terceros. La eliminamos cuando usted nos lo pida y, a más tardar, dos años después de su mensaje.",
+          "Nuestros buzones de correo los proporciona Migadu-Mail GmbH, una empresa suiza cuyos servidores de correo se encuentran en Francia."
+        ]
+      },
+      {
+        "title": "Alojamiento y registros del servidor",
+        "body": [
+          "Este sitio web está alojado en Vercel Inc., EE. UU. Cuando usted abre una página, Vercel trata los datos técnicos que su navegador envía automáticamente, como su dirección IP, la hora de la solicitud, la página solicitada y el tipo de navegador. Este tratamiento es necesario para ofrecer el sitio web de forma segura y fiable.",
+          "Estos datos pueden tratarse en EE. UU. y en otros países. Vercel está sujeta a garantías contractuales de protección de datos, entre ellas las cláusulas contractuales tipo reconocidas por Suiza y la UE."
+        ]
+      },
+      {
+        "title": "Cookies, tipografías y seguimiento",
+        "body": [
+          "Utilizamos una sola cookie funcional que recuerda su idioma. No contiene información personal y no requiere consentimiento.",
+          "Medimos el uso del sitio con PostHog, alojado en la UE (Fráncfort). Funciona sin cookies y no guarda nada en su dispositivo. Contamos las páginas vistas y unos pocos eventos: que se ha empezado o terminado un cálculo, para qué país, tipo de inmueble y uso, y si se ha impreso la hoja o enviado un formulario. Los importes, las direcciones y cualquier otra cosa que usted escriba nunca se incluyen. La grabación de sesiones está desactivada, no se crea ningún perfil suyo y se respeta la opción Do Not Track de su navegador.",
+          "No usamos publicidad ni seguimiento en otros sitios web. Las tipografías se sirven desde nuestro propio servidor, por lo que al abrir el sitio no se contacta con servicios de tipografías como Google Fonts."
+        ]
+      },
+      {
+        "title": "Base jurídica",
+        "body": [
+          "Cuando el RGPD resulta aplicable, tratamos sus datos sobre la base de su consentimiento cuando nos envía un formulario (art. 6.1.a) del RGPD) y sobre la base de nuestro interés legítimo en mantener un sitio web seguro (art. 6.1.f) del RGPD). Puede retirar su consentimiento en cualquier momento escribiéndonos."
+        ]
+      },
+      {
+        "title": "Sus derechos",
+        "body": [
+          "Usted tiene derecho a saber qué datos conservamos sobre usted, a que se rectifiquen o se supriman, a limitar su tratamiento o a oponerse a él, y a recibirlos en un formato de uso común. Para ejercer estos derechos, escriba a la dirección indicada en el aviso legal. Respondemos en un plazo de 30 días.",
+          "También puede presentar una reclamación ante una autoridad de control. En Suiza es el Comisionado Federal de Protección de Datos e Información (FDPIC). Si reside en la UE o en el EEE, puede dirigirse a la autoridad de protección de datos de su país."
+        ]
+      },
+      {
+        "title": "Cambios en esta política",
+        "body": [
+          "Cuando el sitio web cambie, por ejemplo si se incorporan cuentas de usuario o pagos, actualizaremos esta política. La fecha que aparece al principio indica la versión vigente."
+        ]
+      }
+    ]
+  }
+}

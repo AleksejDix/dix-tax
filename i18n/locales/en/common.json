@@ -156,5 +156,12 @@
       "hint": "This opens your email app with a prepared message. Nothing is sent until you press send.",
       "greeting": "Hello, please tell me when this form is ready."
     }
+  },
+  "reminder": {
+    "title": "Remind me before the next deadline",
+    "body": "The next one is {date}. We write once, a few weeks before it, and then not again.",
+    "submit": "Remind me",
+    "done": "Noted. We will write to you once, before that date.",
+    "consent": "Your address is kept for that one reminder and deleted whenever you ask. No newsletter, and it goes to nobody else."
   }
 }

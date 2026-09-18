@@ -156,5 +156,12 @@
       "hint": "Se abrirá tu aplicación de correo con un mensaje preparado. No se envía nada hasta que pulses enviar.",
       "greeting": "Hola, avisadme por favor cuando este formulario esté listo."
     }
+  },
+  "reminder": {
+    "title": "Avisarme antes del próximo plazo",
+    "body": "El próximo es el {date}. Escribimos una vez, unas semanas antes, y después ya no.",
+    "submit": "Avisadme",
+    "done": "Anotado. Le escribiremos una vez, antes de esa fecha.",
+    "consent": "Su dirección se guarda solo para ese aviso y se borra en cuanto lo pida. Sin boletín, y no va a nadie más."
   }
 }

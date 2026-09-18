@@ -44,6 +44,9 @@ All three run on every push and pull request (`.github/workflows/ci.yml`).
 - `app/components/TrustBlock.vue` trust signals; shows "Independent review" only for entries in `app.config.ts`
 - `app/components/Ui/` the design system: Button, Card, Badge, Section, Field, Segmented, ChoiceGroup, CheckList, Steps, Faq, CtaBand
 - `app/utils/deadlines.ts` filing deadlines, with the source of every date in a comment; `DeadlineTimeline.vue` shows them as a horizontal line and `DeadlineNote.vue` as one line under a card
+- `scripts/apple-mail-account.sh` adds a Migadu mailbox to Apple Mail by writing a
+  configuration profile, since Mail cannot be scripted into creating an account. The password
+  stays out of the file: macOS asks for it while installing
 - `scripts/og-images.mjs` builds the social preview images from the locale files (`pnpm og`), committed under `public/og/`
 - `app/composables/useDeclaration.ts` Zurich tax logic for an owner living abroad: the assessed
   values per property, the proportional debt split, and the German note for the remarks field

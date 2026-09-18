@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "Dix.Tax: formularios fiscales para tu inmueble en el extranjero",
-    "description": "¿Vives en Suiza y tienes una vivienda en el extranjero? Dix.Tax te da en unos diez minutos las cifras exactas para la declaración de Zúrich. El Modelo 210 y el Anlage V vienen después."
+    "title": "dix.tax: formularios fiscales para propietarios que viven fuera",
+    "description": "Tiene un piso o una casa en un país en el que no vive. España, Suiza y Alemania piden una declaración por él. dix.tax le da las cifras exactas, explicadas en su idioma. La declaración suiza ya está lista."
   },
   "nav": {
     "how": "Cómo funciona",
@@ -9,65 +9,72 @@
     "faq": "Preguntas",
     "start": "Preparar mi declaración",
     "language": "Idioma",
-    "home": "Inicio de Dix.Tax",
+    "home": "Inicio de dix.tax",
     "menu": "Menú",
-    "forms": "Todos los formularios"
+    "forms": "Todos los formularios",
+    "skip": "Saltar al contenido",
+    "startShort": "Empezar",
+    "calculator": "Calculadora",
+    "here": "Está aquí"
   },
   "founder": {
     "title": "Por qué lo creé",
     "body": [
-      "Soy Aleksej Dix. Declaro mis impuestos en Suiza y tengo varios apartamentos en el extranjero. La primera vez que tuvieron que figurar en mi declaración, pagué las respuestas de mi bolsillo: asesores, tardes enteras con directivas en alemán y muchas dudas.",
-      "Resultó que las reglas son sencillas en cuanto alguien las explica. Mucha gente en Suiza tiene una vivienda en otro país y se enfrenta al mismo formulario, a menudo en un idioma que no es el suyo. Dix.Tax reúne lo que aprendí en diez minutos."
+      "Soy Aleksej Dix. Vivo en Zúrich y tengo pisos en otros países. Cada primavera llegaba lo mismo: un formulario de una oficina tributaria de un país en el que no vivo, en un idioma que no es el mío. Las respuestas las pagué yo, en asesores y en noches con directrices.",
+      "Quien tiene un piso en Zúrich y vive fuera tiene exactamente ese problema, en espejo. Las reglas resultan sencillas en cuanto alguien las explica, y dix.tax las convierte en diez minutos."
     ],
-    "role": "Fundador de Dix.Tax"
+    "role": "Fundador de dix.tax"
   },
   "footer": {
-    "disclaimer": "Dix.Tax es una herramienta de información y cálculo. No es asesoramiento fiscal ni jurídico y no sustituye a un asesor. Las reglas y la práctica pueden cambiar; revisa tus cifras antes de presentar la declaración.",
+    "disclaimer": "dix.tax es una herramienta de información y cálculo. No es asesoramiento fiscal ni jurídico y no sustituye a un asesor. Las reglas y la práctica pueden cambiar; revisa tus cifras antes de presentar la declaración.",
     "sources": "Basado en la guía de la declaración de Zúrich (Wegleitung) y la directiva cantonal de valoración.",
     "formsTitle": "Formularios",
-    "companyTitle": "Dix.Tax",
+    "companyTitle": "dix.tax",
     "legalNotice": "Aviso legal",
     "privacy": "Política de privacidad",
     "contact": "Contacto",
-    "tagline": "Formularios fiscales para quienes tienen un inmueble en el extranjero.",
+    "tagline": "Formularios fiscales para quien tiene una propiedad en un país donde no vive.",
     "copyright": "© {year} {name}. Todos los derechos reservados.",
     "made": "Hecho en Zúrich"
   },
   "hub": {
-    "title": "Vives en Suiza y tienes una vivienda en el extranjero. Eso son dos declaraciones.",
-    "lead": "Una donde vives y, en la mayoría de los países, otra donde está la vivienda. Dix.Tax prepara hoy la declaración de Zúrich: unas preguntas sencillas y la cifra exacta para cada casilla, explicada en tu idioma.",
-    "cta": "Preparar mi declaración de Zúrich · 10 minutos",
-    "ctaNote": "Unos diez minutos. {price} por vivienda. Sin cuenta, y tus cifras no salen del navegador.",
-    "secondary": "Necesito otro formulario",
-    "liveNote": "Cantón de Zúrich. Otros cantones y los formularios extranjeros están en preparación.",
-    "chooseTitle": "¿Qué formulario necesitas?",
-    "chooseLead": "La declaración suiza ya está lista. El Modelo 210 y el Anlage V vienen después, y las respuestas de abajo deciden cuál primero.",
+    "title": "Su propiedad está en un país en el que usted no vive. Ese país quiere una declaración igualmente.",
+    "lead": "España, Suiza y Alemania gravan un inmueble donde está, sea de quien sea y viva donde viva su dueño. dix.tax prepara hoy la declaración suiza: unas preguntas sencillas, la cifra exacta de cada casilla, explicada en su idioma.",
+    "cta": "Preparar mi declaración suiza · 10 minutos",
+    "ctaNote": "Unos diez minutos. {price} por propiedad. Sin cuenta, y sus cifras se quedan en su navegador.",
+    "secondary": "Mi propiedad está en otro sitio",
+    "liveNote": "Propiedades en el cantón de Zúrich. España, Alemania y otros cantones están en preparación.",
+    "chooseTitle": "¿Dónde está su propiedad?",
+    "chooseLead": "La declaración suiza ya está lista. Modelo 210 y Anlage V vienen después, y las respuestas de abajo deciden cuál primero.",
     "bothTitle": "Una vivienda, a menudo dos declaraciones",
-    "bothBody": "Un piso en Valencia cuyo propietario vive en Zúrich necesita el Modelo 210 en España y una línea en la declaración de Zúrich. Las dos usan valores y reglas distintos. Dix.Tax las mantiene separadas y hace bien ambas."
+    "bothBody": "Un piso en Valencia que pertenece a alguien de Berlín necesita el Modelo 210 en España y además entra en la declaración alemana. Cada una usa valores y reglas distintos. dix.tax las mantiene separadas y acierta en las dos."
   },
   "products": {
     "statusLive": "Disponible",
     "statusSoon": "En preparación",
     "more": "Más información",
-    "chZurich": {
+    "switzerland": {
       "name": "Declaración de impuestos suiza",
       "place": "Cantón de Zúrich",
-      "who": "Vives en Suiza y tienes un inmueble en otro país.",
-      "what": "Valor fiscal, alquiler imputado y deducción a tanto alzado para el Liegenschaftenverzeichnis, además de una nota en alemán para la oficina tributaria.",
+      "who": "Tiene un piso o una casa en el cantón de Zúrich y vive en otro país.",
+      "what": "Los valores oficiales del Liegenschaftenverzeichnis, la parte de su deuda que Zúrich acepta y una nota en alemán para la oficina tributaria.",
       "cta": "Preparar mi declaración",
-      "note": "Otros cantones están en preparación."
+      "note": "Otros cantones están en preparación.",
+      "country": "Suiza"
     },
-    "modelo210": {
+    "spain": {
       "name": "Modelo 210",
       "place": "España",
       "who": "Tienes una vivienda en España y vives en otro lugar.",
-      "what": "El impuesto español para propietarios no residentes. Se presenta cada año, aunque la vivienda nunca se alquile."
+      "what": "El impuesto español para propietarios no residentes. Se presenta cada año, aunque la vivienda nunca se alquile.",
+      "country": "España"
     },
-    "anlageV": {
+    "germany": {
       "name": "Anlage V",
       "place": "Alemania",
       "who": "Alquilas un inmueble en Alemania y vives en otro lugar.",
-      "what": "El anexo de alquileres de la declaración alemana, con amortización y gastos deducibles."
+      "what": "El anexo de alquileres de la declaración alemana, con amortización y gastos deducibles.",
+      "country": "Alemania"
     }
   },
   "deadlines": {
@@ -101,7 +108,7 @@
     "items": [
       {
         "title": "Cada regla tiene una fuente",
-        "body": "Cada porcentaje y cada línea del formulario proceden de una guía oficial, una ley o una directiva. Cada calculadora indica sus fuentes, incluida la única regla que se basa en la práctica y no en una directiva."
+        "body": "Cada porcentaje y cada casilla del formulario procede de una guía oficial, una ley o una directriz, y cada calculadora indica sus fuentes."
       },
       {
         "title": "Los cálculos están probados",
@@ -113,7 +120,7 @@
       },
       {
         "title": "Hay una persona detrás",
-        "body": "Dix.Tax lo ha creado Aleksej Dix en Zúrich, que presenta estos formularios para sus propios inmuebles."
+        "body": "dix.tax lo ha creado Aleksej Dix en Zúrich, que presenta estos formularios para sus propios inmuebles."
       }
     ],
     "reviewTitle": "Revisión independiente",
@@ -124,8 +131,8 @@
     "factsTitle": "Lo esencial",
     "notifyTitle": "¿Quieres saber cuándo estará listo?",
     "notifyBody": "Escríbenos y te avisaremos cuando este formulario esté disponible.",
-    "swissTitle": "¿Vives en el cantón de Zúrich?",
-    "swissBody": "Entonces el mismo inmueble también va en tu declaración de impuestos suiza. Esa parte ya está lista.",
+    "swissTitle": "¿Tiene también una propiedad en el cantón de Zúrich?",
+    "swissBody": "Entonces esa propiedad necesita su propia declaración en Zúrich, aunque usted viva en otro sitio. Esa parte ya está lista.",
     "swissCta": "Abrir la declaración suiza"
   },
   "interest": {

@@ -11,6 +11,29 @@ import tailwindcss from '@tailwindcss/vite'
 const localeFiles = (code: string) =>
   ['common', 'legal', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
 
+// Paths retired when the site moved from form names to the country the property stands in
+// (docs/adr/0001-site-navigation.md). Old links, bookmarks and search results keep working,
+// in every language. A two letter code is never a path segment: `de`, `es`, `uk` and `ru`
+// are locale prefixes, and `fr` and `it` follow when those languages are added.
+const MOVED: Record<string, string> = {
+  '/ch/zurich': '/switzerland',
+  '/ch/zurich/guide': '/switzerland/guide',
+  '/ch/zurich/calculator': '/switzerland/calculator',
+  '/modelo-210': '/spain',
+  '/anlage-v': '/germany',
+}
+
+const LOCALE_PREFIXES = ['', '/de', '/uk', '/ru', '/es']
+
+const movedRules = Object.fromEntries(
+  LOCALE_PREFIXES.flatMap((prefix) =>
+    Object.entries(MOVED).map(([from, to]) => [
+      `${prefix}${from}`,
+      { redirect: { to: `${prefix}${to}`, statusCode: 301 } },
+    ]),
+  ),
+)
+
 export default defineNuxtConfig({
   compatibilityDate: '2026-01-01',
   devtools: { enabled: false },
@@ -22,7 +45,7 @@ export default defineNuxtConfig({
   // Used by the sitemap and robots modules.
   site: {
     url: 'https://dix.tax',
-    name: 'Dix.Tax',
+    name: 'dix.tax',
   },
 
   // Security headers, a content security policy and limits for the one server route.
@@ -119,8 +142,9 @@ export default defineNuxtConfig({
     ],
   },
 
-  // The legal page used to live at /legal; keep old links and bookmarks working.
   routeRules: {
+    ...movedRules,
+    // The legal page used to live at /legal; keep old links and bookmarks working.
     '/legal': { redirect: { to: '/legal-notice', statusCode: 301 } },
     '/de/legal': { redirect: { to: '/de/impressum', statusCode: 301 } },
     '/es/legal': { redirect: { to: '/es/aviso-legal', statusCode: 301 } },

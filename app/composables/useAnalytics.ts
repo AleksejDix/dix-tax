@@ -2,7 +2,7 @@
 // properties coarse: a country code or a form name is fine, anything a person typed is not.
 type Events = {
   calculator_started: Record<string, never>
-  property_completed: { country: string; kind: string; usage: string; currency: string; properties: number }
+  property_completed: { country: string; kind: string; usage: string; properties: number }
   sheet_printed: { properties: number }
   note_copied: Record<string, never>
   signup_sent: { product: string; via: 'form' | 'mail' }

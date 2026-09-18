@@ -8,7 +8,7 @@
     "uidLabel": "Unternehmens-Identifikationsnummer (UID)",
     "responsibleTitle": "Verantwortlich für den Inhalt",
     "adviceTitle": "Keine Steuer- oder Rechtsberatung",
-    "advice": "Dix.Tax bietet allgemeine Informationen und eine Berechnungshilfe für Standardfälle. Das ist keine Steuer- oder Rechtsberatung und ersetzt keinen Steuerberater oder Treuhänder. Die Prozentsätze und Regeln entsprechen der veröffentlichten Praxis der Behörden zum Zeitpunkt der Erstellung. Das Steueramt kann Ihren Fall anders beurteilen. Für Ihre Steuererklärung bleiben Sie selbst verantwortlich.",
+    "advice": "dix.tax bietet allgemeine Informationen und eine Berechnungshilfe für Standardfälle. Das ist keine Steuer- oder Rechtsberatung und ersetzt keinen Steuerberater oder Treuhänder. Die Prozentsätze und Regeln entsprechen der veröffentlichten Praxis der Behörden zum Zeitpunkt der Erstellung. Das Steueramt kann Ihren Fall anders beurteilen. Für Ihre Steuererklärung bleiben Sie selbst verantwortlich.",
     "liabilityTitle": "Haftung",
     "liability": "Wir erstellen die Inhalte dieser Website mit Sorgfalt. Wir können aber nicht gewährleisten, dass sie jederzeit vollständig, richtig und aktuell sind. Soweit gesetzlich zulässig, haften wir nicht für Schäden, die aus der Nutzung der Informationen oder Berechnungen auf dieser Website entstehen.",
     "linksTitle": "Links zu anderen Websites",
@@ -20,7 +20,7 @@
     "metaTitle": "Datenschutzerklärung",
     "title": "Datenschutzerklärung",
     "updated": "Stand: {date}",
-    "intro": "Diese Datenschutzerklärung erläutert, welche Personendaten Dix.Tax bearbeitet, zu welchem Zweck das geschieht und welche Rechte Sie haben. Sie richtet sich nach dem schweizerischen Bundesgesetz über den Datenschutz (DSG) und, soweit sie auf Sie anwendbar ist, nach der Datenschutz-Grundverordnung (DSGVO) der EU.",
+    "intro": "Diese Datenschutzerklärung erläutert, welche Personendaten dix.tax bearbeitet, zu welchem Zweck das geschieht und welche Rechte Sie haben. Sie richtet sich nach dem schweizerischen Bundesgesetz über den Datenschutz (DSG) und, soweit sie auf Sie anwendbar ist, nach der Datenschutz-Grundverordnung (DSGVO) der EU.",
     "sections": [
       {
         "title": "Wer verantwortlich ist",

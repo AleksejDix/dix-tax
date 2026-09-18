@@ -24,7 +24,7 @@ const mailto = computed(() => {
   const body = [t('interest.mail.greeting'), '', note.value.trim(), '', `[${chosen.value} / ${locale.value}]`]
     .join('\n')
     .replace(/\n{3,}/g, '\n\n')
-  return `mailto:${address}?subject=${encodeURIComponent(`Dix.Tax: ${form}`)}&body=${encodeURIComponent(body)}`
+  return `mailto:${address}?subject=${encodeURIComponent(`dix.tax: ${form}`)}&body=${encodeURIComponent(body)}`
 })
 
 async function submit() {

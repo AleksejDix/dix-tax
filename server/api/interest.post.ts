@@ -40,10 +40,10 @@ export default defineEventHandler(async (event) => {
 
   try {
     await transport.sendMail({
-      from: `Dix.Tax website <${user}>`,
+      from: `dix.tax website <${user}>`,
       to: process.env.INTEREST_TO || 'hello@dix.tax',
       replyTo: email,
-      subject: `Dix.Tax signup: ${product} (${locale})`,
+      subject: `dix.tax signup: ${product} (${locale})`,
       text: `Form: ${product}\nLanguage: ${locale}\nEmail: ${email}\n\nWhat they wrote:\n${note || '(nothing)'}\n`,
     })
   } catch (error) {

@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import type { Currency, PropertyInput } from '~/composables/useDeclaration'
-
-const { t, locale } = useI18n()
+const { t } = useI18n()
 const localePath = useLocalePath()
 const { strings } = useList()
-const { year, properties, results, remark, hasResult, load, persist, add, remove, reset } = useDeclaration()
+const { year, properties, household, results, summary, remark, hasResult, load, persist, add, remove, reset } =
+  useDeclaration()
 
 useHead({ title: () => t('zh.meta.calcTitle') })
 useSocialImage('ch-zurich')
@@ -25,10 +24,10 @@ onMounted(async () => {
   ready = true
 })
 
-watch([year, properties], persist, { deep: true })
+watch([year, properties, household], persist, { deep: true })
 
 watch(
-  properties,
+  [properties, household],
   () => {
     if (!ready) return
     if (!started) {
@@ -38,12 +37,11 @@ watch(
     for (const r of results.value) {
       if (!r.complete || counted.has(r.input.id)) continue
       counted.add(r.input.id)
-      // Coarse facts only. Never amounts, city, street or the free-text country name.
+      // Coarse facts only. Never amounts, the municipality or the street.
       track('property_completed', {
-        country: r.input.country,
+        country: 'switzerland',
         kind: r.input.kind,
         usage: r.input.usage,
-        currency: r.input.currency,
         properties: counted.size,
       })
     }
@@ -54,28 +52,17 @@ watch(
 const nextSteps = computed(() => strings('zh.calc.result.next'))
 const assumptions = computed(() => strings('zh.calc.result.assumptions'))
 
-// Sorted by the name the visitor sees, so the list is alphabetical in every language.
-const countries = computed(() =>
-  COUNTRIES.map((code) => ({ code, name: countryName(code, locale.value) })).sort((a, b) =>
-    a.name.localeCompare(b.name, locale.value),
-  ),
-)
-
 // Where each rule comes from. Official names stay in German; what the source covers is translated.
 const SOURCES = [
   {
     name: 'Wegleitung zur Steuererklärung 2024, Kanton Zürich',
     url: 'https://www.zh.ch/content/dam/zhweb/bilder-dokumente/themen/steuern-finanzen/steuern/natuerlichepersonen/2024/est-wegleitungen/305_Wegleitung_ZH_2024_HA%20bf%20DEF.pdf',
   },
-  { name: 'Art. 6 Abs. 1 DBG', url: 'https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_6' },
-  { name: 'Kurslisten der ESTV (ICTax)', url: 'https://www.ictax.admin.ch/extern/de.html#/ratelist' },
-  {
-    name: 'Findea: Eigenmietwert einer ausländischen Liegenschaft',
-    url: 'https://blog.findea.ch/de-blog/eigenmietwert-einer-auslandischen-liegenschaft',
-  },
+  { name: 'Art. 4 Abs. 1 lit. c DBG', url: 'https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_4' },
+  { name: 'Art. 7 Abs. 1 DBG', url: 'https://www.fedlex.admin.ch/eli/cc/1991/1184_1184_1184/de#art_7' },
 ]
 
-const USAGES = ['self', 'family', 'rented', 'unusable'] as const
+const USAGES = ['self', 'family', 'rented'] as const
 const usages = computed(() =>
   USAGES.map((value) => {
     const key = value.charAt(0).toUpperCase() + value.slice(1)
@@ -92,16 +79,16 @@ const kinds = computed(() => [
   { value: 'apartment', label: t('zh.calc.fields.apartment') },
   { value: 'house', label: t('zh.calc.fields.house') },
 ])
-const bases = computed(() => [
-  { value: 'purchase', label: t('zh.calc.fields.basisPurchase') },
-  { value: 'market', label: t('zh.calc.fields.basisMarket') },
+const upkeep = computed(() => [
+  { value: 'flat', label: t('zh.calc.fields.maintenanceFlat') },
+  { value: 'actual', label: t('zh.calc.fields.maintenanceActual') },
 ])
 
-function onCurrencyChange(p: PropertyInput, currency: Currency) {
-  p.currency = currency
-  p.rate = APPROX_RATES[currency]
-  p.rentRate = APPROX_AVERAGE_RATES[currency]
-}
+const chf = (value: number) => formatChf(value)
+// One decimal is enough to recognise your own quota, and it matches the German note.
+const quotaText = computed(() =>
+  summary.value.quota === null ? '' : `${(summary.value.quota * 100).toFixed(1).replace('.0', '')}%`,
+)
 
 const copied = ref(false)
 async function copyRemark() {
@@ -149,34 +136,19 @@ function confirmReset() {
           </legend>
 
           <div class="grid gap-4 sm:grid-cols-2">
-            <UiField :label="t('zh.calc.fields.country')">
-              <select v-model="p.country" class="ui-control num font-medium">
-                <!-- Selectable, not disabled: a browser refuses to show a disabled option as the
-                     current one, so the list opened on the first country while the model was still
-                     empty and the sheet stayed blank. -->
-                <option value="">{{ t('zh.calc.fields.countryPlaceholder') }}</option>
-                <option v-for="c in countries" :key="c.code" :value="c.code">{{ c.name }}</option>
-                <option value="other">{{ t('zh.calc.fields.countryOther') }}</option>
-              </select>
-            </UiField>
-            <UiField :label="t('zh.calc.fields.city')">
+            <UiField :label="t('zh.calc.fields.municipality')" :hint="t('zh.calc.fields.municipalityHint')">
               <input
-                v-model="p.city"
+                v-model="p.municipality"
                 type="text"
                 autocomplete="off"
                 class="ui-control font-medium"
-                :placeholder="t('zh.calc.fields.cityPlaceholder')"
+                :placeholder="t('zh.calc.fields.municipalityPlaceholder')"
               />
             </UiField>
+            <UiField :label="t('zh.calc.fields.street')" :hint="t('zh.calc.fields.streetHint')">
+              <input v-model="p.street" type="text" autocomplete="off" class="ui-control font-medium" />
+            </UiField>
           </div>
-
-          <UiField v-if="p.country === 'other'" :label="t('zh.calc.fields.countryOtherLabel')">
-            <input v-model="p.countryName" type="text" autocomplete="off" class="ui-control font-medium" />
-          </UiField>
-
-          <UiField :label="t('zh.calc.fields.street')" :hint="t('zh.calc.fields.streetHint')">
-            <input v-model="p.street" type="text" autocomplete="off" class="ui-control font-medium" />
-          </UiField>
 
           <div class="grid items-end gap-4 sm:grid-cols-[minmax(0,1.6fr)_minmax(0,1fr)_minmax(0,1fr)]">
             <UiField :label="t('zh.calc.fields.type')" :label-id="`kind-${p.id}`">
@@ -191,48 +163,58 @@ function confirmReset() {
           </div>
           <p class="-mt-2.5 text-2xs leading-snug text-ink-soft">{{ t('zh.calc.fields.shareHint') }}</p>
 
-          <UiField :label="t('zh.calc.fields.basis')" :label-id="`basis-${p.id}`" :hint="t('zh.calc.fields.basisHint')">
-            <UiSegmented v-model="p.basis" :options="bases" :name="`basis-${p.id}`" :labelledby="`basis-${p.id}`" />
+          <UiField :label="t('zh.calc.fields.taxValue')" :hint="t('zh.calc.fields.taxValueHint')">
+            <input v-model.number="p.taxValue" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
           </UiField>
-
-          <div class="grid items-end gap-4 sm:grid-cols-[minmax(0,1.4fr)_minmax(5.5rem,0.6fr)_minmax(0,1fr)]">
-            <UiField :label="t('zh.calc.fields.amount')">
-              <input v-model.number="p.amount" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
-            </UiField>
-            <UiField :label="t('zh.calc.fields.currency')">
-              <select
-                :value="p.currency"
-                class="ui-control num font-medium"
-                @change="onCurrencyChange(p, ($event.target as HTMLSelectElement).value as Currency)"
-              >
-                <option v-for="c in CURRENCIES" :key="c" :value="c">{{ c }}</option>
-              </select>
-            </UiField>
-            <UiField v-if="p.currency !== 'CHF'" :label="t('zh.calc.fields.rate', { currency: p.currency })">
-              <input v-model.number="p.rate" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
-            </UiField>
-          </div>
-          <p v-if="p.currency !== 'CHF'" class="-mt-2.5 text-2xs leading-snug text-ink-soft">
-            {{ t('zh.calc.fields.rateHint') }}
-            <a href="https://www.ictax.admin.ch/extern/de.html#/ratelist" target="_blank" rel="noopener">
-              {{ t('zh.calc.fields.rateLink') }}
-            </a>
-          </p>
 
           <UiField :label="t('zh.calc.fields.usage')" :label-id="`usage-${p.id}`">
             <UiChoiceGroup v-model="p.usage" :options="usages" :name="`usage-${p.id}`" :labelledby="`usage-${p.id}`" />
           </UiField>
 
-          <div v-if="p.usage === 'rented'" class="grid gap-4 sm:grid-cols-2">
-            <UiField :label="`${t('zh.calc.fields.rent')} (${p.currency})`" :hint="t('zh.calc.fields.rentHint')">
-              <input v-model.number="p.rent" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
+          <UiField
+            v-if="p.usage === 'rented'"
+            :label="t('zh.calc.fields.rent')"
+            :hint="t('zh.calc.fields.rentHint')"
+          >
+            <input v-model.number="p.rent" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
+          </UiField>
+          <UiField v-else :label="t('zh.calc.fields.eigenmietwert')" :hint="t('zh.calc.fields.eigenmietwertHint')">
+            <input v-model.number="p.eigenmietwert" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
+          </UiField>
+
+          <UiField
+            :label="t('zh.calc.fields.maintenance')"
+            :label-id="`upkeep-${p.id}`"
+            :hint="t('zh.calc.fields.maintenanceHint')"
+          >
+            <UiSegmented
+              v-model="p.maintenanceBasis"
+              :options="upkeep"
+              :name="`upkeep-${p.id}`"
+              :labelledby="`upkeep-${p.id}`"
+            />
+          </UiField>
+          <UiField v-if="p.maintenanceBasis === 'actual'" :label="t('zh.calc.fields.maintenanceAmount')">
+            <input v-model.number="p.maintenanceActual" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
+          </UiField>
+        </UiCard>
+
+        <UiCard as="fieldset" class="mb-6 grid min-w-0 gap-5">
+          <legend class="legend">{{ t('zh.calc.world.title') }}</legend>
+          <p class="-mt-1 text-xs leading-snug text-ink-soft">{{ t('zh.calc.world.lead') }}</p>
+
+          <div class="grid gap-4 sm:grid-cols-2">
+            <UiField :label="t('zh.calc.world.assets')" :hint="t('zh.calc.world.assetsHint')">
+              <input v-model.number="household.worldAssets" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
             </UiField>
-            <UiField
-              v-if="p.currency !== 'CHF'"
-              :label="t('zh.calc.fields.rentRate', { currency: p.currency })"
-              :hint="t('zh.calc.fields.rentRateHint')"
-            >
-              <input v-model.number="p.rentRate" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
+            <UiField :label="t('zh.calc.world.income')" :hint="t('zh.calc.world.incomeHint')">
+              <input v-model.number="household.worldIncome" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
+            </UiField>
+            <UiField :label="t('zh.calc.world.debt')" :hint="t('zh.calc.world.debtHint')">
+              <input v-model.number="household.debt" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
+            </UiField>
+            <UiField :label="t('zh.calc.world.interest')" :hint="t('zh.calc.world.interestHint')">
+              <input v-model.number="household.interest" type="number" inputmode="decimal" min="0" step="any" class="ui-control num font-medium" />
             </UiField>
           </div>
         </UiCard>
@@ -247,6 +229,55 @@ function confirmReset() {
       <aside class="output min-w-0" aria-live="polite">
         <h2 class="mb-4 text-lg">{{ t('zh.calc.result.title') }}</h2>
         <FormSheet :results="results" :year="year" />
+
+        <div v-if="hasResult" class="mt-5 rounded-md border border-rule bg-surface p-4.5">
+          <h3 class="text-xs font-semibold">{{ t('zh.calc.result.summaryTitle') }}</h3>
+          <dl class="mt-3 grid gap-2 text-xs">
+            <div class="flex justify-between gap-4">
+              <dt>{{ t('zh.calc.result.taxableIncome') }}</dt>
+              <dd class="num font-semibold">{{ chf(summary.taxableIncome) }}</dd>
+            </div>
+            <div class="flex justify-between gap-4">
+              <dt>{{ t('zh.calc.result.taxableWealth') }}</dt>
+              <dd class="num font-semibold">{{ chf(summary.taxableWealth) }}</dd>
+            </div>
+          </dl>
+
+          <dl v-if="summary.quota !== null" class="mt-3 grid gap-2 border-t border-rule-soft pt-3 text-xs text-ink-soft">
+            <div class="flex justify-between gap-4">
+              <dt>{{ t('zh.calc.result.quota') }}</dt>
+              <dd class="num">{{ quotaText }}</dd>
+            </div>
+            <div class="flex justify-between gap-4">
+              <dt>{{ t('zh.calc.result.deductibleInterest') }}</dt>
+              <dd class="num">{{ chf(summary.deductibleInterest) }}</dd>
+            </div>
+            <div class="flex justify-between gap-4">
+              <dt>{{ t('zh.calc.result.deductibleDebt') }}</dt>
+              <dd class="num">{{ chf(summary.deductibleDebt) }}</dd>
+            </div>
+            <p class="text-2xs leading-snug">{{ t('zh.calc.result.quotaHint') }}</p>
+          </dl>
+          <p v-else class="mt-3 border-t border-rule-soft pt-3 text-2xs leading-snug text-warn">
+            {{ t('zh.calc.result.quotaMissing') }}
+          </p>
+
+          <template v-if="summary.rateIncome !== null || summary.rateWealth !== null">
+            <h3 class="mt-4 text-xs font-semibold">{{ t('zh.calc.result.rateTitle') }}</h3>
+            <dl class="mt-3 grid gap-2 text-xs text-ink-soft">
+              <div v-if="summary.rateIncome !== null" class="flex justify-between gap-4">
+                <dt>{{ t('zh.calc.result.rateIncome') }}</dt>
+                <dd class="num">{{ chf(summary.rateIncome) }}</dd>
+              </div>
+              <div v-if="summary.rateWealth !== null" class="flex justify-between gap-4">
+                <dt>{{ t('zh.calc.result.rateWealth') }}</dt>
+                <dd class="num">{{ chf(summary.rateWealth) }}</dd>
+              </div>
+              <p class="text-2xs leading-snug">{{ t('zh.calc.result.rateHint') }}</p>
+            </dl>
+          </template>
+        </div>
+
         <p
           v-if="hasResult"
           class="mt-4 rounded-r-md border-l-[3px] border-ok bg-ok-tint px-4 py-3 text-xs font-medium"
@@ -283,7 +314,7 @@ function confirmReset() {
         </ol>
         <div class="no-print flex flex-wrap items-center gap-x-6 gap-y-4">
           <UiButton variant="primary" @click="printSheet">{{ t('zh.calc.result.print') }}</UiButton>
-          <NuxtLink :to="localePath('/ch/zurich/guide')">{{ t('zh.calc.result.guideLink') }}</NuxtLink>
+          <NuxtLink :to="localePath('/switzerland/guide')">{{ t('zh.calc.result.guideLink') }}</NuxtLink>
         </div>
       </section>
     </div>

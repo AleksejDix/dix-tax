@@ -1,128 +1,118 @@
 # ADR 0001: Site navigation
 
-Status: proposed
+Status: accepted
 Date: 2026-09-17
 Deciders: Aleksej Dix
-Related: #21 (canton pages, currently `/ch/<canton>`), #9 (guide pages per search query)
+Related: #28 (this decision), #21 (cantons), #9 (guide pages)
 
 ## Context
 
-Today the site is a hub (`/`) plus three form pages, one of them live with two subpages.
-`app/components/SiteHeader.vue` holds the whole navigation.
+The site was a hub plus three form pages, one of them live with two subpages, and
+`app/components/SiteHeader.vue` held the whole navigation.
 
-### What is broken now
+### What was broken
 
-1. **No navigation on phones.** `.nav { display: none }` below 56rem and there is no drawer.
-   Below 38rem the CTA is hidden too. A phone visitor sees a logo and five language codes.
-2. **The header swaps instead of nesting.** Inside `/ch/zurich` the global nav is replaced by
-   the product nav, so the only way back to the hub is the logo. The `nav.forms` key
-   ("All forms") exists in every locale file and is used nowhere: the parent link was intended
-   and never built.
-3. **The language switcher spends the header's width.** Five always-visible codes compete with
-   the primary nav for the same row, which is why the nav had nowhere to go on small screens.
-4. Smaller defects in the same component: `aria-current="true"` on the language links (the valid
-   token here is `page`), no active state on nav links, and the skip link in `app/app.vue` is
-   labelled with `nav.start` ("Prepare my declaration") instead of "Skip to content".
+1. **No navigation on phones.** The nav was `hidden lg:flex` with no drawer, and the call to
+   action was `hidden sm:inline-flex`. On a 390px screen the header was a logo and five
+   language codes.
+2. **The header swapped instead of nesting.** Inside the product the global nav was replaced by
+   the product nav, so the only way back to the hub was the logo. The `nav.forms` key
+   ("All forms") existed in all five locale files and was used nowhere.
+3. **The language switcher spent the header's width.** Five always-visible codes sat in the row
+   the nav needed, which is why the nav had nowhere to go on a small screen.
+4. `aria-current="true"` on the language links (the valid token is `page`), no active state on
+   nav links, and a skip link labelled "Prepare my declaration".
 
-### What will break next
+### What the paths could not do
 
-Paths are inconsistent: `/ch/zurich` is country first, `/modelo-210` and `/anlage-v` are form
-named at the root. `i18n.strategy` is `prefix_except_default`, so `/de`, `/es`, `/uk`, `/ru` are
-locale prefixes, not available as path segments. `/ch` is safe only by luck. Issue #21 plans
-French for the Romandy cantons, and Italy and France are the likeliest next property countries
-for a Swiss resident, so `/fr` and `/it` are on the way in as locales and would have been wanted
-as countries.
+`/ch/zurich` was country first, `/modelo-210` and `/anlage-v` were form named at the root.
+`i18n.strategy` is `prefix_except_default`, so `/de`, `/es`, `/uk` and `/ru` are locale
+prefixes and cannot be path segments. `/ch` was free by luck. #21 plans French for the Romandy
+cantons, and Italy and France are the likeliest next property countries, so `/fr` and `/it` are
+on their way in as locales too.
 
-### Three axes, only one of which can be the path
+### What settled it
 
-- **Filing jurisdiction**: which tax office receives the form. Has real children in one place
-  only: 26 cantons under the Swiss return (#21).
-- **Form name**: what people actually type. "Modelo 210", "Anlage V",
-  "Liegenschaft im Ausland Steuererklärung Zürich" (#9).
-- **Country**: ambiguous for this audience. Switzerland is where the visitor lives, Spain is
-  where the property stands, and `hub.bothBody` says the normal case is both at once. A page
-  called "Spain" has to serve a Swiss resident with a flat in Valencia and a non-resident owner
-  filing Modelo 210. As an editorial page it can pick one intent and say so. As a path parent it
-  cannot.
+The site is for one reader: **somebody who owns property in a country they do not live in.**
+The countries covered are Spain, Switzerland and Germany. That fixes the meaning of a country:
+it is where the property stands, which is also where the form is filed. Before that decision a
+country page was ambiguous, because Switzerland was where the reader lived while Spain was
+where their flat was, and no hierarchy could hold both.
 
 ## Decision
 
-### 1. Form first, region as child
+### 1. The country is the level, and it is spelled out
 
 ```
-/                                     hub: choose your form
-/<form>                               form page
-/<form>/<region>                      region page, where a form differs by region
-/<form>[/<region>]/calculator|guide   the tool and its guide
-/guides/<slug>                        query-shaped entry pages (#9)
+/                          hub: where is your property?
+/spain                     Modelo 210
+/switzerland               cantonal return under limited tax liability
+/switzerland/guide
+/switzerland/calculator
+/germany                   Anlage V
+/guides/<slug>             query-shaped entry pages (#9)
 ```
 
-So `/modelo-210`, `/anlage-v`, `/swiss-tax-return` with `/swiss-tax-return/zurich`,
-`/swiss-tax-return/zug`. Slugs are translated per locale through `i18n.pages`
-(`/de/schweizer-steuererklaerung/zuerich`).
+One country, one page, and the form is what that page is about, so there is no empty container
+anywhere. Cantons nest under `/switzerland` when a second one lands (#21).
 
-The hierarchy sits where there are real children. Spain and Germany get no country level to
-stand empty, and the term people search for stays at the root. Per-country pages, when they come,
-are entry pages in `/guides/`, addressed to one reader each, and they link into the forms.
+**Rule: no path segment is a two letter code.** The locale prefixes own that namespace, and the
+codes still free today (`fr`, `it`) are the ones a growing site wants. So `/switzerland`, not
+`/ch`. This supersedes the `/ch/<canton>` path in #21.
 
-**Rule: no path segment may be a two letter code.** The locale prefixes own that namespace, and
-the ones still free today are exactly the ones a growing site wants (`fr`, `it`). This retires
-`/ch/zurich` and supersedes the `/ch/<canton>` path in #21.
+### 2. The header always carries the country level
 
-### 2. The header always carries the global level
-
-One shape everywhere: logo, nav, language, CTA. It never swaps out. Inside a form, the product
-level gets its own row: a breadcrumb (`All forms > Swiss tax return > Zurich`) and the section
-links that are in the header today (How it works, Guide, Questions). The header CTA becomes the
-product CTA on those pages, as it does now.
+One shape everywhere: logo, the three countries, language, call to action. It never swaps out,
+because search drops readers straight into a country page and the others have to stay one click
+away. What belongs to a single country sits on its own row underneath: a breadcrumb and that
+country's pages (`SiteProductBar`).
 
 ### 3. Phones get the same links, in a drawer
 
-A `<details>`/`<summary>` disclosure: no JavaScript state, no hydration dependency, every link
-present in the prerendered HTML for the crawler and the five sitemaps. The language switcher
-collapses into the same pattern at every width: one control labelled with the current language,
-the five alternates as real `switchLocalePath` links inside it. The CTA stays visible at every
-width; it is the one action the site exists for.
+A `<details>` disclosure: it opens with no script at all, so every link is in the prerendered
+HTML for the crawler and the five sitemaps, and it closes itself on navigation and on Escape.
+The language switcher uses the same pattern at every width, one control labelled with the
+current language. The call to action is visible at every width, with a short label below 40rem.
 
-### 4. Details that come with it
+### 4. Details that came with it
 
-- `aria-current="page"` for the active nav link and the active language, from `NuxtLink`.
-- A new `nav.skip` key, "Skip to content", in all five locale files.
-- `BreadcrumbList` JSON-LD on form, region and tool pages, from the same breadcrumb data.
-- A 301 in `routeRules` for every retired path, once per locale, alongside the `/legal` ones.
+- `aria-current="page"` on the active country, the active language and the last breadcrumb.
+- Anchors in the country row are plain `<a href>`: `NuxtLink` decides what is current from the
+  path alone, so every anchor on a page would be marked current at the same time.
+- `nav.skip` ("Skip to content"), `nav.startShort`, `nav.calculator`, `nav.here` and
+  `products.<country>.country` in all five locale files.
+- A 301 in `routeRules` for every retired path, once per locale (`movedRules` in the config).
 
 ## Alternatives considered
 
 | Option | Why not |
 | --- | --- |
-| Country first (`/switzerland/zurich`, `/spain/modelo-210`) | Reads well and matches how the hub talks, but "country" means residence in one product and property location in the next, and it builds a level for Spain and Germany that has one child each. Was this ADR's first draft. |
-| Country ISO codes (`/ch`, `/es`, `/de`), as in #21 | Collides with the locale prefixes. `/es` and `/de` are unavailable today, `/fr` and `/it` go the same way as soon as Romandy needs French. |
-| Flat slugs for everything, cantons included | 26 canton slugs at the root read as a list, not a structure, and there is nowhere to put what the cantons share. |
-| Mega menu over all forms | Three forms today. The hub already is that menu, and it earns the landing traffic. |
+| Form first (`/modelo-210`, `/swiss-tax-return/zurich`) | The right answer while the reader was a Swiss resident with a flat abroad, because "country" was then ambiguous. Once the reader became the non-resident owner, the ambiguity went and the country became the thing they identify with: they know where their flat is, not what the form is called. |
+| Country first with ISO codes (`/ch`, `/es`, `/de`), as in #21 | Collides with the locale prefixes. `/es` and `/de` are gone already, `/fr` and `/it` go the same way. |
+| A country level plus a separate form page under it | One form per country today. The second page would say the same thing twice. |
+| Mega menu over all forms | Three countries. The hub already is that menu, and it earns the landing traffic. |
 | Locale strategy `prefix` (`/en/...` too) | Would free the two letter namespace, at the cost of the default locale's URLs and every existing link. Reconsider only if country codes become worth it. |
 
 ## Consequences
 
-- One migration: pages move under `app/pages/`, `products.ts` paths change, `i18n.pages` gains
-  the translated slugs, redirects are added, the `README.md` table and #21 are updated. Cheap
-  now, expensive after launch and after the first inbound link.
-- `/ch/zurich` becomes `/swiss-tax-return/zurich`, one level deeper, and every locale needs a
-  translated form slug that reads naturally. This is copy work, not code.
-- Social images are named by page key, not by path (`useSocialImage('ch-zurich')`), so the
-  rename does not touch `public/og/`.
-- `tests/ch-zurich.test.ts` tests the calculation, not routes, so it is unaffected.
-- New copy keys per language: skip link, breadcrumb labels, form slugs.
-- Sections 2, 3 and 4 do not depend on section 1 and can ship first.
+- `/ch/zurich`, `/ch/zurich/guide`, `/ch/zurich/calculator`, `/modelo-210` and `/anlage-v` are
+  retired, with a 301 each in five languages. 126 routes still prerender.
+- The registry keys became `switzerland`, `spain` and `germany`. The locale **files** are still
+  `ch-zurich.json`, `modelo-210.json` and `anlage-v.json`, and the Zurich content still lives
+  under the `zh.` namespace. Those follow with the copy, not with the paths.
+- **The copy now points the wrong way.** Every page still addresses a Swiss resident with a flat
+  abroad, and the Swiss calculator computes that case: 70 percent of the purchase price, an
+  estimated Eigenmietwert and two exchange rates. For a Swiss property held from abroad the
+  canton issues the Eigenmietwert and the Steuerwert, so none of that applies. This is the next
+  piece of work and it needs an adviser (#15).
+- Slugs are English in every language for now. Translating them (`/de/schweiz`) reads better and
+  doubles the redirect surface; it belongs with the copy rewrite.
+- Social images are named by page key, not by path, so the move did not touch `public/og/`.
 
 ## Open questions
 
-1. Is `swiss-tax-return` the right umbrella, given that the form is really the
-   Liegenschaftenverzeichnis inside the cantonal return? Alternatives: `/tax-return-switzerland`,
-   or keeping the canton at the root (`/zurich-tax-return`) until a second canton exists.
-2. Are slugs translated per locale, or English everywhere? Translation reads better and doubles
-   the redirect surface.
-3. Does `/ch/zurich` stay alive as a canonical alias, or 301 only? (301 only, unless it already
-   has inbound links worth keeping direct.)
-4. With three forms, does the header list forms, or one "All forms" link with the hub doing the
-   choosing? A three item nav is fine; a twenty item one is not, so the answer changes once
-   cantons land.
+1. Do slugs get translated per locale, or stay English?
+2. Does `/switzerland` stay the Swiss page, with `/switzerland/zurich` appearing only when a
+   second canton lands (#21), or does Zurich get its own page straight away?
+3. Is "All forms" still the right name for the hub crumb now that the hub asks where the
+   property is, rather than which form is needed?

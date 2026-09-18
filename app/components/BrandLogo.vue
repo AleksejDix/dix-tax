@@ -8,7 +8,7 @@
   <span
     class="logo inline-block font-logo text-lg leading-none font-black tracking-[0.09em] whitespace-nowrap uppercase sm:text-xl"
     role="img"
-    aria-label="Dix.Tax"
+    aria-label="dix.tax"
   >
     <span aria-hidden="true">dix</span><span class="tld" aria-hidden="true">.tax</span>
   </span>

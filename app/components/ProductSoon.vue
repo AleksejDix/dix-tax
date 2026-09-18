@@ -55,7 +55,7 @@ useSocialImage(props.ns === 'modelo210' ? 'modelo-210' : 'anlage-v')
         <UiCard tone="quiet" class="grid justify-items-start gap-3.5 border-dashed">
           <h2 class="text-lg">{{ t('soon.swissTitle') }}</h2>
           <p class="text-xs text-ink-soft">{{ t('soon.swissBody') }}</p>
-          <NuxtLink :to="localePath('/ch/zurich')">{{ t('soon.swissCta') }}</NuxtLink>
+          <NuxtLink :to="localePath('/switzerland')">{{ t('soon.swissCta') }}</NuxtLink>
         </UiCard>
       </aside>
     </div>

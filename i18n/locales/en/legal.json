@@ -8,7 +8,7 @@
     "uidLabel": "Company number (UID)",
     "responsibleTitle": "Responsible for the content",
     "adviceTitle": "No tax or legal advice",
-    "advice": "Dix.Tax provides general information and a calculation aid for standard situations. It is not tax or legal advice and does not replace a tax adviser. The percentages and rules reflect the published practice of the authorities at the time of writing, and the tax office can assess your case differently. You remain responsible for your tax return.",
+    "advice": "dix.tax provides general information and a calculation aid for standard situations. It is not tax or legal advice and does not replace a tax adviser. The percentages and rules reflect the published practice of the authorities at the time of writing, and the tax office can assess your case differently. You remain responsible for your tax return.",
     "liabilityTitle": "Liability",
     "liability": "We prepare the content of this website with care, but we cannot guarantee that it is complete, correct and up to date at all times. To the extent permitted by law, we accept no liability for damage resulting from the use of the information or the calculations on this website.",
     "linksTitle": "Links to other websites",
@@ -20,7 +20,7 @@
     "metaTitle": "Privacy policy",
     "title": "Privacy policy",
     "updated": "Last updated: {date}",
-    "intro": "This policy explains which personal data Dix.Tax processes, why, and what rights you have. It follows the Swiss Federal Act on Data Protection and, where it applies to you, the EU General Data Protection Regulation (GDPR).",
+    "intro": "This policy explains which personal data dix.tax processes, why, and what rights you have. It follows the Swiss Federal Act on Data Protection and, where it applies to you, the EU General Data Protection Regulation (GDPR).",
     "sections": [
       {
         "title": "Who is responsible",

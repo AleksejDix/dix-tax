@@ -50,15 +50,15 @@ function chf(value: number) {
       <dl class="prop-facts">
         <div class="fact fact--wide">
           <dt>Ort <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.place') }}</span></dt>
-          <dd>{{ r.input.city }}</dd>
+          <dd>{{ r.input.municipality }}</dd>
         </div>
         <div v-if="r.input.street" class="fact fact--wide">
           <dt>Strasse <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.street') }}</span></dt>
           <dd>{{ r.input.street }}</dd>
         </div>
         <div class="fact">
-          <dt>Kanton / Land <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.country') }}</span></dt>
-          <dd>{{ countryDe(r.input) }}</dd>
+          <dt>Kanton <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.canton') }}</span></dt>
+          <dd>Zürich</dd>
         </div>
         <div class="fact">
           <dt>Art <span v-if="factSub" :lang="$i18n.locale">{{ t('zh.sheet.kind') }}</span></dt>
@@ -83,8 +83,14 @@ function chf(value: number) {
         </p>
         <div class="line">
           <dt>
-            Unterhalts- und Verwaltungskosten, pauschal
-            <span :lang="$i18n.locale">{{ t('zh.sheet.maintenance') }}</span>
+            {{
+              r.input.maintenanceBasis === 'actual'
+                ? 'Unterhalts- und Verwaltungskosten, effektiv'
+                : 'Unterhalts- und Verwaltungskosten, pauschal'
+            }}
+            <span :lang="$i18n.locale">
+              {{ r.input.maintenanceBasis === 'actual' ? t('zh.sheet.maintenanceActual') : t('zh.sheet.maintenance') }}
+            </span>
           </dt>
           <dd class="num"><span class="cur">−</span>{{ chf(r.maintenance) }}</dd>
         </div>
@@ -97,7 +103,7 @@ function chf(value: number) {
         </div>
         <div class="line line--sum">
           <dt>
-            Verkehrswert
+            Steuerwert
             <span :lang="$i18n.locale">{{ t('zh.sheet.value') }}</span>
           </dt>
           <dd class="num">{{ chf(r.taxValue) }}</dd>
@@ -124,7 +130,7 @@ function chf(value: number) {
         </div>
         <div class="total">
           <dt>
-            Liegenschaften zum Verkehrswert
+            Liegenschaften zum Steuerwert
             <span :lang="$i18n.locale">
               {{ t('zh.sheet.totalValue') }}. {{ t('zh.sheet.transfer', { line: '31.1' }) }}
             </span>

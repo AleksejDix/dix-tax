@@ -6,7 +6,7 @@ useHead(() => ({
   htmlAttrs: { lang: head.value.htmlAttrs?.lang },
   link: head.value.link,
   meta: head.value.meta,
-  titleTemplate: (title?: string) => (title ? `${title} | Dix.Tax` : t('meta.title')),
+  titleTemplate: (title?: string) => (title ? `${title} | dix.tax` : t('meta.title')),
 }))
 
 useSeoMeta({
@@ -22,8 +22,9 @@ useSocialImage('home')
 
 <template>
   <div class="app">
-    <a href="#main" class="skip">{{ t('nav.start') }}</a>
+    <a href="#main" class="skip">{{ t('nav.skip') }}</a>
     <SiteHeader />
+    <SiteProductBar />
     <main id="main">
       <NuxtPage />
     </main>

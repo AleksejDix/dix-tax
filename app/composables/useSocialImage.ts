@@ -22,7 +22,7 @@ export function useSocialImage(name: SocialImage) {
     ogUrl: () => absolute(route.path),
     // og:locale wants language_TERRITORY; a bare language is accepted where we have no region.
     ogLocale: () => localeProperties.value.language.replace('-', '_'),
-    ogSiteName: 'Dix.Tax',
+    ogSiteName: 'dix.tax',
     twitterCard: 'summary_large_image',
     twitterImage: () => absolute(`/og/${name}-${locale.value}.png`),
   })

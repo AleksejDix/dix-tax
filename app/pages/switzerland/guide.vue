@@ -11,14 +11,16 @@ const docs = computed(() => strings('zh.guide.docs'))
 
 // German terms are fixed; only the explanation is translated.
 const terms = [
+  { key: 'beschraenkt', de: 'Beschränkte Steuerpflicht' },
   { key: 'liegenschaftenverzeichnis', de: 'Liegenschaftenverzeichnis' },
+  { key: 'amtlicheSchaetzung', de: 'Amtliche Schätzung' },
   { key: 'eigenmietwert', de: 'Eigenmietwert' },
   { key: 'steuerwert', de: 'Steuerwert' },
   { key: 'pauschalabzug', de: 'Pauschalabzug' },
+  { key: 'schuldzinsen', de: 'Schuldzinsen' },
   { key: 'satzbestimmend', de: 'satzbestimmend' },
   { key: 'steuerausscheidung', de: 'Steuerausscheidung' },
-  { key: 'quellensteuer', de: 'Quellensteuer' },
-  { key: 'schutzstatus', de: 'Schutzstatus S' },
+  { key: 'vertretung', de: 'Vertretung in der Schweiz' },
   { key: 'gemeindesteueramt', de: 'Gemeindesteueramt' },
   { key: 'fristerstreckung', de: 'Fristerstreckung' },
   { key: 'bemerkungen', de: 'Bemerkungen' },
@@ -47,7 +49,7 @@ const terms = [
           </ul>
         </section>
 
-        <UiButton :to="localePath('/ch/zurich/calculator')" variant="primary">{{ t('zh.guide.cta') }}</UiButton>
+        <UiButton :to="localePath('/switzerland/calculator')" variant="primary">{{ t('zh.guide.cta') }}</UiButton>
       </div>
 
       <UiCard as="aside" aria-labelledby="glossary-title" class="lg:sticky lg:top-22">

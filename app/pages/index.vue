@@ -23,7 +23,7 @@ useSocialImage('home')
           <h1 class="max-w-[20ch]">{{ t('hub.title') }}</h1>
           <p class="lead mt-6 max-w-[34rem]">{{ t('hub.lead') }}</p>
           <div class="mt-8 flex flex-wrap gap-3">
-            <UiButton :to="localePath('/ch/zurich/calculator')" variant="primary">{{ t('hub.cta') }}</UiButton>
+            <UiButton :to="localePath('/switzerland/calculator')" variant="primary">{{ t('hub.cta') }}</UiButton>
             <UiButton :to="{ path: localePath('/'), hash: '#choose' }">{{ t('hub.secondary') }}</UiButton>
           </div>
           <p class="mt-4 max-w-[34rem] text-xs text-ink-soft">{{ t('hub.ctaNote', { price }) }}</p>

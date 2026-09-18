@@ -1,4 +1,4 @@
-// Filing deadlines for the forms Dix.Tax covers. A deadline is the strongest reason a
+// Filing deadlines for the forms dix.tax covers. A deadline is the strongest reason a
 // visitor acts today instead of next month, so every date here is taken from the tax
 // administration itself and is dated; when a rule changes, change it here and nowhere else.
 //

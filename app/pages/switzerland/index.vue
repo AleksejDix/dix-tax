@@ -5,7 +5,7 @@ const { strings, objects } = useList()
 const { price } = useAppConfig()
 
 const sample = [sampleResult()]
-const sampleRemark = remarkDe(sample, 2025)
+const sampleRemark = remarkDe(summarise(sample, newHousehold()), 2025)
 
 const facts = computed(() => objects('zh.facts.items', ['title', 'body']))
 const steps = computed(() => objects('zh.steps.items', ['title', 'body']))
@@ -53,8 +53,8 @@ useHead(() => ({
           <h1>{{ t('zh.hero.title') }}</h1>
           <p class="lead mt-6">{{ t('zh.hero.lead', { price }) }}</p>
           <div class="mt-9 flex flex-wrap gap-3">
-            <UiButton :to="localePath('/ch/zurich/calculator')" variant="primary">{{ t('zh.hero.cta') }}</UiButton>
-            <UiButton :to="{ path: localePath('/ch/zurich'), hash: '#how' }">{{ t('zh.hero.secondary') }}</UiButton>
+            <UiButton :to="localePath('/switzerland/calculator')" variant="primary">{{ t('zh.hero.cta') }}</UiButton>
+            <UiButton :to="{ path: localePath('/switzerland'), hash: '#how' }">{{ t('zh.hero.secondary') }}</UiButton>
           </div>
           <p class="mt-5 flex items-center gap-2 text-xs text-ink-soft">
             <svg viewBox="0 0 16 16" aria-hidden="true" class="size-4 flex-none text-ok">
@@ -91,7 +91,7 @@ useHead(() => ({
       <div class="wrap grid items-start gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(0,1.4fr)] lg:gap-16">
         <div class="grid justify-items-start gap-8 lg:sticky lg:top-26">
           <h2 id="how-title">{{ t('zh.steps.title') }}</h2>
-          <UiButton :to="localePath('/ch/zurich/calculator')" variant="primary">{{ t('zh.hero.cta') }}</UiButton>
+          <UiButton :to="localePath('/switzerland/calculator')" variant="primary">{{ t('zh.hero.cta') }}</UiButton>
         </div>
         <UiSteps :items="steps" />
       </div>
@@ -188,7 +188,7 @@ useHead(() => ({
       :title="t('zh.cta.title')"
       :body="t('zh.cta.body')"
       :label="t('zh.cta.button')"
-      :to="localePath('/ch/zurich/calculator')"
+      :to="localePath('/switzerland/calculator')"
     />
   </div>
 </template>

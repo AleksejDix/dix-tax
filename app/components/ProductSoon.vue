@@ -15,6 +15,9 @@ useSeoMeta({
   ogDescription: () => t(`${props.ns}.metaDescription`),
 })
 useSocialImage(props.ns === 'modelo210' ? 'modelo-210' : 'anlage-v')
+
+// The namespace names the form, the registry names the country.
+const country = computed(() => (props.ns === 'modelo210' ? 'spain' : 'germany') as const)
 </script>
 
 <template>
@@ -41,7 +44,7 @@ useSocialImage(props.ns === 'modelo210' ? 'modelo-210' : 'anlage-v')
 
         <h2 class="mt-12 text-lg">{{ t('deadlines.title') }}</h2>
         <div class="mt-4">
-          <DeadlineTable :only="ns" />
+          <DeadlineTable :only="country" />
         </div>
         <p class="mt-3 text-2xs text-ink-soft">{{ t('deadlines.note') }}</p>
       </section>

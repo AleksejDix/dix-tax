@@ -38,21 +38,21 @@ const utc = (year: number, month: number, day: number) => new Date(Date.UTC(year
 function scheduleFor(year: number): Deadline[] {
   const next = year + 1
   return [
-    { product: 'chZurich', year, date: utc(next, 3, 31), kind: 'due', label: 'zurich' },
-    { product: 'chZurich', year, date: utc(next, 9, 30), kind: 'extended', label: 'zurich' },
-    { product: 'chZurich', year, date: utc(next, 11, 30), kind: 'final', label: 'zurich' },
+    { product: 'switzerland', year, date: utc(next, 3, 31), kind: 'due', label: 'zurich' },
+    { product: 'switzerland', year, date: utc(next, 9, 30), kind: 'extended', label: 'zurich' },
+    { product: 'switzerland', year, date: utc(next, 11, 30), kind: 'final', label: 'zurich' },
     // The April window opened with the 2026 tax year; before that, filing ran all year.
-    { product: 'modelo210', year, date: utc(next, 12, 31), kind: 'due', label: 'modelo210Own' },
+    { product: 'spain', year, date: utc(next, 12, 31), kind: 'due', label: 'modelo210Own' },
     {
-      product: 'modelo210',
+      product: 'spain',
       year,
       date: year >= 2026 ? utc(next, 4, 20) : utc(next, 1, 20),
       kind: 'due',
       label: 'modelo210Rented',
     },
-    { product: 'anlageV', year, date: utc(next, 7, 31), kind: 'due', label: 'anlageV' },
+    { product: 'germany', year, date: utc(next, 7, 31), kind: 'due', label: 'anlageV' },
     // "The last day of February" of the year after next, so a leap year moves it to the 29th.
-    { product: 'anlageV', year, date: utc(next + 1, 3, 0), kind: 'final', label: 'anlageVAdviser' },
+    { product: 'germany', year, date: utc(next + 1, 3, 0), kind: 'final', label: 'anlageVAdviser' },
   ].sort((a, b) => a.date.getTime() - b.date.getTime()) as Deadline[]
 }
 

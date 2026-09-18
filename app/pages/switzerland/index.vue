@@ -63,7 +63,7 @@ useHead(() => ({
             </svg>
             {{ t('zh.hero.note', { price }) }}
           </p>
-          <DeadlineNote product="chZurich" class="mt-2" />
+          <DeadlineNote product="switzerland" class="mt-2" />
         </div>
 
         <figure class="m-0 max-w-[34rem] lg:max-w-none">

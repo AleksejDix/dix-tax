@@ -25,7 +25,11 @@ const sectionLink = 'py-1 text-xs font-medium text-ink no-underline hover:text-b
       <nav v-if="sections.length" :aria-label="t('nav.menu')" class="flex flex-wrap gap-x-6">
         <template v-for="s in sections" :key="s.key">
           <NuxtLink v-if="s.to" :to="s.to" :class="sectionLink">{{ s.label }}</NuxtLink>
-          <a v-else :href="s.href" :class="sectionLink">{{ s.label }}</a>
+          <NuxtLink v-else :to="s.anchor" custom>
+            <template #default="{ href, navigate }">
+              <a :href="href" :class="sectionLink" @click="navigate">{{ s.label }}</a>
+            </template>
+          </NuxtLink>
         </template>
       </nav>
     </div>

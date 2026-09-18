@@ -9,28 +9,28 @@ const iso = (d: Date) => d.toISOString().slice(0, 10)
 
 describe('Zurich tax return', () => {
   it('is due on 31 March of the following year', () => {
-    const d = nextDeadline('chZurich', on('2026-02-10'))!
+    const d = nextDeadline('switzerland', on('2026-02-10'))!
     expect(d.year).toBe(2025)
     expect(iso(d.date)).toBe('2026-03-31')
     expect(d.kind).toBe('due')
   })
 
   it('moves to the extended 30 September once 31 March has passed', () => {
-    const d = nextDeadline('chZurich', on('2026-04-01'))!
+    const d = nextDeadline('switzerland', on('2026-04-01'))!
     expect(d.year).toBe(2025)
     expect(iso(d.date)).toBe('2026-09-30')
     expect(d.kind).toBe('extended')
   })
 
   it('moves to the last extension, 30 November, and then to the next tax year', () => {
-    expect(iso(nextDeadline('chZurich', on('2026-10-01'))!.date)).toBe('2026-11-30')
-    const after = nextDeadline('chZurich', on('2026-12-01'))!
+    expect(iso(nextDeadline('switzerland', on('2026-10-01'))!.date)).toBe('2026-11-30')
+    const after = nextDeadline('switzerland', on('2026-12-01'))!
     expect(after.year).toBe(2026)
     expect(iso(after.date)).toBe('2027-03-31')
   })
 
   it('counts the deadline day itself as still open', () => {
-    const d = nextDeadline('chZurich', on('2026-03-31'))!
+    const d = nextDeadline('switzerland', on('2026-03-31'))!
     expect(iso(d.date)).toBe('2026-03-31')
     expect(daysUntil(d, on('2026-03-31'))).toBe(0)
   })

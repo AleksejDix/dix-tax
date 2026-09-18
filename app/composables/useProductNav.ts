@@ -37,15 +37,16 @@ export function useProductNav() {
     return crumbs
   })
 
-  // An anchor is a plain href: `NuxtLink` decides what is current from the path alone, so
-  // every anchor on the page would be marked as the current one at the same time.
+  // Anchors travel through the router like everything else, but they cannot be plain
+  // `NuxtLink`s: it decides what is current from the path alone, so every anchor on the page
+  // would be marked as the current one at once. `SiteProductBar` renders them with `custom`.
   const sections = computed(() => {
     const p = product.value
     if (!p?.sections) return []
     return p.sections.map((s) => ({
       key: s.key,
       label: t(`nav.${s.key}`),
-      href: s.hash ? `${localePath(p.path)}${s.hash}` : undefined,
+      anchor: s.hash ? { path: localePath(p.path), hash: s.hash } : undefined,
       to: s.path ? localePath(s.path) : undefined,
     }))
   })

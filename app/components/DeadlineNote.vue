@@ -30,5 +30,10 @@ const next = computed(() => {
     <p v-if="next" class="text-xs text-ink-soft">
       {{ next.text }}<template v-if="next.left">, <span class="font-semibold text-warn">{{ next.left }}</span></template>
     </p>
+    <!-- The date is worked out in the browser, so the server has nothing to render. Hold the
+         line's height anyway, or every card under it jumps down once the script runs. -->
+    <template #fallback>
+      <p class="text-xs" aria-hidden="true">&nbsp;</p>
+    </template>
   </ClientOnly>
 </template>

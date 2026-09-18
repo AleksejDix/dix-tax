@@ -48,6 +48,7 @@ useSeoMeta({
   ogDescription: () => t(`${props.ns}.metaDescription`),
 })
 useSocialImage(props.ns === 'modelo210' ? 'modelo-210' : 'anlage-v')
+useFaqSchema(faq)
 </script>
 
 <template>

@@ -38,14 +38,32 @@ export default defineNuxtConfig({
   compatibilityDate: '2026-01-01',
   devtools: { enabled: false },
 
-  modules: ['@nuxtjs/i18n', '@nuxt/fonts', 'nuxt-security', '@nuxtjs/robots', '@nuxtjs/sitemap'],
+  // @nuxtjs/seo brings robots, sitemap, schema.org, link checking and seo-utils in one
+  // module, so those are no longer listed separately.
+  modules: ['@nuxtjs/i18n', '@nuxt/fonts', 'nuxt-security', '@nuxtjs/seo'],
 
   css: ['~/assets/css/main.css'],
 
-  // Used by the sitemap and robots modules.
+  // Read by every part of the SEO suite.
   site: {
     url: 'https://dix.tax',
     name: 'dix.tax',
+    description: 'Tax forms for people who own property in a country they do not live in.',
+    defaultLocale: 'en',
+  },
+
+  // The social images are drawn by `scripts/og-images.mjs` and committed, so the build and
+  // the request path stay untouched and nothing new has to be allowed in the content
+  // security policy. Generating them at request time would undo both.
+  ogImage: { enabled: false },
+
+  // The person behind the site, once, for the structured data on every page.
+  schemaOrg: {
+    identity: {
+      type: 'Organization',
+      name: 'dix.tax',
+      url: 'https://dix.tax',
+    },
   },
 
   // Security headers, a content security policy and limits for the one server route.

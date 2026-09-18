@@ -6,6 +6,20 @@ const { t } = useI18n()
 const { trail, sections } = useProductNav()
 
 const sectionLink = 'text-xs font-medium text-ink no-underline hover:text-blue aria-[current=page]:text-blue-deep'
+
+// The same trail the reader sees, handed to the crawler. One crumb is the hub itself, which
+// is not a trail, so nothing is claimed there.
+useSchemaOrg(
+  computed(() =>
+    trail.value.length > 1
+      ? [
+          defineBreadcrumb({
+            itemListElement: trail.value.map((crumb) => ({ name: crumb.label, item: crumb.to })),
+          }),
+        ]
+      : [],
+  ),
+)
 </script>
 
 <template>

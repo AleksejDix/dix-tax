@@ -24,23 +24,7 @@ useSeoMeta({
 })
 useSocialImage('ch-zurich')
 
-// FAQ rich result, in the language of the page.
-useHead(() => ({
-  script: [
-    {
-      type: 'application/ld+json',
-      innerHTML: JSON.stringify({
-        '@context': 'https://schema.org',
-        '@type': 'FAQPage',
-        mainEntity: faq.value.map((item) => ({
-          '@type': 'Question',
-          name: item.q,
-          acceptedAnswer: { '@type': 'Answer', text: item.a },
-        })),
-      }),
-    },
-  ],
-}))
+useFaqSchema(faq)
 </script>
 
 <template>

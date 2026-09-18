@@ -1,3 +1,3 @@
 <template>
-  <ProductSoon ns="modelo210" />
+  <ProductLanding ns="modelo210" />
 </template>

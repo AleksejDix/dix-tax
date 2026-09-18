@@ -1,30 +1,136 @@
 {
   "modelo210": {
     "metaTitle": "Modelo 210 for property owners who live outside Spain",
-    "metaDescription": "Who has to file Spain's Modelo 210, how the tax is calculated and when it is due. A guided calculator is in preparation.",
+    "metaDescription": "Who has to file Spain's Modelo 210, how the tax is worked out at 1.1 or 2 percent of the cadastral value, which rate applies to you and when it is due. A guided tool is in preparation.",
     "title": "Modelo 210: Spain's tax for owners who live elsewhere",
-    "lead": "If you own a home in Spain but are not tax resident there, Spain expects a Modelo 210 every year. That applies even if the home is never rented and earns nothing.",
+    "lead": "If you own a home in Spain but are not tax resident there, Spain expects a Modelo 210 every year. That applies even if the home is never rented and earns nothing at all.",
+    "hero": {
+      "cta": "Tell me when the tool is ready",
+      "secondary": "How the tax works",
+      "note": "The guided tool is still being built. What is on this page is the whole rule, in your language, with the law it comes from."
+    },
     "facts": [
       {
         "label": "Who files",
-        "value": "Anyone who owns property in Spain and is not tax resident there. Each co-owner files separately."
+        "value": "Anyone who owns property in Spain and is not tax resident there. Each co-owner files separately, for their own share."
       },
       {
         "label": "Used by you or standing empty",
-        "value": "Spain taxes a notional income: 1.1% of the cadastral value if that value was revised in the last 10 years, otherwise 2%."
+        "value": "Spain taxes an income nobody paid you: 1.1% of the cadastral value if that value was revised in the last ten tax periods, otherwise 2%."
       },
       {
         "label": "Rented out",
-        "value": "The rent you received. Residents of the EU and EEA may deduct costs, others may not."
+        "value": "The rent you received. Residents of another EU state may deduct the costs of earning it; everyone else is taxed on the gross."
       },
       {
         "label": "Tax rate",
-        "value": "19% for residents of the EU and EEA, 24% for everyone else, including Switzerland and the United Kingdom."
+        "value": "19% for residents of the EU and the EEA, 24% for everyone else, Switzerland and the United Kingdom included."
       },
       {
         "label": "Deadlines",
-        "value": "Own use: by 31 December of the following year. Rent: the first twenty days of April of the following year. Both windows changed with income of 2026; for 2025 the old ones still apply, 1 January to 31 December 2026 and 1 to 20 January 2026."
+        "value": "Own use: by 31 December of the following year. Rented out: the annual window in the following year. The dates below are the ones the tax agency publishes."
       }
-    ]
+    ],
+    "how": {
+      "title": "How Spain works out the tax",
+      "lead": "Two different taxes hide behind one form, and which one you owe depends on whether anybody paid you rent.",
+      "steps": [
+        {
+          "title": "Find the cadastral value",
+          "body": "It is on the IBI receipt from the town hall, and it is not the market value: it is usually far below what the flat would sell for. The receipt also says when the value was last revised, which decides your percentage."
+        },
+        {
+          "title": "Empty or kept for yourself: Spain invents an income",
+          "body": "1.1% of the cadastral value when that value was revised in the last ten tax periods, otherwise 2%. Nobody paid you anything and the tax is due anyway. Only a habitual residence is exempt, and somebody living abroad does not have one in Spain."
+        },
+        {
+          "title": "Rented out: the rent you received",
+          "body": "If you live in another EU state you may deduct what it cost you to earn that rent. If you live anywhere else, Switzerland and the United Kingdom included, you are taxed on the gross rent with nothing deducted."
+        },
+        {
+          "title": "Apply your rate, and file one form each",
+          "body": "19% if you live in the EU or the EEA, 24% if you live anywhere else. Where you live decides it, not where you are from. Two owners means two forms, each for their own share."
+        }
+      ],
+      "exampleTitle": "A flat in Valencia, standing empty",
+      "example": [
+        { "label": "Cadastral value, last revised 2019", "value": "EUR 90'000" },
+        { "label": "Imputed income, 1.1%", "value": "EUR 990" },
+        { "label": "Rate for an owner living in Switzerland", "value": "24%" },
+        { "label": "Tax for the year", "value": "EUR 238" }
+      ],
+      "exampleNote": "The same flat owned from Germany would be taxed at 19%, so EUR 188. If two of you own it, each declares half and files a form of their own."
+    },
+    "offer": {
+      "title": "What dix.tax will do for you",
+      "lead": "The rule fits on a page. Getting it onto a Spanish form correctly, once a year, for every owner, is what takes the evening.",
+      "items": [
+        "Work out your imputed income or your rental result, with the percentage that actually applies to your property",
+        "Give you the right rate, 19 or 24 percent, from where you live rather than where you are from",
+        "One filled sheet per owner, because Spain wants a separate Modelo 210 from each of you",
+        "Name every field in Spanish and in your language, so you can see what you are signing",
+        "Remind you before the deadline, once a year, and not more often"
+      ],
+      "note": "What it will cost is not decided yet. The Swiss declaration, which is ready today, costs {price} per property."
+    },
+    "docs": {
+      "title": "What you will need",
+      "items": [
+        "The IBI receipt from the town hall, which carries the cadastral value and the year it was last revised",
+        "Your NIE, and the NIE of every co-owner",
+        "The deed (escritura), which says what share of the property is yours",
+        "The rental contract and the rent actually received, if it is let",
+        "A certificate of tax residence from your own country, which Spain may ask for before giving you the 19 percent rate"
+      ]
+    },
+    "faq": {
+      "title": "Questions people ask",
+      "items": [
+        {
+          "q": "The flat is empty and earns nothing. Why is there any tax?",
+          "a": "Because Spanish law taxes the possibility of using it. It is called imputed income: a percentage of the cadastral value counts as income even though nobody paid you. Only a habitual residence escapes it, and a person living abroad does not have one in Spain. A holiday flat you use three weeks a year is taxed for the whole year."
+        },
+        {
+          "q": "Where do I find the cadastral value?",
+          "a": "On the annual IBI receipt from the town hall, which also tells you the year of the last revision. The Catastro's own site shows it too, with your NIE and a certificate. Do not use the purchase price: the cadastral value is a separate figure and usually much lower."
+        },
+        {
+          "q": "Do I pay 19 or 24 percent?",
+          "a": "Where you live decides. A resident of another EU state, or of Iceland, Norway or Liechtenstein, pays 19 percent. Everybody else pays 24 percent, and that includes Switzerland and the United Kingdom, which are neither. Your nationality does not come into it."
+        },
+        {
+          "q": "Can I deduct the mortgage, the community fee and the repairs?",
+          "a": "Only if you live in another EU state. Then you may deduct the costs that are directly connected to the Spanish income. From Switzerland or the United Kingdom you are taxed on the gross rent, with the mortgage interest, the comunidad and the repairs counting for nothing. It is the single biggest difference between two owners of identical flats."
+        },
+        {
+          "q": "We own it together. Is that one form?",
+          "a": "No. Each owner files their own Modelo 210 for their own share, with their own NIE. A couple owning half each files two forms, each on half the cadastral value or half the rent."
+        },
+        {
+          "q": "When is it due?",
+          "a": "For a flat you keep for yourself, by 31 December of the year after the tax year. For a rented flat there is an annual window early in the following year. The table on this page carries the dates as the tax agency publishes them, and it counts down to the next one."
+        },
+        {
+          "q": "I have owned it for years and never filed. What now?",
+          "a": "Filing late of your own accord costs less than being found. Spain can go back several years and add a surcharge, and the tax office does eventually notice, because ownership is in the land register and the town hall bills you for IBI every year. This is a case for an adviser rather than for a form filled in a hurry."
+        },
+        {
+          "q": "Is this the same as IBI, or as the wealth tax?",
+          "a": "No, they are three different things. IBI is the municipal property tax you pay to the town hall. Modelo 210 is the national income tax on the flat. Spain also levies a wealth tax that can reach a non-resident owner of an expensive property, which is a separate filing again."
+        },
+        {
+          "q": "Do I still have to declare the flat at home?",
+          "a": "Usually yes. Spain has the first right to tax property that stands in Spain, and your own country then either exempts it while still counting it for your rate, or credits the Spanish tax against its own. Which of the two applies depends on your treaty with Spain, so check it at home. Nothing you file in Spain replaces your own return."
+        }
+      ]
+    },
+    "sources": {
+      "title": "Where these rules come from",
+      "items": [
+        "The non-resident income tax act: the 19 and 24 percent rates, and which costs a resident of the EU may deduct",
+        "The personal income tax act: imputed income at 1.1 or 2 percent of the cadastral value",
+        "The tax agency's own manual for non-resident owners"
+      ]
+    }
   }
 }

@@ -1,26 +1,143 @@
 {
   "anlageV": {
     "metaTitle": "Anlage V for landlords who live outside Germany",
-    "metaDescription": "Who has to file Germany's Anlage V from abroad, which forms belong to it and when it is due. A guided calculator is in preparation.",
+    "metaDescription": "Who files Germany's Anlage V from abroad, what can be deducted, why the tax-free allowance does not apply to you, and when the return is due. A guided tool is in preparation.",
     "title": "Anlage V: German rental income for owners who live abroad",
-    "lead": "If you rent out property in Germany without living there, the rent is still taxed in Germany. You declare it once a year on Anlage V.",
+    "lead": "If you rent out property in Germany without living there, the rent is taxed in Germany. You declare it once a year on Anlage V, and the tariff treats you differently from your neighbour.",
+    "hero": {
+      "cta": "Tell me when the tool is ready",
+      "secondary": "How the tax works",
+      "note": "The guided tool is still being built. What is on this page is the whole rule, in your language, with the law it comes from."
+    },
     "facts": [
       {
         "label": "Who files",
-        "value": "Anyone who rents out property in Germany without a home there. Germany calls this limited tax liability."
+        "value": "Anyone who rents out property in Germany without a home there. German law calls it limited tax liability, and it rests on the property alone."
       },
       {
         "label": "Forms",
-        "value": "The main form ESt 1 C plus one Anlage V for each property, filed online through ELSTER."
+        "value": "The main form ESt 1 C plus one Anlage V for each property, usually filed online through ELSTER."
       },
       {
         "label": "What is taxed",
-        "value": "Rent received minus deductible costs, such as depreciation of the building, loan interest, management and repairs."
+        "value": "Rent received minus the costs of earning it: depreciation of the building, loan interest, management, repairs and the property tax."
+      },
+      {
+        "label": "No tax-free allowance",
+        "value": "A resident pays nothing until the Grundfreibetrag is used up. For you it is added back, so German tax starts at the first euro you keep."
       },
       {
         "label": "Deadline",
-        "value": "31 July of the following year if you file yourself."
+        "value": "31 July of the following year if you file yourself, and the end of February of the year after that if a Steuerberater files for you."
       }
-    ]
+    ],
+    "how": {
+      "title": "How Germany works out the tax",
+      "lead": "Rent, minus what it cost you to earn it, and then a tariff that starts at the first euro because you live abroad.",
+      "steps": [
+        {
+          "title": "Add up the rent",
+          "body": "The rent you received over the year, including the service charges the tenant pays you, because what you pay out again for heating and water comes off on the other side."
+        },
+        {
+          "title": "Take off the costs of earning it",
+          "body": "Depreciation of the building, loan interest, management, repairs and the Grundsteuer. Living abroad narrows this: a cost counts only where it is economically connected to the German property."
+        },
+        {
+          "title": "Depreciation is the largest item",
+          "body": "Of the building only, never the land: 2% a year for a building finished between 1925 and 2022, 2.5% for one finished before 1925, 3% after 2022, and 5% of the falling book value for new residential buildings begun between October 2023 and October 2029."
+        },
+        {
+          "title": "Expect no tax-free allowance",
+          "body": "A resident's first thousands of euros are free of tax. For a person taxed only on German property that allowance is added back, so the rent you keep is taxed from the first euro. There is one way out: you can apply to be treated as fully liable, which needs at least 90 percent of your income to be taxable in Germany, or your other income to stay under the allowance."
+        },
+        {
+          "title": "File where the building is",
+          "body": "Not where you live and not where you bought it: the Finanzamt in whose district the property lies handles your return. Most people send it through ELSTER, which is free."
+        }
+      ],
+      "exampleTitle": "A flat in Leipzig, let for the whole year",
+      "example": [
+        { "label": "Rent received", "value": "EUR 9'600" },
+        { "label": "Depreciation, 2% of EUR 150'000", "value": "− EUR 3'000" },
+        { "label": "Loan interest", "value": "− EUR 2'400" },
+        { "label": "Management, repairs, property tax", "value": "− EUR 900" },
+        { "label": "Taxable rental income", "value": "EUR 3'300" }
+      ],
+      "exampleNote": "Somebody living in Germany would pay nothing at all on that, because their tax-free allowance covers it. For you the allowance is added back, so those 3'300 euros are taxed from the first one."
+    },
+    "offer": {
+      "title": "What dix.tax will do for you",
+      "lead": "Anlage V is not hard once somebody tells you which line is which. It is the German, the depreciation and the once-a-year-ness that cost you an evening.",
+      "items": [
+        "Work out your rental result, with the depreciation rate that matches the year your building was finished",
+        "Put every figure on the line of Anlage V where it belongs, ready to type into ELSTER",
+        "Tell you whether applying to be treated as fully liable would be worth it in your case",
+        "Translate every German term on the form, so you know what you are signing",
+        "Remind you before the deadline, once a year, and not more often"
+      ],
+      "note": "What it will cost is not decided yet. The Swiss declaration, which is ready today, costs {price} per property."
+    },
+    "docs": {
+      "title": "What you will need",
+      "items": [
+        "The purchase contract, and the split of the price between land and building, because only the building is depreciated",
+        "The bank's annual statement showing the interest you paid",
+        "The management statement (Hausgeld) and the invoices for any repairs",
+        "The Grundsteuer notice from the municipality",
+        "Your ELSTER certificate, or the papers needed to register for one"
+      ]
+    },
+    "faq": {
+      "title": "Questions people ask",
+      "items": [
+        {
+          "q": "I do not live in Germany. Why does Germany tax my rent?",
+          "a": "Because the building is there. German law taxes rent from property that lies in Germany whoever owns it and wherever they live. It is limited tax liability: Germany taxes the rent from that property and nothing else of yours, but it does tax it every year."
+        },
+        {
+          "q": "Do I get the German tax-free allowance?",
+          "a": "In the ordinary case, no. The law applies the tariff to your income increased by the allowance, which cancels it out, so tax begins at the first euro of rent you keep. Somebody living in Germany with the same flat would often pay nothing. You can apply to be treated as fully liable instead, but that needs at least 90 percent of your income to be taxable in Germany, or your other income to stay under the allowance, which rules out most people with a salary at home."
+        },
+        {
+          "q": "What can I actually deduct?",
+          "a": "Depreciation of the building, interest on the loan that bought it, management, repairs, the Grundsteuer and the costs you pass on to the tenant. The limit for somebody living abroad is that a cost must be economically connected to the German property: your accountant at home, your travel to look at it, and your own mortgage on a different house do not qualify."
+        },
+        {
+          "q": "How much depreciation can I claim?",
+          "a": "It follows the year the building was finished: 2 percent a year for 1925 to 2022, 2.5 percent for anything older, and 3 percent for buildings finished after 2022. New residential buildings begun between October 2023 and October 2029 can instead be written down by 5 percent of the falling book value. All of it applies to the building only, so the part of the purchase price that bought the land is never depreciated."
+        },
+        {
+          "q": "Which Finanzamt do I write to?",
+          "a": "The one in whose district the property lies. Not the one where you used to live, and not a central office for foreigners. If you own two flats in different districts, the one with the more valuable property takes it."
+        },
+        {
+          "q": "When is it due?",
+          "a": "31 July of the year after the tax year if you file it yourself. If a Steuerberater files for you, the deadline moves to the end of February of the year after that. The table on this page counts down to the next one."
+        },
+        {
+          "q": "Do I have to use ELSTER?",
+          "a": "For rental income you are not forced to file electronically, but almost everybody does, because ELSTER is free and the paper route from abroad is slow. Registering takes a letter with an activation code, which reaches a foreign address as well."
+        },
+        {
+          "q": "The flat is empty. Do I still file?",
+          "a": "Germany does not tax a notional rent on an empty home, which is where it differs from Switzerland and from Spain. With no rent there is usually nothing to declare, though costs from a period when you were genuinely trying to let it can still be worth claiming. The Grundsteuer is due either way."
+        },
+        {
+          "q": "Will my own country tax the rent as well?",
+          "a": "Germany has the first right to tax property that stands in Germany. Your own country then either exempts the German rent while still counting it when it sets your rate, or credits the German tax against its own. Which of the two applies depends on your treaty with Germany. Nothing you file in Germany replaces your return at home."
+        }
+      ]
+    },
+    "sources": {
+      "title": "Where these rules come from",
+      "items": [
+        "Rent from German property is taxable in Germany even for somebody who lives elsewhere",
+        "The tax-free allowance is added back, and costs count only where they belong to the German income",
+        "The application to be treated as fully liable, and the conditions on it",
+        "The depreciation rates, by the year the building was finished",
+        "The competent tax office is the one where the property lies"
+      ]
+    }
   }
 }

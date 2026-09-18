@@ -1,30 +1,136 @@
 {
   "modelo210": {
     "metaTitle": "Modelo 210 para propietarios que viven fuera de España",
-    "metaDescription": "Quién tiene que presentar el Modelo 210, cómo se calcula el impuesto y cuándo vence. Estamos preparando una calculadora guiada.",
-    "title": "Modelo 210: el impuesto español para propietarios que viven en otro país",
-    "lead": "Si tienes una vivienda en España pero no eres residente fiscal allí, España espera un Modelo 210 cada año. Esto vale aunque la vivienda nunca se alquile y no genere ingresos.",
+    "metaDescription": "Quién debe presentar el Modelo 210, cómo se calcula el impuesto con el 1,1 o el 2 por ciento del valor catastral, qué tipo le corresponde y cuándo vence. Una herramienta guiada está en preparación.",
+    "title": "Modelo 210: el impuesto español para propietarios que viven fuera",
+    "lead": "Si tiene una vivienda en España y no es residente fiscal allí, España le pide un Modelo 210 cada año. También cuando la vivienda no se alquila nunca y no produce nada.",
+    "hero": {
+      "cta": "Avisadme cuando esté lista",
+      "secondary": "Cómo se calcula el impuesto",
+      "note": "La herramienta guiada aún se está construyendo. Lo que hay en esta página es la regla completa, en su idioma, con la ley de la que sale."
+    },
     "facts": [
       {
-        "label": "Quién lo presenta",
-        "value": "Toda persona que tenga un inmueble en España y no sea residente fiscal allí. Cada copropietario presenta el suyo por separado."
+        "label": "Quién presenta",
+        "value": "Cualquiera que tenga un inmueble en España sin ser residente fiscal allí. Cada copropietario presenta el suyo, por su propia parte."
       },
       {
-        "label": "Uso propio o vivienda vacía",
-        "value": "España grava una renta imputada: el 1,1% del valor catastral si ese valor se revisó en los últimos 10 años, y el 2% en caso contrario."
+        "label": "De uso propio o vacía",
+        "value": "España grava una renta que nadie le ha pagado: el 1,1% del valor catastral si ese valor se revisó en los diez períodos impositivos anteriores, y el 2% en caso contrario."
       },
       {
         "label": "Alquilada",
-        "value": "El alquiler que has cobrado. Los residentes en la UE y el EEE pueden deducir gastos, los demás no."
+        "value": "El alquiler cobrado. Quien reside en otro Estado de la UE puede deducir los gastos; los demás tributan sobre el bruto."
       },
       {
-        "label": "Tipo impositivo",
-        "value": "19% para residentes en la UE y el EEE, 24% para todos los demás, incluidos Suiza y el Reino Unido."
+        "label": "Tipo de gravamen",
+        "value": "19% para residentes en la UE y el EEE, 24% para el resto, Suiza y el Reino Unido incluidos."
       },
       {
         "label": "Plazos",
-        "value": "Uso propio: hasta el 31 de diciembre del año siguiente. Alquiler: los veinte primeros días de abril del año siguiente. Los dos plazos cambian a partir de las rentas de 2026; para 2025 siguen los anteriores, del 1 de enero al 31 de diciembre de 2026 y del 1 al 20 de enero de 2026."
+        "value": "Uso propio: hasta el 31 de diciembre del año siguiente. Alquilada: en la ventana anual del año siguiente. Las fechas de abajo son las que publica la Agencia Tributaria."
       }
-    ]
+    ],
+    "how": {
+      "title": "Cómo calcula España el impuesto",
+      "lead": "Detrás de un mismo formulario hay dos impuestos distintos, y cuál debe usted depende de si alguien le ha pagado alquiler.",
+      "steps": [
+        {
+          "title": "Busque el valor catastral",
+          "body": "Está en el recibo del IBI del ayuntamiento y no es el valor de mercado: suele quedar muy por debajo de lo que vale el piso. El recibo también dice cuándo se revisó por última vez, y eso decide su porcentaje."
+        },
+        {
+          "title": "Vacía o para usted: España se inventa una renta",
+          "body": "El 1,1% del valor catastral si se revisó en los diez períodos impositivos anteriores, y el 2% si no. Nadie le ha pagado nada y el impuesto se debe igual. Solo queda exenta la vivienda habitual, y quien vive fuera no tiene una en España."
+        },
+        {
+          "title": "Alquilada: el alquiler cobrado",
+          "body": "Si reside en otro Estado de la UE puede deducir lo que le ha costado obtener ese alquiler. Si reside en cualquier otro sitio, Suiza y el Reino Unido incluidos, tributa sobre el alquiler bruto, sin deducir nada."
+        },
+        {
+          "title": "Aplique su tipo, y un formulario por propietario",
+          "body": "19% si vive en la UE o el EEE, 24% si vive fuera. Decide dónde vive, no de dónde es. Dos propietarios significan dos formularios, cada uno por su parte."
+        }
+      ],
+      "exampleTitle": "Un piso en Valencia, vacío",
+      "example": [
+        { "label": "Valor catastral, revisado en 2019", "value": "EUR 90.000" },
+        { "label": "Renta imputada, 1,1%", "value": "EUR 990" },
+        { "label": "Tipo para un propietario que vive en Suiza", "value": "24%" },
+        { "label": "Impuesto del año", "value": "EUR 238" }
+      ],
+      "exampleNote": "El mismo piso en manos de alguien que vive en Alemania tributaría al 19%, es decir EUR 188. Si son dos propietarios, cada uno declara la mitad y presenta su propio formulario."
+    },
+    "offer": {
+      "title": "Lo que dix.tax hará por usted",
+      "lead": "La regla cabe en una página. Llevarla bien a un formulario español, una vez al año y por cada propietario, es lo que le cuesta la tarde.",
+      "items": [
+        "Calcular su renta imputada o su resultado del alquiler, con el porcentaje que de verdad corresponde a su inmueble",
+        "Darle el tipo correcto, 19 o 24 por ciento, según dónde vive y no según de dónde es",
+        "Una hoja rellena por propietario, porque España quiere un Modelo 210 de cada uno",
+        "Nombrar cada casilla en español y en su idioma, para que vea qué está firmando",
+        "Avisarle antes del plazo, una vez al año y no más"
+      ],
+      "note": "Lo que costará aún no está decidido. La declaración suiza, que ya está lista, cuesta {price} por propiedad."
+    },
+    "docs": {
+      "title": "Lo que necesitará",
+      "items": [
+        "El recibo del IBI del ayuntamiento, que lleva el valor catastral y el año de la última revisión",
+        "Su NIE, y el NIE de cada copropietario",
+        "La escritura, que dice qué parte del inmueble es suya",
+        "El contrato de alquiler y el alquiler realmente cobrado, si está arrendado",
+        "Un certificado de residencia fiscal de su país, que España puede pedirle antes de aplicarle el 19 por ciento"
+      ]
+    },
+    "faq": {
+      "title": "Preguntas frecuentes",
+      "items": [
+        {
+          "q": "El piso está vacío y no produce nada. ¿Por qué hay impuesto?",
+          "a": "Porque la ley española grava la posibilidad de usarlo. Se llama renta imputada: un porcentaje del valor catastral cuenta como renta aunque nadie le haya pagado. Solo se libra la vivienda habitual, y quien vive fuera no tiene una en España. Un piso de vacaciones que usa tres semanas al año tributa por el año entero."
+        },
+        {
+          "q": "¿Dónde encuentro el valor catastral?",
+          "a": "En el recibo anual del IBI del ayuntamiento, que además indica el año de la última revisión. La sede del Catastro también lo muestra, con NIE y certificado. No use el precio de compra: el valor catastral es otra magnitud y suele ser bastante menor."
+        },
+        {
+          "q": "¿Pago el 19 o el 24 por ciento?",
+          "a": "Lo decide dónde vive. Quien reside en otro Estado de la UE, o en Islandia, Noruega o Liechtenstein, paga el 19 por ciento. Los demás pagan el 24, y ahí entran Suiza y el Reino Unido, que no son ninguna de las dos cosas. Su nacionalidad no cuenta."
+        },
+        {
+          "q": "¿Puedo deducir la hipoteca, la comunidad y las reparaciones?",
+          "a": "Solo si reside en otro Estado de la UE. Entonces puede deducir los gastos directamente relacionados con la renta española. Desde Suiza o el Reino Unido tributa sobre el alquiler bruto, y los intereses, la comunidad y las reparaciones no cuentan. Es la mayor diferencia entre dos propietarios de pisos idénticos."
+        },
+        {
+          "q": "Somos copropietarios. ¿Es un solo formulario?",
+          "a": "No. Cada propietario presenta su propio Modelo 210 por su parte, con su NIE. Una pareja al cincuenta por ciento presenta dos formularios, cada uno sobre la mitad del valor catastral o del alquiler."
+        },
+        {
+          "q": "¿Cuándo vence?",
+          "a": "Para un piso de uso propio, hasta el 31 de diciembre del año siguiente al ejercicio. Para uno alquilado hay una ventana anual a principios del año siguiente. La tabla de esta página lleva las fechas tal como las publica la Agencia Tributaria y cuenta atrás hasta la próxima."
+        },
+        {
+          "q": "Lo tengo desde hace años y nunca he presentado nada. ¿Qué hago?",
+          "a": "Presentar tarde por iniciativa propia cuesta menos que que le encuentren. España puede remontarse varios años y añadir un recargo, y la Administración acaba enterándose, porque la propiedad consta en el registro y el ayuntamiento le gira el IBI cada año. Esto es caso para un asesor, no para un formulario rellenado deprisa."
+        },
+        {
+          "q": "¿Es lo mismo que el IBI o que el impuesto sobre el patrimonio?",
+          "a": "No, son tres cosas distintas. El IBI es el impuesto municipal sobre el inmueble. El Modelo 210 es el impuesto estatal sobre la renta del piso. Además España tiene un impuesto sobre el patrimonio que puede alcanzar a un propietario no residente con un inmueble caro, y eso es otra declaración más."
+        },
+        {
+          "q": "¿Tengo que declarar el piso también en mi país?",
+          "a": "Normalmente sí. España tiene el primer derecho a gravar los inmuebles situados en España, y su país lo deja exento computándolo como mucho para el tipo, o le deduce el impuesto español. Cuál de las dos cosas se aplica depende de su convenio con España. Lo que presente en España no sustituye a su declaración de allí."
+        }
+      ]
+    },
+    "sources": {
+      "title": "De dónde salen estas reglas",
+      "items": [
+        "La ley del impuesto sobre la renta de no residentes: los tipos del 19 y el 24 por ciento y qué gastos puede deducir un residente en la UE",
+        "La ley del IRPF: la renta imputada del 1,1 o el 2 por ciento del valor catastral",
+        "El manual de la propia Agencia Tributaria para propietarios no residentes"
+      ]
+    }
   }
 }

@@ -1,30 +1,136 @@
 {
   "modelo210": {
     "metaTitle": "Modelo 210 für Eigentümer, die ausserhalb Spaniens wohnen",
-    "metaDescription": "Wer das spanische Modelo 210 einreichen muss, wie die Steuer berechnet wird und wann sie fällig ist. Ein geführter Rechner ist in Vorbereitung.",
-    "title": "Modelo 210: die spanische Steuer für Eigentümer, die anderswo wohnen",
-    "lead": "Wenn Sie ein Zuhause in Spanien besitzen, dort aber nicht steuerlich ansässig sind, erwartet Spanien jedes Jahr ein Modelo 210. Das gilt auch dann, wenn die Liegenschaft nie vermietet wird und nichts einbringt.",
+    "metaDescription": "Wer das spanische Modelo 210 einreichen muss, wie die Steuer mit 1,1 oder 2 Prozent des Katasterwerts berechnet wird, welcher Satz für Sie gilt und wann sie fällig ist. Ein geführtes Werkzeug ist in Vorbereitung.",
+    "title": "Modelo 210: Spaniens Steuer für Eigentümer, die anderswo leben",
+    "lead": "Wer in Spanien eine Wohnung besitzt, dort aber nicht steuerlich ansässig ist, muss jedes Jahr ein Modelo 210 einreichen. Das gilt auch, wenn die Wohnung nie vermietet wird und gar nichts einbringt.",
+    "hero": {
+      "cta": "Benachrichtigen, sobald es bereit ist",
+      "secondary": "Wie die Steuer berechnet wird",
+      "note": "Das geführte Werkzeug entsteht noch. Was auf dieser Seite steht, ist die ganze Regel, in Ihrer Sprache, mit dem Gesetz dazu."
+    },
     "facts": [
       {
         "label": "Wer einreicht",
-        "value": "Alle, die eine Liegenschaft in Spanien besitzen und dort nicht steuerlich ansässig sind. Jede Miteigentümerin und jeder Miteigentümer reicht ein eigenes Formular ein."
+        "value": "Wer in Spanien Eigentum hat und dort nicht steuerlich ansässig ist. Jeder Miteigentümer reicht für seinen eigenen Anteil selbst ein."
       },
       {
-        "label": "Selbst genutzt oder leer stehend",
-        "value": "Spanien besteuert ein fiktives Einkommen: 1.1% des Katasterwerts, wenn dieser in den letzten 10 Jahren neu festgelegt wurde, sonst 2%."
+        "label": "Selbst genutzt oder leer",
+        "value": "Spanien besteuert ein Einkommen, das Ihnen niemand gezahlt hat: 1,1% des Katasterwerts, wenn dieser in den letzten zehn Steuerperioden revidiert wurde, sonst 2%."
       },
       {
         "label": "Vermietet",
-        "value": "Die Miete, die Sie erhalten haben. Wer in der EU und im EWR ansässig ist, darf Kosten abziehen, alle anderen nicht."
+        "value": "Die erhaltene Miete. Wer in einem anderen EU-Staat wohnt, darf die Kosten abziehen; alle anderen versteuern die Bruttomiete."
       },
       {
         "label": "Steuersatz",
-        "value": "19% für Personen, die in der EU und im EWR ansässig sind, 24% für alle anderen, auch für die Schweiz und das Vereinigte Königreich."
+        "value": "19% für Ansässige in der EU und im EWR, 24% für alle anderen, die Schweiz und das Vereinigte Königreich eingeschlossen."
       },
       {
         "label": "Fristen",
-        "value": "Eigennutzung: bis 31. Dezember des Folgejahres. Vermietung: die ersten zwanzig Tage im April des Folgejahres. Beide Fristen gelten neu ab den Einkünften 2026; für 2025 gelten noch die alten, 1. Januar bis 31. Dezember 2026 und 1. bis 20. Januar 2026."
+        "value": "Eigennutzung: bis zum 31. Dezember des Folgejahres. Vermietet: im jährlichen Fenster des Folgejahres. Die Daten unten sind die, die die Steuerbehörde veröffentlicht."
       }
-    ]
+    ],
+    "how": {
+      "title": "Wie Spanien die Steuer berechnet",
+      "lead": "Hinter einem Formular stecken zwei verschiedene Steuern, und welche Sie schulden, hängt davon ab, ob Ihnen jemand Miete gezahlt hat.",
+      "steps": [
+        {
+          "title": "Den Katasterwert heraussuchen",
+          "body": "Er steht auf der IBI-Rechnung der Gemeinde und ist nicht der Marktwert: meist liegt er weit unter dem, was die Wohnung einbringen würde. Die Rechnung sagt auch, wann der Wert zuletzt revidiert wurde, und das entscheidet Ihren Prozentsatz."
+        },
+        {
+          "title": "Leer oder selbst genutzt: Spanien erfindet ein Einkommen",
+          "body": "1,1% des Katasterwerts, wenn dieser in den letzten zehn Steuerperioden revidiert wurde, sonst 2%. Niemand hat Ihnen etwas gezahlt, die Steuer fällt trotzdem an. Befreit ist nur der Hauptwohnsitz, und wer im Ausland lebt, hat in Spanien keinen."
+        },
+        {
+          "title": "Vermietet: die erhaltene Miete",
+          "body": "Wohnen Sie in einem anderen EU-Staat, dürfen Sie abziehen, was die Miete Sie gekostet hat. Wohnen Sie anderswo, die Schweiz und das Vereinigte Königreich eingeschlossen, versteuern Sie die Bruttomiete, ohne jeden Abzug."
+        },
+        {
+          "title": "Ihren Satz anwenden, und je ein Formular",
+          "body": "19%, wenn Sie in der EU oder im EWR wohnen, 24% sonst. Entscheidend ist, wo Sie wohnen, nicht woher Sie kommen. Zwei Eigentümer heissen zwei Formulare, jedes für den eigenen Anteil."
+        }
+      ],
+      "exampleTitle": "Eine Wohnung in Valencia, leer stehend",
+      "example": [
+        { "label": "Katasterwert, zuletzt 2019 revidiert", "value": "EUR 90'000" },
+        { "label": "Fiktives Einkommen, 1,1%", "value": "EUR 990" },
+        { "label": "Satz für eine Eigentümerin in der Schweiz", "value": "24%" },
+        { "label": "Steuer für das Jahr", "value": "EUR 238" }
+      ],
+      "exampleNote": "Dieselbe Wohnung, von Deutschland aus gehalten, würde mit 19% besteuert, also EUR 188. Gehört sie zweien, deklariert jede Hälfte für sich und reicht ein eigenes Formular ein."
+    },
+    "offer": {
+      "title": "Das wird dix.tax für Sie tun",
+      "lead": "Die Regel passt auf eine Seite. Sie einmal im Jahr für jeden Eigentümer korrekt auf ein spanisches Formular zu bringen, kostet den Abend.",
+      "items": [
+        "Ihr fiktives Einkommen oder Ihr Mietergebnis berechnen, mit dem Prozentsatz, der für Ihre Wohnung wirklich gilt",
+        "Den richtigen Satz geben, 19 oder 24 Prozent, nach Ihrem Wohnsitz und nicht nach Ihrer Herkunft",
+        "Ein ausgefülltes Blatt pro Eigentümer, denn Spanien will von jedem ein eigenes Modelo 210",
+        "Jedes Feld auf Spanisch und in Ihrer Sprache benennen, damit Sie sehen, was Sie unterschreiben",
+        "Sie vor der Frist erinnern, einmal im Jahr und nicht öfter"
+      ],
+      "note": "Was es kosten wird, ist noch nicht entschieden. Die Schweizer Deklaration, die heute bereit ist, kostet {price} pro Liegenschaft."
+    },
+    "docs": {
+      "title": "Das brauchen Sie dafür",
+      "items": [
+        "Die IBI-Rechnung der Gemeinde, auf der Katasterwert und Jahr der letzten Revision stehen",
+        "Ihre NIE und die NIE jedes Miteigentümers",
+        "Die Urkunde (escritura), aus der Ihr Anteil hervorgeht",
+        "Den Mietvertrag und die tatsächlich erhaltene Miete, falls vermietet",
+        "Eine Ansässigkeitsbescheinigung Ihres Landes, die Spanien für den Satz von 19 Prozent verlangen kann"
+      ]
+    },
+    "faq": {
+      "title": "Häufige Fragen",
+      "items": [
+        {
+          "q": "Die Wohnung steht leer und bringt nichts ein. Warum fällt Steuer an?",
+          "a": "Weil das spanische Recht die Möglichkeit besteuert, sie zu nutzen. Das heisst fiktives Einkommen: ein Prozentsatz des Katasterwerts gilt als Einkommen, obwohl Ihnen niemand etwas gezahlt hat. Befreit ist nur der Hauptwohnsitz, und wer im Ausland lebt, hat in Spanien keinen. Eine Ferienwohnung, die Sie drei Wochen im Jahr nutzen, wird für das ganze Jahr besteuert."
+        },
+        {
+          "q": "Wo finde ich den Katasterwert?",
+          "a": "Auf der jährlichen IBI-Rechnung der Gemeinde, die auch das Jahr der letzten Revision nennt. Die Katasterbehörde zeigt ihn ebenfalls, mit NIE und Zertifikat. Nehmen Sie nicht den Kaufpreis: der Katasterwert ist eine eigene Grösse und meist deutlich tiefer."
+        },
+        {
+          "q": "Zahle ich 19 oder 24 Prozent?",
+          "a": "Ihr Wohnsitz entscheidet. Wer in einem anderen EU-Staat oder in Island, Norwegen oder Liechtenstein wohnt, zahlt 19 Prozent. Alle anderen zahlen 24 Prozent, und dazu gehören die Schweiz und das Vereinigte Königreich, die beides nicht sind. Ihre Staatsangehörigkeit spielt keine Rolle."
+        },
+        {
+          "q": "Kann ich Hypothek, Gemeinschaftskosten und Reparaturen abziehen?",
+          "a": "Nur, wenn Sie in einem anderen EU-Staat wohnen. Dann dürfen Sie die Kosten abziehen, die unmittelbar mit dem spanischen Einkommen zusammenhängen. Aus der Schweiz oder dem Vereinigten Königreich versteuern Sie die Bruttomiete, Zinsen, comunidad und Reparaturen zählen dann nicht. Das ist der grösste Unterschied zwischen zwei Eigentümern derselben Wohnung."
+        },
+        {
+          "q": "Uns gehört sie gemeinsam. Ist das ein Formular?",
+          "a": "Nein. Jeder Eigentümer reicht sein eigenes Modelo 210 für seinen Anteil ein, mit seiner eigenen NIE. Ein Paar mit je der Hälfte reicht zwei Formulare ein, jedes über die Hälfte des Katasterwerts oder der Miete."
+        },
+        {
+          "q": "Bis wann ist es fällig?",
+          "a": "Für eine selbst genutzte Wohnung bis zum 31. Dezember des Jahres nach dem Steuerjahr. Für eine vermietete gibt es ein jährliches Fenster früh im Folgejahr. Die Tabelle auf dieser Seite führt die Daten so, wie die Steuerbehörde sie veröffentlicht, und zählt zum nächsten herunter."
+        },
+        {
+          "q": "Ich besitze sie seit Jahren und habe nie eingereicht. Was nun?",
+          "a": "Freiwillig nachzureichen kostet weniger, als gefunden zu werden. Spanien kann mehrere Jahre zurückgehen und einen Zuschlag erheben, und die Behörde merkt es irgendwann, weil das Eigentum im Register steht und die Gemeinde jedes Jahr IBI in Rechnung stellt. Das ist ein Fall für eine Fachperson und nicht für ein schnell ausgefülltes Formular."
+        },
+        {
+          "q": "Ist das dasselbe wie IBI oder die Vermögenssteuer?",
+          "a": "Nein, das sind drei verschiedene Dinge. IBI ist die Gemeindesteuer auf die Liegenschaft. Das Modelo 210 ist die staatliche Einkommenssteuer auf die Wohnung. Daneben erhebt Spanien eine Vermögenssteuer, die auch nicht ansässige Eigentümer teurer Objekte treffen kann, und das ist wieder eine eigene Erklärung."
+        },
+        {
+          "q": "Muss ich die Wohnung zu Hause trotzdem deklarieren?",
+          "a": "In aller Regel ja. Spanien hat das erste Besteuerungsrecht für Liegenschaften in Spanien, und Ihr eigenes Land stellt sie danach entweder frei und berücksichtigt sie höchstens für den Satz, oder es rechnet die spanische Steuer an. Was gilt, steht in Ihrem Abkommen mit Spanien. Die spanische Erklärung ersetzt Ihre eigene nicht."
+        }
+      ]
+    },
+    "sources": {
+      "title": "Woher diese Regeln stammen",
+      "items": [
+        "Das Gesetz über die Steuer nicht ansässiger Personen: die Sätze von 19 und 24 Prozent und welche Kosten Ansässige der EU abziehen dürfen",
+        "Das Einkommenssteuergesetz: das fiktive Einkommen von 1,1 oder 2 Prozent des Katasterwerts",
+        "Das Handbuch der spanischen Steuerbehörde für nicht ansässige Eigentümer"
+      ]
+    }
   }
 }

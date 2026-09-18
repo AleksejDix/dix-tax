@@ -8,9 +8,9 @@
     },
     "hero": {
       "title": "Ihre Wohnung steht in Zürich. Sie nicht. Die Steuererklärung kommt trotzdem.",
-      "lead": "Wer im Kanton Zürich Grundeigentum hat, ist hier steuerpflichtig, auch ohne je hier gewohnt zu haben. Besteuert wird nur die Liegenschaft, gefragt wird nach mehr. Beantworten Sie ein paar Fragen und erhalten Sie für jede Zeile die genaue Zahl, erklärt in Ihrer Sprache.",
+      "lead": "Eine Wohnung im Kanton Zürich, aber Sie leben anderswo? Dann müssen Sie trotzdem eine Zürcher Steuererklärung einreichen. Ein paar einfache Fragen, und Sie haben für jede Zeile die genaue Zahl.",
       "cta": "Deklaration vorbereiten · 10 Minuten",
-      "secondary": "So funktioniert es",
+      "secondary": "Wie die Steuer funktioniert",
       "note": "{price} pro Liegenschaft. Kein Konto. Ihre Daten bleiben im Browser.",
       "noteValue": "der Wert, den der Kanton festgelegt hat",
       "noteIncome": "Ihr Mietzins, oder der Mietwert, den der Kanton annimmt",
@@ -37,19 +37,19 @@
       "empty": "Hier erscheint Ihre Liegenschaft"
     },
     "facts": {
-      "title": "Was Zürich von einer Eigentümerin im Ausland verlangt",
+      "title": "Was Zürich von Ihnen will",
       "items": [
         {
-          "title": "Die Liegenschaft macht Sie hier steuerpflichtig",
-          "body": "Grundeigentum im Kanton begründet eine eigene Steuerpflicht, unabhängig von Ihrer Adresse (Art. 4 DBG). Das gilt für die Ferienwohnung, die niemand vermietet, genauso wie für die vermietete, und die Gemeinde stellt Ihnen eine Steuererklärung zu."
+          "title": "Sie müssen einreichen",
+          "body": "Eine Wohnung in Zürich macht Sie hier steuerpflichtig, auch wenn Sie nie in der Schweiz gelebt haben. Leer oder vermietet, das zählt gleich. Die Gemeinde schickt Ihnen ein Formular."
         },
         {
-          "title": "Besteuert wird nur die Liegenschaft",
-          "body": "Lohn, Rente und Ersparnisse im Ausland bleiben von der Schweizer Steuer unberührt. Deklariert werden müssen sie trotzdem, denn die Schweiz besteuert die Liegenschaft zu dem Satz, der Ihrem gesamten Einkommen und Vermögen entspricht. Das nennt sich satzbestimmend."
+          "title": "Besteuert wird nur die Wohnung",
+          "body": "Lohn und Ersparnisse zu Hause werden hier nicht besteuert. Aufschreiben müssen Sie sie trotzdem, denn sie bestimmen den Satz auf der Wohnung."
         },
         {
-          "title": "Der Kanton hat die Werte bereits festgelegt",
-          "body": "Sie schätzen nichts. Die amtliche Schätzung legt Steuerwert und Eigenmietwert fest, und genau diese beiden Zahlen will die Steuererklärung. Fehlt Ihnen die Anzeige, schickt das Gemeindesteueramt sie erneut."
+          "title": "Der Kanton hat schon gerechnet",
+          "body": "Sie schätzen nichts. Zürich hat die beiden Zahlen, die das Formular will, längst festgelegt. Sie stehen auf Ihrer Schätzungsanzeige, und das Gemeindesteueramt schickt sie nochmals."
         }
       ]
     },
@@ -57,124 +57,16 @@
       "title": "Drei Schritte, rund zehn Minuten",
       "items": [
         {
-          "title": "Amtliche Schätzung hervorholen",
-          "body": "Die Schätzungsanzeige des Kantons oder die letzte Veranlagung. Darauf stehen Steuerwert und Eigenmietwert, und ohne sie geht hier nichts."
+          "title": "Den Brief suchen",
+          "body": "Die Schätzungsanzeige des Kantons oder die letzte Steuerrechnung. Auf beiden stehen die zwei Zahlen, die Sie brauchen."
         },
         {
-          "title": "Nutzung angeben",
-          "body": "Selbst genutzt, von Angehörigen bewohnt oder vermietet. Dazu Hypothek und was Sie anderswo besitzen und verdienen, damit die Schulden so verlegt werden, wie es das Gesetz verlangt."
+          "title": "Ein paar Fragen beantworten",
+          "body": "Wer die Wohnung nutzt und was Sie anderswo besitzen. Das Zweite entscheidet, wie viel Ihrer Hypothek hier zählt."
         },
         {
-          "title": "Zahlen in die Steuererklärung übertragen",
-          "body": "Das Ergebnis bildet das Zürcher Liegenschaftenformular Zeile für Zeile ab, mit einer fertigen deutschen Bemerkung. Eintippen in ZHprivateTax oder auf dem Papierformular."
-        }
-      ]
-    },
-    "report": {
-      "title": "Das erhalten Sie",
-      "lead": "Ein Blatt zum Ausdrucken oder als PDF, das Sie zu Ihren Steuerunterlagen legen.",
-      "items": [
-        "Jedes Feld des Liegenschaftenverzeichnisses, für jede Liegenschaft ausgefüllt",
-        "Die beiden Summen für die Steuererklärung: Zeile 6 (Code 188) und Zeile 31.1 (Code 421)",
-        "Den Anteil Ihrer Schulden und Schuldzinsen, den Zürich akzeptiert, bereits ausgerechnet",
-        "Eine deutsche Bemerkung für das Steueramt, mit dem Grund der Steuerpflicht und dem Antrag auf Schuldenverlegung",
-        "Jeden deutschen Begriff übersetzt, damit Sie wissen, was Sie unterschreiben"
-      ]
-    },
-    "compare": {
-      "title": "Ihre Möglichkeiten",
-      "colOption": "Weg",
-      "colCost": "Kosten",
-      "colEffort": "Aufwand",
-      "colResult": "Das Ergebnis",
-      "rows": [
-        {
-          "option": "Die Steuererklärung liegen lassen",
-          "cost": "Heute nichts",
-          "effort": "Keiner",
-          "result": "Das Amt veranlagt nach Ermessen, selten zu Ihren Gunsten, dazu eine Busse. Im Grundbuch steht, dass die Liegenschaft Ihnen gehört, übersehen wird das nicht"
-        },
-        {
-          "option": "Schweizer Treuhänder beauftragen",
-          "cost": "Mehrere hundert Franken, jedes Jahr",
-          "effort": "Termine und Unterlagen, meist nur auf Deutsch",
-          "result": "Der richtige Weg, sobald ein Geschäft, ein Verkauf oder eine Erbschaft im Spiel ist"
-        },
-        {
-          "option": "dix.tax",
-          "cost": "{price} pro Liegenschaft beim ersten Mal, später weniger",
-          "effort": "Rund 10 Minuten",
-          "result": "Richtige Zahlen für eine einfache Liegenschaft, erklärt in Ihrer Sprache"
-        }
-      ]
-    },
-    "fit": {
-      "title": "Passt das zu Ihnen?",
-      "yesTitle": "Das Werkzeug deckt Sie ab, wenn",
-      "yes": [
-        "Sie ausserhalb der Schweiz leben und im Kanton Zürich eine Wohnung oder ein Haus besitzen",
-        "Sie die Liegenschaft selbst nutzen, Angehörigen überlassen oder vermieten",
-        "Ihnen die amtliche Schätzung mit Steuerwert und Eigenmietwert vorliegt"
-      ],
-      "noTitle": "Fragen Sie eine Fachperson oder das Gemeindesteueramt, wenn",
-      "no": [
-        "Sie in der Schweiz auch wohnen, arbeiten oder ein Geschäft führen, denn dann sind Sie für weit mehr als die Liegenschaft steuerpflichtig",
-        "Sie die Liegenschaft im Steuerjahr gekauft, verkauft oder geerbt haben",
-        "es sich um ein Geschäftshaus, Landwirtschaftsland oder Bauland handelt",
-        "die Liegenschaft über eine Gesellschaft oder einen Trust gehalten wird",
-        "Sie in früheren Jahren nicht deklariert haben und das nachholen wollen"
-      ]
-    },
-    "faq": {
-      "title": "Häufige Fragen",
-      "items": [
-        {
-          "q": "Ich lebe im Ausland. Warum muss ich in der Schweiz überhaupt etwas einreichen?",
-          "a": "Weil die Liegenschaft hier steht. Wer Grundeigentum besitzt, ist am Ort der Liegenschaft steuerpflichtig, unabhängig von der Adresse (Art. 4 DBG für die direkte Bundessteuer, gleichlautend im Zürcher Steuergesetz). Das heisst beschränkte Steuerpflicht: besteuert wird die Liegenschaft, nicht Sie als ganze Person. Die Gemeinde, in der sie liegt, stellt die Steuererklärung zu, und sie ist auch in einem Jahr fällig, in dem mit der Wohnung nichts geschehen ist."
-        },
-        {
-          "q": "Wird mein Lohn im Ausland in der Schweiz besteuert?",
-          "a": "Nein. Steuerbar sind hier nur die Liegenschaft und ihr Ertrag. Nach Lohn, Rente und übrigem Vermögen wird gefragt, damit die Schweiz auf den Schweizer Teil den Satz anwendet, der Ihrem gesamten Einkommen und Vermögen entspricht (Art. 7 Abs. 1 DBG). Ein höheres Einkommen im Ausland erhöht also den Satz auf der Wohnung, macht das Einkommen selbst aber nie hier steuerbar. Bei der direkten Bundessteuer gibt es zudem eine Untergrenze: der Satz entspricht mindestens dem in der Schweiz erzielten Einkommen (Art. 7 Abs. 2 DBG), ein kleines Welteinkommen bringt also keinen Satz gegen null."
-        },
-        {
-          "q": "Wo finde ich Eigenmietwert und Steuerwert?",
-          "a": "Auf der Schätzungsanzeige, die der Kanton nach einer Schätzung zustellt, und auf Ihrer letzten Veranlagung. Beide Werte setzt der Kanton fest, nicht Sie und keine Maklerin. Fehlt Ihnen die Anzeige, verlangen Sie eine Kopie beim Gemeindesteueramt der Gemeinde, in der die Liegenschaft liegt."
-        },
-        {
-          "q": "Die Wohnung steht leer. Niemand wohnt darin, sie bringt nichts ein.",
-          "a": "Besteuert wird trotzdem der Eigenmietwert, also der Mietzins, den der Kanton annimmt. Eine leere Ferienwohnung, die Ihnen zur Verfügung steht, gilt als selbst genutzt. Eine Herabsetzung kommt nur in Frage, wenn die Liegenschaft wirklich nicht nutzbar ist, etwa nach einem Brand, und das gehört zum Steueramt, nicht in dieses Werkzeug."
-        },
-        {
-          "q": "Ich vermiete. Was deklariere ich?",
-          "a": "Den Mietzins, den Sie im Jahr tatsächlich erhalten haben, ohne die Nebenkosten, die der Mieter zusätzlich zahlt. Er tritt an die Stelle des Eigenmietwerts. Abziehen können Sie danach entweder die Pauschale von 20% für Unterhalt und Verwaltung oder die tatsächlichen Kosten, wenn sie höher waren, mit Belegen."
-        },
-        {
-          "q": "Kann ich die Zinsen meiner Hypothek abziehen?",
-          "a": "Nur einen Teil. Schulden und Schuldzinsen werden auf alles verlegt, was Sie besitzen, im Verhältnis zur Lage der Aktiven. Macht die Zürcher Wohnung einen Drittel Ihres weltweiten Vermögens aus, ist ein Drittel der Zinsen hier abziehbar. Darum fragt das Werkzeug nach Ihrem übrigen Vermögen, und genau hier passieren die meisten Fehler."
-        },
-        {
-          "q": "Besteuert mein eigenes Land die Wohnung auch?",
-          "a": "Das Land, in dem die Liegenschaft steht, hat das erste Besteuerungsrecht, und die Schweiz nimmt es wahr. Die meisten Abkommen verlangen dann vom Wohnsitzstaat, die Schweizer Liegenschaft freizustellen und höchstens für den Satz zu berücksichtigen, oder die Schweizer Steuer anzurechnen. Was für Sie gilt, steht in Ihrem Abkommen. Die Zürcher Deklaration ersetzt Ihre Steuererklärung zu Hause nicht."
-        },
-        {
-          "q": "Was kostet das?",
-          "a": "{price} pro Liegenschaft für die erste Deklaration. In den folgenden Jahren kostet es weniger, weil Ihre Liegenschaft bereits erfasst ist. Ein Schweizer Treuhänder verlangt für dieselbe Arbeit meist mehrere hundert Franken, jedes Jahr."
-        },
-        {
-          "q": "Bis wann muss die Erklärung eingereicht sein?",
-          "a": "Die Zürcher Frist ist der 31. März für das Vorjahr. Sie können sie online und kostenlos bis zum 30. November erstrecken. Die Erstreckung gilt für das Einreichen, nicht für das Zahlen: auf der Steuer läuft ab dem allgemeinen Fälligkeitstermin ein Zins."
-        },
-        {
-          "q": "Was passiert, wenn ich nichts einreiche?",
-          "a": "Das Amt mahnt und veranlagt Sie danach nach eigenem Ermessen. Diese Schätzung ist bewusst nicht grosszügig, sie lässt sich kaum umstossen, und dazu kommt eine Busse wegen Nichteinreichens. Da das Eigentum im Grundbuch steht, ist Abwarten keine Strategie."
-        },
-        {
-          "q": "Brauche ich jemanden in der Schweiz für die Post?",
-          "a": "Man muss Sie erreichen können. Das Bundesrecht sagt: Wer sich im Ausland befindet, ohne in der Schweiz einen Vertreter zu haben, dem kann eine Verfügung rechtswirksam durch Publikation im kantonalen Amtsblatt eröffnet werden (Art. 116 Abs. 2 DBG), und die Rechtsmittelfrist läuft dann, ob Sie davon wussten oder nicht. Das Steueramt fordert Sie in der Regel auf, eine Zustelladresse in der Schweiz zu bezeichnen, und es ist in Ihrem eigenen Interesse, eine zu haben: Verwandte, Nachbarn, eine Verwaltung oder eine Fachperson."
-        },
-        {
-          "q": "Der Eigenmietwert wird abgeschafft. Was ändert sich für mich?",
-          "a": "Das Parlament hat den Systemwechsel beschlossen, er tritt am 1. Januar 2029 in Kraft. Für Zweitliegenschaften ist stattdessen eine neue kantonale Objektsteuer vorgesehen, und genau in diese Kategorie fallen die meisten Eigentümer mit Wohnsitz im Ausland. Bis dahin gilt, was auf dieser Seite steht, und wir passen das Werkzeug an, sobald die kantonalen Regeln vorliegen."
+          "title": "Die Zahlen übertragen",
+          "body": "Sie bekommen das Zürcher Formular, Zeile für Zeile, dazu einen deutschen Text zum Einfügen. Eintippen in ZHprivateTax oder aufs Papier."
         }
       ]
     },

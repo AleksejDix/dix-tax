@@ -71,6 +71,50 @@
           {
             "q": "Besteuert mein eigenes Land die Wohnung auch?",
             "a": "Die Schweiz hat das erste Besteuerungsrecht für Liegenschaften, die in der Schweiz stehen. Ihr Wohnsitzland stellt sie danach entweder frei und berücksichtigt sie höchstens für den Satz, oder es rechnet die Schweizer Steuer an. Was für Sie gilt, steht in Ihrem Abkommen mit der Schweiz. Die Schweizer Erklärung ersetzt Ihre eigene nicht."
+          },
+          {
+            "q": "Ich lebe im Ausland. Warum muss ich in der Schweiz überhaupt etwas einreichen?",
+            "a": "Weil die Liegenschaft hier steht. Wer Grundeigentum besitzt, ist am Ort der Liegenschaft steuerpflichtig, unabhängig von der Adresse (Art. 4 DBG für die direkte Bundessteuer, gleichlautend im Zürcher Steuergesetz). Das heisst beschränkte Steuerpflicht: besteuert wird die Liegenschaft, nicht Sie als ganze Person. Die Gemeinde, in der sie liegt, stellt die Steuererklärung zu, und sie ist auch in einem Jahr fällig, in dem mit der Wohnung nichts geschehen ist."
+          },
+          {
+            "q": "Wird mein Lohn im Ausland in der Schweiz besteuert?",
+            "a": "Nein. Steuerbar sind hier nur die Liegenschaft und ihr Ertrag. Nach Lohn, Rente und übrigem Vermögen wird gefragt, damit die Schweiz auf den Schweizer Teil den Satz anwendet, der Ihrem gesamten Einkommen und Vermögen entspricht (Art. 7 Abs. 1 DBG). Ein höheres Einkommen im Ausland erhöht also den Satz auf der Wohnung, macht das Einkommen selbst aber nie hier steuerbar. Bei der direkten Bundessteuer gibt es zudem eine Untergrenze: der Satz entspricht mindestens dem in der Schweiz erzielten Einkommen (Art. 7 Abs. 2 DBG), ein kleines Welteinkommen bringt also keinen Satz gegen null."
+          },
+          {
+            "q": "Wo finde ich Eigenmietwert und Steuerwert?",
+            "a": "Auf der Schätzungsanzeige, die der Kanton nach einer Schätzung zustellt, und auf Ihrer letzten Veranlagung. Beide Werte setzt der Kanton fest, nicht Sie und keine Maklerin. Fehlt Ihnen die Anzeige, verlangen Sie eine Kopie beim Gemeindesteueramt der Gemeinde, in der die Liegenschaft liegt."
+          },
+          {
+            "q": "Die Wohnung steht leer. Niemand wohnt darin, sie bringt nichts ein.",
+            "a": "Besteuert wird trotzdem der Eigenmietwert, also der Mietzins, den der Kanton annimmt. Eine leere Ferienwohnung, die Ihnen zur Verfügung steht, gilt als selbst genutzt. Eine Herabsetzung kommt nur in Frage, wenn die Liegenschaft wirklich nicht nutzbar ist, etwa nach einem Brand, und das gehört zum Steueramt, nicht in dieses Werkzeug."
+          },
+          {
+            "q": "Ich vermiete. Was deklariere ich?",
+            "a": "Den Mietzins, den Sie im Jahr tatsächlich erhalten haben, ohne die Nebenkosten, die der Mieter zusätzlich zahlt. Er tritt an die Stelle des Eigenmietwerts. Abziehen können Sie danach entweder die Pauschale von 20% für Unterhalt und Verwaltung oder die tatsächlichen Kosten, wenn sie höher waren, mit Belegen."
+          },
+          {
+            "q": "Kann ich die Zinsen meiner Hypothek abziehen?",
+            "a": "Nur einen Teil. Schulden und Schuldzinsen werden auf alles verlegt, was Sie besitzen, im Verhältnis zur Lage der Aktiven. Macht die Zürcher Wohnung einen Drittel Ihres weltweiten Vermögens aus, ist ein Drittel der Zinsen hier abziehbar. Darum fragt das Werkzeug nach Ihrem übrigen Vermögen, und genau hier passieren die meisten Fehler."
+          },
+          {
+            "q": "Was kostet das?",
+            "a": "{price} pro Liegenschaft für die erste Deklaration. In den folgenden Jahren kostet es weniger, weil Ihre Liegenschaft bereits erfasst ist. Ein Schweizer Treuhänder verlangt für dieselbe Arbeit meist mehrere hundert Franken, jedes Jahr."
+          },
+          {
+            "q": "Bis wann muss die Erklärung eingereicht sein?",
+            "a": "Die Zürcher Frist ist der 31. März für das Vorjahr. Sie können sie online und kostenlos bis zum 30. November erstrecken. Die Erstreckung gilt für das Einreichen, nicht für das Zahlen: auf der Steuer läuft ab dem allgemeinen Fälligkeitstermin ein Zins."
+          },
+          {
+            "q": "Was passiert, wenn ich nichts einreiche?",
+            "a": "Das Amt mahnt und veranlagt Sie danach nach eigenem Ermessen. Diese Schätzung ist bewusst nicht grosszügig, sie lässt sich kaum umstossen, und dazu kommt eine Busse wegen Nichteinreichens. Da das Eigentum im Grundbuch steht, ist Abwarten keine Strategie."
+          },
+          {
+            "q": "Brauche ich jemanden in der Schweiz für die Post?",
+            "a": "Man muss Sie erreichen können. Das Bundesrecht sagt: Wer sich im Ausland befindet, ohne in der Schweiz einen Vertreter zu haben, dem kann eine Verfügung rechtswirksam durch Publikation im kantonalen Amtsblatt eröffnet werden (Art. 116 Abs. 2 DBG), und die Rechtsmittelfrist läuft dann, ob Sie davon wussten oder nicht. Das Steueramt fordert Sie in der Regel auf, eine Zustelladresse in der Schweiz zu bezeichnen, und es ist in Ihrem eigenen Interesse, eine zu haben: Verwandte, Nachbarn, eine Verwaltung oder eine Fachperson."
+          },
+          {
+            "q": "Der Eigenmietwert wird abgeschafft. Was ändert sich für mich?",
+            "a": "Das Parlament hat den Systemwechsel beschlossen, er tritt am 1. Januar 2029 in Kraft. Für Zweitliegenschaften ist stattdessen eine neue kantonale Objektsteuer vorgesehen, und genau in diese Kategorie fallen die meisten Eigentümer mit Wohnsitz im Ausland. Bis dahin gilt, was auf dieser Seite steht, und wir passen das Werkzeug an, sobald die kantonalen Regeln vorliegen."
           }
         ]
       },

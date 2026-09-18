@@ -23,6 +23,8 @@ export interface Product {
   /** Where the tool starts; only for countries whose tool is built */
   start?: string
   status: 'live' | 'soon'
+  /** Whether `products.<key>.note` exists and should be shown under the card */
+  note?: boolean
   sections?: ProductSection[]
 }
 
@@ -32,6 +34,7 @@ export const PRODUCTS: Product[] = [
     path: '/switzerland',
     start: '/switzerland/calculator',
     status: 'live',
+    note: true,
     sections: [
       { key: 'how', hash: '#how' },
       { key: 'guide', path: '/switzerland/guide' },

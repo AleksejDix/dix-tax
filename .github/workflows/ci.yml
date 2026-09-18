@@ -1,0 +1,37 @@
+# Every push and every pull request runs what a person would otherwise have to remember.
+# The type check earns its place on its own: renaming the product registry keys left
+# app/utils/deadlines.ts on the old ids and the hub silently stopped showing its dates,
+# because nothing was checking types at the time.
+name: CI
+
+on:
+  push:
+    branches: [main, growth]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: pnpm
+
+      # `nuxt prepare` runs as a postinstall hook and writes the generated types the
+      # type check needs, so this has to come before it.
+      - run: pnpm install --frozen-lockfile
+
+      - name: Reference cases
+        run: pnpm test
+
+      - name: Types
+        run: pnpm typecheck
+
+      # Prerenders all 126 routes, so a broken page or a missing translation key fails here.
+      - name: Build
+        run: pnpm generate

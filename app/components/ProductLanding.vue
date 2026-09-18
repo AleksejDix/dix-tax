@@ -10,7 +10,7 @@ const { price } = useAppConfig()
 const { strings, objects } = useList()
 
 // The namespace names the form, the registry names the country.
-const country = computed(() => (props.ns === 'modelo210' ? 'spain' : 'germany') as const)
+const country = computed<'spain' | 'germany'>(() => (props.ns === 'modelo210' ? 'spain' : 'germany'))
 
 const facts = computed(() => objects(`${props.ns}.facts`, ['label', 'value']))
 const steps = computed(() => objects(`${props.ns}.how.steps`, ['title', 'body']))
@@ -113,7 +113,7 @@ useSocialImage(props.ns === 'modelo210' ? 'modelo-210' : 'anlage-v')
         <UiCheckList :items="offerItems" />
         <UiCard class="grid justify-items-start gap-3.5">
           <h3>{{ t('deadlines.title') }}</h3>
-          <DeadlineTable :only="country" />
+          <DeadlineTimeline :only="country" />
           <p class="text-2xs text-ink-soft">{{ t('deadlines.note') }}</p>
         </UiCard>
       </div>

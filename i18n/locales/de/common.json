@@ -93,9 +93,6 @@
       "today": "heute"
     },
     "note": "Ihre eigene Frist kann abweichen, wenn Sie eine Erstreckung verlangt haben oder ein Treuhänder für Sie einreicht.",
-    "colForm": "Deklaration",
-    "colKind": "Art der Frist",
-    "colDate": "Termin",
     "kindNames": {
       "due": "Ordentlich",
       "extended": "Erstreckt",

@@ -93,9 +93,6 @@
       "today": "today"
     },
     "note": "Your own deadline can differ if you asked for an extension or an adviser files for you.",
-    "colForm": "Filing",
-    "colKind": "Kind of date",
-    "colDate": "Deadline",
     "kindNames": {
       "due": "Deadline",
       "extended": "Extended",

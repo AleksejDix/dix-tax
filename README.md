@@ -20,8 +20,11 @@ No path segment may be a two letter code: `de`, `es`, `uk` and `ru` are locale p
 pnpm install
 pnpm dev        # http://localhost:3000
 pnpm test       # reference cases for the calculations
+pnpm typecheck  # types, including the generated ones
 pnpm generate   # static site in .output/public
 ```
+
+All three run on every push and pull request (`.github/workflows/ci.yml`).
 
 ## Structure
 
@@ -40,7 +43,7 @@ pnpm generate   # static site in .output/public
 - `server/api/interest.post.ts` signup form: emails the owner over SMTP (`SMTP_USER`, `SMTP_PASS`). The form only renders when both variables exist at build time (`signupEnabled` in `nuxt.config.ts`); otherwise visitors get a "write to us" mail link, so a form that cannot deliver is never shown
 - `app/components/TrustBlock.vue` trust signals; shows "Independent review" only for entries in `app.config.ts`
 - `app/components/Ui/` the design system: Button, Card, Badge, Section, Field, Segmented, ChoiceGroup, CheckList, Steps, Faq, CtaBand
-- `app/utils/deadlines.ts` filing deadlines, with the source of every date in a comment; `DeadlineTable.vue` and `DeadlineNote.vue` show them
+- `app/utils/deadlines.ts` filing deadlines, with the source of every date in a comment; `DeadlineTimeline.vue` shows them as a horizontal line and `DeadlineNote.vue` as one line under a card
 - `scripts/og-images.mjs` builds the social preview images from the locale files (`pnpm og`), committed under `public/og/`
 - `app/composables/useDeclaration.ts` Zurich tax logic for an owner living abroad: the assessed
   values per property, the proportional debt split, and the German note for the remarks field

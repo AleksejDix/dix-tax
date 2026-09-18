@@ -29,7 +29,7 @@ export function useProductNav() {
   })
 
   // Route names carry the locale as a suffix (`privacy___de`).
-  const page = computed(() => String(route.name ?? '').split('___')[0])
+  const page = computed(() => String(route.name ?? '').split('___')[0] ?? '')
 
   const OUTSIDE: Record<string, string> = {
     'legal-notice': 'footer.legalNotice',

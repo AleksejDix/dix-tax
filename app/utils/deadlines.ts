@@ -90,9 +90,9 @@ function startOfDay(date: Date) {
 }
 
 /** The deadline date as the reader's language writes it. */
-export function formatDeadlineDate(date: Date, language: string) {
+export function formatDeadlineDate(date: Date, language: string | undefined) {
   // Readers are in Europe, so plain "en" must not turn into the American "September 30, 2026".
-  return new Intl.DateTimeFormat(language === 'en' ? 'en-GB' : language, {
+  return new Intl.DateTimeFormat(!language || language === 'en' ? 'en-GB' : language, {
     day: 'numeric',
     month: 'long',
     year: 'numeric',

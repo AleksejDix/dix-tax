@@ -33,7 +33,7 @@ const sectionLink = 'text-xs font-medium text-ink no-underline hover:text-blue a
           <NuxtLink v-if="s.to" :to="s.to" :class="sectionLink">{{ s.label }}</NuxtLink>
           <NuxtLink v-else :to="s.anchor" custom>
             <template #default="{ href, navigate }">
-              <a :href="href" :class="sectionLink" @click="navigate">{{ s.label }}</a>
+              <a :href="href ?? undefined" :class="sectionLink" @click="navigate">{{ s.label }}</a>
             </template>
           </NuxtLink>
         </template>

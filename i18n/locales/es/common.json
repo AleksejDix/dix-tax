@@ -93,9 +93,6 @@
       "today": "hoy"
     },
     "note": "Tu plazo puede ser otro si has pedido una prórroga o si presenta un asesor por ti.",
-    "colForm": "Declaración",
-    "colKind": "Tipo de plazo",
-    "colDate": "Fecha límite",
     "kindNames": {
       "due": "Ordinario",
       "extended": "Prorrogado",

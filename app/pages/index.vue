@@ -44,7 +44,7 @@ useSocialImage('home')
           <p class="mt-3 max-w-[30rem] text-xs text-ink-soft">{{ t('deadlines.lead') }}</p>
         </div>
         <div>
-          <DeadlineTable />
+          <DeadlineTimeline />
           <p class="mt-3 text-2xs text-ink-soft">{{ t('deadlines.note') }}</p>
         </div>
       </div>
@@ -85,7 +85,7 @@ useSocialImage('home')
             </UiButton>
             <UiButton v-else :to="localePath(p.path)">{{ t('products.more') }}</UiButton>
           </p>
-          <p v-if="p.key === 'chZurich'" class="mt-3 text-2xs text-ink-soft">{{ t('products.chZurich.note') }}</p>
+          <p v-if="p.note" class="mt-3 text-2xs text-ink-soft">{{ t(`products.${p.key}.note`) }}</p>
         </UiCard>
       </ul>
     </UiSection>

@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "dix.tax: Steuerformulare für Eigentümer, die im Ausland leben",
-    "description": "Sie besitzen eine Wohnung oder ein Haus in einem Land, in dem Sie nicht leben. Spanien, die Schweiz und Deutschland verlangen alle eine Erklärung dafür. dix.tax liefert die genauen Zahlen, erklärt in Ihrer Sprache. Die Schweizer Deklaration ist heute bereit."
+    "title": "dix.tax: Ihre Wohnung im Ausland in der Zürcher Steuererklärung",
+    "description": "Sie wohnen im Kanton Zürich und besitzen eine Wohnung im Ausland. Ob Ukraine, Spanien oder anderswo: dix.tax liefert Ihnen in rund zehn Minuten die genauen Zahlen für die Zürcher Steuererklärung, erklärt in Ihrer Sprache."
   },
   "nav": {
     "how": "So funktioniert es",
@@ -21,8 +21,8 @@
   "founder": {
     "title": "Warum ich das gebaut habe",
     "body": [
-      "Ich bin Aleksej Dix. Ich lebe in Zürich und besitze Wohnungen in anderen Ländern. Jeden Frühling kam dasselbe: ein Formular von einem Steueramt in einem Land, in dem ich nicht wohne, in einer Sprache, die nicht meine ist. Die Antworten habe ich selbst bezahlt, mit Beratern und mit Abenden über Weisungen.",
-      "Wer eine Wohnung in Zürich besitzt und im Ausland lebt, hat genau dieses Problem, spiegelverkehrt. Die Regeln sind einfach, sobald sie jemand erklärt, und dix.tax macht daraus zehn Minuten."
+      "Ich bin Aleksej Dix. Ich versteuere mein Einkommen in der Schweiz und besitze mehrere Wohnungen im Ausland. Als sie zum ersten Mal in meine Steuererklärung gehörten, habe ich die Antworten selbst bezahlt: mit Beratern, mit Abenden über deutschen Weisungen und mit vielen Zweifeln.",
+      "Die Regeln sind einfach, sobald sie jemand erklärt. Viele Menschen in der Schweiz besitzen ein Zuhause in einem anderen Land und stehen vor demselben Formular, oft in einer Sprache, die nicht ihre eigene ist. dix.tax fasst in zehn Minuten zusammen, was ich gelernt habe."
     ],
     "role": "Gründer von dix.tax"
   },
@@ -34,21 +34,21 @@
     "legalNotice": "Impressum",
     "privacy": "Datenschutz",
     "contact": "Kontakt",
-    "tagline": "Steuerformulare für Menschen mit einer Liegenschaft in einem Land, in dem sie nicht leben.",
+    "tagline": "Steuerformulare für Menschen mit einer Liegenschaft im Ausland.",
     "copyright": "© {year} {name}. Alle Rechte vorbehalten.",
     "made": "Entwickelt in Zürich"
   },
   "hub": {
-    "title": "Ihre Liegenschaft steht in einem Land, in dem Sie nicht leben. Eine Steuererklärung will es trotzdem.",
-    "lead": "Spanien, die Schweiz und Deutschland besteuern eine Liegenschaft dort, wo sie steht, wem auch immer sie gehört und wo auch immer diese Person lebt. dix.tax bereitet heute die Schweizer Deklaration vor: ein paar einfache Fragen, für jede Zeile die genaue Zahl, erklärt in Ihrer Sprache.",
-    "cta": "Schweizer Deklaration vorbereiten · 10 Minuten",
-    "ctaNote": "Rund zehn Minuten. {price} pro Liegenschaft. Kein Konto, Ihre Zahlen bleiben im Browser.",
-    "secondary": "Meine Liegenschaft steht anderswo",
-    "liveNote": "Liegenschaften im Kanton Zürich. Spanien, Deutschland und weitere Kantone sind in Vorbereitung.",
-    "chooseTitle": "Wo steht Ihre Liegenschaft?",
-    "chooseLead": "Die Schweizer Deklaration ist heute bereit. Modelo 210 und Anlage V folgen, und die Antworten unten entscheiden, welche zuerst.",
-    "bothTitle": "Eine Wohnung, oft zwei Erklärungen",
-    "bothBody": "Eine Wohnung in Valencia, die jemandem in Berlin gehört, braucht das Modelo 210 in Spanien und gehört ausserdem in die deutsche Erklärung. Beide rechnen mit anderen Werten und anderen Regeln. dix.tax hält sie auseinander und macht beide richtig."
+    "title": "Sie wohnen in Zürich und besitzen eine Wohnung im Ausland. Sie gehört in Ihre Steuererklärung.",
+    "lead": "Ob Ukraine, Spanien oder anderswo: Zürich will die Wohnung sehen, obwohl die Schweiz sie nicht besteuert. Beantworten Sie ein paar einfache Fragen und Sie erhalten die genaue Zahl für jede Zeile, erklärt in Ihrer Sprache.",
+    "cta": "Zürcher Deklaration vorbereiten · 10 Minuten",
+    "ctaNote": "Rund zehn Minuten. {price} pro Wohnung. Ohne Konto, Ihre Zahlen bleiben im Browser.",
+    "secondary": "Ich brauche ein anderes Formular",
+    "liveNote": "Kanton Zürich. Weitere Kantone und die ausländischen Formulare sind in Vorbereitung.",
+    "chooseTitle": "Welches Formular brauchen Sie?",
+    "chooseLead": "Die Schweizer Deklaration ist fertig. Modelo 210 und Anlage V kommen als Nächstes, und die Antworten unten entscheiden, welches zuerst.",
+    "bothTitle": "Eine Liegenschaft, oft zwei Deklarationen",
+    "bothBody": "Eine Wohnung in Valencia, die jemandem in Zürich gehört, braucht das Modelo 210 in Spanien und eine Zeile in der Zürcher Steuererklärung. Für beide gelten andere Werte und andere Regeln. dix.tax hält sie auseinander und rechnet beide richtig."
   },
   "products": {
     "statusLive": "Verfügbar",
@@ -57,8 +57,8 @@
     "switzerland": {
       "name": "Schweizer Steuererklärung",
       "place": "Kanton Zürich",
-      "who": "Sie besitzen eine Wohnung oder ein Haus im Kanton Zürich und leben in einem anderen Land.",
-      "what": "Die amtlichen Werte im Liegenschaftenverzeichnis, der Anteil Ihrer Schulden, den Zürich akzeptiert, und ein deutscher Text für das Steueramt.",
+      "who": "Sie wohnen im Kanton Zürich und besitzen eine Wohnung oder ein Haus in einem anderen Land.",
+      "what": "Steuerwert, Eigenmietwert und Pauschalabzug für das Liegenschaftenverzeichnis, dazu ein deutscher Text für das Steueramt.",
       "cta": "Deklaration vorbereiten",
       "note": "Weitere Kantone sind in Vorbereitung.",
       "country": "Schweiz"
@@ -106,7 +106,7 @@
     "items": [
       {
         "title": "Jede Regel hat eine Quelle",
-        "body": "Jeder Prozentsatz und jede Formularzeile stammt aus einer amtlichen Wegleitung, einem Gesetz oder einer Weisung, und jeder Rechner nennt seine Quellen."
+        "body": "Jeder Prozentsatz und jede Formularzeile stammt aus einer offiziellen Wegleitung, einem Gesetz oder einer Weisung. Jeder Rechner nennt seine Quellen, auch die eine Regel, die auf Praxis statt auf einer Weisung beruht."
       },
       {
         "title": "Die Berechnungen sind getestet",
@@ -129,8 +129,8 @@
     "factsTitle": "Das Wichtigste in Kürze",
     "notifyTitle": "Möchten Sie erfahren, wann es so weit ist?",
     "notifyBody": "Schreiben Sie uns, und wir melden uns, sobald dieses Formular verfügbar ist.",
-    "swissTitle": "Besitzen Sie auch eine Liegenschaft im Kanton Zürich?",
-    "swissBody": "Dann braucht diese Liegenschaft eine eigene Zürcher Steuererklärung, auch wenn Sie anderswo leben. Dieser Teil ist heute bereit.",
+    "swissTitle": "Wohnen Sie im Kanton Zürich?",
+    "swissBody": "Dann gehört dieselbe Liegenschaft auch in Ihre Schweizer Steuererklärung. Dieser Teil ist heute schon verfügbar.",
     "swissCta": "Schweizer Deklaration öffnen"
   },
   "interest": {

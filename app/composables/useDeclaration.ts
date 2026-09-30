@@ -1,42 +1,45 @@
-// The Zurich declaration for somebody who owns property in the canton and lives abroad.
+// The Zurich declaration for somebody who lives in the canton and owns property abroad.
 //
-// Owning real estate in Switzerland makes a person liable here even without living here
-// (wirtschaftliche Zugehörigkeit, Art. 4 Abs. 1 lit. c DBG, § 4 StG ZH). Only the property is
-// taxed, but three things surprise people every year:
+// A resident declares income and wealth worldwide, so a flat in another country belongs in the
+// Liegenschaftenverzeichnis. Switzerland does not tax it (Art. 6 Abs. 1 DBG): the value and
+// the income only set the rate on everything else. Three things follow from that:
 //
-//  1. Nothing is estimated. The canton has already set the Eigenmietwert and the Steuerwert in
-//     its assessment (amtliche Schätzung), and those are the figures the return wants.
-//  2. Debts and debt interest are not deductible in full. They are split over all assets by
-//     where the assets lie, so only the Swiss share counts here.
-//  3. Worldwide income and wealth still have to be declared, not to be taxed, but to set the
-//     rate the Swiss part is taxed at (Art. 7 Abs. 1 DBG).
+//  1. No Swiss authority has valued the property, so the owner supplies the figure. Zurich
+//     practice is 70% of the purchase price, converted to francs.
+//  2. A home kept for the owner or for relatives carries a notional rent, worked out from that
+//     tax value. A home that cannot be used carries none.
+//  3. Two exchange rates apply: the year-end rate for the value, the annual average for rent.
+import { countryName } from '../utils/countries'
+
 export type PropertyKind = 'apartment' | 'house'
-export type PropertyUsage = 'self' | 'family' | 'rented'
-export type MaintenanceBasis = 'flat' | 'actual'
+export type PropertyUsage = 'self' | 'family' | 'rented' | 'unusable'
+export type ValueBasis = 'purchase' | 'market'
+export type Currency = 'EUR' | 'USD' | 'GBP' | 'UAH' | 'CHF'
 
 export interface PropertyInput {
   id: string
-  /** Municipality in the canton of Zurich */
-  municipality: string
+  /** ISO country code, or 'other' together with `countryName`. */
+  country: string
+  countryName: string
+  city: string
   street: string
   kind: PropertyKind
   area: number | null
-  /** Percent of the property owned, for co-ownership and inheritances */
   share: number
-  /** Vermögenssteuerwert from the assessment, for the whole property */
-  taxValue: number | null
+  basis: ValueBasis
+  amount: number | null
+  currency: Currency
+  /** Year-end rate: converts the value, because wealth is measured on 31 December */
+  rate: number | null
   usage: PropertyUsage
-  /** Eigenmietwert from the same assessment, for the whole property */
-  eigenmietwert: number | null
-  /** Rent received over the year, for the whole property, without utilities */
   rent: number | null
-  maintenanceBasis: MaintenanceBasis
-  /** Actual maintenance paid, for the whole property */
-  maintenanceActual: number | null
+  /** Average rate of the year: converts rent, because income is earned over the year */
+  rentRate: number | null
 }
 
 export interface PropertyResult {
   input: PropertyInput
+  valueChf: number
   taxValue: number
   gross: number
   maintenance: number
@@ -44,37 +47,46 @@ export interface PropertyResult {
   complete: boolean
 }
 
-/** Figures that belong to the person, not to one property. */
-export interface Household {
-  /** Gross assets worldwide on 31 December, this property included, at their tax values */
-  worldAssets: number | null
-  /** Income worldwide over the year */
-  worldIncome: number | null
-  /** All debts worldwide on 31 December, mortgages included */
-  debt: number | null
-  /** Debt interest paid worldwide over the year */
-  interest: number | null
-}
-
-export interface DeclarationResult {
-  properties: PropertyResult[]
-  /** Swiss share of worldwide gross assets. Debts and interest follow it. */
-  quota: number | null
-  swissAssets: number
-  /** Income from the properties, after maintenance, before interest */
-  propertyIncome: number
-  deductibleInterest: number
-  taxableIncome: number
-  deductibleDebt: number
-  taxableWealth: number
-  /** Not taxed here, only used to pick the rate */
-  rateIncome: number | null
-  rateWealth: number | null
-  complete: boolean
-}
-
-/** Wegleitung ZH: maintenance and administration may be claimed as a flat 20% of the gross. */
+// Published Zurich practice for property abroad (see the guide and README.md).
+export const TAX_VALUE_FACTOR = 0.7
+export const NOTIONAL_RENT_RATE: Record<PropertyKind, number> = { apartment: 0.0425, house: 0.035 }
 export const MAINTENANCE_FLAT_RATE = 0.2
+
+// Approximate year-end rates, only used to prefill the rate field.
+// The user is asked to replace them with the official ICTax rate.
+export const APPROX_RATES: Record<Currency, number> = {
+  EUR: 0.93,
+  USD: 0.79,
+  GBP: 1.06,
+  UAH: 0.0187,
+  CHF: 1,
+}
+
+// Approximate annual average rates, used to prefill the rate for rent.
+export const APPROX_AVERAGE_RATES: Record<Currency, number> = {
+  EUR: 0.94,
+  USD: 0.83,
+  GBP: 1.1,
+  UAH: 0.02,
+  CHF: 1,
+}
+
+export const CURRENCIES: Currency[] = ['EUR', 'USD', 'GBP', 'UAH', 'CHF']
+
+// Countries offered in the form. Names come from Intl.DisplayNames, so they need no translation:
+// the visitor sees them in their language, the tax form and the German note get the German name.
+export const COUNTRIES = [
+  'AL', 'AR', 'AM', 'AU', 'AT', 'AZ', 'BY', 'BE', 'BA', 'BR', 'BG', 'CA', 'CL', 'CN', 'CO', 'HR', 'CY', 'CZ',
+  'DK', 'DO', 'EG', 'EE', 'FI', 'FR', 'GE', 'DE', 'GR', 'HU', 'IN', 'ID', 'IE', 'IL', 'IT', 'JP', 'KZ', 'XK',
+  'LV', 'LB', 'LT', 'LU', 'MK', 'MT', 'MX', 'MD', 'ME', 'MA', 'NL', 'NZ', 'NO', 'PE', 'PH', 'PL', 'PT', 'RO',
+  'RU', 'RS', 'SK', 'SI', 'ZA', 'KR', 'ES', 'LK', 'SE', 'TH', 'TN', 'TR', 'UA', 'AE', 'GB', 'US', 'UY', 'VN',
+]
+
+/** Country as it is written on the Zurich form and in the German note. */
+export function countryDe(p: Pick<PropertyInput, 'country' | 'countryName'>) {
+  if (p.country === 'other') return p.countryName.trim()
+  return p.country ? countryName(p.country, 'de-CH') : ''
+}
 
 export const TAX_YEARS = [2026, 2025, 2024]
 
@@ -90,82 +102,46 @@ export function kindLabelDe(kind: PropertyKind) {
 export function newProperty(): PropertyInput {
   return {
     id: Math.random().toString(36).slice(2, 10),
-    municipality: '',
+    country: '',
+    countryName: '',
+    city: '',
     street: '',
     kind: 'apartment',
     area: null,
     share: 100,
-    taxValue: null,
+    basis: 'purchase',
+    amount: null,
+    currency: 'EUR',
+    rate: APPROX_RATES.EUR,
     usage: 'self',
-    eigenmietwert: null,
     rent: null,
-    maintenanceBasis: 'flat',
-    maintenanceActual: null,
+    rentRate: APPROX_AVERAGE_RATES.EUR,
   }
-}
-
-export function newHousehold(): Household {
-  return { worldAssets: null, worldIncome: null, debt: null, interest: null }
 }
 
 export function calculate(input: PropertyInput): PropertyResult {
   const share = Math.min(Math.max(input.share || 0, 0), 100) / 100
-  const taxValue = Math.round((input.taxValue || 0) * share)
+  const rate = input.currency === 'CHF' ? 1 : input.rate || 0
+  const valueChf = (input.amount || 0) * rate * share
+  const taxValue = Math.round(valueChf * TAX_VALUE_FACTOR)
 
-  // Rented out: the rent actually received. Otherwise the Eigenmietwert the canton assessed,
-  // which also applies when relatives live there for nothing.
-  const gross =
-    input.usage === 'rented'
-      ? Math.round((input.rent || 0) * share)
-      : Math.round((input.eigenmietwert || 0) * share)
+  // Rent is income: the federal annual average rate applies, not the year-end rate.
+  const rentRate = input.currency === 'CHF' ? 1 : input.rentRate || rate
 
-  const maintenance =
-    input.maintenanceBasis === 'actual'
-      ? Math.round((input.maintenanceActual || 0) * share)
-      : Math.round(gross * MAINTENANCE_FLAT_RATE)
+  let gross = 0
+  if (input.usage === 'rented') gross = Math.round((input.rent || 0) * rentRate * share)
+  else if (input.usage !== 'unusable') gross = Math.round(taxValue * NOTIONAL_RENT_RATE[input.kind])
+
+  const maintenance = Math.round(gross * MAINTENANCE_FLAT_RATE)
 
   return {
     input,
+    valueChf: Math.round(valueChf),
     taxValue,
     gross,
     maintenance,
     net: gross - maintenance,
-    complete: Boolean(input.municipality.trim() && input.taxValue && gross),
-  }
-}
-
-/**
- * Debts and debt interest are split over all assets by where they lie
- * (quotenmässige Schuldenverlegung nach Lage der Aktiven), so a mortgage on a Zurich flat is
- * only deductible here to the extent the owner's assets are here. Without the worldwide total
- * there is no quota, and nothing is deducted rather than too much.
- */
-export function summarise(properties: PropertyResult[], household: Household): DeclarationResult {
-  const shown = properties.filter((p) => p.complete)
-  const swissAssets = shown.reduce((sum, p) => sum + p.taxValue, 0)
-  const propertyIncome = shown.reduce((sum, p) => sum + p.net, 0)
-
-  const worldAssets = household.worldAssets || 0
-  const quota = worldAssets > 0 ? Math.min(1, swissAssets / worldAssets) : null
-
-  const deductibleInterest = quota === null ? 0 : Math.round((household.interest || 0) * quota)
-  const deductibleDebt = quota === null ? 0 : Math.round((household.debt || 0) * quota)
-
-  const rateWealth =
-    household.worldAssets === null ? null : Math.max(0, worldAssets - (household.debt || 0))
-
-  return {
-    properties,
-    quota,
-    swissAssets,
-    propertyIncome,
-    deductibleInterest,
-    taxableIncome: propertyIncome - deductibleInterest,
-    deductibleDebt,
-    taxableWealth: Math.max(0, swissAssets - deductibleDebt),
-    rateIncome: household.worldIncome,
-    rateWealth,
-    complete: shown.length > 0,
+    complete: Boolean(countryDe(input) && input.city.trim() && input.amount && rate),
   }
 }
 
@@ -176,58 +152,66 @@ export function formatChf(value: number) {
     .replace(/\B(?=(\d{3})+(?!\d))/g, "'")
 }
 
+function formatAmount(value: number) {
+  return formatChf(value)
+}
+
 function formatPercentDe(value: number) {
-  return (value * 100).toFixed(1).replace('.0', '').replace('.', ',')
+  return (value * 100).toString().replace('.', ',')
 }
 
 /** German note for the remarks field of the tax return. Always German: the tax office reads it. */
-export function remarkDe(result: DeclarationResult, year: number) {
-  const shown = result.properties.filter((r) => r.complete)
-  if (!shown.length) return ''
+export function remarkDe(results: PropertyResult[], year: number) {
+  const lines = results
+    .filter((r) => r.complete)
+    .map((r, i) => {
+      const p = r.input
+      const where = [p.city.trim(), p.street.trim()].filter(Boolean).join(', ')
+      const basis = p.basis === 'purchase' ? 'des Kaufpreises' : 'des geschätzten Verkehrswerts'
+      const conversion =
+        p.currency === 'CHF'
+          ? `${basis} von CHF ${formatAmount(p.amount || 0)}`
+          : `${basis} von ${p.currency} ${formatAmount(p.amount || 0)} (Kurs ${p.rate})`
+      const shareText = p.share < 100 ? `, Anteil ${p.share}%` : ''
 
-  const lines = shown.map((r, i) => {
-    const p = r.input
-    const where = [p.municipality.trim(), p.street.trim()].filter(Boolean).join(', ')
-    const shareText = p.share < 100 ? `, Anteil ${p.share}%` : ''
-    const income =
-      p.usage === 'rented'
-        ? `Vermietet. Mietzinseinnahmen CHF ${formatChf(r.gross)}.`
-        : p.usage === 'family'
-          ? `Unentgeltlich von Angehörigen bewohnt; deklariert ist der Eigenmietwert von CHF ${formatChf(r.gross)}.`
-          : `Selbst genutzt oder leer stehend; Eigenmietwert CHF ${formatChf(r.gross)}.`
-    const upkeep =
-      p.maintenanceBasis === 'actual'
-        ? `Unterhaltskosten effektiv CHF ${formatChf(r.maintenance)}.`
-        : `Unterhalts- und Verwaltungskosten: Pauschalabzug 20% (CHF ${formatChf(r.maintenance)}).`
+      const usage: Record<PropertyUsage, string> = {
+        self: `Die Liegenschaft steht zur eigenen Verfügung. Eigenmietwert: ${formatPercentDe(NOTIONAL_RENT_RATE[p.kind])}% des Steuerwerts.`,
+        family: `Die Liegenschaft wird unentgeltlich von Angehörigen bewohnt. Eigenmietwert: ${formatPercentDe(NOTIONAL_RENT_RATE[p.kind])}% des Steuerwerts.`,
+        rented:
+          p.currency === 'CHF'
+            ? 'Die Liegenschaft ist vermietet. Deklariert sind die effektiven Mietzinseinnahmen.'
+            : `Die Liegenschaft ist vermietet. Deklariert sind die effektiven Mietzinseinnahmen von ${p.currency} ${formatAmount(p.rent || 0)}, umgerechnet zum Jahresmittelkurs ${p.rentRate || p.rate}.`,
+        unusable:
+          'Die Liegenschaft ist nicht nutzbar (zerstört, stark beschädigt oder nicht zugänglich). Es wird deshalb kein Eigenmietwert deklariert. Belege können auf Wunsch nachgereicht werden.',
+      }
 
-    return `${i + 1}. ${kindLabelDe(p.kind)} in ${where}${shareText}. Steuerwert gemäss amtlicher Schätzung CHF ${formatChf(r.taxValue)}. ${income} ${upkeep}`
-  })
+      return `${i + 1}. ${kindLabelDe(p.kind)} in ${where}, ${countryDe(p)}${shareText}. Steuerwert CHF ${formatChf(r.taxValue)}: 70% ${conversion}. ${usage[p.usage]}`
+    })
 
-  const allocation =
-    result.quota === null
-      ? 'Die Verlegung der Schulden und Schuldzinsen nach Lage der Aktiven ist noch nicht vorgenommen; die Angaben werden nachgereicht.'
-      : `Schulden und Schuldzinsen wurden quotenmässig nach Lage der Aktiven verlegt. Anteil der schweizerischen Aktiven am Bruttovermögen: ${formatPercentDe(result.quota)}%. Abzugsfähige Schuldzinsen CHF ${formatChf(result.deductibleInterest)}, abzugsfähige Schulden CHF ${formatChf(result.deductibleDebt)}.`
+  if (!lines.length) return ''
 
   return [
-    `Beschränkte Steuerpflicht aufgrund von Grundeigentum im Kanton Zürich (Art. 4 Abs. 1 lit. c DBG, § 4 StG ZH), Steuerperiode ${year}. Wohnsitz im Ausland.`,
+    `Liegenschaften im Ausland, Steuerperiode ${year}:`,
     ...lines,
-    allocation,
-    'Das übrige Einkommen und Vermögen ist nicht in der Schweiz steuerbar und wird nur zur Satzbestimmung deklariert (Art. 7 Abs. 1 DBG).',
+    'Grundstücke im Ausland sind von der schweizerischen Steuerpflicht ausgenommen (Art. 6 Abs. 1 DBG); das Besteuerungsrecht liegt beim Belegenheitsstaat. Wir bitten um Ausscheidung ins Ausland; die Werte sind nur satzbestimmend zu berücksichtigen. Unterhaltskosten: Pauschalabzug 20%.',
   ].join('\n')
 }
 
-const STORAGE_KEY = 'dixtax:declaration:v2'
+// v2 held the mirrored case, a Zurich property owned from abroad, with different fields.
+const STORAGE_KEY = 'dixtax:declaration:v3'
 
 export function useDeclaration() {
   const year = useState<number>('decl-year', () => 2025)
   const properties = useState<PropertyInput[]>('decl-properties', () => [newProperty()])
-  const household = useState<Household>('decl-household', () => newHousehold())
   const loaded = useState<boolean>('decl-loaded', () => false)
 
   const results = computed(() => properties.value.map(calculate))
-  const summary = computed(() => summarise(results.value, household.value))
-  const remark = computed(() => remarkDe(summary.value, year.value))
-  const hasResult = computed(() => summary.value.complete)
+  const totals = computed(() => ({
+    net: results.value.reduce((sum, r) => sum + r.net, 0),
+    taxValue: results.value.reduce((sum, r) => sum + r.taxValue, 0),
+  }))
+  const remark = computed(() => remarkDe(results.value, year.value))
+  const hasResult = computed(() => results.value.some((r) => r.complete))
 
   function load() {
     if (loaded.value || !import.meta.client) return
@@ -238,9 +222,13 @@ export function useDeclaration() {
       const saved = JSON.parse(raw)
       if (TAX_YEARS.includes(saved.year)) year.value = saved.year
       if (Array.isArray(saved.properties) && saved.properties.length) {
-        properties.value = saved.properties.map((p: Partial<PropertyInput>) => ({ ...newProperty(), ...p }))
+        // Entries saved before the rent rate existed get the average rate of their own currency.
+        properties.value = saved.properties.map((p: Partial<PropertyInput>) => ({
+          ...newProperty(),
+          ...p,
+          rentRate: p.rentRate ?? APPROX_AVERAGE_RATES[p.currency ?? 'EUR'],
+        }))
       }
-      if (saved.household) household.value = { ...newHousehold(), ...saved.household }
     } catch {
       // Corrupt or blocked storage: start with an empty form.
     }
@@ -249,10 +237,7 @@ export function useDeclaration() {
   function persist() {
     if (!import.meta.client || !loaded.value) return
     try {
-      localStorage.setItem(
-        STORAGE_KEY,
-        JSON.stringify({ year: year.value, properties: properties.value, household: household.value }),
-      )
+      localStorage.setItem(STORAGE_KEY, JSON.stringify({ year: year.value, properties: properties.value }))
     } catch {
       // Private mode: the form still works, it just is not remembered.
     }
@@ -269,7 +254,6 @@ export function useDeclaration() {
 
   function reset() {
     properties.value = [newProperty()]
-    household.value = newHousehold()
     year.value = 2025
     try {
       localStorage.removeItem(STORAGE_KEY)
@@ -278,23 +262,26 @@ export function useDeclaration() {
     }
   }
 
-  return { year, properties, household, results, summary, remark, hasResult, load, persist, add, remove, reset }
+  return { year, properties, results, totals, remark, hasResult, load, persist, add, remove, reset }
 }
 
 /** Fixed example shown on the landing page. Runs through the same calculation as the tool. */
 export function sampleResult(): PropertyResult {
   return calculate({
     id: 'sample',
-    municipality: 'Winterthur',
-    street: 'Tösstalstrasse 14',
+    country: 'ES',
+    countryName: '',
+    city: 'Valencia',
+    street: 'Carrer de Colón 27',
     kind: 'apartment',
     area: 68,
     share: 100,
-    taxValue: 486000,
+    basis: 'purchase',
+    amount: 120000,
+    currency: 'EUR',
+    rate: APPROX_RATES.EUR,
     usage: 'self',
-    eigenmietwert: 16800,
     rent: null,
-    maintenanceBasis: 'flat',
-    maintenanceActual: null,
+    rentRate: APPROX_AVERAGE_RATES.EUR,
   })
 }

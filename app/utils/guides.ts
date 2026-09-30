@@ -8,24 +8,24 @@
 // language is worth a slug of its own, an entry in `i18n.pages` in nuxt.config.
 export interface Guide {
   /** Key under `guides.*` in guides.json */
-  key: 'swissFromAbroad' | 'spanishHoliday'
+  key: 'abroadFromZurich' | 'spanishHoliday'
   /** Path in the default locale; other locales may translate it in `i18n.pages` */
   path: string
-  /** The country page this guide leads to */
+  /** The form this guide leads to, by the country it is filed in */
   country: Product['key']
   /** When its facts were last checked against the sources, shown on the page */
   checked: string
   /** Base name under public/og/, drawn by `pnpm og` from this guide's own title */
-  image: 'guide-swiss-from-abroad' | 'guide-spanish-holiday'
+  image: 'guide-abroad-from-zurich' | 'guide-spanish-holiday'
 }
 
 export const GUIDES: Guide[] = [
   {
-    key: 'swissFromAbroad',
-    path: '/guides/swiss-property-when-you-live-abroad',
+    key: 'abroadFromZurich',
+    path: '/guides/property-abroad-in-the-zurich-tax-return',
     country: 'switzerland',
     checked: '2026-09',
-    image: 'guide-swiss-from-abroad',
+    image: 'guide-abroad-from-zurich',
   },
   {
     key: 'spanishHoliday',

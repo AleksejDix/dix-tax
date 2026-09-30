@@ -1,55 +1,54 @@
 {
   "zh": {
     "meta": {
-      "title": "dix.tax: su propiedad en Zúrich cuando usted vive fuera",
-      "description": "Usted tiene un piso o una casa en el cantón de Zúrich y vive en otro país. Aquí obtiene las cifras exactas para la declaración de Zúrich, con el reparto de las deudas y los valores que solo fijan el tipo impositivo.",
+      "title": "dix.tax: declare su inmueble en el extranjero en la declaración de Zúrich",
+      "description": "Para quienes viven en el cantón de Zúrich y tienen una vivienda en el extranjero. Obtenga las cifras exactas para el Liegenschaftenverzeichnis, explicadas en español, inglés, alemán, ucraniano y ruso.",
       "calcTitle": "Preparar la declaración",
-      "guideTitle": "Guía: rellenar el formulario de Zúrich desde el extranjero"
+      "guideTitle": "Guía: cómo rellenar el formulario de Zúrich"
     },
     "hero": {
-      "title": "Su piso está en Zúrich. Usted no. La declaración llega igual.",
-      "lead": "¿Tiene un piso en el cantón de Zúrich pero vive en otro sitio? Aun así debe presentar una declaración en Zúrich. Responda unas preguntas sencillas y tendrá la cifra exacta de cada casilla.",
+      "title": "Vive en Zúrich. Su piso está en el extranjero. Aun así va en su declaración.",
+      "lead": "¿Tiene un piso en Ucrania, en España o en cualquier otro país y vive en el cantón de Zúrich? Tiene que figurar en su declaración de Zúrich. Responda a unas preguntas sencillas y obtenga la cifra exacta de cada casilla.",
       "cta": "Preparar mi declaración · 10 minutos",
       "secondary": "Cómo funciona el impuesto",
       "note": "{price} por propiedad. Sin cuenta. Sus datos se quedan en su navegador.",
-      "noteValue": "el valor que fijó el cantón",
-      "noteIncome": "el alquiler que cobra, o el que el cantón supone",
-      "noteResult": "copie estas dos cifras en su declaración"
+      "noteValue": "el 70% de lo que pagó",
+      "noteIncome": "un alquiler teórico, no dinero real",
+      "noteResult": "copie estas dos en su declaración"
     },
     "sheet": {
-      "caption": "Ejemplo: un piso de 68 m² en Winterthur, valorado por el cantón en CHF 486'000",
-      "place": "Municipio",
+      "caption": "Ejemplo: un piso de 68 m² en Valencia comprado por EUR 120'000",
+      "place": "Localidad",
       "street": "Calle",
-      "canton": "Cantón",
+      "country": "País",
       "kind": "Tipo",
       "kindApartment": "Piso",
       "kindHouse": "Casa",
       "area": "Superficie",
-      "gross": "El alquiler teórico valorado, o el alquiler que usted cobra",
+      "gross": "Alquiler teórico o alquiler cobrado",
       "maintenance": "Deducción a tanto alzado por mantenimiento, 20%",
-      "maintenanceActual": "Mantenimiento realmente pagado",
-      "net": "Rendimiento restante",
+      "net": "Renta restante",
       "value": "Valor fiscal",
-      "totalNet": "Rendimiento neto de inmuebles",
-      "totalValue": "Inmueble por su valor fiscal",
-      "transfer": "Va a la declaración, casilla {line}",
+      "totalNet": "Renta neta de inmuebles",
+      "totalValue": "Inmuebles a valor de mercado",
+      "transfer": "Pasa a la declaración, línea {line}",
       "code": "Código {code}",
-      "empty": "Aquí aparecerá su propiedad"
+      "empty": "Su piso aparecerá aquí"
     },
     "facts": {
-      "title": "Qué quiere Zúrich de usted",
+      "title": "Qué quiere saber Zúrich y cuánto le cuesta a usted",
       "items": [
         {
-          "title": "Tiene que presentarla",
-          "body": "Un piso en Zúrich le convierte en contribuyente aquí, aunque nunca haya vivido en Suiza. Vacío o alquilado, cuenta igual. El municipio le enviará un formulario."
+          "title": "Tiene que declararlo",
+          "body": "Quien presenta la declaración en Zúrich declara sus ingresos y su patrimonio en todo el mundo. Eso incluye un piso en Valencia, Berlín o Kiev, aunque no viva nadie en él."
         },
         {
-          "title": "Solo tributa el piso",
-          "body": "Su sueldo y sus ahorros de casa no tributan aquí. Aun así hay que anotarlos, porque fijan el tipo que se aplica al piso."
+          "title": "Suiza no lo grava",
+          "body": "La ley suiza grava los inmuebles solo en el país donde están, y los convenios fiscales de Suiza dicen lo mismo. Zúrich excluye el piso de su patrimonio y sus ingresos imponibles."
         },
         {
-          "title": "El cantón ya hizo el cálculo",
-          "body": "Usted no adivina nada. Zúrich ya fijó las dos cifras que pide el formulario. Están en su carta de valoración, y la oficina municipal se la reenvía."
+          "title": "Solo cambia su tipo impositivo",
+          "body": "El valor y un alquiler teórico se usan para fijar su tipo. En un piso normal el efecto es pequeño. Lo que sale caro es no declararlo: impuestos atrasados, intereses y una multa."
         }
       ]
     },
@@ -57,22 +56,22 @@
       "title": "Tres pasos, unos diez minutos",
       "items": [
         {
-          "title": "Busque la carta",
-          "body": "La Schätzungsanzeige del cantón, o la última liquidación. Las dos llevan las dos cifras que necesita."
+          "title": "Describa su piso",
+          "body": "País, localidad, superficie, lo que pagó o lo que vale, y cómo se usa hoy: para usted, lo habita su familia, alquilado o inutilizable."
         },
         {
-          "title": "Responda unas preguntas",
-          "body": "Quién usa el piso y qué tiene en otros sitios. Lo segundo decide cuánta hipoteca cuenta aquí."
+          "title": "Obtenga los valores de Zúrich",
+          "body": "Valor fiscal al 70% del precio. Alquiler teórico del 4,25% para pisos o del 3,5% para casas. La deducción a tanto alzado del 20% por mantenimiento. Todo convertido a francos."
         },
         {
-          "title": "Copie las cifras",
-          "body": "Recibe el formulario de Zúrich, casilla por casilla, y una nota en alemán para pegar. Se teclea en ZHprivateTax o en papel."
+          "title": "Copie las cifras en su declaración",
+          "body": "El resultado sigue línea por línea el formulario de inmuebles de Zúrich, con una nota en alemán lista para el campo de observaciones. Introdúzcalo en ZHprivateTax o en el formulario en papel."
         }
       ]
     },
     "cta": {
-      "title": "Diez minutos ahora valen más que una liquidación estimada después",
-      "body": "Tenga delante la valoración cantonal y el extracto de su hipoteca. No necesita más.",
+      "title": "Diez minutos ahora le ahorran una carta de la oficina tributaria después",
+      "body": "Tenga a mano el precio de compra y la superficie del piso. Es todo lo que necesita.",
       "button": "Preparar mi declaración · 10 minutos"
     },
     "calc": {
@@ -80,170 +79,148 @@
       "lead": "Rellene lo que sepa. Su formulario se actualiza mientras escribe.",
       "privacy": "Guardado solo en este navegador.",
       "year": {
-        "label": "Ejercicio fiscal",
-        "hint": "La declaración de un año se presenta en la primavera del año siguiente. Los valores son a 31 de diciembre."
+        "label": "Año fiscal",
+        "hint": "La declaración de un año se presenta en primavera del año siguiente. Los valores son a 31 de diciembre."
       },
       "property": {
-        "heading": "Propiedad {n}",
-        "add": "Añadir otra propiedad",
-        "remove": "Quitar"
+        "heading": "Inmueble {n}",
+        "add": "Añadir otro inmueble",
+        "remove": "Eliminar"
       },
       "fields": {
-        "municipality": "Municipio",
-        "municipalityPlaceholder": "Winterthur",
-        "municipalityHint": "El municipio de Zúrich donde está la propiedad. Es el que le envía la declaración.",
+        "country": "País",
+        "countryPlaceholder": "Elija un país",
+        "countryOther": "Otro país",
+        "countryOtherLabel": "Nombre del país, en alemán si lo sabe",
+        "city": "Ciudad o pueblo",
+        "cityPlaceholder": "Valencia",
         "street": "Calle y número",
-        "streetHint": "Opcional",
+        "streetHint": "Opcional, en caracteres latinos",
         "type": "Tipo",
         "apartment": "Piso",
         "house": "Casa",
-        "area": "Superficie en m²",
-        "share": "Su parte en %",
-        "shareHint": "100 si es suya sola o de usted y su cónyuge",
-        "taxValue": "Valor fiscal en CHF",
-        "taxValueHint": "El valor fiscal de la valoración cantonal, para la propiedad entera. No el precio que pagó ni lo que pediría hoy una agencia.",
-        "usage": "¿Cómo se usa?",
-        "usageSelf": "Para mí, o vacía",
-        "usageSelfHint": "Se aplica el alquiler teórico",
-        "usageFamily": "Vive familia sin pagar",
+        "area": "Superficie total en m²",
+        "share": "Su participación en %",
+        "shareHint": "100 si es solo suyo o lo comparte con su cónyuge",
+        "basis": "¿Qué valor conoce?",
+        "basisPurchase": "Precio de compra",
+        "basisMarket": "Valor de mercado estimado hoy",
+        "basisHint": "Use la estimación si heredó el piso o se lo regalaron, o si ha perdido gran parte de su valor.",
+        "amount": "Importe",
+        "currency": "Moneda",
+        "rate": "Cambio: 1 {currency} en CHF",
+        "rateHint": "Rellenado con un tipo de cambio aproximado a final de año. Sustitúyalo por el tipo oficial de la lista federal de cambios.",
+        "rateLink": "Abrir la lista oficial de cambios (ICTax)",
+        "usage": "¿Cómo se usa hoy?",
+        "usageSelf": "Vacío o para mí",
+        "usageSelfHint": "Se aplica alquiler teórico",
+        "usageFamily": "Mi familia vive allí gratis",
         "usageFamilyHint": "Se trata como uso propio",
-        "usageRented": "Alquilada a un inquilino",
-        "usageRentedHint": "Se declara el alquiler que cobra",
-        "eigenmietwert": "Alquiler teórico en CHF al año",
-        "eigenmietwertHint": "De la misma notificación de valoración, para la propiedad entera.",
-        "rent": "Alquiler cobrado al año, en CHF",
-        "rentHint": "Sin los gastos que el inquilino paga aparte.",
-        "maintenance": "Mantenimiento y administración",
-        "maintenanceFlat": "20% a tanto alzado",
-        "maintenanceActual": "Lo que pagué de verdad",
-        "maintenanceHint": "La deducción a tanto alzado no necesita facturas. Declare los gastos reales solo si fueron mayores, y guarde las facturas.",
-        "maintenanceAmount": "Gastos pagados en el año, en CHF"
-      },
-      "world": {
-        "title": "Usted, en todo lo demás",
-        "lead": "Nada de esto se grava en Suiza. Zúrich lo necesita para fijar su tipo y para calcular qué parte de su deuda corresponde a la propiedad suiza.",
-        "assets": "Todo lo que posee en el mundo, en CHF",
-        "assetsHint": "Bruto, antes de deudas, incluida esta propiedad, a 31 de diciembre. Una cifra aproximada es mejor que ninguna: decide cuántos intereses puede deducir.",
-        "income": "Su renta mundial, en CHF",
-        "incomeHint": "De todo el año, incluida esta propiedad.",
-        "debt": "Sus deudas en el mundo, en CHF",
-        "debtHint": "Hipotecas y otros préstamos, a 31 de diciembre.",
-        "interest": "Intereses pagados, en CHF",
-        "interestHint": "De todo el año, por todas esas deudas."
+        "usageRented": "Alquilado a un inquilino",
+        "usageRentedHint": "Declare el alquiler que cobra",
+        "usageUnusable": "No se puede usar",
+        "usageUnusableHint": "Destruido, muy dañado o inaccesible, por ejemplo a causa de una guerra",
+        "rent": "Alquiler cobrado al año",
+        "rentHint": "Sin los gastos que el inquilino paga aparte. En la misma moneda que arriba.",
+        "rentRate": "Tipo medio del año: 1 {currency} en CHF",
+        "rentRateHint": "El alquiler es un ingreso de todo el año, por eso se usa el tipo medio federal y no el de fin de año. Rellenado con un valor aproximado."
       },
       "result": {
         "title": "Sus cifras",
-        "summaryTitle": "Lo que grava Zúrich",
-        "taxableIncome": "Renta gravable en Suiza",
-        "taxableWealth": "Patrimonio gravable en Suiza",
-        "quota": "Parte suiza de sus bienes",
-        "quotaHint": "Sus deudas y sus intereses son deducibles en esta proporción.",
-        "deductibleInterest": "Intereses deducibles",
-        "deductibleDebt": "Deuda deducible",
-        "quotaMissing": "Indique lo que posee en el mundo y calcularemos qué parte de su deuda acepta Zúrich. Hasta entonces no se deduce nada.",
-        "rateTitle": "Solo para el tipo",
-        "rateIncome": "Renta mundial",
-        "rateWealth": "Patrimonio mundial, tras deudas",
-        "rateHint": "Se declara pero no se grava aquí. Decide el tipo que se aplica a las cifras de arriba.",
-        "notTaxed": "En Suiza solo se grava el inmueble. Todo lo demás se declara para fijar el tipo.",
-        "remarkTitle": "Nota para las observaciones, en alemán",
-        "remarkHint": "Pegue este texto en las observaciones (Bemerkungen) de su declaración o adjúntelo como hoja aparte.",
+        "notTaxed": "Nada de esto tributa en Suiza. Solo se usa para fijar su tipo impositivo.",
+        "remarkTitle": "Nota para el campo de observaciones, en alemán",
+        "remarkHint": "Péguela en las observaciones (Bemerkungen) de su declaración o añádala como hoja aparte.",
         "copy": "Copiar texto",
         "copied": "Copiado",
-        "print": "Imprimir o guardar en PDF",
+        "print": "Imprimir o guardar como PDF",
         "reset": "Borrar todos los datos",
         "resetConfirm": "¿Borrar todo lo que ha introducido?",
         "nextTitle": "Qué hacer con esto",
         "next": [
-          "Abra ZHprivateTax, o el formulario en papel que le envió el municipio",
-          "Copie la hoja casilla por casilla en el Liegenschaftenverzeichnis",
-          "Anote sus deudas e intereses en el Schuldenverzeichnis y pegue la nota alemana en las observaciones",
-          "Nombre un representante en Suiza para las notificaciones y presente antes del 31 de marzo"
+          "Abra su declaración en ZHprivateTax o en papel y vaya al Liegenschaftenverzeichnis.",
+          "Añada cada inmueble con su país y copie las cifras campo por campo.",
+          "Elija la deducción a tanto alzado (Pauschalabzug) por mantenimiento.",
+          "Pegue la nota en alemán en las observaciones y guarde sus documentos en casa."
         ],
         "assumptionsTitle": "Cómo calculamos",
         "assumptions": [
-          "El valor fiscal y el alquiler teórico se toman tal como usted los copia de la valoración cantonal. No se estima nada a partir de un precio de compra.",
-          "El mantenimiento y la administración se deducen al 20% del rendimiento bruto, salvo que indique lo que pagó de verdad.",
-          "Las deudas y sus intereses se reparten según dónde están sus bienes, que es la regla para quien tributa aquí solo por el inmueble.",
-          "Su renta y su patrimonio en otros países se recogen sin tocarlos. Fijan el tipo y no se gravan aquí.",
-          "Una parte inferior al 100% se aplica igual al valor, al rendimiento y a los gastos.",
-          "Una propiedad en patrimonio privado, durante un ejercicio completo. Una compra, una venta o una herencia dentro del año requieren asesor."
+          "Valor fiscal: 70% del precio de compra o del valor de mercado estimado, en francos.",
+          "Alquiler teórico: 4,25% del valor fiscal para pisos, 3,5% para casas. Ninguno si el inmueble no se puede usar.",
+          "Inmueble alquilado: el alquiler realmente cobrado en lugar del alquiler teórico, convertido con el tipo medio del año.",
+          "Mantenimiento: deducción a tanto alzado del 20% del alquiler teórico o cobrado.",
+          "Los importes se redondean a francos enteros y se multiplican por su participación.",
+          "Solo casos habituales: sin hipoteca sobre el inmueble y sin compra, venta ni herencia durante el año. Esos casos son para un asesor."
         ],
         "guideLink": "Abrir la guía paso a paso"
       },
       "sources": {
         "title": "De dónde salen las reglas",
         "items": [
-          "La guía cantonal de la declaración: la deducción a tanto alzado, el formulario de inmuebles y las casillas a las que van las sumas",
-          "Tener un inmueble aquí hace contribuyente a una persona aquí, sea cual sea su domicilio",
-          "Se tributa solo por una parte de la renta, al tipo del conjunto"
+          "Todos los inmuebles, también en el extranjero, se declaran en el Liegenschaftenverzeichnis. Alquiler teórico del 4,25% y del 3,5%, deducción fija del 20% y las líneas 6 y 31.1 de la declaración.",
+          "Los inmuebles en el extranjero no tributan en Suiza y solo cuentan para el tipo impositivo.",
+          "Tipos de cambio oficiales de fin de año y medios anuales.",
+          "Valor fiscal del 70% del precio de compra. Es la práctica que describen las asesorías de Zúrich, no una directiva oficial."
         ]
       }
     },
     "guide": {
-      "title": "Rellenar el formulario de Zúrich desde el extranjero, paso a paso",
-      "lead": "La declaración en línea del cantón se llama ZHprivateTax. El formulario en papel tiene los mismos campos. Aquí se explica dónde va cada cosa.",
+      "title": "Cómo rellenar el formulario de Zúrich, paso a paso",
+      "lead": "La declaración en línea del cantón se llama ZHprivateTax. El formulario en papel tiene los mismos campos. Aquí ve usted dónde va su piso.",
       "stepsTitle": "En la declaración",
       "steps": [
         {
           "title": "Abra el Liegenschaftenverzeichnis",
-          "body": "Es la lista de inmuebles. Desde el ejercicio 2024 toda propiedad se declara aquí, y el programa traslada las sumas al formulario principal."
+          "body": "Es la lista de inmuebles. Desde el año fiscal 2024 todos los inmuebles se declaran solo aquí, incluidos los de otros cantones y los del extranjero."
         },
         {
-          "title": "Añada la propiedad",
-          "body": "Escriba el municipio y la calle. Como tipo elija Stockwerkeigentum para un piso o Einfamilienhaus para una casa, e indique la superficie en m²."
+          "title": "Añada el piso",
+          "body": "Introduzca la localidad y la calle en caracteres latinos. En Kanton / Land elija el país. Como tipo elija Stockwerkeigentum para un piso o Einfamilienhaus para una casa, e introduzca la superficie en m²."
         },
         {
-          "title": "Anote el rendimiento",
-          "body": "En el campo Eigenmietwert / Mietzinseinnahmen ponga el alquiler teórico de su valoración, o el alquiler cobrado si la propiedad está arrendada."
+          "title": "Introduzca la renta",
+          "body": "En el campo Eigenmietwert / Mietzinseinnahmen introduzca el alquiler teórico de su hoja de dix.tax, o el alquiler cobrado si el piso está alquilado."
         },
         {
-          "title": "Elija la deducción",
-          "body": "En Unterhalts- und Verwaltungskosten elija Pauschalabzug, el 20% sin facturas. Elija los gastos reales solo si fueron mayores, y guarde las facturas."
+          "title": "Elija la deducción a tanto alzado",
+          "body": "En Unterhalts- und Verwaltungskosten elija Pauschalabzug. Es del 20% y no requiere justificantes. Los gastos reales solo compensan si fueron mayores, y entonces necesita una lista detallada."
         },
         {
-          "title": "Anote el valor fiscal",
-          "body": "En el campo Steuerwert ponga el valor de la valoración. El programa traslada las sumas a la casilla 6 (rendimiento neto de inmuebles) y a la 31.1 (inmuebles) del formulario principal."
+          "title": "Introduzca el valor fiscal",
+          "body": "En el campo Verkehrswert introduzca el valor fiscal de su hoja. El programa lleva los totales a la línea 6 (renta neta de inmuebles) y a la línea 31.1 (inmuebles) del formulario principal."
         },
         {
-          "title": "Declare sus deudas y pida el reparto",
-          "body": "Anote todas sus deudas y los intereses pagados en el Schuldenverzeichnis, no solo la hipoteca suiza. Después pegue la nota alemana en las observaciones: pide a la oficina que reparta la deuda según dónde están sus bienes y muestra la proporción que usted calculó."
+          "title": "Añada la nota en alemán",
+          "body": "Pegue la nota de su hoja en las observaciones (Bemerkungen). Explica cómo valoró usted el piso y pide a la oficina tributaria que lo asigne al extranjero. La oficina hace la asignación por su cuenta."
         },
         {
-          "title": "Declare lo que tiene fuera, para el tipo",
-          "body": "La renta y el patrimonio en el extranjero van en la declaración aunque Suiza no los grave. Omitirlos no baja la factura, solo invita a la oficina a estimarlos."
-        },
-        {
-          "title": "Nombre un representante y presente",
-          "body": "Dé a la oficina una dirección en Suiza donde le llegue el correo, porque de lo contrario una resolución puede notificarse por publicación en el boletín oficial (art. 116 párr. 2 LIFD). El plazo es el 31 de marzo y se prorroga por internet, gratis, hasta el 30 de noviembre."
+          "title": "Presente y guarde sus documentos",
+          "body": "En Zúrich el plazo es el 31 de marzo. Puede prorrogarlo en línea, sin coste, hasta el 30 de noviembre. No hace falta enviar documentos del piso, pero guárdelos por si la oficina los pide."
         }
       ],
       "docsTitle": "Documentos que conviene guardar",
       "docs": [
-        "La Schätzungsanzeige con el valor fiscal y el alquiler teórico",
-        "La última liquidación (Veranlagung) y el recibo del impuesto",
-        "El extracto de la hipoteca con el saldo a 31 de diciembre y los intereses pagados",
-        "El contrato de alquiler y el justificante del alquiler cobrado, si está arrendada",
-        "Las facturas del mantenimiento, si deduce los gastos reales en lugar del 20%"
+        "Escritura de compraventa, o el documento de herencia o donación",
+        "Nota simple del registro de la propiedad del país donde está el inmueble",
+        "Contrato de alquiler y justificantes del alquiler cobrado, si está alquilado",
+        "Fotos, informes de daños o certificados oficiales, si el inmueble no se puede usar",
+        "El tipo de cambio que usó y de dónde lo sacó"
       ],
       "glossaryTitle": "Palabras alemanas del formulario",
       "glossary": {
-        "beschraenkt": "Obligación fiscal limitada. Aquí tributa solo por el inmueble, no por todo lo que posee.",
-        "liegenschaftenverzeichnis": "Lista de inmuebles. El formulario donde se declara cada propiedad.",
-        "amtlicheSchaetzung": "La valoración cantonal. Fija las dos cifras que pide la declaración y llega como Schätzungsanzeige.",
-        "eigenmietwert": "Alquiler teórico. Lo que el cantón supone que rinde una propiedad cuando no se alquila.",
-        "steuerwert": "Valor fiscal. El valor que el cantón da al inmueble para el impuesto sobre el patrimonio.",
-        "pauschalabzug": "Deducción a tanto alzado. El 20% del rendimiento bruto por mantenimiento y administración, sin facturas.",
-        "schuldzinsen": "Intereses de deudas. Deducibles aquí solo en la proporción que sus bienes suizos representan sobre todo lo que posee.",
-        "satzbestimmend": "Determinante del tipo. Cuenta al elegir el tipo, pero no se grava.",
-        "steuerausscheidung": "Reparto. Dividir renta y patrimonio entre Suiza y el país donde usted vive.",
-        "vertretung": "Representante. Alguien con dirección suiza que recibe su correo fiscal. Sin él, una resolución puede notificarse por publicación en el boletín oficial.",
-        "gemeindesteueramt": "La oficina municipal de impuestos del municipio donde está la propiedad. Su primer contacto ante cualquier duda.",
-        "fristerstreckung": "Prórroga del plazo de presentación. En Zúrich gratis, por internet, hasta el 30 de noviembre.",
-        "bemerkungen": "Observaciones. El campo de texto libre donde va la nota alemana.",
-        "selbstanzeige": "Regularización voluntaria. Declarar una vez, sin sanción, una propiedad que antes omitió."
+        "liegenschaftenverzeichnis": "Lista de inmuebles. El formulario donde se declara cada inmueble.",
+        "eigenmietwert": "Alquiler teórico. La renta que se considera que usted obtiene de una vivienda que reserva para su propio uso.",
+        "steuerwert": "Valor fiscal. El valor del inmueble para el impuesto sobre el patrimonio; en el formulario de Zúrich también se llama Verkehrswert.",
+        "pauschalabzug": "Deducción a tanto alzado. Un porcentaje fijo que puede deducir sin justificantes.",
+        "satzbestimmend": "Solo cuenta para el tipo. La partida no tributa por sí misma, pero eleva el tipo sobre todo lo demás.",
+        "steuerausscheidung": "Reparto fiscal. La oficina tributaria separa lo que tributa en Zúrich de lo que corresponde a otro país.",
+        "quellensteuer": "Impuesto en la fuente. El impuesto que el empleador descuenta directamente del salario.",
+        "schutzstatus": "Estatus de protección S. El permiso de residencia para las personas que huyeron de la guerra en Ucrania.",
+        "gemeindesteueramt": "Oficina tributaria municipal. Su primer contacto para formularios, plazos y preguntas.",
+        "fristerstreckung": "Prórroga del plazo. Más tiempo para presentar la declaración, que se solicita en línea.",
+        "bemerkungen": "Observaciones. Campo de texto libre para dar explicaciones a la oficina tributaria.",
+        "selbstanzeige": "Autodenuncia voluntaria. Comunicar usted mismo omisiones anteriores, una vez en la vida sin multa."
       },
-      "cta": "Preparar mi declaración"
+      "cta": "Calcular mis cifras"
     }
   }
 }

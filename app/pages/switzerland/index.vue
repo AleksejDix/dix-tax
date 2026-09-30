@@ -5,7 +5,6 @@ const { objects } = useList()
 const { price } = useAppConfig()
 
 const sample = [sampleResult()]
-const sampleRemark = remarkDe(summarise(sample, newHousehold()), 2025)
 
 const facts = computed(() => objects('zh.facts.items', ['title', 'body']))
 const steps = computed(() => objects('zh.steps.items', ['title', 'body']))

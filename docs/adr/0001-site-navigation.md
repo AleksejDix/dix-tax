@@ -1,6 +1,6 @@
 # ADR 0001: Site navigation
 
-Status: accepted
+Status: accepted, amended 2026-09-30 (see the end)
 Date: 2026-09-17
 Deciders: Aleksej Dix
 Related: #28 (this decision), #21 (cantons), #9 (guide pages)
@@ -116,3 +116,27 @@ current language. The call to action is visible at every width, with a short lab
    second canton lands (#21), or does Zurich get its own page straight away?
 3. Is "All forms" still the right name for the hub crumb now that the hub asks where the
    property is, rather than which form is needed?
+
+## Amendment, 2026-09-30: the reader lives in Zurich again
+
+The site went back to the reader it started with: somebody who lives in the canton of Zurich
+and owns a flat or a house abroad, in whichever country. What settled the paths above was
+the sentence "the country is where the property stands, which is also where the form is
+filed". Only the second half of it still holds, and it is the half the paths depend on.
+
+- **A country in a path is where a form is filed.** `/switzerland` is the reader's own
+  return, in which the property abroad is declared. `/spain` and `/germany` are the returns
+  the property's own country may want on top. No path moved, so no redirect was added for
+  the country pages.
+- The hub asks which form the reader needs again, not where the property is, because the
+  property can be anywhere and the Zurich return is the same for all of them.
+- The Swiss calculator computes the resident's case again: 70 percent of the purchase price,
+  a notional rent worked out from it and two exchange rates. The consequence recorded above as
+  "the copy now points the wrong way" is resolved in the other direction.
+- The guide for owners of Swiss property who live abroad was replaced by its mirror image,
+  `/guides/property-abroad-in-the-zurich-tax-return`. The old addresses redirect to it in
+  every language (`MOVED_GUIDES` in `nuxt.config.ts`).
+- The alternatives table above calls form first paths "the right answer while the reader was
+  a Swiss resident with a flat abroad". They were not brought back: the header, the country
+  row and five sitemaps are built on the country level, and with "where it is filed" as the
+  meaning of a country the ambiguity that argued for form names is gone.

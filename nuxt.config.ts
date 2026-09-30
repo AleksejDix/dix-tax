@@ -11,7 +11,7 @@ import tailwindcss from '@tailwindcss/vite'
 const localeFiles = (code: string) =>
   ['common', 'legal', 'guides', 'ch-zurich', 'modelo-210', 'anlage-v'].map((name) => `${code}/${name}.json`)
 
-// Paths retired when the site moved from form names to the country the property stands in
+// Paths retired when the site moved from form names to the country a form is filed in
 // (docs/adr/0001-site-navigation.md). Old links, bookmarks and search results keep working,
 // in every language. A two letter code is never a path segment: `de`, `es`, `uk` and `ru`
 // are locale prefixes, and `fr` and `it` follow when those languages are added.
@@ -25,14 +25,27 @@ const MOVED: Record<string, string> = {
 
 const LOCALE_PREFIXES = ['', '/de', '/uk', '/ru', '/es']
 
-const movedRules = Object.fromEntries(
-  LOCALE_PREFIXES.flatMap((prefix) =>
+// The guide for the owner of a Swiss flat who lives abroad was replaced by its mirror image
+// when the site returned to the reader who lives in Zurich and owns property abroad. Its
+// address was translated in German and Spanish, so each language is listed by itself.
+const MOVED_GUIDES: Record<string, string> = {
+  '/guides/swiss-property-when-you-live-abroad': '/guides/property-abroad-in-the-zurich-tax-return',
+  '/uk/guides/swiss-property-when-you-live-abroad': '/uk/guides/property-abroad-in-the-zurich-tax-return',
+  '/ru/guides/swiss-property-when-you-live-abroad': '/ru/guides/property-abroad-in-the-zurich-tax-return',
+  '/de/ratgeber/schweizer-liegenschaft-mit-wohnsitz-im-ausland':
+    '/de/ratgeber/liegenschaft-im-ausland-zuercher-steuererklaerung',
+  '/es/guias/vivienda-en-suiza-viviendo-fuera': '/es/guias/vivienda-en-el-extranjero-declaracion-de-zurich',
+}
+
+const movedRules = Object.fromEntries([
+  ...LOCALE_PREFIXES.flatMap((prefix) =>
     Object.entries(MOVED).map(([from, to]) => [
       `${prefix}${from}`,
       { redirect: { to: `${prefix}${to}`, statusCode: 301 } },
     ]),
   ),
-)
+  ...Object.entries(MOVED_GUIDES).map(([from, to]) => [from, { redirect: { to, statusCode: 301 } }]),
+])
 
 export default defineNuxtConfig({
   compatibilityDate: '2026-01-01',
@@ -48,7 +61,7 @@ export default defineNuxtConfig({
   site: {
     url: 'https://dix.tax',
     name: 'dix.tax',
-    description: 'Tax forms for people who own property in a country they do not live in.',
+    description: 'Tax forms for people who own property abroad.',
     defaultLocale: 'en',
   },
 
@@ -137,9 +150,9 @@ export default defineNuxtConfig({
       // A guide exists to match what somebody typed, so where the language carries real
       // search volume the address is in that language too. Ukrainian and Russian keep the
       // English slug: a transliterated one helps nobody read it.
-      'guides/swiss-property-when-you-live-abroad': {
-        de: '/ratgeber/schweizer-liegenschaft-mit-wohnsitz-im-ausland',
-        es: '/guias/vivienda-en-suiza-viviendo-fuera',
+      'guides/property-abroad-in-the-zurich-tax-return': {
+        de: '/ratgeber/liegenschaft-im-ausland-zuercher-steuererklaerung',
+        es: '/guias/vivienda-en-el-extranjero-declaracion-de-zurich',
       },
       'guides/spanish-holiday-home-tax': {
         de: '/ratgeber/ferienwohnung-spanien-steuern',

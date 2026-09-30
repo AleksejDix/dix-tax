@@ -1,55 +1,54 @@
 {
   "zh": {
     "meta": {
-      "title": "dix.tax: your Zurich property when you live abroad",
-      "description": "You own a flat or a house in the canton of Zurich and live in another country. Get the exact numbers for the Zurich tax return, including the debt split and the figures that only set your rate.",
+      "title": "dix.tax: declare your property abroad in the Zurich tax return",
+      "description": "For people in the canton of Zurich who own a home abroad. Get the exact numbers for the Liegenschaftenverzeichnis, explained in English, German, Spanish, Ukrainian and Russian.",
       "calcTitle": "Prepare the declaration",
-      "guideTitle": "Guide: filling in the Zurich form from abroad"
+      "guideTitle": "Guide: filling in the Zurich form"
     },
     "hero": {
-      "title": "Your flat is in Zurich. You are not. The tax return still is.",
-      "lead": "Own a flat in the canton of Zurich but live somewhere else? You still have to file a Zurich tax return. Answer a few plain questions and get the exact number for every line.",
+      "title": "You live in Zurich. Your flat is abroad. It still goes in your tax return.",
+      "lead": "Own a flat in Ukraine, Spain or anywhere else and live in the canton of Zurich? It belongs in your Zurich tax return. Answer a few plain questions and get the exact number for every line.",
       "cta": "Prepare my declaration · 10 minutes",
       "secondary": "How the tax works",
       "note": "{price} per property. No account. Your data stays in your browser.",
-      "noteValue": "the value the canton assessed",
-      "noteIncome": "rent you receive, or the rent the canton assumes",
+      "noteValue": "70% of what you paid",
+      "noteIncome": "a notional rent, not real money",
       "noteResult": "copy these two into your tax return"
     },
     "sheet": {
-      "caption": "Example: a 68 m² flat in Winterthur, assessed at CHF 486'000",
-      "place": "Municipality",
+      "caption": "Example: a 68 m² flat in Valencia bought for EUR 120'000",
+      "place": "City",
       "street": "Street",
-      "canton": "Canton",
+      "country": "Country",
       "kind": "Type",
       "kindApartment": "Apartment",
       "kindHouse": "House",
       "area": "Area",
-      "gross": "The assessed notional rent, or the rent you receive",
+      "gross": "Notional rent or rent received",
       "maintenance": "Flat maintenance deduction, 20%",
-      "maintenanceActual": "Maintenance actually paid",
       "net": "Remaining income",
       "value": "Tax value",
       "totalNet": "Net income from property",
-      "totalValue": "Property at its tax value",
+      "totalValue": "Property at market value",
       "transfer": "Goes to the tax return, line {line}",
       "code": "Code {code}",
-      "empty": "Your property will appear here"
+      "empty": "Your flat will appear here"
     },
     "facts": {
-      "title": "What Zurich wants from you",
+      "title": "What Zurich wants to know, and what it costs you",
       "items": [
         {
-          "title": "You have to file",
-          "body": "A flat in Zurich makes you a taxpayer here, even if you have never lived in Switzerland. Empty or rented, it counts. The municipality will send you a form."
+          "title": "You have to declare it",
+          "body": "Anyone who files a tax return in Zurich declares income and assets worldwide. That includes a flat in Valencia, Berlin or Kyiv, even if nobody lives there."
         },
         {
-          "title": "Only the flat is taxed",
-          "body": "Your salary and savings at home are not taxed here. You still write them down, because they set the rate on the flat."
+          "title": "Switzerland does not tax it",
+          "body": "Swiss law taxes real estate only in the country where it stands, and Switzerland's tax treaties say the same. Zurich removes the flat from your taxable wealth and income."
         },
         {
-          "title": "The canton did the maths",
-          "body": "You guess nothing. Zurich has already set the two numbers the form wants. They are on your assessment letter, and the local tax office will send it again."
+          "title": "It only moves your tax rate",
+          "body": "The value and a notional rent are used to set your rate. For a typical flat the effect is small. Leaving the flat out is what gets expensive: back taxes, interest and a fine."
         }
       ]
     },
@@ -57,22 +56,22 @@
       "title": "Three steps, about ten minutes",
       "items": [
         {
-          "title": "Find the letter",
-          "body": "The Schätzungsanzeige from the canton, or last year's tax bill. Both carry the two numbers you need."
+          "title": "Describe your flat",
+          "body": "Country, city, size, what you paid or what it is worth, and how it is used today: kept for yourself, lived in by family, rented out, or not usable."
         },
         {
-          "title": "Answer a few questions",
-          "body": "Who uses the flat, and what you own elsewhere. The second part decides how much of your mortgage counts here."
+          "title": "Get the Zurich values",
+          "body": "Tax value at 70% of the price. Notional rent at 4.25% for flats or 3.5% for houses. The 20% flat deduction for maintenance. All converted to francs."
         },
         {
-          "title": "Copy the numbers across",
-          "body": "You get the Zurich form, line by line, plus a German note to paste in. Type it into ZHprivateTax or the paper form."
+          "title": "Copy the numbers into your tax return",
+          "body": "The result mirrors the Zurich property form line by line, with a ready German note for the remarks field. Type it into ZHprivateTax or the paper form."
         }
       ]
     },
     "cta": {
-      "title": "Ten minutes now beats an estimated assessment later",
-      "body": "Have the cantonal assessment and your mortgage statement in front of you. That is all you need.",
+      "title": "Ten minutes now saves a letter from the tax office later",
+      "body": "Have the purchase price and the size of the flat ready. That is all you need.",
       "button": "Prepare my declaration · 10 minutes"
     },
     "calc": {
@@ -89,63 +88,46 @@
         "remove": "Remove"
       },
       "fields": {
-        "municipality": "Municipality",
-        "municipalityPlaceholder": "Winterthur",
-        "municipalityHint": "The Zurich municipality the property lies in. It is the one that sends your tax return.",
+        "country": "Country",
+        "countryPlaceholder": "Choose a country",
+        "countryOther": "Another country",
+        "countryOtherLabel": "Country name, in German if you know it",
+        "city": "City or village",
+        "cityPlaceholder": "Valencia",
         "street": "Street and number",
-        "streetHint": "Optional",
+        "streetHint": "Optional, in Latin letters",
         "type": "Type",
         "apartment": "Apartment",
         "house": "House",
         "area": "Total area in m²",
         "share": "Your share in %",
         "shareHint": "100 if you own it alone or together with your spouse",
-        "taxValue": "Steuerwert in CHF",
-        "taxValueHint": "The tax value from the cantonal assessment, for the whole property. Not the price you paid and not what an agent would ask for it today.",
-        "usage": "How is it used?",
-        "usageSelf": "Kept for myself, or empty",
-        "usageSelfHint": "The Eigenmietwert applies",
+        "basis": "Which value do you know?",
+        "basisPurchase": "Purchase price",
+        "basisMarket": "Estimated market value today",
+        "basisHint": "Use the estimate if the flat was inherited or given to you, or if it has lost much of its value.",
+        "amount": "Amount",
+        "currency": "Currency",
+        "rate": "Rate: 1 {currency} in CHF",
+        "rateHint": "Prefilled with an approximate year-end rate. Replace it with the official rate from the federal rate list.",
+        "rateLink": "Open the official rate list (ICTax)",
+        "usage": "How is it used today?",
+        "usageSelf": "Empty or kept for myself",
+        "usageSelfHint": "Notional rent applies",
         "usageFamily": "Family lives there for free",
         "usageFamilyHint": "Treated like your own use",
         "usageRented": "Rented to a tenant",
         "usageRentedHint": "Declare the rent you receive",
-        "eigenmietwert": "Eigenmietwert in CHF per year",
-        "eigenmietwertHint": "From the same assessment notice, for the whole property.",
-        "rent": "Rent received per year, in CHF",
-        "rentHint": "Without the utilities the tenant pays on top.",
-        "maintenance": "Maintenance and administration",
-        "maintenanceFlat": "Flat 20%",
-        "maintenanceActual": "What I really paid",
-        "maintenanceHint": "The flat deduction needs no receipts. Claim the real costs only if they were higher, and keep the invoices.",
-        "maintenanceAmount": "Costs paid in the year, in CHF"
-      },
-      "world": {
-        "title": "You, everywhere else",
-        "lead": "None of this is taxed in Switzerland. Zurich needs it to set your rate, and to work out how much of your debt belongs to the Swiss property.",
-        "assets": "Everything you own worldwide, in CHF",
-        "assetsHint": "Gross, before debts, this property included, on 31 December. An approximate figure is better than none: it decides how much of your interest you may deduct.",
-        "income": "Your income worldwide, in CHF",
-        "incomeHint": "Over the whole year, this property included.",
-        "debt": "Your debts worldwide, in CHF",
-        "debtHint": "Mortgages and other loans, on 31 December.",
-        "interest": "Debt interest paid, in CHF",
-        "interestHint": "Over the whole year, on all of those debts."
+        "usageUnusable": "Cannot be used",
+        "usageUnusableHint": "Destroyed, badly damaged or out of reach, for example because of war",
+        "rent": "Rent received per year",
+        "rentHint": "Without utilities the tenant pays on top. Same currency as above.",
+        "rentRate": "Average rate for the year: 1 {currency} in CHF",
+        "rentRateHint": "Rent is income earned over the year, so it uses the federal average rate, not the year-end rate. Prefilled with an approximate value."
       },
       "result": {
         "title": "Your numbers",
-        "summaryTitle": "What Zurich taxes",
-        "taxableIncome": "Taxable income in Switzerland",
-        "taxableWealth": "Taxable wealth in Switzerland",
-        "quota": "Swiss share of your assets",
-        "quotaHint": "Your debts and your interest are deductible in this proportion.",
-        "deductibleInterest": "Deductible debt interest",
-        "deductibleDebt": "Deductible debt",
-        "quotaMissing": "Add what you own worldwide and we can work out how much of your debt Zurich accepts. Until then none of it is deducted.",
-        "rateTitle": "Only for the rate",
-        "rateIncome": "Income worldwide",
-        "rateWealth": "Wealth worldwide, after debts",
-        "rateHint": "Declared but not taxed here. It decides the rate the amounts above are taxed at.",
-        "notTaxed": "Only the property is taxed in Switzerland. Everything else you declare is there to set the rate.",
+        "notTaxed": "None of this is taxed in Switzerland. It is used only to set your tax rate.",
         "remarkTitle": "Note for the remarks field, in German",
         "remarkHint": "Paste this into the remarks (Bemerkungen) of your tax return or add it as a separate sheet.",
         "copy": "Copy text",
@@ -155,95 +137,90 @@
         "resetConfirm": "Delete everything you entered?",
         "nextTitle": "What to do with this",
         "next": [
-          "Open ZHprivateTax, or the paper form the municipality sent you",
-          "Copy the property sheet line by line into the Liegenschaftenverzeichnis",
-          "Enter your debts and interest in the Schuldenverzeichnis and paste the German note into the remarks",
-          "Name a representative in Switzerland for service, then submit by 31 March"
+          "Open your tax return in ZHprivateTax or on paper and go to the Liegenschaftenverzeichnis.",
+          "Add each property with its country and copy the numbers field by field.",
+          "Choose the flat deduction (Pauschalabzug) for maintenance.",
+          "Paste the German note into the remarks and keep your documents at home."
         ],
         "assumptionsTitle": "How we calculate",
         "assumptions": [
-          "The Steuerwert and the Eigenmietwert are taken as you enter them from the cantonal assessment. Nothing is estimated from a purchase price.",
-          "Maintenance and administration are deducted at a flat 20% of the gross, unless you enter what you really paid.",
-          "Debts and debt interest are split in proportion to where your assets lie, which is the rule for an owner taxed here on the property alone.",
-          "Your income and wealth elsewhere are carried through untouched. They set the rate and are not taxed here.",
-          "A share below 100% is applied to the value, the income and the costs alike.",
-          "One property, held privately, for a full tax year. A purchase, a sale or an inheritance during the year needs an adviser."
+          "Tax value: 70% of the purchase price or estimated market value, in francs.",
+          "Notional rent: 4.25% of the tax value for flats, 3.5% for houses. None if the property cannot be used.",
+          "Rented property: the rent actually received instead of the notional rent, converted with the average rate for the year.",
+          "Maintenance: flat deduction of 20% of the notional rent or rent received.",
+          "Amounts are rounded to whole francs and multiplied by your ownership share.",
+          "Standard cases only: no mortgage on the property, and no purchase, sale or inheritance during the year. Those need an adviser."
         ],
         "guideLink": "Open the step by step guide"
       },
       "sources": {
         "title": "Where the rules come from",
         "items": [
-          "The cantonal guide to the tax return: the flat deduction, the property form and the lines the totals go to",
-          "Owning real estate here makes a person liable here, whatever their address",
-          "Taxed on part of your income only, at the rate of the whole"
+          "All property, also abroad, is declared in the Liegenschaftenverzeichnis. Notional rent of 4.25% and 3.5%, the 20% flat deduction, and lines 6 and 31.1 of the tax return.",
+          "Property abroad is not taxed in Switzerland and counts only for the rate.",
+          "Official year-end and annual average exchange rates.",
+          "Tax value at 70% of the purchase price. This is practice reported by Zurich fiduciaries, not an official directive."
         ]
       }
     },
     "guide": {
-      "title": "Filling in the Zurich form from abroad, step by step",
-      "lead": "The canton's online tax return is called ZHprivateTax. The paper form has the same fields. Here is where everything goes.",
+      "title": "Filling in the Zurich form, step by step",
+      "lead": "The canton's online tax return is called ZHprivateTax. The paper form has the same fields. Here is where your flat goes.",
       "stepsTitle": "In the tax return",
       "steps": [
         {
           "title": "Open the Liegenschaftenverzeichnis",
-          "body": "This is the list of real estate. Since tax year 2024 every property is declared here, and the totals are carried to the main form by the program."
+          "body": "This is the list of real estate. Since tax year 2024 all properties are declared only here, including those in other cantons and abroad."
         },
         {
-          "title": "Add the property",
-          "body": "Enter the municipality and the street. As type choose Stockwerkeigentum for a flat or Einfamilienhaus for a house, and enter the area in m²."
+          "title": "Add the flat",
+          "body": "Enter city and street in Latin letters. Under Kanton / Land choose the country. As type choose Stockwerkeigentum for a flat or Einfamilienhaus for a house, and enter the area in m²."
         },
         {
           "title": "Enter the income",
-          "body": "In the field Eigenmietwert / Mietzinseinnahmen enter the Eigenmietwert from your assessment, or the rent you received if the property is let."
+          "body": "In the field Eigenmietwert / Mietzinseinnahmen enter the notional rent from your dix.tax sheet, or the rent you received if the flat is rented out."
         },
         {
-          "title": "Choose the deduction",
-          "body": "For Unterhalts- und Verwaltungskosten choose Pauschalabzug, which is 20% and needs no receipts. Choose the actual costs only if they were higher, and keep the invoices."
+          "title": "Choose the flat deduction",
+          "body": "For Unterhalts- und Verwaltungskosten choose Pauschalabzug. It is 20% and needs no receipts. Actual costs are only worth it if they were higher, and then you need a detailed list."
         },
         {
           "title": "Enter the tax value",
-          "body": "In the field Steuerwert enter the value from the assessment. The program carries the totals to line 6 (net income from property) and line 31.1 (property) of the main form."
+          "body": "In the field Verkehrswert enter the tax value from your sheet. The program carries the totals to line 6 (net income from property) and line 31.1 (property) of the main form."
         },
         {
-          "title": "Declare your debts, then ask for the split",
-          "body": "Enter all your debts and the interest you paid in the Schuldenverzeichnis, not only the Swiss mortgage. Then paste the German note into the remarks: it asks the office to allocate the debt in proportion to where your assets lie, and shows the quota you calculated."
+          "title": "Add the German note",
+          "body": "Paste the note from your sheet into the remarks (Bemerkungen). It explains how you valued the flat and asks the tax office to allocate it abroad. The office does the allocation itself."
         },
         {
-          "title": "Declare what you have elsewhere, for the rate",
-          "body": "Income and wealth abroad belong in the return even though Switzerland does not tax them. Leaving them out does not lower your bill, it simply invites the office to estimate them."
-        },
-        {
-          "title": "Name a representative, then submit",
-          "body": "Give the office an address in Switzerland where post reaches you, because a decision can otherwise be served by publication in the official gazette (Art. 116 Abs. 2 DBG). The deadline is 31 March and can be extended online, free of charge, until 30 November."
+          "title": "Submit and keep your documents",
+          "body": "The deadline in Zurich is 31 March. You can extend it online, free of charge, until 30 November. You do not need to send documents about the flat, but keep them in case the office asks."
         }
       ],
       "docsTitle": "Documents worth keeping",
       "docs": [
-        "The Schätzungsanzeige with the Steuerwert and the Eigenmietwert",
-        "Last year's assessment (Veranlagung) and tax bill",
-        "The mortgage statement showing the balance on 31 December and the interest paid",
-        "The rental contract and proof of the rent received, if it is let",
-        "Invoices for maintenance, if you claim the real costs instead of the flat 20%"
+        "Purchase contract, or the inheritance or gift document",
+        "Land register extract from the country where the property stands",
+        "Rental contract and proof of rent received, if rented",
+        "Photos, damage reports or official confirmations, if the property cannot be used",
+        "The exchange rate you used and where it came from"
       ],
       "glossaryTitle": "German words on the form",
       "glossary": {
-        "beschraenkt": "Limited tax liability. You are taxed here on the property alone, not on everything you own.",
         "liegenschaftenverzeichnis": "List of real estate. The form where every property is declared.",
-        "amtlicheSchaetzung": "The cantonal valuation. It sets both figures the return asks for and arrives as a Schätzungsanzeige.",
-        "eigenmietwert": "Notional rent. What the canton assumes a property brings in when you do not rent it out.",
-        "steuerwert": "Tax value. The value the canton puts on the property for the wealth tax.",
-        "pauschalabzug": "Flat deduction. 20% of the gross for maintenance and administration, with no receipts.",
-        "schuldzinsen": "Debt interest. Deductible here only in the proportion your Swiss assets bear to everything you own.",
-        "satzbestimmend": "Rate determining. Counted when the rate is chosen, but not taxed.",
-        "steuerausscheidung": "Allocation. Dividing income and wealth between Switzerland and the country you live in.",
-        "vertretung": "Representative. Somebody with a Swiss address who receives your tax post. Without one, a decision can be served by publication in the official gazette.",
-        "gemeindesteueramt": "The municipal tax office where the property lies. Your first contact for anything unclear.",
-        "fristerstreckung": "Extension of the filing deadline. Free of charge in Zurich, online, until 30 November.",
-        "bemerkungen": "Remarks. The free text field where the German note goes.",
-        "selbstanzeige": "Voluntary disclosure. Declaring a property you left out before, once, without a penalty."
+        "eigenmietwert": "Notional rent. Income you are deemed to have from a home you keep for your own use.",
+        "steuerwert": "Tax value. The value of the property for wealth tax, in Zurich also called Verkehrswert on the form.",
+        "pauschalabzug": "Flat deduction. A fixed percentage you may deduct without receipts.",
+        "satzbestimmend": "Counts for the rate only. The item is not taxed itself but raises the rate on everything else.",
+        "steuerausscheidung": "Tax allocation. The tax office separates what is taxable in Zurich from what belongs to another country.",
+        "quellensteuer": "Tax at source. Tax that the employer deducts directly from the salary.",
+        "schutzstatus": "Protection status S. The residence status for people who fled the war in Ukraine.",
+        "gemeindesteueramt": "Municipal tax office. Your first contact for forms, deadlines and questions.",
+        "fristerstreckung": "Deadline extension. More time to file, requested online.",
+        "bemerkungen": "Remarks. Free text field for explanations to the tax office.",
+        "selbstanzeige": "Voluntary disclosure. Reporting earlier omissions yourself, once in a lifetime without a fine."
       },
-      "cta": "Prepare my declaration"
+      "cta": "Calculate my numbers"
     }
   }
 }

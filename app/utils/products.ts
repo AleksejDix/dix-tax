@@ -1,6 +1,7 @@
-// Registry of the countries dix.tax covers. The reader owns property in a country they do
-// not live in, so the country is always where the property stands and where the form is
-// filed. Adding one means: an entry here, a locale file per language
+// Registry of the forms dix.tax covers, by the country each one is filed in. The reader lives
+// in the canton of Zurich and owns property abroad, so Switzerland is where they live and
+// file their own return, and the other countries are where a property can stand and ask for
+// a return of its own. Adding one means: an entry here, a locale file per language
 // (i18n/locales/<lang>/<id>.json) and its pages under `path`.
 
 /** A link inside a country, shown in its own row under the header. */

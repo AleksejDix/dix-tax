@@ -11,16 +11,14 @@ const docs = computed(() => strings('zh.guide.docs'))
 
 // German terms are fixed; only the explanation is translated.
 const terms = [
-  { key: 'beschraenkt', de: 'Beschränkte Steuerpflicht' },
   { key: 'liegenschaftenverzeichnis', de: 'Liegenschaftenverzeichnis' },
-  { key: 'amtlicheSchaetzung', de: 'Amtliche Schätzung' },
   { key: 'eigenmietwert', de: 'Eigenmietwert' },
   { key: 'steuerwert', de: 'Steuerwert' },
   { key: 'pauschalabzug', de: 'Pauschalabzug' },
-  { key: 'schuldzinsen', de: 'Schuldzinsen' },
   { key: 'satzbestimmend', de: 'satzbestimmend' },
   { key: 'steuerausscheidung', de: 'Steuerausscheidung' },
-  { key: 'vertretung', de: 'Vertretung in der Schweiz' },
+  { key: 'quellensteuer', de: 'Quellensteuer' },
+  { key: 'schutzstatus', de: 'Schutzstatus S' },
   { key: 'gemeindesteueramt', de: 'Gemeindesteueramt' },
   { key: 'fristerstreckung', de: 'Fristerstreckung' },
   { key: 'bemerkungen', de: 'Bemerkungen' },

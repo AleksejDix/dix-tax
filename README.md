@@ -3,12 +3,15 @@
 Tax forms for people who own property abroad. Nuxt 4, `@nuxtjs/i18n`, five languages:
 English (default), German, Spanish, Ukrainian, Russian.
 
-The reader owns property in a country they do not live in. The country is always where the
-property stands, which is also where the form is filed (`docs/adr/0001-site-navigation.md`).
+The reader lives in the canton of Zurich and owns a flat or a house in another country:
+Ukraine, Spain, anywhere. That property belongs in the Zurich tax return, and getting it
+there is what the site is about. The country in a path is the one a form is filed in
+(`docs/adr/0001-site-navigation.md`): Switzerland for the reader's own return, Spain and
+Germany for the return the property's own country may ask for on top.
 
 | Country | Form | Path | Status |
 | --- | --- | --- | --- |
-| Switzerland | cantonal return, canton of Zurich | `/switzerland` | live |
+| Switzerland | Zurich tax return, property abroad | `/switzerland` | live |
 | Spain | Modelo 210 | `/spain` | information page, tool in preparation |
 | Germany | Anlage V | `/germany` | information page, tool in preparation |
 
@@ -48,9 +51,12 @@ All three run on every push and pull request (`.github/workflows/ci.yml`).
   configuration profile, since Mail cannot be scripted into creating an account. The password
   stays out of the file: macOS asks for it while installing
 - `scripts/og-images.mjs` builds the social preview images from the locale files (`pnpm og`), committed under `public/og/`
-- `app/composables/useDeclaration.ts` Zurich tax logic for an owner living abroad: the assessed
-  values per property, the proportional debt split, and the German note for the remarks field
-- `app/utils/countries.ts` a country name in the reader's language, used by the legal notice
+- `app/composables/useDeclaration.ts` Zurich tax logic for property abroad: the tax value, the
+  notional rent, both exchange rates, and the German note for the remarks field
+- `app/utils/countries.ts` a country name in any language, used by the calculator, the form
+  facsimile (in German) and the legal notice
+- `app/utils/guides.ts` registry of the guide pages under `/guides`, one per question somebody
+  types into a search box
 - `tests/` reference cases with hand-calculated results
 - `i18n/locales/<lang>/<file>.json` copy, one file per product plus `common.json` and `legal.json`. English is the source;
   keep keys and array lengths identical across languages. Zurich keys live under `zh.`.
@@ -131,8 +137,8 @@ library is not even downloaded. `app/plugins/analytics.client.ts` configures it:
 storage, no session recording, no automatic capture, no person profiles, Do Not Track respected.
 
 Events are sent only through `useAnalytics().track`, and the list in `app/composables/useAnalytics.ts`
-is the complete list: `calculator_started`, `property_completed` (country code, property type, use,
-currency), `sheet_printed`, `note_copied`, `signup_sent`. Never pass amounts, addresses or free text.
+is the complete list: `calculator_started`, `property_completed` (country code, property type, use),
+`sheet_printed`, `note_copied`, `signup_sent`. Never pass amounts, addresses or free text.
 When this list changes, the privacy policy (`legal.json`, section "Cookies, fonts and tracking") and the
 trust block must change with it. PostHog's endpoint is allowed in the content security policy.
 
@@ -153,31 +159,38 @@ really reviewed a product, add them to `reviews` in `app/app.config.ts`; the blo
 
 ## Tax rules encoded
 
-The reader owns property in the canton and lives abroad, so nothing is estimated: the canton
-has already valued the property and the tool only arranges what the assessment says.
+The reader lives in the canton and the property stands abroad, so Switzerland does not tax
+it: the figures only set the rate. No Swiss authority has valued the property either, which
+is why the tool works the values out instead of asking for an assessment.
 
 | Rule | Value | Source |
 | --- | --- | --- |
-| Owning property here makes a person taxable here, whatever their address | | Art. 4 Abs. 1 lit. c DBG, § 4 StG ZH |
-| Steuerwert and Eigenmietwert | as assessed by the canton | amtliche Schätzung, entered by the reader |
-| Rented out: the rent received replaces the Eigenmietwert | | Wegleitung ZH 2024 |
-| Flat maintenance deduction | 20% of the gross | Wegleitung ZH 2024 |
-| Debts and debt interest are split over all assets by where they lie | Swiss assets / worldwide gross assets | quotenmässige Schuldenverlegung |
+| All property, including abroad, goes in the Liegenschaftenverzeichnis | | Wegleitung ZH 2024 |
+| Property abroad is not taxed in Switzerland and counts for the rate only | | Art. 6 Abs. 1 DBG |
 | Net income transfers to line 6 (code 188), value to line 31.1 (code 421) | | Wegleitung ZH 2024 |
-| Only the property is taxed, at the rate of the owner's worldwide income and wealth | | Art. 7 Abs. 1 DBG |
-| For the federal tax the rate is at least the one matching the income earned in Switzerland | | Art. 7 Abs. 2 DBG |
-| An owner abroad without a representative here can be served by publication in the official gazette | | Art. 116 Abs. 2 DBG |
-| Eigenmietwert abolished, second homes to get a cantonal property tax instead | from 1 January 2029 | Federal decision, 2026 |
+| Tax value of property abroad | 70% of purchase price | Zurich practice as published by fiduciaries, not an official directive |
+| Notional rent (Eigenmietwert) | 4.25% apartment, 3.5% house, of the tax value | Liegenschaftenverzeichnis form |
+| A property that cannot be used carries no notional rent | | explained in the German note, documents kept by the owner |
+| Rented out: the rent received replaces the notional rent | converted at the annual average rate | Wegleitung ZH 2024, ICTax |
+| Flat maintenance deduction | 20% | Wegleitung ZH 2024 |
+| Source-taxed residents must file | other income >= CHF 3'000 or wealth >= CHF 80'000 / 160'000 | Wegleitung ZH 2024 |
+| Eigenmietwert abolished | from 1 January 2029 | Federal Council, 1 April 2026 |
 
-No currencies and no exchange rates: a Zurich property is assessed in francs. The whole model
-is in `app/composables/useDeclaration.ts`, and `tests/ch-zurich.test.ts` pins every number.
+Two exchange rates are used, both prefilled with approximations in `useDeclaration.ts`:
+the year-end rate for the value (wealth) and the annual average rate for rent (income).
+Update both each January from the ICTax rate list. Five currencies are offered (EUR, USD,
+GBP, UAH, CHF); a price in any other currency has to be converted by the reader first.
+
+The whole model is in `app/composables/useDeclaration.ts`, and `tests/ch-zurich.test.ts`
+pins every number. A mortgage on the property, and a purchase, sale or inheritance during
+the year, are out of scope and the tool says so.
 
 ## Before launch
 
-- Payment is not built yet. The price (CHF 49.95 per apartment, first declaration) is set in `app/app.config.ts` and shown in the copy, but the calculator is still open. Stripe is ruled out. Later years are meant to be cheaper; the amount is not set. When payment is added, update the privacy text on the legal page, which currently says nothing is transmitted.
-- Have a Zurich tax adviser review the copy, the proportional debt split and the wording about
-  rate-determining income and wealth. Every article cited on the site was checked against the
-  federal law itself (fedlex); the cantonal paragraphs have not been. The flat 20% deduction is taken from the Wegleitung and has
-  not been checked against the federal rule for buildings under ten years old.
+- Payment is not built yet. The price (CHF 49.95 per property, first declaration) is set in `app/app.config.ts` and shown in the copy, but the calculator is still open. Stripe is ruled out. Later years are meant to be cheaper; the amount is not set. When payment is added, update the privacy text on the legal page, which currently says nothing is transmitted.
+- Have a Zurich tax adviser review the copy, the 70% valuation, the notional rent rates for
+  property abroad and the wording about allocation abroad. The 70% rule is practice reported by
+  fiduciaries, not a directive, and the site says so. The flat 20% deduction is taken from the
+  Wegleitung and has not been checked against the federal rule for buildings under ten years old.
 - Have native speakers proofread the `uk`, `ru` and `es` locale files.
 - Replace the contact email in `app/app.config.ts` and add a postal address on the legal page.

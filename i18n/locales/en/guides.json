@@ -3,124 +3,108 @@
     "kicker": "Guide",
     "shortTitle": "The short answer",
     "checked": "Facts checked against the law in {date}.",
-    "swissFromAbroad": {
-      "metaTitle": "You live abroad and own a flat in Switzerland: what tax is there?",
-      "metaDescription": "Owning property in Switzerland makes you taxable there even if you have never lived there. What is taxed, why an empty holiday flat still costs you, how much of your mortgage counts, and what changes in 2029.",
-      "title": "You live abroad and own a flat in Switzerland. What tax is there?",
-      "lead": "Everything written about Swiss tax and holiday flats is written for people who live in Switzerland and own something abroad. This is the other direction: your flat is in Switzerland and you are not.",
+    "abroadFromZurich": {
+      "metaTitle": "You live in Zurich and own a flat abroad: what goes in the tax return?",
+      "metaDescription": "A flat abroad belongs in your Zurich tax return. Switzerland does not tax it, but it sets your rate. How it is valued, what the notional rent is, what to do when the flat cannot be used, and what happens if you left it out.",
+      "title": "You live in Zurich and own a flat abroad. What goes in the tax return?",
+      "lead": "Anyone who files a tax return in the canton of Zurich declares what they own worldwide. A flat in Kyiv, Valencia or Belgrade is part of that, even though Switzerland will never tax it.",
       "points": [
-        "Owning property in a Swiss canton makes you taxable in Switzerland, whatever your address and whatever your passport",
-        "Only the property is taxed. Your salary and savings at home are declared but not taxed",
-        "An empty holiday flat is taxed on the notional rent the canton assessed, not on what it earned",
-        "Only the Swiss share of your mortgage interest is deductible, in proportion to where your assets lie",
-        "From 1 January 2029 the notional rent disappears and cantons may tax second homes instead"
+        "A flat abroad belongs in the Zurich tax return, whichever country it stands in and whether or not anybody lives there",
+        "Switzerland does not tax it. The value and the income only set the rate on everything else",
+        "Zurich practice values it at 70 percent of the purchase price, converted to francs",
+        "A flat you keep for yourself carries a notional rent. A flat that cannot be used carries none",
+        "Leaving it out is what gets expensive: back taxes for up to ten years, interest and a fine"
       ],
       "sections": [
         {
-          "title": "Yes, and your nationality has nothing to do with it",
-          "body": "Swiss law taxes a person where their real estate lies, whoever they are and wherever they live. Owning a flat or a house in a canton is enough on its own to create a tax liability there, which is why the municipality where the property stands sends you a tax return even though you have never lived in the country. Tax people call it limited liability: the property is taxed, not you as a whole."
+          "title": "Yes, and it does not matter which country",
+          "body": "Once you live in Switzerland, the tax return asks for your income and wealth worldwide, and real estate abroad is on that list. It makes no difference whether the flat is in Ukraine, Spain, Serbia or Turkey, whether you bought it or inherited it, or whether anybody lives in it. The country only changes what you write in one field of the form."
         },
         {
-          "title": "What Switzerland actually taxes",
-          "body": "Two things, and only two. The income from the property, which is either the rent you receive or a notional rent when you keep it for yourself. And the property as wealth, at the value the canton has put on it. Your salary abroad, your pension and your savings are not taxable in Switzerland and never become so because of the flat."
+          "title": "Switzerland does not tax it",
+          "body": "Swiss law leaves real estate to the country where it stands (Art. 6 Abs. 1 DBG), and Switzerland's tax treaties say the same. The tax office takes the flat and its income back out of what is taxable in Zurich. This is called allocation abroad, and you do not work it out yourself: you declare, the office allocates."
         },
         {
-          "title": "The empty flat is the part people get wrong",
-          "body": "A holiday flat that stands empty eleven months of the year is taxed as though you had rented it to yourself. The canton assesses that notional rent, the Eigenmietwert, and it appears on the assessment notice along with the tax value. Nobody paid you anything and the tax is due anyway. A reduction is only considered when the property genuinely cannot be used, after a fire for example, and that is a conversation with the tax office rather than a box on the form."
+          "title": "So why does Zurich want to see it? For the rate",
+          "body": "Swiss tax rates rise with income and wealth. Zurich taxes what is taxable here at the rate that matches your worldwide total, so the flat lifts your rate a little without being taxed itself. For a typical flat the effect is small. It is still not optional, because the office can only set the right rate if it sees everything."
         },
         {
-          "title": "Nothing is estimated, because the canton already did it",
-          "body": "This is the good news. You do not have to value your own property or guess at a market rent: the cantonal assessment sets both the tax value and the notional rent, and the return simply wants those two figures. If you cannot find the notice, the municipal tax office where the property lies will send you a copy."
+          "title": "How you value the flat",
+          "body": "No Swiss authority has valued a flat in another country, so the figure comes from you. Zurich practice is 70 percent of the purchase price, converted to francs at the rate of 31 December. If the flat was inherited or given to you, take a realistic estimate of what it would sell for and use 70 percent of that. This is the practice Zurich fiduciaries describe, not a published directive, so keep the contract or whatever else supports your number."
         },
         {
-          "title": "Your mortgage is only partly deductible here",
-          "body": "Debts and debt interest are spread across everything you own, in proportion to where your assets lie. If the Swiss flat is a third of your worldwide assets, a third of your interest is deductible in Switzerland and the rest belongs to your own country. This is the single most common mistake, because an owner who deducts the whole Swiss mortgage has understated their Swiss income and will hear about it."
+          "title": "The rent nobody paid you",
+          "body": "A flat you keep for yourself, or that your parents live in for free, is treated as though it earned a rent. This notional rent, the Eigenmietwert, is 4.25 percent of the tax value for a flat and 3.5 percent for a house. If the flat is let, you declare the rent you really received instead, converted at the average rate for the year. Either way 20 percent comes off for maintenance, and no receipts are needed."
         },
         {
-          "title": "Your income at home goes on the form, and is not taxed",
-          "body": "Switzerland taxes the flat at the rate that matches your total income and wealth, so the return asks for figures it has no intention of taxing. Leaving them out does not lower the bill, it invites the office to estimate them. For the federal tax there is also a floor: the rate is at least the one that matches the income earned in Switzerland, so a modest worldwide income does not buy you a near-zero rate."
+          "title": "If the flat is damaged or out of reach",
+          "body": "You still list it, because you still own it. But a flat that truly cannot be used, after war damage or a fire, or because it lies in an area you cannot reach, carries no notional rent, and its value should reflect what is left of it. Say so in German in the remarks field, and keep photos or official reports in case the office asks."
         },
         {
-          "title": "The post has to be able to reach you",
-          "body": "If you are abroad without anybody in Switzerland to receive your tax post, a decision can be served on you by publication in the cantonal official gazette, and the period for appealing it runs whether you saw it or not. The office will normally ask you to name an address for service here. A relative, a neighbour, the property manager or an adviser can all do it, and it is worth having one before you need it."
+          "title": "The country where the flat stands may want a return too",
+          "body": "What you file in Zurich does not replace what the flat's own country asks for. Spain wants a Modelo 210 from every owner who lives elsewhere, and Germany wants a return with Anlage V when the flat is let. Those are separate filings with their own values and deadlines, and their figures will not match the Zurich ones. That is normal."
         },
         {
           "title": "What changes in 2029",
-          "body": "Switzerland voted in September 2025 to end the taxation of notional rent, and the Federal Council set the change in force for 1 January 2029. Second homes, which is what most property owned from abroad is, are the category cantons may tax instead with a new property tax. The deduction for maintenance costs goes at the same time. Until then the rules on this page apply unchanged."
+          "body": "Switzerland voted in September 2025 to end the taxation of notional rent, and the Federal Council set the change in force for 1 January 2029. Up to and including tax year 2028 the notional rent still has to be declared. The flat itself stays in the tax return after that, as part of your wealth."
         },
         {
-          "title": "If you have never filed",
-          "body": "Waiting to be forgotten is not a strategy: ownership is recorded in the land register and the municipality knows exactly who you are. An office that hears nothing eventually assesses you at its own estimate, which is deliberately not generous and hard to overturn, and adds a fine for not filing. Catching up voluntarily costs less, and it is a case for an adviser rather than for a form filled in a hurry."
+          "title": "If you left it out in earlier years",
+          "body": "Once in your life you can put this right without a fine, through a voluntary disclosure (straflose Selbstanzeige), as long as the tax office has not found out by itself. You pay the missing tax for up to ten years plus interest, which for a flat abroad is usually a small amount. Talk to the cantonal tax office or an adviser first, and do not simply start listing the flat without a word."
         }
       ],
       "faq": {
         "title": "Questions that follow",
         "items": [
           {
-            "q": "Does it matter that I am not Swiss?",
-            "a": "No. Liability follows the property, not the passport. A Swiss citizen living in Berlin and a German citizen living in Berlin are in exactly the same position with regard to a flat in Zurich."
+            "q": "Do I pay Swiss tax on my flat abroad?",
+            "a": "No. Swiss law taxes real estate only in the country where it stands, and Switzerland's tax treaties say the same. Zurich still wants to see the flat because your total wealth and income decide which tax rate applies to the part that is taxable in Switzerland. Tax people call this satzbestimmend, meaning it counts for the rate only."
           },
           {
-            "q": "The flat is rented to tourists a few weeks a year. What then?",
-            "a": "The rent you actually received replaces the notional rent for the period it was let, and the notional rent covers the rest of the year. Short-term letting can also bring cantonal or communal tourist taxes and, above certain thresholds, other obligations, which are separate from the tax return."
-          },
-          {
-            "q": "What if I sell it?",
-            "a": "A gain on Swiss real estate is taxable in Switzerland, through a separate cantonal property gains tax rather than through this return. Your treaty will almost certainly leave that right with Switzerland, so plan for it before you sign anything."
-          },
-          {
-            "q": "Will my own country tax the flat as well?",
-            "a": "Switzerland has the first right to tax property that stands in Switzerland. Your country of residence then either exempts it while still counting it when it sets your rate, or credits the Swiss tax against its own. Which of the two applies depends on your treaty with Switzerland, so check that at home. Nothing you file in Switzerland replaces your own return."
-          },
-          {
-            "q": "I live abroad. Why do I have to file in Switzerland at all?",
-            "a": "Because the property is here. Swiss law makes an owner taxable in the place where the real estate lies, whatever their address (Art. 4 DBG for the federal tax, the same rule in the Zurich tax act). It is called limited liability: only the property is taxed, not you as a whole. The municipality where the property lies sends the return, and it is due even in a year when nothing happened with the flat."
-          },
-          {
-            "q": "Is my salary abroad taxed in Switzerland?",
-            "a": "No. Only the property and its income are taxable here. Your salary, pension and other assets are asked for so that Switzerland can apply the rate that matches your full income and wealth to the Swiss part (Art. 7 Abs. 1 DBG). A larger income abroad therefore raises the rate on the flat, but never makes the income itself taxable here. For the federal tax there is also a floor: the rate is at least the one that matches the income earned in Switzerland (Art. 7 Abs. 2 DBG), so a small worldwide income does not buy a near-zero rate."
-          },
-          {
-            "q": "Where do I find the Eigenmietwert and the Steuerwert?",
-            "a": "On the Schätzungsanzeige, the assessment notice the canton sends after a valuation, and on your last tax bill. Both figures are set by the canton, not by you and not by an estate agent. If you do not have the notice, ask the Gemeindesteueramt of the municipality where the property lies; they send a copy."
-          },
-          {
-            "q": "The flat is empty. Nobody lives there and it earns nothing.",
-            "a": "It is still taxed on the Eigenmietwert, the rent the canton assumes you would otherwise pay. An empty holiday flat that is available to you counts as used by you. A reduction is only considered when the property truly cannot be used, for example after a fire, and that is a case for the tax office rather than for this tool."
-          },
-          {
-            "q": "I rent it out. What do I declare?",
-            "a": "The rent you actually received over the year, without the utilities the tenant pays on top. That replaces the Eigenmietwert. You may then deduct either the flat 20% for maintenance and administration, or what you really spent if it was more, with receipts."
-          },
-          {
-            "q": "Can I deduct the interest on my mortgage?",
-            "a": "Only part of it. Debts and debt interest are spread over everything you own, in proportion to where your assets lie. If the Zurich flat is a third of your assets worldwide, a third of your interest is deductible here. That is why the tool asks what you own elsewhere, and it is the single point most people get wrong."
+            "q": "The other country already taxes the flat. Is that not double taxation?",
+            "a": "No. The other country taxes the property and any rent from it. Switzerland does not tax them again, it only uses them to set the rate on your Swiss income and wealth. Whatever you owe abroad, for example German tax on rent (Anlage V) or the Spanish non-resident tax (Modelo 210), is a separate filing in that country."
           },
           {
             "q": "What does it cost?",
-            "a": "{price} per property for your first declaration. In the following years it costs less, because your property is already set up. A Swiss adviser usually charges several hundred francs for the same work, every year."
+            "a": "{price} per property for your first declaration. In the following years it costs less, because your flat is already set up. A tax adviser usually charges several hundred francs for the same work, every year."
           },
           {
-            "q": "When is it due?",
-            "a": "The Zurich deadline is 31 March for the previous year. You can extend it online, free of charge, until 30 November. The extension is for filing, not for paying: interest runs on the tax from the general due date."
+            "q": "My tax is deducted from my salary. Do I file a tax return at all?",
+            "a": "People taxed at source (Quellensteuer), for example with a B permit or protection status S, usually do not file. You must file if you have other income of CHF 3'000 or more per year, taxable wealth of CHF 80'000 or more (CHF 160'000 for married couples), or a gross salary of CHF 120'000 or more. With status S you also become fully taxable once you have lived in Switzerland for more than two years without interruption and your life is centred here. And if your municipality sent you a tax return, you have to complete it in any case. If you are unsure, ask your Gemeindesteueramt."
           },
           {
-            "q": "What happens if I do not file?",
-            "a": "The office reminds you, then assesses you at its own estimate (Ermessensveranlagung). That estimate is deliberately not generous, it is hard to overturn, and it comes with a fine for not filing. Since ownership is recorded in the land register, waiting to be forgotten is not a strategy."
+            "q": "How do I value the flat?",
+            "a": "Zurich practice for property abroad is 70% of the purchase price, converted to francs. If there was no purchase price, for example because the flat was inherited or given to you, use a realistic estimate of what it would sell for and take 70% of that. Keep whatever supports your number: the purchase contract, a land register extract, or comparable listings."
           },
           {
-            "q": "Do I need somebody in Switzerland to receive my post?",
-            "a": "Somebody has to be able to reach you. Federal law says that if you are abroad without a representative in Switzerland, a decision can be served on you validly by publication in the cantonal official gazette (Art. 116 Abs. 2 DBG), and the appeal period then runs whether you saw it or not. The cantonal office will normally ask you to name a delivery address here, and it is in your own interest to have one: a relative, a neighbour, a property manager or an adviser."
+            "q": "My flat is damaged or cannot be used. What now?",
+            "a": "You still list it, because you still own it. Use a value that reflects reality, and do not declare any notional rent if the flat really cannot be used, for example after war damage or a fire, or because it is in an area you cannot reach. The tool writes a short German explanation for the remarks field. Keep photos, official reports or news coverage in case the tax office asks."
           },
           {
-            "q": "Eigenmietwert is being abolished. What changes for me?",
-            "a": "Parliament decided to end the taxation of notional rent, with the change taking effect on 1 January 2029. Second homes are meant to be covered instead by a new cantonal property tax, which is precisely the category most owners living abroad fall into. Until then the rules on this page apply unchanged, and we will update the tool when the cantonal rules are published."
+            "q": "My parents live in the flat for free. Is that rental income?",
+            "a": "It is not rent, but Zurich treats a flat used by you or your relatives free of charge as used by yourself. That means a notional rent (Eigenmietwert) of 4.25% of the tax value applies. It affects your rate only."
+          },
+          {
+            "q": "What is Eigenmietwert, and was it not abolished?",
+            "a": "It is a notional income: what you could earn if you rented out a home you keep for yourself. Swiss voters decided on 28 September 2025 to abolish it, and the Federal Council set 1 January 2029 as the start date. Up to and including tax year 2028 it still has to be declared."
+          },
+          {
+            "q": "I did not declare the flat in earlier years. What should I do?",
+            "a": "Once in your life you can correct this without a fine through a voluntary disclosure (straflose Selbstanzeige), as long as the tax office has not found out on its own. You pay the missing tax for up to ten years plus interest, which for a foreign flat is usually a small amount. Contact the cantonal tax office or an adviser before you file, and do not simply start listing the flat without explanation."
+          },
+          {
+            "q": "What about my bank accounts abroad?",
+            "a": "Once you are fully taxable in Switzerland, foreign accounts belong in the securities and accounts list (Wertschriftenverzeichnis) with the balance on 31 December and the interest earned. This tool only covers real estate."
+          },
+          {
+            "q": "Does this affect my social assistance?",
+            "a": "Social assistance, asylum support and supplementary benefits follow their own rules and are handled by a different office. This tool only covers the tax return. Tell your caseworker about the property truthfully and ask how it is treated in your municipality."
           }
         ]
       },
       "cta": {
         "title": "Prepare the Zurich declaration",
-        "body": "For the canton of Zurich, dix.tax turns the two figures on your assessment into the exact numbers for every line, with the German note for the tax office. About ten minutes.",
+        "body": "dix.tax turns the price and the size of your flat into the exact numbers for every line of the Zurich form, with the German note for the tax office. About ten minutes.",
         "label": "Open the Swiss declaration"
       }
     },

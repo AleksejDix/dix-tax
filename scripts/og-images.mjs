@@ -61,7 +61,7 @@ function at(object, path) {
 
 /** The brand prefix is already in the picture, so the headline does not repeat it. */
 function headline(title) {
-  const rest = title.replace(/^Dix\.Tax:\s*/, '')
+  const rest = title.replace(/^dix\.tax:\s*/i, '')
   return rest.charAt(0).toLocaleUpperCase() + rest.slice(1)
 }
 
